@@ -13,9 +13,20 @@ const ContactUs = (props) => {
     // service details with booking form component
     <div className='servicePageWrapper'>
  
-
+      
       <div className='pagetitle'>
-        <h2>SERVICE DETAILS AND BOOKING FORM</h2>
+        <h2>Get In Touch With Us</h2>
+      </div>
+      <div>
+        <section class="tech-hero-block">
+        <div class="tech-hero-content">
+            <h1>We’d love to hear from you</h1>
+            <p>Whether you have a question about our API, architecture, pricing, need a technical demo, or anything else, our engineering team is ready to answer all your questions.</p>
+        </div>
+    </section>
+        <div>
+          <h2></h2>
+        </div>
       </div>
 
       <div className='detailsWrapper'>

@@ -274,7 +274,7 @@ class BookingForm extends Component {
                             )}
                             <div className='bookingFields'>
                                 <div className='leftBookingBlock'>
-                                    <Field type="text" name="Name" id="Name" placeHolder="First Name" />
+                                    <Field type="text" name="Name" id="Name" placeHolder="Name" />
                                         <ErrorMessage className="error" name="Name" component="div" />
                                     <Field type="text" name="companyName" id="companyName" placeHolder="Company/Startup Name" />
                                         <ErrorMessage className="error" name="companyName" component="div" />
