@@ -140,12 +140,11 @@ class BookingForm extends Component {
                         //clear form
                 resetForm({values: {
                         serviceTitle: this.props.serviceTitle, 
-                        firstName: "",
-                        secondName: "",
-                        address: "",
-                        postCode: "",
+                        Name: "",
                         date: null,
                         time: null,
+                        email:'',
+                        companyName: '',
                         phoneNumber: "",
                         bookingNote: ""
                     }
@@ -203,10 +202,10 @@ class BookingForm extends Component {
                             _id: this.props.initialData?._id,
                             serviceTitle: this.props.serviceTitle || this.props.initialData?.serviceTitle,
                             // dateTime: null,
-                            firstName: this.props.initialData?.firstName || '',
-                            secondName: this.props.initialData?.secondName || '',
-                            address: this.props.initialData?.address || '',
-                            postCode: this.props.initialData?.postCode || '',
+                            Name: this.props.initialData?.Name || '',
+                            email: this.props.initialData?.email || '',
+                            companyName: this.props.initialData?.companyName || '',
+                            // address: this.props.initialData?.address || '',
                             date: this.state.dateSelectedByUser 
                                 ? this.state.date 
                                 : this.props.initialData?.date || null,
@@ -217,16 +216,19 @@ class BookingForm extends Component {
                         enableReinitialize={this.props.initialData?.update === true}
                         
                             validationSchema = {Yup.object({
-                                firstName: Yup.string()
+                                Name: Yup.string()
                                             .required('Required Field'),
-                                secondName: Yup.string()
-                                            .required('Required Field'),
-                                address: Yup.string()
-                                            .min(2, "Min 2 characters")
-                                            .required('Address is Required'),
-                                postCode: Yup.string()
-                                            .min(2, "Min 2 characters")
-                                            .required('Postcode is Required'),
+                              
+                                // address: Yup.string()
+                                //             .min(2, "Min 2 characters")
+                                //             .required('Address is Required'),
+                                companyName: Yup.string()
+                                                .min(1, "Min 1 characters")
+                                                .required('Required Field'), 
+                                                
+                                email: Yup.string()
+                                        .email('Wrong Email address')
+                                        .required('Required Field'),
                                 time: Yup.string()
                                             .required('Required Field'),
                                 phoneNumber: Yup.string()
@@ -272,22 +274,22 @@ class BookingForm extends Component {
                             )}
                             <div className='bookingFields'>
                                 <div className='leftBookingBlock'>
-                                    <Field type="text" name="firstName" id="firstName" placeHolder="First Name" />
-                                        <ErrorMessage className="error" name="firstName" component="div" />
-                                    <Field type="text" name="secondName" id="secondName" placeHolder="Second Name" />
-                                        <ErrorMessage className="error" name="secondName" component="div" />
-                                   
-                                       
-                                        <ErrorMessage className="error" name="time" component="div" />
-                                    <Field as="textarea" name="bookingNote" id="bookingNote" placeHolder="Booking Note" />
+                                    <Field type="text" name="Name" id="Name" placeHolder="First Name" />
+                                        <ErrorMessage className="error" name="Name" component="div" />
+                                    <Field type="text" name="companyName" id="companyName" placeHolder="Company/Startup Name" />
+                                        <ErrorMessage className="error" name="companyName" component="div" />
+                                    <Field type="text" name="email" id="email" placeHolder="Email" />
+                                        <ErrorMessage className="error" name="email" component="div" />
+
+                                        {/* <ErrorMessage className="error" name="time" component="div" /> */}
+                                    <Field as="textarea" name="bookingNote" id="bookingNote" placeHolder="Booking Message" />
                                         <ErrorMessage className="error" name="bookingNote" component="div" />
                                 </div>
 
                                 <div className='rightBookingBlock'>
-                                    <Field type="text" name="address" id="address" placeHolder="Address" />
-                                        <ErrorMessage className="error" name="address" component="div" />
-                                    <Field type="text" name="postCode" id="postCode" placeHolder="Post Code" />
-                                        <ErrorMessage className="error" name="postCode" component="div" />
+                                    {/* <Field type="text" name="address" id="address" placeHolder="Address" />
+                                        <ErrorMessage className="error" name="address" component="div" /> */}
+                                 
                                     <div className='phoneNumBlock'>
                                         <span className="phone-prefix">+44</span>
                                         <Field type="text" name="phoneNumber" id="phoneNumber2" placeHolder="+44 Phone Number" />

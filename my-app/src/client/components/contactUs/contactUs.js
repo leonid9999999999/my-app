@@ -44,7 +44,7 @@ const ContactUs = (props) => {
 
       <div className="formWrapper">
         <BookingForm
-          buttonTitle='Book Now'
+          buttonTitle='Submit'
           serviceTitle={title}
           title={`Book a ${title} Plan`}
           desc="We will contact you before booking date to remind you"
