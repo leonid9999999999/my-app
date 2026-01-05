@@ -251,11 +251,8 @@ class BookingForm extends Component {
 
                         <Form className='bookingForm'>
                         
-                            <div style={{
-                                display:"flex", alignItems: "center",
-                                justifyContent: "space-between"
-                            }}
-                            >
+                            <div className='wrapperDesc'>
+
                                 <div className='BookingDesc'>
                                     <h3>{this.props.title}</h3>
                                     <p>{this.props.desc}</p>
@@ -280,25 +277,22 @@ class BookingForm extends Component {
                                         <ErrorMessage className="error" name="companyName" component="div" />
                                     <Field type="text" name="email" id="email" placeHolder="Email" />
                                         <ErrorMessage className="error" name="email" component="div" />
-
-                                        {/* <ErrorMessage className="error" name="time" component="div" /> */}
-                                    <Field as="textarea" name="bookingNote" id="bookingNote" placeHolder="Booking Message" />
-                                        <ErrorMessage className="error" name="bookingNote" component="div" />
-                                </div>
-
-                                <div className='rightBookingBlock'>
-                                    {/* <Field type="text" name="address" id="address" placeHolder="Address" />
-                                        <ErrorMessage className="error" name="address" component="div" /> */}
-                                 
-                                    <div className='phoneNumBlock'>
+                                     <div className='phoneNumBlock'>
                                         <span className="phone-prefix">+44</span>
                                         <Field type="text" name="phoneNumber" id="phoneNumber2" placeHolder="+44 Phone Number" />
                                     </div>
                                         <ErrorMessage className="error" name="phoneNumber" component="div" />
+
+                                        {/* <ErrorMessage className="error" name="time" component="div" /> */}
+                                    <Field as="textarea" name="bookingNote" id="bookingNote" placeHolder="Booking Message" />
+                                        <ErrorMessage className="error" name="bookingNote" component="div" />
+                                    
                                     
                             
-                                    <Button type="submit" text={this.props.buttonTitle} disabled={isSubmitting} style={{backgroundColor:"#56D55D", color: "white"}}/>
+                                    <Button type="submit" text={this.props.buttonTitle} disabled={isSubmitting} style={{backgroundColor:"#56D55D", color: "white", width: "100%"}}/>
                                 </div>
+
+                                
                             </div>
                             
                             
