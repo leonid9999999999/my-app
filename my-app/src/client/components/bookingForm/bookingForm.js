@@ -271,31 +271,39 @@ class BookingForm extends Component {
                             )}
                             <div className='bookingFields'>
                                 <div className='leftBookingBlock'>
+                                    {/* Name Field */}
+                                    <label htmlFor="Name" className="field-label">Full Name</label>
                                     <Field type="text" name="Name" id="Name" placeHolder="Name" />
-                                        <ErrorMessage className="error" name="Name" component="div" />
+                                    <ErrorMessage className="error" name="Name" component="div" />
+
+                                    {/* Company Field */}
+                                    <label htmlFor="companyName" className="field-label">Company Name</label>
                                     <Field type="text" name="companyName" id="companyName" placeHolder="Company/Startup Name" />
-                                        <ErrorMessage className="error" name="companyName" component="div" />
+                                    <ErrorMessage className="error" name="companyName" component="div" />
+
+                                    {/* Email Field */}
+                                    <label htmlFor="email" className="field-label">Email Address</label>
                                     <Field type="text" name="email" id="email" placeHolder="Email" />
-                                        <ErrorMessage className="error" name="email" component="div" />
-                                     <div className='phoneNumBlock'>
+                                    <ErrorMessage className="error" name="email" component="div" />
+
+                                    {/* Phone Field */}
+                                    <label htmlFor="phoneNumber2" className="field-label">Phone Number</label>
+                                    <div className='phoneNumBlock'>
                                         <span className="phone-prefix">+44</span>
+                                        {/* Note: htmlFor above matches this ID */}
                                         <Field type="text" name="phoneNumber" id="phoneNumber2" placeHolder="+44 Phone Number" />
                                     </div>
-                                        <ErrorMessage className="error" name="phoneNumber" component="div" />
+                                    <ErrorMessage className="error" name="phoneNumber" component="div" />
 
-                                        {/* <ErrorMessage className="error" name="time" component="div" /> */}
+                                    {/* Booking Note Field */}
+                                    <label htmlFor="bookingNote" className="field-label">Message</label>
                                     <Field as="textarea" name="bookingNote" id="bookingNote" placeHolder="Booking Message" />
-                                        <ErrorMessage className="error" name="bookingNote" component="div" />
-                                    
-                                    
-                            
+                                    <ErrorMessage className="error" name="bookingNote" component="div" />
+                                        
                                     <Button type="submit" text={this.props.buttonTitle} disabled={isSubmitting} style={{backgroundColor:"#56D55D", color: "white", width: "100%"}}/>
                                 </div>
-
                                 
                             </div>
-                            
-                            
                         </Form>
                          )}
                     </Formik>

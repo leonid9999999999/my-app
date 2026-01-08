@@ -3,6 +3,7 @@
      justify-content: center;
     color: white;
     font-size: 38px;
+    margin-top: 50px;
 }
 .imgWrapper{
     position: relative;
@@ -125,7 +126,7 @@
     background-color: #ffffff;
     border-radius: 12px;
     border: 1px solid black;
-    
+    height: 700px;
 }
 
 .additionalInformation {
@@ -133,6 +134,7 @@
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  height: 100%;
 }
 
 .additionalInformation h2 {
