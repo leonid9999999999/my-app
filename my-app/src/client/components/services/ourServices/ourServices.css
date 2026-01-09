@@ -5,6 +5,22 @@ h2{
     color:White;
 }
 
+
+.contact-link {
+  font-size: 24px;
+  color: #0060B6;
+  text-decoration: none;
+  transition: all 0.3s ease; /* Adds a smooth transition */
+}
+
+/* hover styles */
+.contact-link:hover {
+  text-decoration: underline; /* Standard hover effect */
+  color: #004a8f; /* Slightly darker blue */
+  cursor: pointer;
+}
+
+
 .firsBlockMain{
     margin: 100px 0  0  0;
     display: flex;
@@ -21,8 +37,13 @@ h2{
     width: 500px;
 }
 
+.blockTitle{
+font-size: 48px;
+}
+
 .additionalBlockWrapperTitle{
     font-size: 20px;
+   
 }
 
 .additionalParagraph{
@@ -38,6 +59,7 @@ h2{
     display: flex;
     justify-content: center;
     margin-top: 50px;
+   
 }
 
 .additionalBlock{
@@ -47,12 +69,13 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    
-
+     
 }
 
 .additionalBlockWrapperParagraph{
-   
+   display: flex;
+   flex-direction: column;
+    align-items: flex-start;
 }
 
 .secondBlockOurProject{
