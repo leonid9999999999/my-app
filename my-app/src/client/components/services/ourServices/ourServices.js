@@ -7,7 +7,10 @@ import "./portfolioGrid.css";
 import FAQSection from "../faqSection/faqSection";
 import ProjectCard from "../projectCard/projectCard";
 import { useRef } from 'react';
+import SingleBundle from "../../ourBundles/singleBundle/singleBundle";
 
+
+import OurBundles from "../../ourBundles/ourBundles";
 
 
 const projects = [
@@ -226,6 +229,15 @@ const targetSection = useRef(null);
             {/* <h2 className="text-4xl md:text-5xl text-[#1a3a52] mb-12">
               FAQs
             </h2> */}
+          </div>
+        </div>
+
+        <div className="sixthBlockOurBundlesrapper">
+          <h2 className="blockTitle">
+            Our Bundles
+          </h2>
+          <div className="ourBundles">
+            <OurBundles/>
           </div>
         </div>
     </div>
