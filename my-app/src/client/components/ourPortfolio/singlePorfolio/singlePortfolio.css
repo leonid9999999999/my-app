@@ -1,12 +1,14 @@
 .portfolio-card {
-    width: 100%;
-    max-width: 700px;
+    
+    max-width: 500px;
     /* CHANGE SIZE HERE */
-    margin: 0 auto;
+    margin: 80px;
     text-align: left;
 }
 
 .portfolio-image-wrapper {
+    width: 550px;
+    cursor: pointer;
     position: relative;
     background: #3f3f3f;
     border-radius: 24px;
@@ -43,7 +45,7 @@
     background: white;
     color: black;
     padding: 10px 18px;
-    border-radius: 999px;
+    border-radius: 10px;
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
@@ -58,7 +60,14 @@
 /* TITLE */
 .portfolio-title {
     margin-top: 16px;
-    font-size: 22px;
+    margin-bottom: 5px;
+    font-size: 33px;
     font-weight: 500;
     color: #ffffff;
+}
+
+.portDesription {
+    font-size: 16px;
+    margin: 0;
+    color: #ffffff9c;
 }

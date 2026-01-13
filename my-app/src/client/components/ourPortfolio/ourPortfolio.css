@@ -1,3 +1,92 @@
-.ourPortfolio{
-    margin-top: 100px;
+.ourPortfolio {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 80px 0;
+ 
+    /* space between rows */
 }
+/* Update the wrapper to handle the background */
+/* Update the wrapper to handle the background */
+.ourPorfolioWrapper {
+    width: 100%;
+    position: relative;
+    /* Needed to position the background behind */
+    overflow: hidden;
+    /* Ensures the blurry edges don't spill out */
+    padding: 20px 0;
+    z-index: 1;
+    /* Keeps content on top */
+}
+
+/* 2. The Gradient acts as the "Snowy" background */
+.ourPorfolioWrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    /* Your Gradient Colors */
+    background: linear-gradient(-45deg, #0a0f19, #1e3a8a, #00f7ffb4, #0a0f19);
+    background-size: 400% 400%;
+
+    /* The Animation */
+    animation: gradientBG 15s ease infinite;
+
+    /* THE SNOWY EFFECT: High blur + slight scaling to hide messy edges */
+    filter: blur(100px);
+    transform: scale(1.2);
+    z-index: -2;
+    /* Puts it at the very back */
+}
+
+/* 3. Optional: A thin white "Frost" layer on top of the colors */
+.ourPorfolioWrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.05);
+    /* 5% White Tint */
+    z-index: -1;
+    /* sits between gradient and content */
+    pointer-events: none;
+}
+
+/* Ensure your animation keyframes remain in the file */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ROW 1 → LEFT */
+.topOurPortfolioBlock {
+    height: 310px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* ROW 2 → RIGHT */
+.bottomOurPortfolioBlock {
+    height: 280px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
