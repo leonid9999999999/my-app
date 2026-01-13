@@ -5,6 +5,7 @@ import './App.css';
 import Main from "./client/components/main/main";
 import ContactUs from './client/components/contactUs/contactUs';
 import OurServices from './client/components/services/ourServices/ourServices.js';
+import OurPortfolio from './client/components/ourPortfolio/ourPortfolio.js';
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
                     <Route index element={<Navigate to="/home" replace />} />
 
                     <Route path="ourServices" element={<OurServices/>} />
+
+                    <Route path="ourPortfolio" element={<OurPortfolio />} />
 
                 </Route>
                 

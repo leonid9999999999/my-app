@@ -1,4 +1,11 @@
-.ourBundlesBlock{
+.ourBundlesBlock {
     display: flex;
     justify-content: center;
+    gap: 32px;
+    /* space between cards */
+    flex-wrap: wrap;
+    /* IMPORTANT */
+    max-width: 1100px;
+    /* limits to 3 cards */
+    margin: 0 auto;
 }
