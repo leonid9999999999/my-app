@@ -1,0 +1,96 @@
+h1{
+    color:White;
+}
+h2{
+    color:White;
+}
+
+
+.contact-link {
+  font-size: 24px;
+  color: #0060B6;
+  text-decoration: none;
+  transition: all 0.3s ease; /* Adds a smooth transition */
+}
+
+/* hover styles */
+.contact-link:hover {
+  text-decoration: underline; /* Standard hover effect */
+  color: #004a8f; /* Slightly darker blue */
+  cursor: pointer;
+}
+
+
+.firsBlockMain{
+    margin: 100px 0  0  0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.slider{
+    
+}
+
+.Title{
+    width: 500px;
+}
+
+.blockTitle{
+font-size: 48px;
+}
+
+.additionalBlockWrapperTitle{
+    font-size: 20px;
+   
+}
+
+.additionalParagraph{
+    color: rgba(255, 255, 255, 0.69);
+    font-size: 18px;
+    width: 900px;
+    text-align:justify;
+  text-align-last:justify;
+  
+}
+
+.additionalBlockWrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+   
+}
+
+.additionalBlock{
+    gap: 30px;
+    height: 120px;
+    width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     
+}
+
+.additionalBlockWrapperParagraph{
+   display: flex;
+   flex-direction: column;
+    align-items: flex-start;
+}
+
+.secondBlockOurProject{
+    margin: 80px 0 0 0;
+}
+
+/* Our Recipe ,Steps */
+
+.ourRecipeWrapper{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px 100px 0 100px;
+}
+
+.fifthBlockFAQWrapper{
+    margin-top: 80px;
+}

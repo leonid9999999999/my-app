@@ -1,0 +1,148 @@
+.pagetitle{
+    display: flex;
+     justify-content: center;
+    color: white;
+    font-size: 38px;
+    margin-top: 50px;
+}
+.imgWrapper{
+    position: relative;
+    overflow: hidden;
+    width: 220px;
+    height: 240px;
+    border-radius: 15px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.detailsWrapper{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+
+.mainDetails{
+    
+}
+
+.formWrapper{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0  60px 0;
+    gap: 20px;
+}
+
+.serviceTitle{
+    margin-top: 10px;
+    margin-bottom: 12px;
+    color:#FFF9CB;
+    font-size: 32px;
+}
+
+.serviceDesc{
+    width: 700px;
+    margin: 0;
+    color: white;
+    font-size: 24px;
+}
+
+
+.tech-hero-block {
+        /* Ensure modern fonts */
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        position: relative;
+        width: 100%;
+        /* Generous padding for a premium feel */
+        padding: 120px 20px; 
+        text-align: center;
+        color: #ffffff; /* White text for contrast against dark background */
+        overflow: hidden;
+
+        /* --- BACKGROUND CONFIGURATION --- */
+        
+        /* 1. Set the background color as a fallback */
+        background-color: #0f172a; /* Deep dark blue/slate */
+
+        /* 2. The Image & The Overlay */
+        /* We stack two things here:
+           - First: A semi-transparent dark gradient overlay (rgba(15, 23, 42, 0.85)). 
+             Changing the '0.85' value makes it darker (closer to 1) or lighter (closer to 0).
+           - Second: The URL to the tech image. 
+        */
+        background-image: 
+            linear-gradient(to bottom, rgba(15, 23, 42, 0.40), rgba(15, 23, 42, 0.60)),
+            url('../../../resources/images/backgroundImg.png');
+
+      
+    }
+
+    /* Optional: Add a subtle coded pattern overlay using CSS only */
+    .tech-hero-block::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        /* A very faint grid pattern to look like a blueprint or monitor pixels */
+        background-image: 
+            linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      
+    }
+
+    /* --- Typography Styling --- */
+    .tech-hero-content {
+        position: relative; /* Ensures text sits above the grid overlay */
+        z-index: 2;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .tech-hero-content h1 {
+        margin: 0 0 24px 0;
+        font-size: 48px; /* Slightly larger for impact */
+        font-weight: 700;
+        letter-spacing: -1px;
+        /* A slight blueish-white glow to the text */
+        text-shadow: 0 0 20px rgba(100, 180, 255, 0.3);
+    }
+
+    .tech-hero-content p {
+        margin: 0 auto;
+        font-size: 20px;
+        line-height: 1.6;
+        /* Using a slightly transparent white for the subtitle so the H1 pops more */
+        color: rgba(255, 255, 255, 0.85); 
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+        .tech-hero-block { padding: 80px 20px; }
+        .tech-hero-content h1 { font-size: 36px; }
+        .tech-hero-content p { font-size: 18px; }
+    }
+
+
+.additionalInformationWrapper {
+    width: 400px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid black;
+    height: 700px;
+}
+
+.additionalInformation {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  height: 100%;
+}
+
+.additionalInformation h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.additionalInformation{
+    color: #555;
+}
+

@@ -1,0 +1,159 @@
+/* WRAPPER */
+.singleBundleWrapper {
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px;
+}
+
+/* CARD */
+.singleBundle {
+    width: 280px;
+    background: linear-gradient(180deg,
+            rgba(30, 41, 59, 0.85),
+            rgba(2, 6, 23, 0.95));
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.singleBundle:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.6),
+        0 30px 80px rgba(139, 92, 246, 0.25);
+}
+
+
+.singleBundle img {
+    height: 150px;
+    width: 100%;
+    /* Растягиваем на всю ширину */
+    object-fit: cover;
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
+
+    display: block;
+   
+}
+
+
+
+
+.infoBlock {
+    padding: 10px 15px ;
+    color: rgba(255, 255, 255, 0.736);
+}
+
+
+.bundleTitle h2 {
+    font-size: 15px;
+    margin-bottom: 0px;
+}
+
+.briefDescription {
+    font-size: 10px;
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+
+.priceDescription {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 0px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #38bdf8;
+    margin: 5px 0 6px 0;
+}
+
+/* MAIN INFO BLOCK */
+.bundleMainInfo {
+    border-top: 1px solid rgba(148, 163, 184, 0.15);
+    padding-top: 2px;
+}
+
+.topMainInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.topMainInfo ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bottomMainInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bottomMainInfo ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* SECTION TITLES */
+.titleTop h4,
+.titleBottom h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #c7d2fe;
+}
+
+/* LISTS */
+.bundleMainInfo ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.bundleMainInfo li {
+    position: relative;
+    padding-left: 22px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #e5e7eb;
+    margin-bottom: 8px;
+}
+
+/* CHECK ICON */
+.bundleMainInfo li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #2B7FFF;
+    font-weight: bold;
+}
+
+/* BUTTON */
+.bundleMainInfo button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px 0;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bundleMainInfo button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.5);
+}
