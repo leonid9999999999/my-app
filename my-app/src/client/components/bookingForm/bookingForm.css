@@ -1,0 +1,137 @@
+.bookingFormWrapper{
+    background-color: white;
+    width: 600px;
+    height: 700px;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+
+.bookingFormInner{
+
+}
+
+.bookingForm{
+
+}
+
+.phoneNumBlock{
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.phone-prefix{
+    margin:10px
+}
+
+
+
+.leftBookingBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    align-items: flex-start;
+
+}
+
+.rightBookingBlock{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bookingFields{
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+}
+
+.bookingFields input{
+    padding: 5px  5px 5px 10px ;
+    width: 100%;
+    height: 35px;
+    border-radius: 15px;
+    border: 1px solid grey;
+}
+
+.bookingFields input:hover{
+   
+    border: 1.2px solid rgb(0, 0, 0);
+}
+
+
+#phoneNumber{
+    
+}
+#dateTime{
+    height: 45px;
+    border-radius: 15px;
+}
+
+#bookingNote{
+    padding: 10px  5px 5px 15px ;
+    margin: 0 0 20px 0;
+    border-radius: 15px;
+    height: 100px;
+    border: 1px solid grey;
+    width: 100%;
+}
+#bookingNote:hover{
+    border: 1.2px solid rgb(0, 0, 0);
+}
+
+#phoneNumber2{
+    width: 320px;
+    border-radius: 0px 15px 15px 0;
+}
+
+.BookingDesc{
+   
+    display: flex;
+    flex-direction: column;
+    margin:10px 0 0px 0px;
+}
+
+.BookingDesc h3{
+    margin-bottom:10px;
+    font-size: 29px;
+    
+}
+
+.BookingDesc p{
+    
+    font-size: 22px;
+    color: rgb(97, 97, 97);
+    margin:0;
+    
+}
+
+
+.error{
+    color:red
+}
+.closeImg{
+    width:30px;
+    height: 30px;
+    margin: 0px 80px 0 0;
+    cursor: pointer;
+}
+
+.closeImg:hover {
+    transform: scale(1.2);
+}
+
+.wrapperDesc{
+    display: flex ;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.field-label {
+  display: block;       /* Forces the label to sit on its own line */
+  margin-bottom: 5px;   /* Adds a little space between label and input */
+  font-weight: bold;    /* Optional: makes the label text bold */
+  margin-top: 15px;     /* Adds space between the previous input and the new label */
+}

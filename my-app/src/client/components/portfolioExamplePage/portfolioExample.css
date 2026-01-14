@@ -1,0 +1,30 @@
+.portfolioExampleWrapper{
+    margin-top: 120px;
+   
+}
+
+.moreInfromationAboutProjectWrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.explanationInfoBlock{
+    margin: 50px 0 0 0;
+}
+
+.moreInfromationAboutProject{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 50px;
+    width: 1000px;
+}
+
+.moreInfromationAboutProject p {
+   color:white;
+}
+
+.why-it-is-good ul {
+    color:white;
+}
