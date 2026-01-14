@@ -18,8 +18,7 @@ function Header() {
         </Link>
         <div className="header__button">Contact Us</div>
       </div>
-
-    </div>
+  </div>
   );
 }
 
