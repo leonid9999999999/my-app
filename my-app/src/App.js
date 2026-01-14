@@ -6,6 +6,7 @@ import Main from "./client/components/main/main";
 import ContactUs from './client/components/contactUs/contactUs';
 import OurServices from './client/components/services/ourServices/ourServices.js';
 import OurPortfolio from './client/components/ourPortfolio/ourPortfolio.js';
+import PortfolioExample from './client/components/portfolioExamplePage/portfolioExample.js';
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
                     <Route path="ourServices" element={<OurServices/>} />
 
                     <Route path="/ourPortfolio" element={<OurPortfolio />} />
+
+                    <Route path="/portfolioExample" element={<PortfolioExample />} />
 
                 </Route>
                 

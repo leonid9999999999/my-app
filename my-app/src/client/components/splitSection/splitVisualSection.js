@@ -92,7 +92,7 @@ const SplitVisualSection = ({ sections }) => {
                 isReversed ? "split-image-bottom" : "split-image-top"
               }`}
             >
-              <img src={section.image} alt={section.title} />
+              <img style={section.styles} src={section.image} alt={section.title} />
             </div>
           </div>
         );
