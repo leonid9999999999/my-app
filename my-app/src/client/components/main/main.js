@@ -26,10 +26,10 @@ function Main() {
       const y = (e.clientY - rect.top) / rect.height - 0.5;
 
       logoEl.style.transform = `
-        translate(-50%, -50%)
-        rotateX(${ -y * 10 }deg)
-        rotateY(${ x * 12 }deg)
-      `;
+  translate(-50%, -50%)
+  rotateX(${ -y * 10 }deg)
+  rotateY(${ x * 12 }deg)
+`;
     };
 
     hero.addEventListener("mousemove", handleMouseMove);
