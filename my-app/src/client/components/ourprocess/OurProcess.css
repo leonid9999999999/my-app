@@ -1,0 +1,133 @@
+.process {
+  height: 500vh;
+  background: radial-gradient(ellipse at top, #0f172a, #020617);
+  color: white;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.process.is-visible {
+  opacity: 1;
+}
+
+.process-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 100px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* HEADER */
+.process-header {
+  text-align: center;
+}
+
+.process-header h2 {
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.process-header p {
+  margin-top: 12px;
+  opacity: 0.55;
+}
+
+/* TIMELINE FULL WIDTH */
+.process-timeline {
+  position: relative;
+  width: 100%;
+}
+
+.timeline-line {
+  height: 2px;
+  background: rgba(255,255,255,0.15);
+  position: relative;
+}
+
+.timeline-progress {
+  position: absolute;
+  inset: 0;
+  width: 0;
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  transition: width 0.8s cubic-bezier(.4,0,.2,1);
+}
+
+.timeline-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -20px;
+}
+
+.timeline-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #020617;
+  border: 2px solid rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: all 0.6s cubic-bezier(.4,0,.2,1);
+}
+
+.timeline-circle.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.timeline-circle.active {
+  background: #3b82f6;
+  color: #020617;
+  box-shadow: 0 0 30px rgba(59,130,246,0.6);
+}
+
+/* CONTENT */
+.process-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px; /* немного уменьшил для симметрии */
+  align-items: center; /* вертикальное центрирование текста относительно изображения */
+}
+
+/* IMAGE */
+.process-image img {
+  width: 100%;
+  border-radius: 28px;
+  box-shadow: 0 60px 140px rgba(0,0,0,0.65);
+  transition: transform 1s ease;
+}
+
+/* TEXT */
+.process-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* центрирует текст по вертикали */
+}
+
+.step-bg {
+  position: absolute;
+  top: -40px;
+  left: -20px;
+  font-size: 140px;
+  font-weight: 700;
+  opacity: 0.05;
+  filter: blur(1px);
+  pointer-events: none;
+}
+
+.process-text h3 {
+  font-size: 38px;
+  margin-bottom: 16px;
+}
+
+.process-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  opacity: 0.7;
+}

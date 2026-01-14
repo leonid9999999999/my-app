@@ -1,6 +1,7 @@
 import logo from '../../../resources/images/ima1logo.png';
 import './header.css';
 
+
 function Header() {
   return (
     <div className="header">
@@ -14,8 +15,7 @@ function Header() {
         <div className="header__link">Work</div>
         <div className="header__button">Contact Us</div>
       </div>
-
-    </div>
+  </div>
   );
 }
 
