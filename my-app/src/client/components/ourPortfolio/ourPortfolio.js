@@ -1,42 +1,45 @@
-import SinglePortfolio from "./singlePorfolio/singlePortfolio"
-import Ecom from "../../../resources/displayImages/e-com.png"
-import "./ourPortfolio.css"
+import SinglePortfolio from "./singlePorfolio/singlePortfolio";
+import portfolioData from "../../data/portfolio/porfolioData.json";
+import Ecom from "../../../resources/displayImages/e-com.png";
+import { useNavigate } from "react-router-dom";
+import "./ourPortfolio.css";
 
-function OurPortfolio(){
-    return(
+function OurPortfolio() {
+    const navigate = useNavigate();
+
+    return (
         <div className="ourPorfolioWrapper">
             <div className="ourPortfolio">
-                <div className="topOurPortfolioBlock">
-                    <SinglePortfolio image={Ecom}
-                        title="E-Commerce SaleStaff"
-                        siteUrl="https://example.com"
-                        description="
-                                    Big Blue Campers are a specialist VW campervan hire 
-                                    company in Worcestershire offering modern Volkswagen campervan hire.
-                                    "
-                    />
-                </div>
-                <div className="bottomOurPortfolioBlock">
-                    <SinglePortfolio image={Ecom}
-                        title="E-Commerce SaleStaff"
-                        siteUrl="https://example.com"
-                    />
-                </div>
-                <div className="topOurPortfolioBlock">
-                    <SinglePortfolio image={Ecom}
-                        title="E-Commerce SaleStaff"
-                        siteUrl="https://example.com"
-                    />
-                </div>
-                <div className="bottomOurPortfolioBlock">
-                    <SinglePortfolio image={Ecom}
-                        title="E-Commerce SaleStaff"
-                        siteUrl="https://example.com"
-                    />
-                </div>
-                
+
+                {portfolioData.map(item => (
+                    <div key={item.id} className="portfolioPair">
+
+                        {/* TOP */}
+                        <div className="topOurPortfolioBlock">
+                            <SinglePortfolio
+                                image={Ecom}
+                                title={item.topTitle || item.title}
+                                siteUrl={item.siteUrl}
+                                onClick={() => navigate(`/portfolio/${item.id}`)}
+                            />
+                        </div>
+
+                        {/* BOTTOM */}
+                        <div className="bottomOurPortfolioBlock">
+                            <SinglePortfolio
+                                image={Ecom}
+                                title={item.bottomTitle || item.title}
+                                siteUrl={item.siteUrl}
+                                onClick={() => navigate(`/portfolio/${item.id}`)}
+                            />
+                        </div>
+
+                    </div>
+                ))}
+
             </div>
         </div>
-    )
+    );
 }
-export default OurPortfolio
+
+export default OurPortfolio;
