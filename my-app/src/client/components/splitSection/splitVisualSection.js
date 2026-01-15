@@ -62,7 +62,8 @@
 
 import "./splitVisualSection.css";
 
-const SplitVisualSection = ({ sections }) => {
+const SplitVisualSection = ({ sections = [],styles,  }) => {
+  console.log(sections)
   return (
     <section className="split-section">
       {sections.map((section, index) => {
@@ -92,7 +93,7 @@ const SplitVisualSection = ({ sections }) => {
                 isReversed ? "split-image-bottom" : "split-image-top"
               }`}
             >
-              <img style={section.styles} src={section.image} alt={section.title} />
+              <img style={styles} src={section.image} alt={section.title} />
             </div>
           </div>
         );

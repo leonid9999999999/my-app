@@ -33,7 +33,7 @@ function App() {
 
                     <Route path="/ourPortfolio" element={<OurPortfolio />} />
 
-                    <Route path="/portfolioExample" element={<PortfolioExample />} />
+                    <Route path="/portfolio/:id" element={<PortfolioExample />} />
 
                 </Route>
                 

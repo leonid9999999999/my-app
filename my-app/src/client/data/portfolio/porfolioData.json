@@ -3,33 +3,129 @@
         "id": "ecommerce-salestaff",
         "position": "top",
         "image": "Ecom",
-        "title": "E-Commerce SaleStaff",
+        "title": "E-Commerce Website for Clothing Reseller",
         "siteUrl": "https://example.com",
-        "description": "Big Blue Campers are a specialist VW campervan hire company in Worcestershire offering modern Volkswagen campervan hire."
+        "description": "Big Blue Campers are a specialist VW campervan hire company in Worcestershire offering modern Volkswagen campervan hire.",
+        "sliderImages": [
+                "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
+                "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
+                "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png"
+        ],
+        "sections": [
+            {
+                "title": "Bridge Betweeen Customer & You",
+                "paragraphs": [
+                    "We built this platform to be a bridge between you and your customers, using technology to make them feel understood rather than overwhelmed. We engineered smart search capabilities and intuitive filtering and sorting so that finding the perfect item feels like a delightful discovery, not a tedious hunt. Recognising that life moves fast, we ensured a fully responsive design that adapts beautifully to any device, giving your users the freedom to shop wherever they feel most comfortable. Finally, we integrated High-Qulity media such as videos,images,products, multiple payment options to ensure that the moment of purchase is not just secure, but effortless, leaving them with a sense of trust and satisfaction every time they visit."
+                ],
+                "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
+                "imagePosition": "right"
+            },
+            {
+                "title": "Automate Heavy Lifting",
+                "paragraphs": [
+                    "Behind the scenes, we’ve engineered a powerful command center designed to give you complete peace of mind and the freedom to focus on growth. We integrated robust Inventory Management and a streamlined Order Management System to automate the heavy lifting, ensuring you never have to worry about overselling or losing track of a shipment. To help your brand find its voice and audience, we built in advanced Marketing and SEO tools that put you on the map, all while safeguarding your reputation with top-tier SSL security.",
+                    "Finally, we empowered you with a crystal-clear Analytics Dashboard, turning complex data into actionable insights so you can make every business decision with absolute confidence."
+                ],
+                "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1768437636/main-sample.png",
+                "imagePosition": "left"
+            }
+        ],
+        "moreDescriptionAboutService": "What We Developed: We have deployed a high-performance, mobile-first e-commerce platform specifically engineered for the unique demands of the fashion resale market. Unlike standard retail sites, designed to handle one-off vintage and pre-loved items without the risk of double-selling.",
+        "whyGood": [
+            {
+                "title": "Operational Efficiency",
+                "content": "The backend automates the complex logistics of resale—from stock intake to generating Royal Mail postage labels—reducing manual admin time by roughly 40%."
+            },
+            {
+                "title": "High Conversion UX",
+                "content": "We tackled the biggest barrier in resale—trust—by implementing a high-fidelity product showcase with zoom capabilities and detailed measurement guides, drastically reducing return rates."
+            },
+            {
+                "title": "Scalability",
+                "content": "The infrastructure is robust enough to handle high-traffic stock drops, ensuring the site remains stable during peak release times."
+            }
+        ]
+        
     },
     {
-        "id": "branding-project",
+        "id": "2",
         "position": "bottom",
         "image": "Ecom",
         "title": "Brand Identity",
         "siteUrl": "https://example.com",
-        "description": "Brand identity and logo system."
+        "description": "Brand identity and logo system.",
+        "sections": [
+            {
+                "title": "Bridge Betweeen Customer & You",
+                "paragraphs": [
+                    "We built this platform to be a bridge between you and your customers, using technology to make them feel understood rather than overwhelmed. We engineered smart search capabilities and intuitive filtering and sorting so that finding the perfect item feels like a delightful discovery, not a tedious hunt. Recognising that life moves fast, we ensured a fully responsive design that adapts beautifully to any device, giving your users the freedom to shop wherever they feel most comfortable. Finally, we integrated High-Qulity media such as videos,images,products, multiple payment options to ensure that the moment of purchase is not just secure, but effortless, leaving them with a sense of trust and satisfaction every time they visit."
+                ],
+                "image": "",
+                "imagePosition": "right"
+            },
+            {
+                "title": "Automate Heavy Lifting",
+                "paragraphs": [
+                    "Behind the scenes, we’ve engineered a powerful command center designed to give you complete peace of mind and the freedom to focus on growth. We integrated robust Inventory Management and a streamlined Order Management System to automate the heavy lifting, ensuring you never have to worry about overselling or losing track of a shipment. To help your brand find its voice and audience, we built in advanced Marketing and SEO tools that put you on the map, all while safeguarding your reputation with top-tier SSL security.",
+                    "Finally, we empowered you with a crystal-clear Analytics Dashboard, turning complex data into actionable insights so you can make every business decision with absolute confidence."
+                ],
+                "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+                "imagePosition": "left"
+            }
+        ]
     },
     {
-        "id": "ecommerce-salestaff",
+        "id": "ecommerce-salestaff-2",
         "position": "top",
         "image": "Ecom",
         "title": "E-Commerce SaleStaff",
         "siteUrl": "https://example.com",
-        "description": "Big Blue Campers are a specialist VW campervan hire company in Worcestershire offering modern Volkswagen campervan hire."
+        "description": "Big Blue Campers are a specialist VW campervan hire company in Worcestershire offering modern Volkswagen campervan hire.",
+        "sections": [
+            {
+                "title": "Bridge Betweeen Customer & You",
+                "paragraphs": [
+                    "We built this platform to be a bridge between you and your customers, using technology to make them feel understood rather than overwhelmed. We engineered smart search capabilities and intuitive filtering and sorting so that finding the perfect item feels like a delightful discovery, not a tedious hunt. Recognising that life moves fast, we ensured a fully responsive design that adapts beautifully to any device, giving your users the freedom to shop wherever they feel most comfortable. Finally, we integrated High-Qulity media such as videos,images,products, multiple payment options to ensure that the moment of purchase is not just secure, but effortless, leaving them with a sense of trust and satisfaction every time they visit."
+                ],
+                "image": "",
+                "imagePosition": "right"
+            },
+            {
+                "title": "Automate Heavy Lifting",
+                "paragraphs": [
+                    "Behind the scenes, we’ve engineered a powerful command center designed to give you complete peace of mind and the freedom to focus on growth. We integrated robust Inventory Management and a streamlined Order Management System to automate the heavy lifting, ensuring you never have to worry about overselling or losing track of a shipment. To help your brand find its voice and audience, we built in advanced Marketing and SEO tools that put you on the map, all while safeguarding your reputation with top-tier SSL security.",
+                    "Finally, we empowered you with a crystal-clear Analytics Dashboard, turning complex data into actionable insights so you can make every business decision with absolute confidence."
+                ],
+                "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+                "imagePosition": "left"
+            }
+        ]
     },
     {
-        "id": "branding-project",
+        "id": "branding-project-2",
         "position": "bottom",
         "image": "Ecom",
         "title": "Brand Identity",
         "siteUrl": "https://example.com",
-        "description": "Brand identity and logo system."
+        "description": "Brand identity and logo system.",
+        "sections": [
+            {
+                "title": "Bridge Betweeen Customer & You",
+                "paragraphs": [
+                    "We built this platform to be a bridge between you and your customers, using technology to make them feel understood rather than overwhelmed. We engineered smart search capabilities and intuitive filtering and sorting so that finding the perfect item feels like a delightful discovery, not a tedious hunt. Recognising that life moves fast, we ensured a fully responsive design that adapts beautifully to any device, giving your users the freedom to shop wherever they feel most comfortable. Finally, we integrated High-Qulity media such as videos,images,products, multiple payment options to ensure that the moment of purchase is not just secure, but effortless, leaving them with a sense of trust and satisfaction every time they visit."
+                ],
+                "image": "",
+                "imagePosition": "right"
+            },
+            {
+                "title": "Automate Heavy Lifting",
+                "paragraphs": [
+                    "Behind the scenes, we’ve engineered a powerful command center designed to give you complete peace of mind and the freedom to focus on growth. We integrated robust Inventory Management and a streamlined Order Management System to automate the heavy lifting, ensuring you never have to worry about overselling or losing track of a shipment. To help your brand find its voice and audience, we built in advanced Marketing and SEO tools that put you on the map, all while safeguarding your reputation with top-tier SSL security.",
+                    "Finally, we empowered you with a crystal-clear Analytics Dashboard, turning complex data into actionable insights so you can make every business decision with absolute confidence."
+                ],
+                "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+                "imagePosition": "left"
+            }
+        ]
     }
-    
 ]
