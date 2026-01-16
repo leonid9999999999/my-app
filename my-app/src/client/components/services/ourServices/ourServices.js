@@ -8,69 +8,16 @@ import FAQSection from "../faqSection/faqSection";
 import ProjectCard from "../projectCard/projectCard";
 import { useRef } from 'react';
 import SingleBundle from "../../ourBundles/singleBundle/singleBundle";
-
+import portfolioData from "../../../data/portfolio/porfolioData.json";
 
 import OurBundles from "../../ourBundles/ourBundles";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-const projects = [
-  {
-    image:
-      "https://images.unsplash.com/photo-1760037028517-e5cc6e3ebd3e?q=80&w=1080",
-    title: "LEO Technology",
-    tags: "Logo, Website & Branding",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1664907057569-65ab622623c4?q=80&w=1080",
-    title: "Crop Advisors",
-    tags: "Brand Identity & Marketing",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1594235048794-fae8583a5af5?q=80&w=1080",
-    title: "Arena Offices",
-    tags: "Brand Strategy & Design",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1600812703042-38e573598898?q=80&w=1080",
-    title: "Chrysalis Yacht Design",
-    tags: "Luxury Branding & Collateral",
-  },
-];
+
 
 const PortfolioGrid = () => {
-  
-  
-  return (
-    <section className="portfolio-section">
-      <div className="portfolio-container">
-        <h2 className="portfolio-heading">Latest Branding Projects</h2>
-
-        <div className="portfolio-grid">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-
-const OurServices = (props) => {
-  const location = useLocation();
   const navigate = useNavigate();
-  const serviceDetails = location?.state;
-  const sections = serviceDetails.ourServicesInfo[0].sections
-  const slides= serviceDetails.ourServicesInfo[0].sliderImages
- 
-  const { firstPageTitle, additionalTitle, additionalParagpragh} = serviceDetails.ourServicesInfo[0]|| {};
-
-  console.log("SeC", firstPageTitle)
-
   function Page(item) {
 
     const safeSections = item.sections || [];
@@ -90,7 +37,36 @@ const OurServices = (props) => {
       });
 
   }
+  
+  return (
+    <section className="portfolio-section">
+      <div className="portfolio-container">
+        <h2 className="portfolio-heading">Latest Branding Projects</h2>
+
+        <div className="portfolio-grid">
+          {portfolioData.map((project, index) => (
+            <ProjectCard onClick={() => Page(project)} key={index} title={project.title} image={project.image} {...portfolioData} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+
+const OurServices = (props) => {
+  const location = useLocation();
+
+  const serviceDetails = location?.state;
+  const sections = serviceDetails.ourServicesInfo[0].sections
+  const slides= serviceDetails.ourServicesInfo[0].sliderImages
  
+  const { firstPageTitle, additionalTitle, additionalParagpragh} = serviceDetails.ourServicesInfo[0]|| {};
+
+  console.log("SeC", firstPageTitle)
+
+ 
+// Hard codeed Leave it  Ostav' !!!!
 const cards = [
   {
     title: "Discover",

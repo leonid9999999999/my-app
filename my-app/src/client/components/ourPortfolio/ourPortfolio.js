@@ -50,7 +50,7 @@ function OurPortfolio() {
                             {/* TOP */}
                             <div className="topOurPortfolioBlock">
                                 <SinglePortfolio
-                                    image={Ecom}
+                                    image={topItem.image}
                                     description={topItem.description}
                                     title={topItem.title}
                                     siteUrl={`/portfolio/${topItem.id}`}
@@ -62,8 +62,8 @@ function OurPortfolio() {
                             {bottomItem && (
                                 <div className="bottomOurPortfolioBlock">
                                     <SinglePortfolio
-                                        image={Ecom}
-                                        description={topItem.description}
+                                        image={bottomItem.image}
+                                        description={bottomItem.description}
                                         title={bottomItem.title}
                                         siteUrl={`/portfolio/${bottomItem.id}`}
                                         onClick={() => Page(bottomItem)}

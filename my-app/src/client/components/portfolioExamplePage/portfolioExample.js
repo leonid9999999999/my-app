@@ -5,6 +5,7 @@ import { borderRadius, height, width } from "@mui/system"
 import ImageSlider2 from "../imageSlider2/imageSlider2"
 import { useLocation } from "react-router-dom";
 
+
 function PortfolioExample(){
 
     const location = useLocation();

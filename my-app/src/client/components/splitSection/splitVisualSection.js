@@ -82,7 +82,7 @@ const SplitVisualSection = ({ sections = [],styles,  }) => {
               ))}
 
               {section.linkText && (
-                <a href={section.linkUrl} className="split-link">
+                <a href={"/ContactUs"} className="split-link">
                   {section.linkText}
                 </a>
               )}
@@ -93,7 +93,8 @@ const SplitVisualSection = ({ sections = [],styles,  }) => {
                 isReversed ? "split-image-bottom" : "split-image-top"
               }`}
             >
-              <img style={styles} src={section.image} alt={section.title} />
+              
+              <img  className="imageSection" style={styles} src={section.image} alt={section.title} />
             </div>
           </div>
         );

@@ -2,10 +2,10 @@
     {
         "id": "ecommerce-salestaff",
         "position": "top",
-        "image": "Ecom",
+        "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
         "title": "E-Commerce Website for Clothing Reseller",
         "siteUrl": "https://example.com",
-        "description": "Big Blue Campers are a specialist VW campervan hire company in Worcestershire offering modern Volkswagen campervan hire.",
+        "description": "A custom e-commerce platform for an independent clothing retailer in Cardiff, enabling the brand to expand their local presence into a fully digital online store",
         "sliderImages": [
                 "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
                 "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
@@ -50,37 +50,142 @@
     {
         "id": "2",
         "position": "bottom",
-        "image": "Ecom",
-        "title": "Brand Identity",
+        "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1768501387/Screenshot_2026-01-15_at_18.22.59_imnqtk.png",
+        "title": "University Smart Campus Navigator",
         "siteUrl": "https://example.com",
-        "description": "Brand identity and logo system.",
+        "description": "Smart Campus Navigator Web Applicaiton For Cardiff Metropolitan University",
+        "sliderImages": [
+            "https://res.cloudinary.com/dibygfenr/image/upload/v1768501387/Screenshot_2026-01-15_at_18.22.59_imnqtk.png",
+            "https://res.cloudinary.com/dibygfenr/image/upload/v1768576846/Screenshot_2026-01-16_at_15.20.39_oyycbt.png",
+            "https://res.cloudinary.com/dibygfenr/image/upload/v1768576557/Screenshot_2026-01-16_at_15.15.47_xhxu2g.png",
+            "https://res.cloudinary.com/dibygfenr/image/upload/v1768576439/Screenshot_2026-01-16_at_15.13.53_ab78ve.png",
+            "https://res.cloudinary.com/dibygfenr/image/upload/v1768576555/Screenshot_2026-01-16_at_15.15.08_fj5m7f.png"
+        ],
         "sections": [
             {
-                "title": "Bridge Betweeen Customer & You",
+                "title": "Solving The Campus Maze",
                 "paragraphs": [
-                    "We built this platform to be a bridge between you and your customers, using technology to make them feel understood rather than overwhelmed. We engineered smart search capabilities and intuitive filtering and sorting so that finding the perfect item feels like a delightful discovery, not a tedious hunt. Recognising that life moves fast, we ensured a fully responsive design that adapts beautifully to any device, giving your users the freedom to shop wherever they feel most comfortable. Finally, we integrated High-Qulity media such as videos,images,products, multiple payment options to ensure that the moment of purchase is not just secure, but effortless, leaving them with a sense of trust and satisfaction every time they visit."
+                    "For many first-year students, stepping onto a university campus can feel overwhelming. The excitement of a new beginning is often overshadowed by the anxiety of simply not knowing where to go. We wanted to eliminate that stress. Our goal was to create a digital companion that makes the Llandaff campus feel familiar from day one, clearly displaying every lecture block, café, and gym facility.",
+                    "We didn't just rush into coding. We started with empathy and structure, using Figma to prototype user-centric designs. We mapped out every interaction to ensure that finding a specific room was intuitive, moving from rough concepts to a polished, confirmed design blueprint before development began."
                 ],
-                "image": "",
+                "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1768576846/Screenshot_2026-01-16_at_15.20.39_oyycbt.png",
                 "imagePosition": "right"
             },
             {
-                "title": "Automate Heavy Lifting",
+                "title": "Smart Navigation, Powered by Code",
                 "paragraphs": [
-                    "Behind the scenes, we’ve engineered a powerful command center designed to give you complete peace of mind and the freedom to focus on growth. We integrated robust Inventory Management and a streamlined Order Management System to automate the heavy lifting, ensuring you never have to worry about overselling or losing track of a shipment. To help your brand find its voice and audience, we built in advanced Marketing and SEO tools that put you on the map, all while safeguarding your reputation with top-tier SSL security.",
-                    "Finally, we empowered you with a crystal-clear Analytics Dashboard, turning complex data into actionable insights so you can make every business decision with absolute confidence."
+                    "To turn our designs into a living application, we utilized the robust MERN stack, building a responsive and dynamic platform. The core of the experience is powered by Leaflet, which we integrated to render interactive, detailed maps of the campus architecture. But we went beyond just showing static locations.",
+                    "We engineered intelligent routing logic that connects the user's live location directly to their destination. The system calculates the fastest route, estimates travel time, and draws the exact path across the campus grounds. Whether finding a hidden classroom or the nearest coffee spot, the application provides real-time guidance, ensuring that even a complete newcomer can navigate the Llandaff campus with total confidence."
                 ],
-                "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+                "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1768501387/Screenshot_2026-01-15_at_18.22.59_imnqtk.png",
                 "imagePosition": "left"
+            },
+            {
+                "title": "Safety Without Compromise",
+                "paragraphs": [
+                    "We believe that a great application relies on trust. That is why we built security into the foundation of our architecture. We chose MongoDB as our cloud database solution, leveraging its enterprise-grade encryption to ensure that all sensitive data remains private and protected from external threats.",
+                    "We took no shortcuts with user identity. All passwords are secured using advanced hashing algorithms, making them unreadable to anyone but the user. We fortified the codebase to be resilient against common vulnerabilities, creating a safe environment where different user groups—from students to staff—can navigate the system with confidence, knowing their digital footprint is secure."
+                ],
+                "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1768576439/Screenshot_2026-01-16_at_15.13.53_ab78ve.png",
+                "imagePosition": "right"
+            },
+            {
+                "title": "Exclusive Community Access",
+                "paragraphs": [
+                    "To preserve the integrity of the platform, we implemented a strict authentication system. We developed a secure Registration and Login workflow that acts as a digital gatekeeper, ensuring that the application remains an exclusive tool for the university context.",
+                    "By enforcing robust authorisation protocols, we guarantee that only verified students and staff can access the sensitive campus data. This creates a focused, safe environment where the university community can utilise the navigation tools without external interference, ensuring resources are used only by those they were designed for."
+                ],
+                "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1768576555/Screenshot_2026-01-16_at_15.15.08_fj5m7f.png",
+                "imagePosition": "left"
+            }
+        ],
+        "moreDescriptionAboutService": "What We Developed: We have engineered a comprehensive, mobile-responsive campus navigation platform using the MERN stack, specifically designed to solve the navigational challenges of the Llandaff campus. Moving far beyond static PDF maps, this dynamic application integrates Leaflet.js to provide an interactive, real-time mapping experience. By calculating exact routes from a user's live location to specific lecture blocks, cafes, or gyms, we have created a digital companion that eliminates the anxiety of orientation and ensures students and staff can find their way with absolute precision.",
+        "whyGood": [
+            {
+                "title": "Time Optimisation",
+                "content": "The application's intelligent routing logic calculates the most efficient paths across the campus. This significantly reduces travel time between lectures, helping new students avoid lateness and navigate the complex site stress-free."
+            },
+            {
+                "title": "Interactive Precision",
+                "content": "We moved beyond basic wayfinding by integrating Leaflet.js for granular mapping. Users can visualize their exact live location relative to campus buildings, turning a confusing physical layout into an intuitive, easily navigable digital experience."
+            },
+            {
+                "title": "Secure Architecture",
+                "content": "Built on the MERN stack with enterprise-grade MongoDB storage, the system manages sensitive user data securely. The implementation of strict authentication ensures that the platform remains an exclusive, protected resource for the university community."
             }
         ]
     },
     {
-        "id": "ecommerce-salestaff-2",
+        "id": "3",
         "position": "top",
-        "image": "Ecom",
-        "title": "E-Commerce SaleStaff",
+        "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1768502028/Screenshot_2026-01-15_at_18.33.39_ntavot.png",
+        "title": "Booking System",
+        
+        "description": "A modern booking system engineered to streamline operations for a local client. By migrating from inconvenient manual bookings to a full-stack web application, we automated the entire client management process.",
+        "sliderImages": [
+            "https://res.cloudinary.com/dibygfenr/image/upload/v1768502028/Screenshot_2026-01-15_at_18.33.39_ntavot.png",
+            "https://res.cloudinary.com/dibygfenr/image/upload/v1768589375/Screenshot_2026-01-16_at_18.49.13_jzdil0.png",
+            "https://res.cloudinary.com/dibygfenr/image/upload/v1768589378/Screenshot_2026-01-16_at_18.49.29_nzzntd.png",
+            "https://res.cloudinary.com/dibygfenr/image/upload/v1768589333/Screenshot_2026-01-16_at_18.48.37_vglmh7.png",
+            "https://res.cloudinary.com/dibygfenr/image/upload/v1768589336/Screenshot_2026-01-16_at_18.48.51_t2bzyt.png"
+        ],
+        "sections": [
+            {
+                "title": "From Chaos to Clarity: Designing 'Book Flow'",
+                "paragraphs": [
+                    "Everything began with a conversation about a specific problem: a local cleaning business was drowning in paperwork, relying on phone calls and physical diaries to manage their livelihood. We sat down with the client to gather detailed requirements, aiming to replace this administrative chaos with a digital solution. Our goal was to design 'Book Flow'—a bespoke application that would automate their workflow.",
+                    "After analysing their needs, we chose the MERN stack for its flexibility and performance. We moved from initial sketches to full prototypes, ensuring the design solved the core issue of manual scheduling before we wrote a single line of code."
+                ],
+                "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1768589375/Screenshot_2026-01-16_at_18.49.13_jzdil0.png",
+                "imagePosition": "right"
+            },
+            {
+                "title": "A Seamless Booking Experience",
+                "paragraphs": [
+                    "We developed a clean, intuitive main interface where customers can browse all available cleaning services and book their preferred slots in seconds. To ensure transparency, we engineered a comprehensive user dashboard featuring dynamic tables. Here, clients can view their full booking history, checking exactly when and what they have booked.",
+                    "For the business side, we built a powerful admin panel. This allows the cleaning team to visualise their daily schedule, see exactly where they need to go, and manage appointments efficiently, transforming a complex log of addresses into a clear, actionable itinerary."
+                ],
+                "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1768589378/Screenshot_2026-01-16_at_18.49.29_nzzntd.png",
+                "imagePosition": "left"
+            },
+            {
+                "title": "Fortified Data Protection",
+                "paragraphs": [
+                    "Security was paramount. We leveraged the MERN stack and MongoDB to create a secure environment for sensitive client data. We implemented advanced cryptographic hashing to protect passwords and utilised JWT (JSON Web Tokens) to ensure that sessions remain private and that no unauthorised personnel can access the system.",
+                    "Furthermore, we integrated AWS S3 for secure cloud storage of images, ensuring that before-and-after photos or profile images are handled with enterprise-grade security. Every layer of the application was built to prioritise user privacy and data integrity."
+                ],
+                "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1768589333/Screenshot_2026-01-16_at_18.48.37_vglmh7.png",
+                "imagePosition": "right"
+            }
+        ],
+        "moreDescriptionAboutService": "What We Developed: 'Book Flow' is a custom-engineered web application designed to digitise the operations of a local cleaning service. It serves as a comprehensive management tool that connects customers directly with the workforce, automating scheduling, invoicing, and route planning in one centralised platform.",
+            "whyGood": [
+                {
+                    "title": "Operational Clarity",
+                    "content": "The transition from paper diaries to our digital table system gave the business owner immediate visibility over their schedule, eliminating double-bookings and missed appointments entirely."
+                },
+                {
+                    "title": "Secure Infrastructure",
+                    "content": "By utilising AWS for media and hashed encryption for data, we ensured the system meets modern security standards, giving both the business and their clients peace of mind regarding their personal information."
+                },
+                {
+                    "title": "Ongoing Partnership",
+                    "content": "We don't just launch and leave. We maintain close contact with the business, providing ongoing support and implementing new features based on real-world usage. The client reported a significant reduction in admin time and is delighted with the seamless performance of the app."
+                }
+            ]
+    },
+    {
+        "id": "4",
+        "position": "bottom",
+        "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1768501387/Screenshot_2026-01-15_at_18.22.59_imnqtk.png",
+        "title": "Brand Identity",
         "siteUrl": "https://example.com",
-        "description": "Big Blue Campers are a specialist VW campervan hire company in Worcestershire offering modern Volkswagen campervan hire.",
+        "description": "Brand identity and logo system.",
+        "sliderImages": [
+            "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
+            "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
+            "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png"
+        ],
         "sections": [
             {
                 "title": "Bridge Betweeen Customer & You",
@@ -99,32 +204,20 @@
                 "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
                 "imagePosition": "left"
             }
-        ]
-    },
-    {
-        "id": "branding-project-2",
-        "position": "bottom",
-        "image": "Ecom",
-        "title": "Brand Identity",
-        "siteUrl": "https://example.com",
-        "description": "Brand identity and logo system.",
-        "sections": [
+        ],
+        "moreDescriptionAboutService": "What We Developed: We have deployed a high-performance, mobile-first e-commerce platform specifically engineered for the unique demands of the fashion resale market. Unlike standard retail sites, designed to handle one-off vintage and pre-loved items without the risk of double-selling.",
+        "whyGood": [
             {
-                "title": "Bridge Betweeen Customer & You",
-                "paragraphs": [
-                    "We built this platform to be a bridge between you and your customers, using technology to make them feel understood rather than overwhelmed. We engineered smart search capabilities and intuitive filtering and sorting so that finding the perfect item feels like a delightful discovery, not a tedious hunt. Recognising that life moves fast, we ensured a fully responsive design that adapts beautifully to any device, giving your users the freedom to shop wherever they feel most comfortable. Finally, we integrated High-Qulity media such as videos,images,products, multiple payment options to ensure that the moment of purchase is not just secure, but effortless, leaving them with a sense of trust and satisfaction every time they visit."
-                ],
-                "image": "",
-                "imagePosition": "right"
+                "title": "Operational Efficiency",
+                "content": "The backend automates the complex logistics of resale—from stock intake to generating Royal Mail postage labels—reducing manual admin time by roughly 40%."
             },
             {
-                "title": "Automate Heavy Lifting",
-                "paragraphs": [
-                    "Behind the scenes, we’ve engineered a powerful command center designed to give you complete peace of mind and the freedom to focus on growth. We integrated robust Inventory Management and a streamlined Order Management System to automate the heavy lifting, ensuring you never have to worry about overselling or losing track of a shipment. To help your brand find its voice and audience, we built in advanced Marketing and SEO tools that put you on the map, all while safeguarding your reputation with top-tier SSL security.",
-                    "Finally, we empowered you with a crystal-clear Analytics Dashboard, turning complex data into actionable insights so you can make every business decision with absolute confidence."
-                ],
-                "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
-                "imagePosition": "left"
+                "title": "High Conversion UX",
+                "content": "We tackled the biggest barrier in resale—trust—by implementing a high-fidelity product showcase with zoom capabilities and detailed measurement guides, drastically reducing return rates."
+            },
+            {
+                "title": "Scalability",
+                "content": "The infrastructure is robust enough to handle high-traffic stock drops, ensuring the site remains stable during peak release times."
             }
         ]
     }

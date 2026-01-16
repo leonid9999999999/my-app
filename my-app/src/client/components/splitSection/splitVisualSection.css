@@ -52,17 +52,34 @@
 .split-image img {
   width: 100%;
   height: 450px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s ease;
+  
+  /* 1. Use 'contain' to stop cropping (zooms out to show full image) */
+  object-fit: contain;
 
+  /* 2. Add padding to push the image away from the curved corners */
+  padding: 10px;
+
+  /* 3. Important: Prevents padding from making the image larger than 100% */
+  box-sizing: border-box;
+
+  /* 4. Add a background color. 
+     Since the image is now smaller (contained), this color fills the 
+     empty space and preserves the cool shape/border-radius. */
+  background-color: #f0f2f5;
+
+  display: block;
+  overflow: hidden;
+  transition: transform 0.5s ease;
 }
+
+
 
 /* IMAGE SHAPES */
 .split-image-top img {
   border-top-right-radius: 160px;
   border-bottom-left-radius: 24px;
   
+ 
 }
 
 .split-image-bottom img {
@@ -71,9 +88,12 @@
 }
 
 .split-image:hover img {
-  transform: scale(1.08);
+  transform: scale(1.03);
+  /* Reduced zoom slightly for a cleaner effect */
 }
-
+.imageSection{
+  border-radius: 50px;
+}
 /* MOBILE */
 @media (max-width: 900px) {
   .split-row,
