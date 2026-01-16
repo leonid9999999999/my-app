@@ -11,7 +11,8 @@ import SingleBundle from "../../ourBundles/singleBundle/singleBundle";
 
 
 import OurBundles from "../../ourBundles/ourBundles";
-
+import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const projects = [
   {
@@ -41,6 +42,8 @@ const projects = [
 ];
 
 const PortfolioGrid = () => {
+  
+  
   return (
     <section className="portfolio-section">
       <div className="portfolio-container">
@@ -58,20 +61,40 @@ const PortfolioGrid = () => {
 
 
 const OurServices = (props) => {
-  const { location } = props;
-  const { title, price, serviceDescription, urlImage } = location?.state || {};
-  const slides = [
-    "https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg",
-    "https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg",
-    "https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg"
-];
+  const location = useLocation();
+  const navigate = useNavigate();
+  const serviceDetails = location?.state;
+  const sections = serviceDetails.ourServicesInfo[0].sections
+  const slides= serviceDetails.ourServicesInfo[0].sliderImages
+ 
+  const { firstPageTitle, additionalTitle, additionalParagpragh} = serviceDetails.ourServicesInfo[0]|| {};
 
-  
+  console.log("SeC", firstPageTitle)
 
+  function Page(item) {
+
+    const safeSections = item.sections || [];
+    const safeBenefits = item.whyGood || [];
+    const safeSliderImages = item.sliderImages || [];
+    console.log("sections    ", safeSliderImages)
+    navigate(`/portfolio/${item.id}`,
+      {
+        state: {
+          title: item.title,
+          // paragraphs: item.sections.paragraphs,
+          sections: safeSections,
+          whyGood: safeBenefits,
+          moreDescriptionAboutService: item.moreDescriptionAboutService,
+          sliderImages: safeSliderImages
+        }
+      });
+
+  }
+ 
 const cards = [
   {
     title: "Discover",
-    image: "https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg",
+    image: "https://res.cloudinary.com/dibygfenr/image/upload/v1768528827/dicover_qqnupz.png",
     alt: "Discovery session",
     text:
       "Through discovery sessions, we explore your goals, challenges, and competitors. We uncover audience needs and create a clear plan that fits your business.",
@@ -82,14 +105,14 @@ const cards = [
   },
   {
     title: "Design",
-    image: "https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg",
+    image: "https://res.cloudinary.com/dibygfenr/image/upload/v1768529147/design_ayx6yd.jpg",
     alt: "Website design",
     text:
       "We create fresh, engaging designs that bring your ideas to life. Our focus is on clarity, usability, and strong visual impact."
   },
   {
     title: "Develop",
-    image: "https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg",
+    image: "https://res.cloudinary.com/dibygfenr/image/upload/v1768529794/Developing_nmte87.jpg",
     alt: "Website development",
     text:
       "We build fast, reliable websites tailored to your needs. From simple sites to custom features, everything is built to perform.",
@@ -119,7 +142,7 @@ const targetSection = useRef(null);
                 <ImageSlider images={slides} interval={3000} />
               </div>
               <div className="Title">
-                  <h1> Simplify Your Life With A Better Website</h1>
+                  <h1> {firstPageTitle}</h1>
                   <Button style={{backgroundColor: "#3b82f6", color: "white"}} onClick={handleScrollDown} text="Find out more!"/>
               </div>
           </div>
@@ -127,13 +150,11 @@ const targetSection = useRef(null);
             <div className="additionalBlock">
 
               <div className="additionalBlockWrapperTitle">
-                  <h2>WebApplications</h2>
+                  <h2>{additionalTitle}</h2>
               </div>
               <div className="additionalBlockWrapperParagraph">
                   <p className="additionalParagraph">
-                    Looking to build a strong online presence or grow your business? We design and build websites that are clean, effective, and easy to manage.
-                    Whether you need a simple portfolio site or a powerful website focused on generating leads, our in-house team takes care of everything — 
-                    from design and development to hosting and ongoing support. We create reliable, end-to-end web solutions that help your brand stand out and perform.
+                    {additionalParagpragh}
                   </p>
               <a className="contact-link" href="ContactUs">
                         Contact us today →
@@ -171,55 +192,8 @@ const targetSection = useRef(null);
             <div className="AboutService">
               {/* What We Do section in service in more details  */}
                 <SplitVisualSection
-                    sections={[
-                      {
-                        title: "Built for tomorrow. Designed for you.",
-                        paragraphs: [
-                          "No two organisations are the same — and neither are our websites. We create bespoke digital experiences on flexible, future-ready platforms, designed around your goals and built to adapt as your business evolves.",
-                          "With clean code and considered architecture at the core, our websites are fast, reliable, and crafted to perform — today, tomorrow, and beyond."
-                        ],
-                        image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb",
-                        linkText: "Talk to our website experts →",
-                        linkUrl: "/",
-                        imagePosition: "right"
-                      },
-                      {
-                        title: "Experience with purpose.",
-                        paragraphs: [
-                          "Great design goes beyond appearance. We focus on how users move, think, and interact, creating seamless journeys that feel natural and intuitive from the first click to the last.",
-                          "Every interaction is deliberate. Every detail earns its place. The result is a website that doesn’t just look good — it works hard for your business."
-                        ],
-                        image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
-                        linkText: "Brief us today →",
-                        linkUrl: "/",
-                        imagePosition: "left"
-                      }
-                    ]}
+                    sections={sections}
                 />
-
-                <SplitVisualSection
-                    sections={[
-                      {
-                        title: "Visibility that scales",
-                        paragraphs: [
-                          "We build websites that are ready to be found. From clean technical foundations to performance-led design, every build is optimised for speed, accessibility, and search.",
-                          "By blending creative thinking with technical expertise, we help your brand grow its presence online — now and as the digital landscape continues to evolve."
-                        ],
-                        image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb",
-                        imagePosition: "right"
-                      },
-                      {
-                        title: "Control without complexity.",
-                        paragraphs: [
-                          "Your website should be easy to manage, not a barrier to progress. Our bespoke builds make content updates simple, with intuitive tools that give you confidence and control.",
-
-                          "We support you with tailored guidance, clear documentation, and real human support — so as your business grows, your website grows with you."
-                        ],
-                        image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
-                        imagePosition: "left"
-                      }
-                    ]}
-                  />
 
             </div>
         </div>

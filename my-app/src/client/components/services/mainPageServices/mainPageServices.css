@@ -1,0 +1,55 @@
+.ourServices {
+    padding: 140px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    color: #ffffff;
+}
+
+.ourServicesWrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ourServiceTitle {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.ourServiceSubtitle{
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto 80px;
+    font-size: 16px;
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+/* === GRID === */
+
+.ourServiceGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+
+
+/* === RESPONSIVE === */
+
+@media (max-width: 1024px) {
+    .ourServiceGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .ourServiceGrid{
+        grid-template-columns: 1fr;
+    }
+
+    .ourServiceTitle {
+        font-size: 36px;
+    }
+}

@@ -29,7 +29,7 @@ function App() {
                     {/* Optional: Add an index route if you want localhost:3000/ to show Main */}
                     <Route index element={<Navigate to="/home" replace />} />
 
-                    <Route path="ourServices" element={<OurServices/>} />
+                    <Route path="/ourservices/:id" element={<OurServices/>} />
 
                     <Route path="/ourPortfolio" element={<OurPortfolio />} />
 

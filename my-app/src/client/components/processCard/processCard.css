@@ -12,18 +12,24 @@
   color: #e0e0e0;
   max-width: 420px;
 }
-
 .image-wrapper {
   overflow: hidden;
   border-top-right-radius: 180px;
   border-bottom-right-radius: 180px;
 }
 
+/* IMAGE */
 .image-wrapper img {
   width: 100%;
   height: 260px;
   object-fit: cover;
   display: block;
+
+  transition: transform 0.5s ease;
 }
 
+/* HOVER ZOOM */
+.image-wrapper:hover img {
+  transform: scale(1.08);
+}
 
