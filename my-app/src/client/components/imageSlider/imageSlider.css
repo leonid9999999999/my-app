@@ -1,52 +1,178 @@
 .slider-container {
   width: 100%;
-  max-width: 600px; /* Adjust as needed */
-  height: 400px;    /* Adjust as needed */
+  max-width: 650px;
+  height: 425px;
   margin: 0 auto;
-  overflow: hidden; /* Hides the images that are currently out of view */
+  overflow: hidden;
   position: relative;
+  background: #0b1f33;
+
+  /* Shape & Transition */
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   border-bottom-right-radius: 200px;
+  transition: transform 0.6s ease, border-radius 0.6s ease-in-out;
+}
+
+/* --- SHADOW OVERLAY (Unchanged logic) --- */
+.slider-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+
+  /* Match initial shape */
+  border-radius: 10px;
+  border-bottom-right-radius: 200px;
+
+  /* Inner Shadow */
+  box-shadow: inset -25px -5px 40px rgba(70, 70, 70, 0.4);
+
+  /* Transition */
+  transition: box-shadow 0.6s ease, border-radius 0.6s ease-in-out;
+}.slider-container {
+  width: 100%;
+  max-width: 650px;
+  height: 425px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+
+  /* 1. We move the GRAY background here so the 'card' shape is always visible */
+  background: #f0f2f5;
+
+  /* Shape & Transition */
+  border-radius: 10px;
+  border-bottom-right-radius: 200px;
+  transition: transform 0.6s ease, border-radius 0.6s ease-in-out;
+}
+
+/* --- SHADOW OVERLAY --- */
+.slider-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+
+  /* Match initial shape */
+  border-radius: 10px;
+  border-bottom-right-radius: 200px;
+
+  /* Inner Shadow */
+  box-shadow: inset -25px -5px 40px rgba(70, 70, 70, 0.4);
+
+  transition: box-shadow 0.6s ease, border-radius 0.6s ease-in-out;
+}
+
+/* --- HOVER EFFECTS --- */
+.slider-container:hover {
+  transform: scale(1.1);
+  border-bottom-right-radius: 50px;
+}
+
+.slider-container:hover::after {
+  border-bottom-right-radius: 50px;
+  /* Removes shadow on hover as requested */
+  box-shadow: inset -25px -5px 40px rgba(70, 70, 70, 0.0);
 }
 
 .slider-wrapper {
   display: flex;
   height: 100%;
-  /* This creates the smooth sliding animation */
-  transition: transform 0.5s ease-in-out; 
+  transition: transform 0.5s ease-in-out;
 }
 
 .slide {
   min-width: 100%;
   height: 100%;
+  display: flex;
+
+  /* 2. Center the image perfectly in the box */
+  align-items: center;
+  justify-content: center;
 }
 
+/* --- THE FIX FOR CUT TEXT --- */
 .slide img {
+  /* 3. Don't use 100%. Use 85% or less. 
+     This creates a physical gap between the image and the container edges. */
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures image covers the area without stretching */
+  max-width: 100%;
+  max-height: 100%;
+  /* Slightly smaller height to avoid the bottom curve */
+
+  /* 4. Keep aspect ratio perfect */
+  object-fit: contain;
+
+  /* Optional: Drop shadow for the image itself to make it pop off the gray bg */
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.15));
+
+  transition: transform 0.5s ease;
 }
 
-/* Optional: Styling for the dots at the bottom */
-.slider-dots {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+/* --- HOVER EFFECTS --- */
+.slider-container:hover {
+  transform: scale(1.1);
+  border-bottom-right-radius: 50px;
+  /* Optional: Outer shadow for lift */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.slider-container:hover::after {
+  border-bottom-right-radius: 50px;
+  box-shadow: inset -25px -5px 40px rgba(70, 70, 70, 0.0);
+}
+
+.slider-wrapper {
   display: flex;
-  gap: 10px;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
 }
 
-.dot {
-  width: 12px;
-  height: 12px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* This background color is less important now as the image covers it, 
+     but good to keep as fallback */
+  background: #0b1f33;
 }
 
-.dot.active {
-  background-color: white;
+/* --- UPDATED IMAGE STYLES --- */
+.slide img {
+  /* 1. Ensure it fills the container's flexible space */
+  max-width: 100%;
+  max-height: 100%;
+
+  /* Reset fixed sizes to 'auto' or '100%' so padding works correctly 
+     If you strictly need 300px, you can keep it, but 100% works best with padding. */
+  width: 100%;
+  height: 100%;
+
+  /* 2. 'contain' ensures the full image is visible */
+  object-fit: contain;
+
+  /* 3. Add Padding (The Safe Zone) */
+  padding: 30px;
+  /* Adjust this value if you want more/less zoom */
+
+  /* 4. Ensure padding is inside the dimensions */
+  box-sizing: border-box;
+
+  /* 5. The Gray Background filling the shape */
+  background-color: #f0f2f5;
+
+  /* Optional: A subtle shadow on the image itself to separate it from the gray bg */
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
 }

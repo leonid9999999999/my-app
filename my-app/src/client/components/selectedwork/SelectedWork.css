@@ -48,11 +48,11 @@ background: rgba(255, 255, 255, 0.03);  color: #ffffff;
   overflow: hidden;
 }
 
-/*
-  👉 СЮДА ТЫ ПОТОМ МОЖЕШЬ ПОСТАВИТЬ:
-  - img внутри
-  - или background-image
-*/
+.imageSettings{
+  width: 100%;
+}
+
+
 
 .selected-work__tag {
   font-size: 13px;

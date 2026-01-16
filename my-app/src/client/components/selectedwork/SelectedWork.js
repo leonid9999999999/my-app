@@ -1,4 +1,9 @@
 import "./SelectedWork.css";
+import OneSelectionCard from "./oneSelectionCard";
+
+import servicesData from "../../data/services/services.json";
+import ProjectCard from "../services/projectCard/projectCard";
+
 function SelectedWork() {
   return (
     <section className="selected-work">
@@ -10,53 +15,20 @@ function SelectedWork() {
         </p>
 
         <div className="selected-work__grid">
-          {/* CARD 1 */}
-          <div className="selected-work__card">
-            <div className="selected-work__image">
-              {/* IMAGE PLACEHOLDER */}
-            </div>
 
-            <span className="selected-work__tag">Web Application</span>
-            <h3 className="selected-work__card-title">
-              Financial Services Platform
-            </h3>
-            <p className="selected-work__card-text">
-              Custom web application with real-time analytics, resulting in 40%
-              increase in user engagement.
-            </p>
-          </div>
+          {/*Work blokc can be displayed here  */}
 
-          {/* CARD 2 */}
-          <div className="selected-work__card">
-            <div className="selected-work__image">
-              {/* IMAGE PLACEHOLDER */}
-            </div>
-
-            <span className="selected-work__tag">Online Store</span>
-            <h3 className="selected-work__card-title">
-              E-Commerce Solution
-            </h3>
-            <p className="selected-work__card-text">
-              Fully-featured e-commerce platform with custom checkout flow and
-              inventory management.
-            </p>
-          </div>
-
-          {/* CARD 3 */}
-          <div className="selected-work__card">
-            <div className="selected-work__image">
-              {/* IMAGE PLACEHOLDER */}
-            </div>
-
-            <span className="selected-work__tag">Marketing Site</span>
-            <h3 className="selected-work__card-title">
-              Corporate Website
-            </h3>
-            <p className="selected-work__card-text">
-              Professional corporate site with CMS integration and multilingual
-              support for EU markets.
-            </p>
-          </div>
+          {/* {servicesData.map((project) => (
+            <OneSelectionCard
+              key={project.id} // Important: Always include a unique key
+              tag={project.tag}
+              title={project.title}
+              text={project.text}
+              image={project.mainImage}
+            />
+            
+          ))} */}
+          
         </div>
       </div>
     </section>
