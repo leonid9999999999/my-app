@@ -10,3 +10,5 @@ Thumbs.db
 
 # Explicitly ignore .DS_Store in all subfolders (Redundant but safe)
 **/.DS_Store
+
+config.env

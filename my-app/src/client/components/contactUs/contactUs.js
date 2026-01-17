@@ -19,7 +19,7 @@ const ContactUs = (props) => {
  
       
       <div className='pagetitle'>
-        <h2>Get In Touch With Us</h2>
+        <h2>Let's Get Your Project Started</h2>
       </div>
       <div>
         <section class="tech-hero-block">
@@ -50,8 +50,8 @@ const ContactUs = (props) => {
               <InfoBlock
                 icon={Email}
                 name="Email"
-                content="info@knghtage.co.uk"
-                link="mailto:info@knage.co.uk"
+                content="vbsecuresolutions@gmail.com"
+                link="vbsecuresolutions@gmail.com"
               />
 
               <InfoBlock
