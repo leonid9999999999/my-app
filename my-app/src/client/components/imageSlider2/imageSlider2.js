@@ -34,7 +34,7 @@ const ImageSlider2 = ({ images, autoPlayInterval = 4000 }) => {
             </button>
 
             {/* SLIDER */}
-            <div className="slider">
+            <div className="slider2">
                 <div
                     className="slider-track"
                     style={{ transform: `translateX(-${currentIndex * 100}%)` }}

@@ -9,6 +9,7 @@ import SelectedWork from "../selectedwork/SelectedWork";
 import ClientTestimonials from "../ClientTestimonials/ClientTestimonials";
 import ReadyToStart from "../ReadyToStart/ReadyToStart";
 import logo from "../../../resources/images/ima1logo.png";
+import MainPageServices from "../services/mainPageServices/mainPageServices";
 
 function Main() {
 
@@ -37,7 +38,7 @@ function Main() {
   return (
     <div className="main">
       
-      <Intro />
+      {/* <Intro /> */}
 
       <div className="main__hero">
         <div className="main__background"></div>
@@ -68,6 +69,7 @@ function Main() {
       </div>
 
       <WhyWorkWithUs />
+      <MainPageServices/>
       <OurProcess />
       <SelectedWork />
       <ClientTestimonials />

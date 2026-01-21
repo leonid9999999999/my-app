@@ -15,21 +15,20 @@ import TermsOfService from "./client/components/Terms/TermsOfService";
 
 function App() {
   return (
-
-
-<Router>
-  <ScrollToTop />
-
+  <Router>
   <div className="App">
   <Routes>
+
+
     <Route path="/" element={<WebApp />}>
       <Route index element={<Navigate to="home" replace />} />
 
       <Route path="home" element={<Main />} />
       <Route path="contactUs" element={<ContactUs />} />
-      <Route path="ourServices" element={<OurServices />} />
+        <Route path="/ourservices/:id" element={<OurServices/>} />
+        <Route path="/portfolio/:id" element={<PortfolioExample />} />
+
       <Route path="ourPortfolio" element={<OurPortfolio />} />
-      <Route path="portfolioExample" element={<PortfolioExample />} />
       <Route path="privacyPolicy" element={<PrivacyPolicy />} />
       <Route path="about" element={<AboutUs />} />
       <Route path="terms-of-service" element={<TermsOfService />} />
@@ -37,7 +36,7 @@ function App() {
   </Routes>
 </div>
 </Router>
-
+                    
     
   );
 }

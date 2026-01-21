@@ -1,13 +1,14 @@
 .portfolio-card {
     
     max-width: 500px;
+    
     /* CHANGE SIZE HERE */
-    margin: 80px;
+    margin: 60px;
     text-align: left;
 }
 
 .portfolio-image-wrapper {
-    width: 550px;
+    
     cursor: pointer;
     position: relative;
     background: #3f3f3f;
@@ -71,3 +72,4 @@
     margin: 0;
     color: #ffffff9c;
 }
+

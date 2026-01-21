@@ -48,22 +48,11 @@
   overflow: hidden;
 }
 
-.image-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.45);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  font-size: 14px;
-  letter-spacing: 1px;
+.imageSettings{
+  width: 100%;
 }
 
-.selected-work__image:hover .image-overlay {
-  opacity: 1;
-}
+
 
 .selected-work__tag {
   font-size: 13px;

@@ -1,19 +1,15 @@
 import './singlePortfolio.css'
+import { Link } from 'react-router-dom'
 
-function SinglePortfolio({ image, title, siteUrl, description }){
+function SinglePortfolio({ image, title, siteUrl, description,onClick }){
     return(
         
-            <div className="portfolio-card">
+            <div className="portfolio-card" onClick={onClick}>
                 <div className="portfolio-image-wrapper">
                     <img src={image} alt={title} className="portfolio-image" />
-                        <a
-                            href={siteUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="view-site-btn"
-                        >
+                        <Link to={siteUrl} className="view-site-btn">
                             View Site
-                        </a>
+                        </Link>
                 </div>
 
                 <h3 className="portfolio-title">{title}</h3>

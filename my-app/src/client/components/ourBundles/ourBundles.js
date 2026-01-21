@@ -55,7 +55,7 @@ function OurBundles(){
                     image={PortfolioExample}
                     title="Complete Website"
                     description="Small But Energetic Website with Big Impact,
-                              Portfolios showcase your work, build professional credibility, and help you attract employers to land jobs. 
+                              showcase your work, build professional credibility, and help you attract employees. 
                               "
                     price="£400"
                     includedServices={[
@@ -74,8 +74,8 @@ function OurBundles(){
                 <SingleBundle
                     image={PortfolioExample}
                     title="Landing Pages"
-                    description="Small But Energetic Website with Big Impact,
-                              Portfolios showcase your work, build professional credibility, and help you attract employers to land jobs. 
+                    description="Website with Big Impact,
+                              showcaseing your work, build professional credibility, and help you attract employers to land jobs. 
                               "
                     price="£200"
                     includedServices={[
