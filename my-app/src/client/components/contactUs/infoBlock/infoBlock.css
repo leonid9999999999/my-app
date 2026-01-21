@@ -3,6 +3,11 @@
   align-items: flex-start;
   gap: 1rem;
   margin: 30px;
+transition: transform 0.3s ease-in-out;
+}
+
+.infoRow:hover{
+  transform: scale(1.1);
 }
 
 .infoIconWrapper {

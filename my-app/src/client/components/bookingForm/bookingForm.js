@@ -11,7 +11,7 @@ import withRouter from '../navigate/navigate.js';
 import axios from 'axios';
 import * as Yup from 'yup';
 import Button from '../Tools/button/button.js';
-
+import Modal from '../modal/modal.js';
 
 class BookingForm extends Component {
     
@@ -26,7 +26,6 @@ class BookingForm extends Component {
             success: null,
             date: "",
             content: "",
-            selectedTime:' ',
             update: false,
             dateSelectedByUser: false,
             errorMessage: '',
@@ -86,21 +85,6 @@ class BookingForm extends Component {
         
     }
 
-    getCalendarData = (selectedDate, setFieldValue) => {
-        
-            const jsDate = new Date(selectedDate);
-
-            const formattedDate = dayjs(jsDate).format("YYYY-MM-DD");
-            // const formattedTime = dayjs(jsDate).format("HH:mm");
-            
-            this.setState({ 
-                date: formattedDate,
-                dateSelectedByUser: true 
-            });
-            setFieldValue("date", formattedDate)
-            
-            this.getTime(formattedDate)
-    }
 
     handleUpdateSubmit = (values) => {
 
@@ -120,46 +104,53 @@ class BookingForm extends Component {
         console.log("Booking Submited Try:");
         try {
             //send value to bakend via router link + passing token 
-            const res = await axios.post(`/api/createBooking`, values,
-                {
-                    headers: {
-                        Authorization: 'Bearer ' + localStorage.getItem('token'),
-                       
-                    },
-                }
-            );
+            const res = await axios.post(`/api/createBooking`, values);
+            
             console.log("Booking Submited:", res.data);
             console.log(res.data.message)
-            //reseting states
+            // reseting states
                 this.setState({
-                            success: true,
-                            date:"",
-                            selectedTime: ""
-                            
-                        })
+                    success: true,
+                })
                         //clear form
                 resetForm({values: {
-                        serviceTitle: this.props.serviceTitle, 
-                        Name: "",
-                        date: null,
-                        time: null,
+                        fullName: "",
                         email:'',
                         companyName: '',
                         phoneNumber: "",
-                        bookingNote: ""
+                        bookingMessage: ""
                     }
                 });
         } catch (error) {
-            if(error.response && error.response.status === 409){
+
+            let message = "Something went wrong. Please try again.";
+            if (error.response && error.response.status === 409) {
                 this.setState({
                     success: false,
-                    errorMessage: error.message, 
+                    errorMessage: error.message,
                 });
             }
+            if (error.response) {
+                // The request was made and the server responded with a status code
+                // that falls out of the range of 2xx (e.g. 400, 404, 500)
+                // We try to grab the message sent from your backend controller
+                message = error.response.data.message || error.response.data.error || error.response.status || "Server Error";
+                console.log("Server responded with error:", error.response.status);
+            } else if (error.request) {
+                message = "Server is not responding. Please check your connection.";
+                console.log("No response received from server");
+            } else {
+                // Something happened in setting up the request that triggered an Error
+                message = error.message;
+            }
+            this.setState({
+                success: false,
+                errorMessage: message,
+            });
             console.error(error);
-            
+
             } finally {
-            
+                setSubmitting(false);
         }
     };
     render (){
@@ -172,25 +163,23 @@ class BookingForm extends Component {
         return(
             <div className="bookingFormWrapper" style={this.props.style}>
                 {this.state.success === true && (
-                    <div className="modal-overlay">
-                        <div className="modal">
-                            <h3>Success!</h3>
-                            <p>Your Booking Submitted</p>
-                            <button onClick={() => this.setState({ success: null, errorMessage: null })}>
-                                Close
-                            </button>
-                        </div>
-                    </div>
+                    <Modal
+                        onClose={() => this.setState({ success: null, errorMessage: null })}
+                    />
                 )}
 
                 {/* If unseccess it will throw 409 error and set state to false and print this */}
                 {this.state.success === false && this.state.errorMessage && (
                     <div className="modal-overlay">
                         <div className="modal">
-                            <h4> Unfortunately time is alredy booked for this date</h4>
-                            <p>{this.state.errorMessage}</p>
+                            {/* Generic Header */}
+                            <h3 style={{ color: 'red' }}>Submission Failed</h3>
+
+                            {/* The dynamic message from the catch block above */}
+                            <p>Server Resonse // error - {this.state.errorMessage}</p>
+
                             <button onClick={() => this.setState({ success: null, errorMessage: null })}>
-                                Try again
+                                Close & Try Again
                             </button>
                         </div>
                     </div>
@@ -202,26 +191,19 @@ class BookingForm extends Component {
                             _id: this.props.initialData?._id,
                             serviceTitle: this.props.serviceTitle || this.props.initialData?.serviceTitle,
                             // dateTime: null,
-                            Name: this.props.initialData?.Name || '',
+                            fullName: this.props.initialData?.Name || '',
                             email: this.props.initialData?.email || '',
                             companyName: this.props.initialData?.companyName || '',
                             // address: this.props.initialData?.address || '',
-                            date: this.state.dateSelectedByUser 
-                                ? this.state.date 
-                                : this.props.initialData?.date || null,
-                            time: this.state.selectedTime,
                             phoneNumber: this.props.initialData?.phoneNumber || '',
-                            bookingNote: this.props.initialData?.bookingNote || ''
+                            bookingMessage: this.props.initialData?.bookingMessage || ''
                         }}
                         enableReinitialize={this.props.initialData?.update === true}
                         
                             validationSchema = {Yup.object({
-                                Name: Yup.string()
+                                fullName: Yup.string()
                                             .required('Required Field'),
-                              
-                                // address: Yup.string()
-                                //             .min(2, "Min 2 characters")
-                                //             .required('Address is Required'),
+
                                 companyName: Yup.string()
                                                 .min(1, "Min 1 characters")
                                                 .required('Required Field'), 
@@ -229,18 +211,11 @@ class BookingForm extends Component {
                                 email: Yup.string()
                                         .email('Wrong Email address')
                                         .required('Required Field'),
-                                time: Yup.string()
-                                            .required('Required Field'),
                                 phoneNumber: Yup.string()
                                             .min(2, "Min 2 characters")
                                             .matches(nationalNumberRegex, "input 9 or 10 numbers(DO NOT include 0 or +44)")
                                             .required('Phone Number is Required '),
-                                // email: Yup.string()
-                                //             .email('Wrong Email address')
-                                //             .required('Required Field'),
-                                // bookingNote: Yup.string()
-                                //             .min(5, "Minium 5 characters")
-                                            
+                                bookingMessage: Yup.string()
                             })}
                             onSubmit={this.handleFinalSubmit }
                             
@@ -254,8 +229,8 @@ class BookingForm extends Component {
                             <div className='wrapperDesc'>
 
                                 <div className='BookingDesc'>
-                                    <h3>{this.props.title}</h3>
-                                    <p>{this.props.desc}</p>
+                                    <h3>Get In Touch With Us</h3>
+                                        <p>Describe your project and leave us your contact information, we’ll get back to you soon.</p>
                                     
                                 </div>
                                 <div className='closeImg'>
@@ -272,22 +247,22 @@ class BookingForm extends Component {
                             <div className='bookingFields'>
                                 <div className='leftBookingBlock'>
                                     {/* Name Field */}
-                                    <label htmlFor="Name" className="field-label">Full Name</label>
-                                    <Field type="text" name="Name" id="Name" placeHolder="Name" />
-                                    <ErrorMessage className="error" name="Name" component="div" />
+                                    <label htmlFor="fullName" className="field-label">Full Name*</label>
+                                    <Field type="text" name="fullName" id="fullName" placeHolder="Your Full Name" />
+                                    <ErrorMessage className="error" name="fullName" component="div" />
 
                                     {/* Company Field */}
-                                    <label htmlFor="companyName" className="field-label">Company Name</label>
+                                    <label htmlFor="companyName" className="field-label">Company Name*</label>
                                     <Field type="text" name="companyName" id="companyName" placeHolder="Company/Startup Name" />
                                     <ErrorMessage className="error" name="companyName" component="div" />
 
                                     {/* Email Field */}
-                                    <label htmlFor="email" className="field-label">Email Address</label>
-                                    <Field type="text" name="email" id="email" placeHolder="Email" />
+                                    <label htmlFor="email" className="field-label">Email Address*</label>
+                                    <Field type="text" name="email" id="email" placeHolder="Your Email" />
                                     <ErrorMessage className="error" name="email" component="div" />
 
                                     {/* Phone Field */}
-                                    <label htmlFor="phoneNumber2" className="field-label">Phone Number</label>
+                                    <label htmlFor="phoneNumber2" className="field-label">Phone Number*</label>
                                     <div className='phoneNumBlock'>
                                         <span className="phone-prefix">+44</span>
                                         {/* Note: htmlFor above matches this ID */}
@@ -296,9 +271,9 @@ class BookingForm extends Component {
                                     <ErrorMessage className="error" name="phoneNumber" component="div" />
 
                                     {/* Booking Note Field */}
-                                    <label htmlFor="bookingNote" className="field-label">Message</label>
-                                    <Field as="textarea" name="bookingNote" id="bookingNote" placeHolder="Booking Message" />
-                                    <ErrorMessage className="error" name="bookingNote" component="div" />
+                                    <label htmlFor="bookingMessage" className="field-label">Message</label>
+                                    <Field as="textarea" name="bookingMessage" id="bookingMessage" placeHolder="Booking Message" />
+                                    <ErrorMessage className="error" name="bookingMessage" component="div" />
                                         
                                     <Button type="submit" text={this.props.buttonTitle} disabled={isSubmitting} style={{backgroundColor:"#56D55D", color: "white", width: "100%"}}/>
                                 </div>

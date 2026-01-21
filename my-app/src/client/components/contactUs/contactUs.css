@@ -20,7 +20,6 @@
     gap: 40px;
 }
 
-
 .mainDetails{
     
 }
@@ -32,11 +31,17 @@
     gap: 20px;
 }
 
+#visit-us-heading{
+    font-size: 26px;
+    color: black;
+}
+
 .serviceTitle{
     margin-top: 10px;
     margin-bottom: 12px;
     color:#FFF9CB;
     font-size: 32px;
+    
 }
 
 .serviceDesc{
@@ -45,7 +50,6 @@
     color: white;
     font-size: 24px;
 }
-
 
 .tech-hero-block {
         /* Ensure modern fonts */
@@ -57,23 +61,10 @@
         text-align: center;
         color: #ffffff; /* White text for contrast against dark background */
         overflow: hidden;
-
-        /* --- BACKGROUND CONFIGURATION --- */
-        
-        /* 1. Set the background color as a fallback */
         background-color: #0f172a; /* Deep dark blue/slate */
-
-        /* 2. The Image & The Overlay */
-        /* We stack two things here:
-           - First: A semi-transparent dark gradient overlay (rgba(15, 23, 42, 0.85)). 
-             Changing the '0.85' value makes it darker (closer to 1) or lighter (closer to 0).
-           - Second: The URL to the tech image. 
-        */
         background-image: 
             linear-gradient(to bottom, rgba(15, 23, 42, 0.40), rgba(15, 23, 42, 0.60)),
             url('../../../resources/images/backgroundImg.png');
-
-      
     }
 
     /* Optional: Add a subtle coded pattern overlay using CSS only */
@@ -85,7 +76,6 @@
         background-image: 
             linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
             linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-      
     }
 
     /* --- Typography Styling --- */
@@ -120,13 +110,12 @@
         .tech-hero-content p { font-size: 18px; }
     }
 
-
 .additionalInformationWrapper {
     width: 400px;
     background-color: #ffffff;
     border-radius: 12px;
     border: 1px solid black;
-    height: 700px;
+    min-height: 500px;
 }
 
 .additionalInformation {
