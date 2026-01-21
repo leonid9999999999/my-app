@@ -8,39 +8,35 @@ import ContactUs from './client/components/contactUs/contactUs';
 import OurServices from './client/components/services/ourServices/ourServices.js';
 import OurPortfolio from './client/components/ourPortfolio/ourPortfolio.js';
 import PortfolioExample from './client/components/portfolioExamplePage/portfolioExample.js';
+import PrivacyPolicy from './client/components/PrivacyPolicy/PrivacyPolicy.js';
+import AboutUs from './client/components/About/AboutUs.js';
+import ScrollToTop from "./client/components/utils/ScrollToTop";
+import TermsOfService from "./client/components/Terms/TermsOfService";
 
 function App() {
   return (
+  <Router>
+  <div className="App">
+  <Routes>
 
-      <Router>
-        <div className="App">
-          <Routes>
-                <Route path='/' element={<WebApp />}>
+
+    <Route path="/" element={<WebApp />}>
+      <Route index element={<Navigate to="home" replace />} />
+
+      <Route path="home" element={<Main />} />
+      <Route path="contactUs" element={<ContactUs />} />
+        <Route path="/ourservices/:id" element={<OurServices/>} />
+        <Route path="/portfolio/:id" element={<PortfolioExample />} />
+
+      <Route path="ourPortfolio" element={<OurPortfolio />} />
+      <Route path="privacyPolicy" element={<PrivacyPolicy />} />
+      <Route path="about" element={<AboutUs />} />
+      <Route path="terms-of-service" element={<TermsOfService />} />
+    </Route>
+  </Routes>
+</div>
+</Router>
                     
-                    {/* Default redirect: /h -> /home */}
-                    <Route path="h" element={<Navigate to="/home" replace />} />
-                    
-                    {/* Child Route: /home renders inside the Outlet of WebApp */}
-                    <Route path="home" element={<Main/>} />
-                    
-                    {/* Child Route: /ContactUs renders inside the Outlet of WebApp */}
-                    <Route path="ContactUs" element={<ContactUs/>} />
-                    
-                    {/* Optional: Add an index route if you want localhost:3000/ to show Main */}
-                    <Route index element={<Navigate to="/home" replace />} />
-
-                    <Route path="/ourservices/:id" element={<OurServices/>} />
-
-                    <Route path="/ourPortfolio" element={<OurPortfolio />} />
-
-                    <Route path="/portfolio/:id" element={<PortfolioExample />} />
-
-                </Route>
-                
-              
-          </Routes>
-        </div>
-      </Router>
     
   );
 }

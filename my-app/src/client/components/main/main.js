@@ -8,8 +8,6 @@ import OurProcess from "../ourprocess/OurProcess";
 import SelectedWork from "../selectedwork/SelectedWork";
 import ClientTestimonials from "../ClientTestimonials/ClientTestimonials";
 import ReadyToStart from "../ReadyToStart/ReadyToStart";
-import Footer from "../Footer/Footer";
-
 import logo from "../../../resources/images/ima1logo.png";
 import MainPageServices from "../services/mainPageServices/mainPageServices";
 
@@ -76,7 +74,7 @@ function Main() {
       <SelectedWork />
       <ClientTestimonials />
       <ReadyToStart />
-      <Footer />
+      
     </div>
   );
 }

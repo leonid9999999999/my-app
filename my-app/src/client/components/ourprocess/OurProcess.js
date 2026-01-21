@@ -42,28 +42,35 @@ export default function OurProcess() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
-      if (!sectionRef.current) return;
+  const scrollContainer = document.querySelector(".App");
+  if (!scrollContainer) return;
 
-      const rect = sectionRef.current.getBoundingClientRect();
-      const progress = Math.min(
-        Math.max(-rect.top / (rect.height - window.innerHeight), 0),
-        1
-      );
+  const onScroll = () => {
+    if (!sectionRef.current) return;
 
-      setVisible(progress > 0 && progress < 1);
+    const rect = sectionRef.current.getBoundingClientRect();
+    const containerHeight = scrollContainer.clientHeight;
 
-      const index = Math.min(
-        STEPS.length - 1,
-        Math.floor(progress * STEPS.length)
-      );
+    const progress = Math.min(
+      Math.max(-rect.top / (rect.height - containerHeight), 0),
+      1
+    );
 
-      setStep(index);
-    };
+    setVisible(progress > 0 && progress < 1);
 
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    const index = Math.min(
+      STEPS.length - 1,
+      Math.floor(progress * STEPS.length)
+    );
+
+    setStep(index);
+  };
+
+  scrollContainer.addEventListener("scroll", onScroll);
+  onScroll(); // сразу вызываем, чтобы инициализировать
+
+  return () => scrollContainer.removeEventListener("scroll", onScroll);
+}, []);
 
   return (
     <section ref={sectionRef} className={`process ${visible ? "is-visible" : ""}`}>
