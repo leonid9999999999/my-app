@@ -71,7 +71,6 @@ function Main() {
       <WhyWorkWithUs />
       <MainPageServices/>
       <OurProcess />
-      <SelectedWork />
       <ClientTestimonials />
       <ReadyToStart />
       

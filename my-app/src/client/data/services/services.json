@@ -4,7 +4,7 @@
         "tag": "Web Designs",
         "title": "Intuitive User Experiences ",
         "text": "User-centric interfaces where functionality meets modern design to maximise engagement",
-        "mainImage": "",
+        "mainImage": "https://res.cloudinary.com/dibygfenr/image/upload/v1768576439/Screenshot_2026-01-16_at_15.13.53_ab78ve.png",
         "ourServicesInfo": [
             {
                 "firstPageTitle": "Simplify Your Life With A Better Website",
@@ -66,16 +66,16 @@
         "tag": "E-Commerce",
         "title": "Online Shop",
         "text": "Complete online stores optimised for conversions and customer experience",
-        "mainImage":"https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
+        "mainImage":"https://res.cloudinary.com/dibygfenr/image/upload/v1769002651/shop-2_ggnp5a.png",
         "ourServicesInfo": [
             {
                 "firstPageTitle": "Launch The Professional Online Store You Have Always Wanted",
                 "additionalTitle": "E-Commerce",
                 "additionalParagpragh": "Looking to build a strong online presence or grow your business? We design and build webapplications that are clean, effective, and easy to manage. Whether you need a simple portfolio site or a powerful website focused on generating leads, our in-house team takes care of everything — from design and development to hosting and ongoing support. We create reliable, end-to-end web solutions that help your brand stand out and perform.",
                 "sliderImages": [
-                    "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
-                    "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
-                    "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png"
+                    "https://res.cloudinary.com/dibygfenr/image/upload/v1769002651/shop-2_ggnp5a.png",
+                    "https://res.cloudinary.com/dibygfenr/image/upload/v1769002651/shop-3_xofxfm.png",
+                    "https://res.cloudinary.com/dibygfenr/image/upload/v1769002651/shop-4_ju1s2r.png"
                 ],
                 "sections": [
                     {
@@ -115,7 +115,7 @@
                             "Your website should be easy to manage, not a barrier to progress. Our bespoke builds make content updates simple, with intuitive tools that give you confidence and control.",
                             "We support you with tailored guidance, clear documentation, and real human support — so as your business grows, your website grows with you."
                         ],
-                        "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+                        "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1769002651/shop-4_ju1s2r.png",
                         "imagePosition": "left"
                     }
                 ]
@@ -127,7 +127,7 @@
         "tag": "Bussiness Website",
         "title": "Informational Static Solution",
         "text": "Launch your personal brand with a custom-built website designed to showcase your skills and attract your dream opportunities.",
-        "mainImage": "https://res.cloudinary.com/dibygfenr/image/upload/v1768574960/mainImage_cnowlz.jpg",
+        "mainImage": "https://res.cloudinary.com/dibygfenr/image/upload/v1769002649/pool-1_acorhc.png",
         "ourServicesInfo": [
             {
                 "firstPageTitle": "Bussiness Website",
@@ -189,7 +189,7 @@
         "tag": "Portfolio",
         "title": "Opportunity To Show Your Self",
         "text": "We design and deploy professional, responsive portfolio websites that highlight your projects and experience effectively.",
-        "mainImage": "",
+        "mainImage": "https://res.cloudinary.com/dibygfenr/image/upload/v1769002649/student-1_lwjwvk.png",
         "ourServicesInfo": [
             {
                 "firstPageTitle": "Launch The Professional Online Store You Have Always Wanted",
