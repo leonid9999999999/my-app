@@ -8,39 +8,36 @@ import ContactUs from './client/components/contactUs/contactUs';
 import OurServices from './client/components/services/ourServices/ourServices.js';
 import OurPortfolio from './client/components/ourPortfolio/ourPortfolio.js';
 import PortfolioExample from './client/components/portfolioExamplePage/portfolioExample.js';
+import PrivacyPolicy from './client/components/PrivacyPolicy/PrivacyPolicy.js';
+import AboutUs from './client/components/About/AboutUs.js';
+import ScrollToTop from "./client/components/utils/ScrollToTop";
+import TermsOfService from "./client/components/Terms/TermsOfService";
 
 function App() {
   return (
 
-      <Router>
-        <div className="App">
-          <Routes>
-                <Route path='/' element={<WebApp />}>
-                    
-                    {/* Default redirect: /h -> /home */}
-                    <Route path="h" element={<Navigate to="/home" replace />} />
-                    
-                    {/* Child Route: /home renders inside the Outlet of WebApp */}
-                    <Route path="home" element={<Main/>} />
-                    
-                    {/* Child Route: /ContactUs renders inside the Outlet of WebApp */}
-                    <Route path="ContactUs" element={<ContactUs/>} />
-                    
-                    {/* Optional: Add an index route if you want localhost:3000/ to show Main */}
-                    <Route index element={<Navigate to="/home" replace />} />
 
-                    <Route path="ourServices" element={<OurServices/>} />
+<Router>
+  <ScrollToTop />
 
-                    <Route path="/ourPortfolio" element={<OurPortfolio />} />
+  <div className="App">
+  <Routes>
+    <Route path="/" element={<WebApp />}>
+      <Route index element={<Navigate to="home" replace />} />
 
-                    <Route path="/portfolioExample" element={<PortfolioExample />} />
+      <Route path="home" element={<Main />} />
+      <Route path="contactUs" element={<ContactUs />} />
+      <Route path="ourServices" element={<OurServices />} />
+      <Route path="ourPortfolio" element={<OurPortfolio />} />
+      <Route path="portfolioExample" element={<PortfolioExample />} />
+      <Route path="privacyPolicy" element={<PrivacyPolicy />} />
+      <Route path="about" element={<AboutUs />} />
+      <Route path="terms-of-service" element={<TermsOfService />} />
+    </Route>
+  </Routes>
+</div>
+</Router>
 
-                </Route>
-                
-              
-          </Routes>
-        </div>
-      </Router>
     
   );
 }

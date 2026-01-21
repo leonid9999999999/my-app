@@ -1,19 +1,17 @@
 import "./Footer.css";
-import logo from '../../../resources/images/ima1logo.png';
-
-// import logo from "../../assets/logo.png"; ← ЕСЛИ будешь импортировать как модуль
+import logo from "../../../resources/images/ima1logo.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer__container">
 
-        {/* LEFT */}
+        {/* BRAND */}
         <div className="footer__brand">
-            <div className="Logo">
-                <img alt="logo" src={logo} />
-            </div>
-          
+          <div className="footer__logo">
+            <img src={logo} alt="VB Secure Solutions logo" />
+          </div>
 
           <p className="footer__description">
             Professional web design and development services for businesses
@@ -36,10 +34,9 @@ function Footer() {
         <div className="footer__column">
           <h4 className="footer__title">Company</h4>
           <ul className="footer__list">
-            <li>About Us</li>
-            <li>Our Work</li>
-            <li>Process</li>
-            <li>Contact</li>
+            <li><Link to="/About">About Us</Link></li>
+            <li><Link to="/ourPortfolio">Our Work</Link></li>
+            <li><Link to="/AboutUs">Contact</Link></li>
           </ul>
         </div>
 
@@ -47,12 +44,9 @@ function Footer() {
         <div className="footer__column">
           <h4 className="footer__title">Contact</h4>
           <ul className="footer__list footer__list--contact">
-            <li>
-              <span>✉</span> hello@yourcompany.co.uk
-            </li>
-            <li>
-              <span>📍</span> Cardiff, United Kingdom
-            </li>
+            <li>vbsecuresolutions@gmail.com</li>
+            <li>Cardiff, United Kingdom</li>
+            <li>+44 89 0989 2641</li>
           </ul>
         </div>
 
@@ -60,11 +54,11 @@ function Footer() {
 
       {/* BOTTOM */}
       <div className="footer__bottom">
-        <span>© 2024 WebDev Pro. All rights reserved.</span>
+        <span>© 2026 VB SECURE SOFTWARE SOLUTIONS</span>
 
         <div className="footer__links">
-          <span>Privacy Policy</span>
-          <span>Terms of Service</span>
+          <Link to="/PrivacyPolicy">Privacy Policy</Link>
+          <Link to="/terms-of-service">Terms of Service</Link>
         </div>
       </div>
     </footer>
