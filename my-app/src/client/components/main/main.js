@@ -10,8 +10,27 @@ import ClientTestimonials from "../ClientTestimonials/ClientTestimonials";
 import ReadyToStart from "../ReadyToStart/ReadyToStart";
 import logo from "../../../resources/images/ima1logo.png";
 import MainPageServices from "../services/mainPageServices/mainPageServices";
+import ErrorBoundary from "../errorBoundary/ErrorBoundary";
+import { useLocation } from "react-router-dom";
+import { useRef } from "react";
 
 function Main() {
+
+
+  const location = useLocation();
+  const servicesRef = useRef(null);
+  const processRef = useRef(null);
+
+  
+
+  useEffect(() => {
+    if (location.state?.scrollTo === "services") {
+      servicesRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+    if (location.state?.scrollTo === "process") {
+      processRef.current?.scrollIntoView({ behavior: "smooth", margin: 80 });
+    }
+  }, [location]);
 
   useEffect(() => {
     const hero = document.querySelector(".main__hero");
@@ -69,8 +88,12 @@ function Main() {
       </div>
 
       <WhyWorkWithUs />
-      <MainPageServices/>
-      <OurProcess />
+      <div style={{ margin: 0, padding: 0 }} ref={servicesRef} >
+        <MainPageServices />
+      </div>
+      <div style={{margin: 0, padding: 0}}ref={processRef} >
+        <OurProcess />
+      </div>
       <SelectedWork />
       <ClientTestimonials />
       <ReadyToStart />
