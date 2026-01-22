@@ -1,21 +1,25 @@
-import "./projectCard.css"
+import "./projectCard.css";
 
-function ProjectCard({ onClick,stylep,styleh3,tag, title, text, image }) {
-    return (
-        <div onClick={onClick}className="project-card">
-            <div className="project-image">
-                <img src={image} alt={title} />
-            </div>
-            <span className="work_tag">{tag}</span>
-            <h3 style={styleh3} className="project-title">{title}</h3>
-            <p style={stylep} className="project-tags">{text}</p>
+function ProjectCard({ onClick, tag, title, text, image }) {
+  return (
+    <div onClick={onClick} className="project-card">
+      <div className="project-image">
+        <img src={image} alt={title} />
+        <div className="image-overlay" />
+      </div>
 
-            <button className="project-link">
-                <span>Explore</span>
-               
-            </button>
+      <div className="project-content">
+        <span className="work-tag">{tag}</span>
+        <h3 className="project-title">{title}</h3>
+        <p className="project-text">{text}</p>
+
+        <div className="project-link">
+          <span>View project</span>
+          <span className="arrow">→</span>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
 
-export default ProjectCard
+export default ProjectCard;

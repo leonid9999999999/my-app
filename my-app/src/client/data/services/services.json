@@ -1,8 +1,8 @@
 [
     {
         "id": 0,
-        "tag": "Web Designs",
-        "title": "Intuitive User Experiences ",
+        
+        "title": "Web Designs ",
         "text": "User-centric interfaces where functionality meets modern design to maximise engagement",
         "mainImage": "https://res.cloudinary.com/dibygfenr/image/upload/v1768576846/Screenshot_2026-01-16_at_15.20.39_oyycbt.png",
         "ourServicesInfo": [
@@ -65,8 +65,8 @@
     },
     {
         "id": 1,
-        "tag": "E-Commerce",
-        "title": "Online Shop",
+        
+        "title": "E-Commerce",
         "text": "Complete online stores optimised for conversions and customer experience",
         "mainImage":"https://res.cloudinary.com/dibygfenr/image/upload/v1769002651/shop-2_ggnp5a.png",
         "ourServicesInfo": [
@@ -126,8 +126,8 @@
     },
     {
         "id": 2,
-        "tag": "Bussiness Website",
-        "title": "Informational Static Solution",
+        
+        "title": "Bussiness Website",
         "text": "Launch your personal brand with a custom-built website designed to showcase your skills and attract your dream opportunities.",
         "mainImage": "https://res.cloudinary.com/dibygfenr/image/upload/v1769002649/pool-1_acorhc.png",
         "ourServicesInfo": [
@@ -184,8 +184,8 @@
     },
     {
         "id": 3,
-        "tag": "Portfolio",
-        "title": "Opportunity To Show Your Self",
+        
+        "title": "Portfolio",
         "text": "We design and deploy professional, responsive portfolio websites that highlight your projects and experience effectively.",
         "mainImage": "https://res.cloudinary.com/dibygfenr/image/upload/v1769002649/student-1_lwjwvk.png",
         "ourServicesInfo": [
@@ -242,8 +242,8 @@
     },
     {
         "id": 4,
-        "tag": "Web Application",
-        "title": "Complex and Dynamic Solution",
+        
+        "title": "Web Application",
         "text": "Custom scalable applications built using modern practices.",
         "mainImage": "https://res.cloudinary.com/dibygfenr/image/upload/v1768501387/Screenshot_2026-01-15_at_18.22.59_imnqtk.png",
         "ourServicesInfo": [
@@ -306,8 +306,8 @@
     
     {
         "id": 5,
-        "tag": "Business Card",
-        "title": "Online Business Card",
+        
+        "title": "Business Card",
         "text": "Make a lasting first impression. Allow potential clients to view your best work and book their session immediately, directly from their phone.",
         "mainImage": "https://res.cloudinary.com/dibygfenr/image/upload/v1768500914/Screenshot_2026-01-15_at_18.14.24_ug1qsi.png",
         "ourServicesInfo": [
@@ -352,8 +352,8 @@
    
     {
         "id": 6,
-        "tag": "Eductional Website",
-        "title": "Interactive Learning Platform",
+        
+        "title": "Eductional Website",
         "text": "A comprehensive educational hub featuring course management, progress tracking, and multimedia learning resources.",
         "mainImage": "https://res.cloudinary.com/dibygfenr/image/upload/v1769008403/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_1053_cstozm.png",
         "ourServicesInfo": [
@@ -409,8 +409,8 @@
     },
     {
         "id": 7,
-        "tag": "Personal Website Blog",
-        "title": "Share Your Narrative",
+        
+        "title": "Personal Website Blog",
         "text": "A beautifully designed blogging platform that prioritises readability and helps you connect authentically with your audience.",
         "mainImage": "",
         "ourServicesInfo": [
@@ -470,8 +470,8 @@
     },
     {
         "id": 8,
-        "tag": "Proffesional Maintenance",
-        "title": "Ongoing Support",
+        
+        "title": "Proffesional Maintenanc",
         "text": "Stressless maintenance, updates and technical support to your keep site running smoothly",
         "mainImage": "",
         "ourServicesInfo": [
