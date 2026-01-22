@@ -53,27 +53,6 @@
   transition: transform 0.6s ease, border-radius 0.6s ease-in-out;
 }
 
-/* --- SHADOW OVERLAY --- */
-.slider-container::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 5;
-  pointer-events: none;
-
-  /* Match initial shape */
-  border-radius: 10px;
-  border-bottom-right-radius: 200px;
-
-  /* Inner Shadow */
-  box-shadow: inset -25px -5px 40px rgba(70, 70, 70, 0.4);
-
-  transition: box-shadow 0.6s ease, border-radius 0.6s ease-in-out;
-}
-
 /* --- HOVER EFFECTS --- */
 .slider-container:hover {
   transform: scale(1.04);
@@ -180,4 +159,72 @@
 
   /* Optional: A subtle shadow on the image itself to separate it from the gray bg */
   filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+}
+
+@media (max-width: 768px) {
+
+  /* 1. THE PARENT (The Scissors) */
+  .slider-container {
+    height: 400px !important;
+    width: 100% !important;
+
+    /* This clips anything that goes outside, including the corner curve */
+    overflow: hidden;
+
+    border-bottom-right-radius: 80px;
+    background: #f0f2f5;
+  }
+
+    .slider-container::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+      pointer-events: none;
+  
+      /* Match initial shape */
+      border-radius: 10px;
+      border-bottom-right-radius: 20px;
+  
+      /* Inner Shadow */
+      box-shadow: inset -25px -5px 40px rgba(70, 70, 70, 0.4);
+  
+      /* Transition */
+      transition: box-shadow 0.6s ease, border-radius 0.6s ease-in-out;
+  
+    }
+
+  .slider-wrapper {
+    height: 100% !important;
+  }
+
+  /* 2. THE CHILD (The Content) */
+  .slide {
+    width: 100% !important;
+    height: 100% !important;
+
+    /* Force flex to center the image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 3. THE IMAGE (Stop it from being cut) */
+  .slide img {
+    /* "contain" ensures the WHOLE image is visible, never cropped */
+    object-fit: contain !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    /* 4. IMPORTANT: Add Padding */
+    /* This pushes the image INWARD, away from the edges where it gets cut */
+    padding: 20px !important;
+
+    /* This makes sure the padding is calculated INSIDE the width */
+    box-sizing: border-box !important;
+  }
 }

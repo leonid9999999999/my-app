@@ -89,7 +89,7 @@ function Main() {
 
       <WhyWorkWithUs />
       <div style={{ margin: 0, padding: 0 }} ref={servicesRef} >
-        <ErrorBoundary><MainPageServices /></ErrorBoundary>
+        <MainPageServices />
       </div>
       <div style={{margin: 0, padding: 0}}ref={processRef} >
         <OurProcess />

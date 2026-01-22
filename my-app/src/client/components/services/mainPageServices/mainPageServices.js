@@ -47,7 +47,7 @@ function MainPageServices(){
     return(
         <div id="services" className="ourServices">
             <div className="ourServicesWrapper">
-                <h2 className="ourServiceTitle">Selected Work</h2>
+                <h2 className="ourServiceTitle">Our Services</h2>
 
                 <p className="ourServiceSubtitle">
                     Recent projects delivered for businesses across the UK and Europe.
@@ -62,7 +62,7 @@ function MainPageServices(){
                         //   text={project.text}
                         //   image={project.mainImage}
                         // />
-                        <ErrorBoundary><ProjectCard
+                        <ProjectCard
                             onClick={() => Page(project)}
                             styleh3={{ fontSize: 18, fontWeight: 600, marginBottom: 10, color: 'white' }}
                             styelep={{ fontSize: 14, lineHeight: 1.6, color: "#94a3b8" }}
@@ -72,7 +72,7 @@ function MainPageServices(){
                             text={project.text}
                             image={project.mainImage}
                         />
-                        </ErrorBoundary>
+                       
                     ))}
 
                 </div>

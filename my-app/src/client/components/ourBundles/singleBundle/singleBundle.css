@@ -57,6 +57,13 @@
     margin-bottom: 14px;
 }
 
+.briefDescription p{
+    font-size: 10px;
+    line-height: 1.5;
+    margin-bottom: 14px;
+    color: grey;
+}
+
 
 .priceDescription {
     display: flex;

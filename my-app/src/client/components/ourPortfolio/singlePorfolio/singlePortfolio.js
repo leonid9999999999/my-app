@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function SinglePortfolio({ image, title, siteUrl, description,onClick }){
     return(
-        <ErrorBoundary>
+       
             <div className="portfolio-card" onClick={onClick}>
                 <div className="portfolio-image-wrapper">
                     <img src={image} alt={title} className="portfolio-image" />
@@ -16,7 +16,7 @@ function SinglePortfolio({ image, title, siteUrl, description,onClick }){
                 <h3 className="portfolio-title">{title}</h3>
                 <p className='portDesription'>{description}</p>
             </div>
-        </ErrorBoundary>
+       
     );
 }
 

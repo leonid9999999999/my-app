@@ -132,9 +132,9 @@ const OurServices = () => {
       <div className="firstBlockMainWrapper">
         <div className="firsBlockMain">
           <div className="slider">
-            <ErrorBoundary>
+           
               {loadingSlider ? <Spinner /> : <ImageSlider images={slides} interval={3000} />}
-            </ErrorBoundary>
+           
           </div>
           <div className="Title">
             <h1>{firstPageTitle}</h1>
@@ -152,7 +152,7 @@ const OurServices = () => {
       {/* --- Portfolio Grid */}
       <div className="secondBlockOurProject">
         <div className="ourProject" ref={targetSection}>
-          <ErrorBoundary>
+          
             {loadingPortfolio ? (
               <Spinner />
             ) : (
@@ -172,7 +172,7 @@ const OurServices = () => {
                 </div>
               </section>
             )}
-          </ErrorBoundary>
+         
         </div>
       </div>
 
@@ -185,9 +185,9 @@ const OurServices = () => {
               <Spinner />
             ) : (
               cards.map((card, index) => (
-                <ErrorBoundary key={index}>
+                
                   <ProcessCard {...card} />
-                </ErrorBoundary>
+                
               ))
             )}
           </div>
@@ -197,9 +197,9 @@ const OurServices = () => {
       {/* --- Split Section */}
       <div className="forthBlockMoreAboutService">
         <div className="AboutService">
-          <ErrorBoundary>
+         
             <SplitVisualSection sections={sections} />
-          </ErrorBoundary>
+        
         </div>
       </div>
 

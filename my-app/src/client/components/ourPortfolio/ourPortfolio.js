@@ -36,14 +36,14 @@ function OurPortfolio() {
             </div>
         );
     }
-    throw new Error("I crashed!");
+   
     return (
         <div className="ourPorfolioWrapper">
             <div className="ourPorfolioTitle">
                 <h2>Our Work</h2>
             </div>
             <div className="ourPortfolio">
-                <ErrorBoundary>
+                
                     {portfolioItems.map((item, index) => {
                         // only start a pair on EVEN index
                         if (index % 2 !== 0) return null;
@@ -56,7 +56,7 @@ function OurPortfolio() {
 
                                 {/* TOP */}
                                 <div className="topOurPortfolioBlock">
-                                    <ErrorBoundary>
+                                  
                                         <SinglePortfolio
                                             image={topItem.image}
                                             description={topItem.description}
@@ -64,13 +64,13 @@ function OurPortfolio() {
                                             siteUrl={`/portfolio/${topItem.id}`}
                                             onClick={() => Page(topItem)}
                                         />
-                                    </ErrorBoundary>
+                                    
                                 </div>
 
                                 {/* BOTTOM */}
                                 {bottomItem && (
                                     <div className="bottomOurPortfolioBlock">
-                                        <ErrorBoundary>
+                                        
                                             <SinglePortfolio
                                                 image={bottomItem.image}
                                                 description={bottomItem.description}
@@ -78,14 +78,14 @@ function OurPortfolio() {
                                                 siteUrl={`/portfolio/${bottomItem.id}`}
                                                 onClick={() => Page(bottomItem)}
                                             />
-                                        </ErrorBoundary>
+                                        
                                     </div>
                                 )}
 
                             </div>
                         );
                     })}
-                </ErrorBoundary>
+               
             </div>
         </div>
     );
