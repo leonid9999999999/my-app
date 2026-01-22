@@ -122,22 +122,7 @@ const targetSection = useRef(null);
                   <Button style={{backgroundColor: "#3b82f6", color: "white"}} onClick={handleScrollDown} text="Find out more!"/>
               </div>
           </div>
-          <div className="additionalBlockWrapper">
-            <div className="additionalBlock">
-
-              <div className="additionalBlockWrapperTitle">
-                  <h2>{additionalTitle}</h2>
-              </div>
-              <div className="additionalBlockWrapperParagraph">
-                  <p className="additionalParagraph">
-                    {additionalParagpragh}
-                  </p>
-              <a className="contact-link" href="ContactUs">
-                        Contact us today →
-                  </a>
-              </div>
-            </div>
-          </div>
+          
         </div>
         <div className="secondBlockOurProject">
             <div className="ourProject">

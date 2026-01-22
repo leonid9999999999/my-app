@@ -17,6 +17,8 @@ function App() {
   return (
   <Router>
   <div className="App">
+    {/* ScrollToTop должен быть здесь, чтобы отслеживать все маршруты */}
+      <ScrollToTop />
   <Routes>
 
 

@@ -4,55 +4,57 @@
         "tag": "Web Designs",
         "title": "Intuitive User Experiences ",
         "text": "User-centric interfaces where functionality meets modern design to maximise engagement",
-        "mainImage": "https://res.cloudinary.com/dibygfenr/image/upload/v1768576439/Screenshot_2026-01-16_at_15.13.53_ab78ve.png",
+        "mainImage": "https://res.cloudinary.com/dibygfenr/image/upload/v1768576846/Screenshot_2026-01-16_at_15.20.39_oyycbt.png",
         "ourServicesInfo": [
             {
                 "firstPageTitle": "Simplify Your Life With A Better Website",
                 "additionalTitle": "WebApplications",
-                "additionalParagpragh": "Looking to build a strong online presence or grow your business? We design and build websites that are clean, effective, and easy to manage. Whether you need a simple portfolio site or a powerful website focused on generating leads, our in-house team takes care of everything — from design and development to hosting and ongoing support. We create reliable, end-to-end web solutions that help your brand stand out and perform.",
+                "additionalParagpragh": "Every business is different, and so should be your website. We design and build websites that are easy to use, clear, and engaging - helping your visitors find what they need and take action. With smart design and solid architecture at the core, our websites are reliable, fast, and built to grow with your business.",
 
                 "sliderImages": [
-                    "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
-                    "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
-                    "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png"
+                    "https://res.cloudinary.com/dibygfenr/image/upload/v1768576846/Screenshot_2026-01-16_at_15.20.39_oyycbt.png",
+                    "https://res.cloudinary.com/dibygfenr/image/upload/v1768589375/Screenshot_2026-01-16_at_18.49.13_jzdil0.png",
+                    "https://res.cloudinary.com/dibygfenr/image/upload/v1769002652/pool-2_ejxowv.png"
                 ],
                 "sections": [
                     {
-                        "title": "Built for tomorrow. Designed for you.",
+                        "title": "Design that stands out",
                         "paragraphs": [
-                            "No two organisations are the same — and neither are our websites. We create bespoke digital experiences on flexible, future-ready platforms, designed around your goals and built to adapt as your business evolves.",
-                            "With clean code and considered architecture at the core, our websites are fast, reliable, and crafted to perform — today, tomorrow, and beyond."
+                            "We create websites that capture attention and leave a lasting impression. Every layout, colour and interaction is carefully crafted to reflect your brand and engage your audience.",
+
+                            "From concept to completion, our designs are clean, intuitive and built to showcase your business at its best."
+                            
                         ],
-                        "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb",
+                        "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1769002652/pool-2_ejxowv.png",
                         "linkText": "Talk to our website experts →",
                         "linkUrl": "/",
                         "imagePosition": "right"
                     },
                     {
-                        "title": "Experience with purpose.",
+                        "title": "Engaging experiences, every time",
                         "paragraphs": [
-                            "Great design goes beyond appearance. We focus on how users move, think, and interact, creating seamless journeys that feel natural and intuitive from the first click to the last.",
-                            "Every interaction is deliberate. Every detail earns its place. The result is a website that doesn’t just look good — it works hard for your business."
+                            "Your website should feel effortless to use while leaving a strong visual impression. We focus on creating designs that guide users naturally, making every visit memorable.",
+                            "Our approach balances aesthetics with usability, ensuring your site looks great and works flawlessly."
                         ],
-                        "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+                        "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1768576846/Screenshot_2026-01-16_at_15.20.39_oyycbt.png",
                         "linkText": "Brief us today →",
                         "linkUrl": "/",
                         "imagePosition": "left"
                     },
                     {
-                        "title": "Visibility that scales",
+                        "title": "Built to impress",
                         "paragraphs": [
-                            "We build websites that are ready to be found. From clean technical foundations to performance-led design, every build is optimised for speed, accessibility, and search.",
-                            "By blending creative thinking with technical expertise, we help your brand grow its presence online — now and as the digital landscape continues to evolve."
+                            "Great design is about more than style - it’s about clarity, focus and impact. We design websites that are visually striking, intuitive to navigate, and tailored to your business goals.",
+                            "Every element is intentional, every interaction considered, delivering an experience your visitors will remember."
                         ],
-                        "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb",
+                        "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1768589375/Screenshot_2026-01-16_at_18.49.13_jzdil0.png",
                         "imagePosition": "right"
                     },
                     {
-                        "title": "Control without complexity.",
+                        "title": "Design with purpose",
                         "paragraphs": [
-                            "Your website should be easy to manage, not a barrier to progress. Our bespoke builds make content updates simple, with intuitive tools that give you confidence and control.",
-                            "We support you with tailored guidance, clear documentation, and real human support — so as your business grows, your website grows with you."
+                            "We craft digital experiences that combine beauty and function. From typography and layout to interactions and animations, every detail is designed to engage users and support your brand.",
+                            "The result is a website that not only looks exceptional but also communicates your message effectively."
                         ],
                         "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
                         "imagePosition": "left"
@@ -71,7 +73,7 @@
             {
                 "firstPageTitle": "Launch The Professional Online Store You Have Always Wanted",
                 "additionalTitle": "E-Commerce",
-                "additionalParagpragh": "Looking to build a strong online presence or grow your business? We design and build webapplications that are clean, effective, and easy to manage. Whether you need a simple portfolio site or a powerful website focused on generating leads, our in-house team takes care of everything — from design and development to hosting and ongoing support. We create reliable, end-to-end web solutions that help your brand stand out and perform.",
+                "additionalParagpragh": "We build complete online stores designed to convert visitors into customers. Every product page, checkout flow and interaction is crafted for clarity, ease of use and efficiency.",
                 "sliderImages": [
                     "https://res.cloudinary.com/dibygfenr/image/upload/v1769002651/shop-2_ggnp5a.png",
                     "https://res.cloudinary.com/dibygfenr/image/upload/v1769002651/shop-3_xofxfm.png",
@@ -79,41 +81,41 @@
                 ],
                 "sections": [
                     {
-                        "title": "Built for tomorrow. Designed for you.",
+                        "title": "Online Shop",
                         "paragraphs": [
-                            "No two organisations are the same — and neither are our websites. We create bespoke digital experiences on flexible, future-ready platforms, designed around your goals and built to adapt as your business evolves.",
-                            "With clean code and considered architecture at the core, our websites are fast, reliable, and crafted to perform — today, tomorrow, and beyond."
+                            "We build complete online stores designed to convert visitors into customers. Every product page, checkout flow and interaction is crafted for clarity, ease of use and efficiency.",
+                            "Your store will be fast, reliable, and optimised to grow sales while providing a seamless experience for every shopper."
                         ],
-                        "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb",
+                        "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1769002652/shop-1_tu1ogg.png",
                         "linkText": "Talk to our website experts →",
                         "linkUrl": "/",
                         "imagePosition": "right"
                     },
                     {
-                        "title": "Experience with purpose.",
+                        "title": "E-Commerce that performs",
                         "paragraphs": [
-                            "Great design goes beyond appearance. We focus on how users move, think, and interact, creating seamless journeys that feel natural and intuitive from the first click to the last.",
-                            "Every interaction is deliberate. Every detail earns its place. The result is a website that doesn’t just look good — it works hard for your business."
+                            "From intuitive navigation to smooth checkout, our e-commerce websites are designed with the customer in mind. We combine clean design with smart functionality to create stores that are easy to manage and drive results.",
+                            "Every store is tailored to your brand, giving your customers a shopping experience that’s simple, enjoyable and effective."
                         ],
-                        "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+                        "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1769002651/shop-2_ggnp5a.png",
                         "linkText": "Brief us today →",
                         "linkUrl": "/",
                         "imagePosition": "left"
                     },
                     {
-                        "title": "Visibility that scales",
+                        "title": "Shops built for growth",
                         "paragraphs": [
-                            "We build websites that are ready to be found. From clean technical foundations to performance-led design, every build is optimised for speed, accessibility, and search.",
-                            "By blending creative thinking with technical expertise, we help your brand grow its presence online — now and as the digital landscape continues to evolve."
+                            "Our online stores don’t just look great - they are engineered to sell. With thoughtful layouts, clear product displays, and seamless payment flows, your customers can shop confidently and effortlessly.",
+                            "We deliver e-commerce solutions that are scalable, reliable and ready to support your business as it grows."
                         ],
-                        "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb",
+                        "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1769002651/shop-3_xofxfm.png",
                         "imagePosition": "right"
                     },
                     {
-                        "title": "Control without complexity.",
+                        "title": "Designed to sell",
                         "paragraphs": [
-                            "Your website should be easy to manage, not a barrier to progress. Our bespoke builds make content updates simple, with intuitive tools that give you confidence and control.",
-                            "We support you with tailored guidance, clear documentation, and real human support — so as your business grows, your website grows with you."
+                            "We create e-commerce websites that blend design and functionality, giving your customers a smooth and engaging shopping experience. From homepage to checkout, every interaction is considered to encourage sales and repeat visits.",
+                            "With clean code, smart architecture and intuitive design, your store will perform now and adapt as your business evolves."
                         ],
                         "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1769002651/shop-4_ju1s2r.png",
                         "imagePosition": "left"
@@ -132,7 +134,7 @@
             {
                 "firstPageTitle": "Bussiness Website",
                 "additionalTitle": "Website",
-                "additionalParagpragh": "Looking to build a strong online presence or grow your business? We design and build websites that are clean, effective, and easy to manage. Whether you need a simple portfolio site or a powerful website focused on generating leads, our in-house team takes care of everything — from design and development to hosting and ongoing support. We create reliable, end-to-end web solutions that help your brand stand out and perform.",
+                "additionalParagpragh": "Looking to build a strong online presence or grow your business? We design and build websites that are clean, effective, and easy to manage. Whether you need a simple portfolio site or a powerful website focused on generating leads, our in-house team takes care of everything - from design and development to hosting and ongoing support. We create reliable, end-to-end web solutions that help your brand stand out and perform.",
                 "sliderImages": [
                     "https://res.cloudinary.com/dibygfenr/image/upload/v1768574960/mainImage_cnowlz.jpg",
                     "https://res.cloudinary.com/dibygfenr/image/upload/v1768574960/secondImage_sqopjk.jpg",
@@ -141,10 +143,9 @@
                 ],
                 "sections": [
                     {
-                        "title": "Built for tomorrow. Designed for you.",
+                        "title": "Showcase your brand",
                         "paragraphs": [
-                            "No two organisations are the same — and neither are our websites. We create bespoke digital experiences on flexible, future-ready platforms, designed around your goals and built to adapt as your business evolves.",
-                            "With clean code and considered architecture at the core, our websites are fast, reliable, and crafted to perform — today, tomorrow, and beyond."
+                            "We design custom websites that highlight your skills, services and achievements. Every page is crafted to present your brand clearly and professionally, helping you attract the right opportunities."
                         ],
                         "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1768574960/mainImage_cnowlz.jpg",
                         "linkText": "Talk to our website experts →",
@@ -152,10 +153,9 @@
                         "imagePosition": "right"
                     },
                     {
-                        "title": "Experience with purpose.",
+                        "title": "Personalised business websites",
                         "paragraphs": [
-                            "Great design goes beyond appearance. We focus on how users move, think, and interact, creating seamless journeys that feel natural and intuitive from the first click to the last.",
-                            "Every interaction is deliberate. Every detail earns its place. The result is a website that doesn’t just look good — it works hard for your business."
+                            "Launch a website that reflects who you are and what you do. With a clean, modern design and intuitive structure, your site will communicate your expertise and engage your audience from the first visit."
                         ],
                         "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1768574960/secondImage_sqopjk.jpg",
                         "linkText": "Brief us today →",
@@ -163,19 +163,17 @@
                         "imagePosition": "left"
                     },
                     {
-                        "title": "Visibility that scales",
+                        "title": "Informational and impactful",
                         "paragraphs": [
-                            "We build websites that are ready to be found. From clean technical foundations to performance-led design, every build is optimised for speed, accessibility, and search.",
-                            "By blending creative thinking with technical expertise, we help your brand grow its presence online — now and as the digital landscape continues to evolve."
+                            "Your website is your digital calling card. We create static solutions that are easy to manage, visually appealing, and built to showcase your skills or services effectively."
                         ],
                         "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1768574961/thirdImage_vvhw9j.jpg",
                         "imagePosition": "right"
                     },
                     {
-                        "title": "Control without complexity.",
+                        "title": "Designed to represent you",
                         "paragraphs": [
-                            "Your website should be easy to manage, not a barrier to progress. Our bespoke builds make content updates simple, with intuitive tools that give you confidence and control.",
-                            "We support you with tailored guidance, clear documentation, and real human support — so as your business grows, your website grows with you."
+                            "We craft websites that tell your story and highlight your strengths. With thoughtful design and clear presentation, your site helps you make a strong impression and attract the opportunities you want."
                         ],
                         "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1768574960/forthImage_z6nxht.jpg",
                         "imagePosition": "left"
@@ -193,52 +191,49 @@
         "ourServicesInfo": [
             {
                 "firstPageTitle": "Launch The Professional Online Store You Have Always Wanted",
-                "additionalTitle": "E-Commerce",
-                "additionalParagpragh": "Looking to build a strong online presence or grow your business? We design and build websites that are clean, effective, and easy to manage. Whether you need a simple portfolio site or a powerful website focused on generating leads, our in-house team takes care of everything — from design and development to hosting and ongoing support. We create reliable, end-to-end web solutions that help your brand stand out and perform.",
+                "additionalTitle": "Portfolio",
+                "additionalParagpragh": "Looking to build a strong online presence or grow your business? We design and build websites that are clean, effective, and easy to manage. Whether you need a simple portfolio site or a powerful website focused on generating leads, our in-house team takes care of everything - from design and development to hosting and ongoing support. We create reliable, end-to-end web solutions that help your brand stand out and perform.",
                 "sliderImages": [
-                    "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
-                    "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
-                    "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png"
+                    "https://res.cloudinary.com/dibygfenr/image/upload/v1769002649/student-1_lwjwvk.png",
+                    "https://res.cloudinary.com/dibygfenr/image/upload/v1769002650/student-3_nqqhvh.png",
+                    "https://res.cloudinary.com/dibygfenr/image/upload/v1769002651/student-4_z1ceck.png"
                 ],
                 "sections": [
                     {
-                        "title": "Built for tomorrow. Designed for you.",
+                        "title": "Showcase your work",
                         "paragraphs": [
-                            "No two organisations are the same — and neither are our websites. We create bespoke digital experiences on flexible, future-ready platforms, designed around your goals and built to adapt as your business evolves.",
-                            "With clean code and considered architecture at the core, our websites are fast, reliable, and crafted to perform — today, tomorrow, and beyond."
+                            "We design responsive portfolio websites that put your projects and achievements in the spotlight. Every detail is crafted to present your work clearly and professionally, helping you stand out."
                         ],
-                        "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb",
+                        "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1769002649/student-1_lwjwvk.png",
                         "linkText": "Talk to our website experts →",
                         "linkUrl": "/",
                         "imagePosition": "right"
                     },
                     {
-                        "title": "Experience with purpose.",
+                        "title": "Your projects, perfectly presented",
                         "paragraphs": [
-                            "Great design goes beyond appearance. We focus on how users move, think, and interact, creating seamless journeys that feel natural and intuitive from the first click to the last.",
-                            "Every interaction is deliberate. Every detail earns its place. The result is a website that doesn’t just look good — it works hard for your business."
+                            "Our portfolio websites combine clean design with intuitive navigation, making it easy for visitors to explore your work. Each site is tailored to highlight your skills and experience effectively."
                         ],
-                        "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+                        "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1769002649/student-2_qodl8n.png",
                         "linkText": "Brief us today →",
                         "linkUrl": "/",
                         "imagePosition": "left"
                     },
                     {
-                        "title": "Visibility that scales",
+                        "title": "Designed to impress",
                         "paragraphs": [
-                            "We build websites that are ready to be found. From clean technical foundations to performance-led design, every build is optimised for speed, accessibility, and search.",
-                            "By blending creative thinking with technical expertise, we help your brand grow its presence online — now and as the digital landscape continues to evolve."
+                            "We build portfolio websites that not only look polished but also showcase your projects and expertise. From layout to interactivity, every element is designed to engage your audience."
                         ],
-                        "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb",
+                        "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1769002650/student-3_nqqhvh.png",
                         "imagePosition": "right"
                     },
                     {
-                        "title": "Control without complexity.",
+                        "title": "Your experience, front and centre",
                         "paragraphs": [
                             "Your website should be easy to manage, not a barrier to progress. Our bespoke builds make content updates simple, with intuitive tools that give you confidence and control.",
-                            "We support you with tailored guidance, clear documentation, and real human support — so as your business grows, your website grows with you."
+                            "We support you with tailored guidance, clear documentation, and real human support - so as your business grows, your website grows with you."
                         ],
-                        "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+                        "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1769002651/student-4_z1ceck.png",
                         "imagePosition": "left"
                     }
                 ]
@@ -360,56 +355,52 @@
         "tag": "Eductional Website",
         "title": "Interactive Learning Platform",
         "text": "A comprehensive educational hub featuring course management, progress tracking, and multimedia learning resources.",
-        "mainImage": "",
+        "mainImage": "https://res.cloudinary.com/dibygfenr/image/upload/v1769008403/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_1053_cstozm.png",
         "ourServicesInfo": [
             {
                 "firstPageTitle": "Launch The Professional Online Store You Have Always Wanted",
                 "additionalTitle": "E-Commerce",
                 "additionalParagpragh": "Looking to build a strong online presence or grow your business? We design and build websites that are clean, effective, and easy to manage. Whether you need a simple portfolio site or a powerful website focused on generating leads, our in-house team takes care of everything — from design and development to hosting and ongoing support. We create reliable, end-to-end web solutions that help your brand stand out and perform.",
                 "sliderImages": [
-                    "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
-                    "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
-                    "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png"
+                    "https://res.cloudinary.com/dibygfenr/image/upload/v1769008402/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_1051_ppwxfe.png",
+                    "https://res.cloudinary.com/dibygfenr/image/upload/v1769008402/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_1052_wc6rsf.png",
+                    "https://res.cloudinary.com/dibygfenr/image/upload/v1769008403/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_1049_xplws6.png"
                 ],
                 "sections": [
                     {
-                        "title": "Built for tomorrow. Designed for you.",
+                        "title": "Built for learning",
                         "paragraphs": [
-                            "No two organisations are the same — and neither are our websites. We create bespoke digital experiences on flexible, future-ready platforms, designed around your goals and built to adapt as your business evolves.",
-                            "With clean code and considered architecture at the core, our websites are fast, reliable, and crafted to perform — today, tomorrow, and beyond."
+                            "We design educational websites that support structured learning and meaningful engagement. From course management to progress tracking, every feature is built to create a smooth and effective learning experience."
                         ],
-                        "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb",
+                        "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1769008402/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_1051_ppwxfe.png",
                         "linkText": "Talk to our website experts →",
                         "linkUrl": "/",
                         "imagePosition": "right"
                     },
                     {
-                        "title": "Experience with purpose.",
+                        "title": "Interactive learning platforms",
                         "paragraphs": [
-                            "Great design goes beyond appearance. We focus on how users move, think, and interact, creating seamless journeys that feel natural and intuitive from the first click to the last.",
-                            "Every interaction is deliberate. Every detail earns its place. The result is a website that doesn’t just look good — it works hard for your business."
+                            "Our educational platforms combine clear design with powerful functionality. With integrated courses, multimedia content and user progress tracking, we create environments that make learning accessible and engaging."
                         ],
-                        "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+                        "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1769008402/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_1052_wc6rsf.png",
                         "linkText": "Brief us today →",
                         "linkUrl": "/",
                         "imagePosition": "left"
                     },
                     {
-                        "title": "Visibility that scales",
+                        "title": "Designed to educate",
                         "paragraphs": [
-                            "We build websites that are ready to be found. From clean technical foundations to performance-led design, every build is optimised for speed, accessibility, and search.",
-                            "By blending creative thinking with technical expertise, we help your brand grow its presence online — now and as the digital landscape continues to evolve."
+                            "We build comprehensive learning platforms that bring content and users together. From intuitive dashboards to rich multimedia resources, every element is crafted to support education at scale."
                         ],
-                        "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb",
+                        "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1769008403/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_1049_xplws6.png",
                         "imagePosition": "right"
                     },
                     {
-                        "title": "Control without complexity.",
+                        "title": "Learning, made accessible",
                         "paragraphs": [
-                            "Your website should be easy to manage, not a barrier to progress. Our bespoke builds make content updates simple, with intuitive tools that give you confidence and control.",
-                            "We support you with tailored guidance, clear documentation, and real human support — so as your business grows, your website grows with you."
+                            "We create educational websites that are easy to navigate and simple to manage. With smart course structures, progress tracking and interactive content, our platforms support learners at every stage."
                         ],
-                        "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+                        "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1769008403/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_1050_lnzxbi.png",
                         "imagePosition": "left"
                     }
                 ]
@@ -426,7 +417,7 @@
             {
                 "firstPageTitle": "Launch The Professional Online Store You Have Always Wanted",
                 "additionalTitle": "E-Commerce",
-                "additionalParagpragh": "Looking to build a strong online presence or grow your business? We design and build websites that are clean, effective, and easy to manage. Whether you need a simple portfolio site or a powerful website focused on generating leads, our in-house team takes care of everything — from design and development to hosting and ongoing support. We create reliable, end-to-end web solutions that help your brand stand out and perform.",
+                "additionalParagpragh": "Looking to build a strong online presence or grow your business? We design and build websites that are clean, effective, and easy to manage. Whether you need a simple portfolio site or a powerful website focused on generating leads, our in-house team takes care of everything - from design and development to hosting and ongoing support. We create reliable, end-to-end web solutions that help your brand stand out and perform.",
                 "sliderImages": [
                     "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
                     "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
@@ -434,10 +425,10 @@
                 ],
                 "sections": [
                     {
-                        "title": "Built for tomorrow. Designed for you.",
+                        "title": "Share your narrative",
                         "paragraphs": [
-                            "No two organisations are the same — and neither are our websites. We create bespoke digital experiences on flexible, future-ready platforms, designed around your goals and built to adapt as your business evolves.",
-                            "With clean code and considered architecture at the core, our websites are fast, reliable, and crafted to perform — today, tomorrow, and beyond."
+                            "We design personal websites and blogs that put your voice first. With carefully considered layouts, clear typography and a strong focus on readability, your content remains easy and enjoyable to read.",
+                            "Every detail is designed to support storytelling, helping you connect authentically with your audience and build a lasting presence around your ideas."
                         ],
                         "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb",
                         "linkText": "Talk to our website experts →",
@@ -445,10 +436,10 @@
                         "imagePosition": "right"
                     },
                     {
-                        "title": "Experience with purpose.",
+                        "title": "Designed for meaningful storytelling",
                         "paragraphs": [
-                            "Great design goes beyond appearance. We focus on how users move, think, and interact, creating seamless journeys that feel natural and intuitive from the first click to the last.",
-                            "Every interaction is deliberate. Every detail earns its place. The result is a website that doesn’t just look good — it works hard for your business."
+                            "A personal blog is more than a place to publish content - it’s a space to express ideas and perspectives. We create blogging platforms that prioritise clarity, structure and flow, allowing your stories to unfold naturally.",
+                            "The result is a website that feels personal, engaging and easy to return to."
                         ],
                         "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
                         "linkText": "Brief us today →",
@@ -456,19 +447,19 @@
                         "imagePosition": "left"
                     },
                     {
-                        "title": "Visibility that scales",
+                        "title": "Your ideas, thoughtfully presented",
                         "paragraphs": [
                             "We build websites that are ready to be found. From clean technical foundations to performance-led design, every build is optimised for speed, accessibility, and search.",
-                            "By blending creative thinking with technical expertise, we help your brand grow its presence online — now and as the digital landscape continues to evolve."
+                            "This approach helps you communicate clearly, build trust and connect with your audience in an authentic way."
                         ],
                         "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb",
                         "imagePosition": "right"
                     },
                     {
-                        "title": "Control without complexity.",
+                        "title": "A platform for your voice",
                         "paragraphs": [
-                            "Your website should be easy to manage, not a barrier to progress. Our bespoke builds make content updates simple, with intuitive tools that give you confidence and control.",
-                            "We support you with tailored guidance, clear documentation, and real human support — so as your business grows, your website grows with you."
+                            "We create blogging platforms that are visually refined and simple to use. By focusing on clean design and user experience, we ensure your content is easy to read and your message comes through clearly.",
+                            "Your website becomes a space where ideas are shared, conversations begin and audiences grow naturally over time."
                         ],
                         "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
                         "imagePosition": "left"
@@ -487,7 +478,7 @@
             {
                 "firstPageTitle": "Launch The Professional Online Store You Have Always Wanted",
                 "additionalTitle": "E-Commerce",
-                "additionalParagpragh": "Looking to build a strong online presence or grow your business? We design and build websites that are clean, effective, and easy to manage. Whether you need a simple portfolio site or a powerful website focused on generating leads, our in-house team takes care of everything — from design and development to hosting and ongoing support. We create reliable, end-to-end web solutions that help your brand stand out and perform.",
+                "additionalParagpragh": "Looking to build a strong online presence or grow your business? We design and build websites that are clean, effective, and easy to manage. Whether you need a simple portfolio site or a powerful website focused on generating leads, our in-house team takes care of everything - from design and development to hosting and ongoing support. We create reliable, end-to-end web solutions that help your brand stand out and perform.",
                 "sliderImages": [
                     "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
                     "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
@@ -495,10 +486,10 @@
                 ],
                 "sections": [
                     {
-                        "title": "Built for tomorrow. Designed for you.",
+                        "title": "Ongoing support you can rely on",
                         "paragraphs": [
-                            "No two organisations are the same — and neither are our websites. We create bespoke digital experiences on flexible, future-ready platforms, designed around your goals and built to adapt as your business evolves.",
-                            "With clean code and considered architecture at the core, our websites are fast, reliable, and crafted to perform — today, tomorrow, and beyond."
+                            "We provide stress-free website maintenance to keep everything running smoothly. From regular updates to technical support, we take care of the details so you don’t have to.",
+                            "Our proactive approach helps ensure your site stays secure, up to date and performing as expected at all times."
                         ],
                         "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb",
                         "linkText": "Talk to our website experts →",
@@ -506,10 +497,10 @@
                         "imagePosition": "right"
                     },
                     {
-                        "title": "Experience with purpose.",
+                        "title": "Professional maintenance, made simple",
                         "paragraphs": [
-                            "Great design goes beyond appearance. We focus on how users move, think, and interact, creating seamless journeys that feel natural and intuitive from the first click to the last.",
-                            "Every interaction is deliberate. Every detail earns its place. The result is a website that doesn’t just look good — it works hard for your business."
+                            "A well-maintained website is essential for long-term performance. We offer ongoing support, updates and monitoring to keep your site stable, secure and reliable.",
+                            "With our team handling the technical side, you can focus on your business with confidence."
                         ],
                         "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
                         "linkText": "Brief us today →",
@@ -517,19 +508,19 @@
                         "imagePosition": "left"
                     },
                     {
-                        "title": "Visibility that scales",
+                        "title": "Support that keeps you moving",
                         "paragraphs": [
-                            "We build websites that are ready to be found. From clean technical foundations to performance-led design, every build is optimised for speed, accessibility, and search.",
-                            "By blending creative thinking with technical expertise, we help your brand grow its presence online — now and as the digital landscape continues to evolve."
+                            "We look after your website beyond launch. Through regular maintenance, updates and technical assistance, we ensure your site continues to run smoothly and efficiently.",
+                            "Our support services are designed to reduce risk, minimise downtime and give you peace of mind."
                         ],
                         "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb",
                         "imagePosition": "right"
                     },
                     {
-                        "title": "Control without complexity.",
+                        "title": "Stress-free website care",
                         "paragraphs": [
-                            "Your website should be easy to manage, not a barrier to progress. Our bespoke builds make content updates simple, with intuitive tools that give you confidence and control.",
-                            "We support you with tailored guidance, clear documentation, and real human support — so as your business grows, your website grows with you."
+                            "We take care of your website’s ongoing needs, from updates and fixes to technical support. Our maintenance services help keep your site fast, secure and ready to perform.",
+                            "This allows you to focus on what matters most, knowing your website is in safe hands."
                         ],
                         "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
                         "imagePosition": "left"
