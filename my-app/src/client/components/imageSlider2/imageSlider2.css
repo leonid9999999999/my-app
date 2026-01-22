@@ -63,3 +63,23 @@
         height: 300px;
     }
 }
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.image-skeleton {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            #1a668f 25%,
+            #5f60c0 37%,
+            #0ccbdc 63%);
+    background-size: 400% 100%;
+    animation: shimmer 1.2s ease-in-out infinite;
+}

@@ -13,6 +13,9 @@ import AboutUs from './client/components/About/AboutUs.js';
 import ScrollToTop from "./client/components/utils/ScrollToTop";
 import TermsOfService from "./client/components/Terms/TermsOfService";
 
+import Page404 from "./client/components/errorBoundary/Page404.js";
+import AppErrorBoundaryWrapper from './client/components/errorBoundary/ErrorBoundary.js';
+
 function App() {
   return (
   <Router>
@@ -20,19 +23,23 @@ function App() {
   <Routes>
 
 
-    <Route path="/" element={<WebApp />}>
-      <Route index element={<Navigate to="home" replace />} />
+          <Route path="/" element={<WebApp />}>
+            <Route index element={<Navigate to="home" replace />} />
 
-      <Route path="home" element={<Main />} />
-      <Route path="contactUs" element={<ContactUs />} />
-        <Route path="/ourservices/:id" element={<OurServices/>} />
-        <Route path="/portfolio/:id" element={<PortfolioExample />} />
+            {/* Wrap all pages inside one ErrorBoundary */}
+            <Route element={<AppErrorBoundaryWrapper />}>
+              <Route path="home" element={<Main />} />
+              <Route path="contactUs" element={<ContactUs />} />
+              <Route path="/ourservices/:id" element={<OurServices />} />
+              <Route path="/portfolio/:id" element={<PortfolioExample />} />
+              <Route path="ourPortfolio" element={<OurPortfolio />} />
+              <Route path="privacyPolicy" element={<PrivacyPolicy />} />
+              <Route path="about" element={<AboutUs />} />
+              <Route path="terms-of-service" element={<TermsOfService />} />
+            </Route>
 
-      <Route path="ourPortfolio" element={<OurPortfolio />} />
-      <Route path="privacyPolicy" element={<PrivacyPolicy />} />
-      <Route path="about" element={<AboutUs />} />
-      <Route path="terms-of-service" element={<TermsOfService />} />
-    </Route>
+            <Route path="*" element={<Page404 />} />
+          </Route>
   </Routes>
 </div>
 </Router>

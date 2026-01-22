@@ -26,11 +26,11 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 60px;
+    gap:10px;
 }
 
 .slider{
-    
+    margin:  0 0 0 34px;
 }
 
 .Title{
