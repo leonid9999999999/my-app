@@ -36,7 +36,7 @@ function Footer() {
           <ul className="footer__list">
             <li><Link to="/About">About Us</Link></li>
             <li><Link to="/ourPortfolio">Our Work</Link></li>
-            <li><Link to="/AboutUs">Contact</Link></li>
+            
           </ul>
         </div>
 

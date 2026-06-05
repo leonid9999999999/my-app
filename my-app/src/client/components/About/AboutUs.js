@@ -1,6 +1,8 @@
 import "./AboutUs.css";
 import { useEffect, useState, useRef } from "react";
 import founder from "../../../resources/images/me.png";
+import TeamMember from "../../../resources/images/Timo.png";
+
 import logo from "../../../resources/images/imalogo.png";
 
 function AboutUs() {
@@ -139,6 +141,41 @@ useEffect(() => {
               and building a strong reputation step by step.
             </p>
         </div>
+        
+      </section>
+
+
+      
+
+
+      <section className="about-founder fade-up">
+        
+        <div className="about-founder__image">
+          <img src={TeamMember} alt="Leonid Vishnevsky" />
+        </div>
+
+        <div className="about-founder__content">
+          <h2>Team Member</h2>
+            <h3>Timo Berkut</h3>
+
+            <p>
+  Timo is a core technical lead at VB Secure Software Solutions and one of the
+  key people behind the company’s foundation.
+</p>
+
+
+<p>
+  Timo is responsible for backend development, system architecture, integrations,
+  and technical infrastructure, leading this part of the company’s work and
+  defining engineering standards.
+</p>
+
+<p>
+  His contribution is fundamental to the studio’s growth, and many of the
+  technical and structural decisions were shaped by his expertise and support.
+</p>
+        </div>
+        
       </section>
 
       {/* TIMELINE */}
