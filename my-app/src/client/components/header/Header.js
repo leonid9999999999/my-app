@@ -18,7 +18,9 @@ function Header() {
         <Link to="ourServices" className="header__link"> 
           Services
         </Link>
-        <div className="header__link">Process</div>
+        <Link to="/About" className="header__link">
+        About Us
+        </Link>
         <Link to="/ourPortfolio" className="header__link">
           Work
         </Link>
