@@ -25,7 +25,7 @@ const ContactUs = (props) => {
         <section class="tech-hero-block">
           <div class="tech-hero-content">
               <h1>We’d love to hear from you</h1>
-              <p>Whether you have a question about our API, architecture, pricing, need a technical demo, or anything else, our engineering team is ready to answer all your questions.</p>
+            <p>Whether you have questions about our service, architecture, or pricing? Book a meeting with us to discuss how we can solve your specific challenges.</p>
           </div>
         </section>
       </div>
@@ -74,8 +74,7 @@ const ContactUs = (props) => {
       </div>
         <BookingForm
           buttonTitle='Submit'
-          serviceTitle={title}
-          title={`Book a ${title} Plan`}
+
           desc="We Will Contact You Soon"
         />
       </div>

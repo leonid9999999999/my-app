@@ -1,12 +1,15 @@
 import "./mainPageServices.css";
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import servicesData from "../../../data/services/services.json";
 import ProjectCard from "../../services/projectCard/projectCard.js";
-
-
+import ErrorBoundary from "../../errorBoundary/ErrorBoundary.js";
+import Spinner from "../../spinner/Spinner.js"; 
 
 function MainPageServices(){
     const navigate = useNavigate();
+    const [loading, setLoading] = useState(true);
+    const [projects, setProjects] = useState([]);
 
     function Page(item) {
 
@@ -23,18 +26,35 @@ function MainPageServices(){
             });
 
     }
+    useEffect(() => {
+        // simulate async fetch with setTimeout
+        const timer = setTimeout(() => {
+            setProjects(servicesData);
+            setLoading(false);
+        }, 900); // 1 second delay
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (loading) {
+        return (
+            <div className="spinnerWrapper">
+                <Spinner />
+            </div>
+        );
+    }
 
     return(
-        <div className="ourServices">
+        <div id="services" className="ourServices">
             <div className="ourServicesWrapper">
-                <h2 className="ourServiceTitle">Selected Work</h2>
+                <h2 className="ourServiceTitle">Our Services</h2>
 
                 <p className="ourServiceSubtitle">
                     Recent projects delivered for businesses across the UK and Europe.
                 </p>
 
                 <div className="ourServiceGrid">
-                    {servicesData.map((project) => (
+                    {projects.map((project) => (
                         // <OneSelectionCard
                         //   key={project.id} // Important: Always include a unique key
                         //   tag={project.tag}
@@ -52,6 +72,7 @@ function MainPageServices(){
                             text={project.text}
                             image={project.mainImage}
                         />
+                       
                     ))}
 
                 </div>

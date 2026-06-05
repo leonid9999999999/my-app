@@ -3,7 +3,7 @@
      justify-content: center;
     color: white;
     font-size: 38px;
-    margin-top: 50px;
+    margin-top: 90px;
 }
 .imgWrapper{
     position: relative;
@@ -135,3 +135,207 @@
     color: #555;
 }
 
+/* ===============================
+   RESPONSIVE — TABLET & MOBILE
+================================ */
+
+/* --------- Tablets (<= 1024px) --------- */
+@media (max-width: 1024px) {
+
+  .formWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bookingFormWrapper,
+  .additionalInformationWrapper {
+    width: 90%;
+    max-width: 600px;
+  }
+
+  .serviceDesc {
+    width: 100%;
+    text-align: center;
+  }
+
+  .detailsWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* --------- Phones (<= 768px) --------- */
+@media (max-width: 768px) {
+
+  /* HERO */
+  .pagetitle {
+    font-size: 28px;
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  .tech-hero-content h1 {
+    font-size: 34px;
+  }
+
+  .tech-hero-content p {
+    font-size: 16px;
+  }
+
+  /* FORM WRAPPERS */
+  .bookingFormWrapper,
+  .additionalInformationWrapper {
+    width: 95%;
+    min-height: auto;
+  }
+
+  .bookingFields {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    min-height: auto;
+  }
+
+  .leftBookingBlock {
+    
+    width: 90%;
+  }
+
+  .bookingFields input,
+  #bookingMessage,
+  #dateTime {
+    width: 100%;
+  }
+
+  /* PHONE INPUT */
+  .phoneNumBlock {
+    width: 100%;
+  }
+
+  #phoneNumber2 {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 15px;
+  }
+
+  /* TEXT */
+  .BookingDesc p {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .BookingDesc h3 {
+    font-size: 24px;
+  }
+
+  /* IMAGES */
+  .imgWrapper {
+    width: 180px;
+    height: 200px;
+  }
+}
+
+/* --------- Small Phones (<= 480px) --------- */
+@media (max-width: 480px) {
+
+    /* 1. WRAPPER: Make it fluid */
+    .bookingFormWrapper {
+        width: 95% !important;
+        /* Slightly wider than 90% for better use of space */
+        max-width: 100%;
+        margin: 10px auto !important;
+        margin: 0 auto;
+        /* Centers it */
+        box-sizing: border-box;
+        /* Prevents border from adding to width */
+    }
+
+    /* 2. INNER WRAPPER: Remove extra constraints */
+    .bookingFormInner {
+        width: 100%;
+        /* Let it fill the wrapper completely */
+        padding: 0;
+        /* Remove extra padding if any */
+    }
+
+    /* 3. INPUTS & TEXTAREA: The Critical Fix */
+    /* This ensures padding is calculated INSIDE the width, not added to it */
+    .bookingFields input,
+    .bookingFields textarea,
+    .phoneNumBlock,
+    .bookingFormWrapper {
+        box-sizing: border-box !important;
+        max-width: 100%;
+    }
+
+    /* 4. LAYOUT COLUMNS */
+    .leftBookingBlock {
+        width: 100%;
+        /* Unlock the fixed 380px */
+        max-width: 100%;
+        /* Ensure it doesn't overflow */
+    }
+
+    .bookingFields {
+        padding: 15px;
+        /* Consistent padding */
+        min-height: auto;
+        /* Remove the tall 500px height on mobile */
+        display: block;
+        /* Stack everything vertically */
+    }
+
+    /* 5. TEXT SIZING: Scale down text for small screens */
+    .BookingDesc h3 {
+        font-size: 21px !important;
+        /* Down from 29px */
+        margin-top: 10px;
+        text-align: center;
+        /* Looks better on mobile */
+    }
+
+    .BookingDesc p {
+        width: 100% !important;
+        /* Unlock fixed 390px */
+        font-size: 15px !important;
+        /* Down from 18px */
+        text-align: center;
+        /* Center align description */
+        box-sizing: border-box;
+        padding: 0 10px;
+        /* Add breathing room for text */
+    }
+
+        .infoText p {
+            /* 1. FORCE TEXT WRAPPING (Crucial for emails/links) */
+            overflow-wrap: break-word !important;
+            word-wrap: break-word !important;
+            word-break: break-word !important;
+    
+            /* 2. CONSTRAINT */
+            width: 100% !important;
+            max-width: 100% !important;
+    
+            /* 3. YOUR STYLES */
+            margin: 0.25rem 0 0 !important;
+            font-size: 0.95rem !important;
+            color: #555;
+            text-align: left;
+        }
+
+    .closeImg {
+        margin: 0;
+        /* Reset margin */
+        position: absolute;
+        /* Optional: Position it top-right if needed */
+        right: 15px;
+        top: 15px;
+    }
+
+    /* Wrapper for the header description to allow centering */
+    .wrapperDesc {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}

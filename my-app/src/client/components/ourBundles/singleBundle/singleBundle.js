@@ -6,6 +6,7 @@ function SingleBundle({
     title,
     description,
     price,
+    price2,
     includedServices = [],
     whatYouGet = [],
     buttonText = "Choose This Bundle"
@@ -28,7 +29,7 @@ function SingleBundle({
 
                     {/* PRICE */}
                     <div className="priceDescription">
-                        <h3 className="price">{price}</h3>
+                        <h3 className="price">{price} - {price2}</h3>
                     </div>
 
                     <div className="bundleMainInfo">

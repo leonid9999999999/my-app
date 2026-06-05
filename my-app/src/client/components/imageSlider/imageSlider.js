@@ -25,7 +25,7 @@ const ImageSlider = ({ images, interval = 3000 }) => {
       {/* The wrapper that holds all images side-by-side */}
       <div 
         className="slider-wrapper"
-        style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+        style={{ transform: `translateX(-${activeIndex * 102}%)` }}
       >
         {images.map((img, index) => (
           <div key={index} className="slide">

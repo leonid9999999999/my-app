@@ -42,28 +42,28 @@ export default function OurProcess() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-  const scrollContainer = document.querySelector(".App");
-  if (!scrollContainer) return;
+    const scrollContainer = document.querySelector(".App");
+    if (!scrollContainer) return;
+    
+    const onScroll = () => {
+      if (!sectionRef.current) return;
 
-  const onScroll = () => {
-    if (!sectionRef.current) return;
+      const rect = sectionRef.current.getBoundingClientRect();
+      const containerHeight = scrollContainer.clientHeight;
 
-    const rect = sectionRef.current.getBoundingClientRect();
-    const containerHeight = scrollContainer.clientHeight;
+      const progress = Math.min(
+        Math.max(-rect.top / (rect.height - containerHeight), 0),
+        1
+      );
 
-    const progress = Math.min(
-      Math.max(-rect.top / (rect.height - containerHeight), 0),
-      1
-    );
+      setVisible(progress >= 0 && progress < 1);
 
-    setVisible(progress > 0 && progress < 1);
+      const index = Math.min(
+        STEPS.length - 2,
+        Math.floor(progress * STEPS.length)
+      );
 
-    const index = Math.min(
-      STEPS.length - 1,
-      Math.floor(progress * STEPS.length)
-    );
-
-    setStep(index);
+      setStep(index);
   };
 
   scrollContainer.addEventListener("scroll", onScroll);

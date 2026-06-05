@@ -109,3 +109,132 @@
     font-size: 2.2rem;
   }
 }
+
+/* --- STEP 1: Laptops & Tablets (1024px and below) --- */
+/* The layout stays Horizontal (Row), but we shrink the sizes so it fits. */
+@media (max-width: 1024px) {
+
+  /* 1. Reduce the outer padding so content has more room */
+  .split-section {
+    padding: 4rem 2rem;
+    gap: 5rem;
+    /* Reduce vertical gap between rows */
+  }
+
+  .split-row {
+    gap: 2.5rem;
+    /* Reduce the gap between Text and Image (was 4rem) */
+    width: 100%;
+  }
+
+  /* 2. Scale down the Fonts */
+  .split-text h2 {
+    font-size: 2rem;
+    /* Down from 3rem */
+  }
+
+    .split-text p {
+      font-size: 0.8rem;
+      /* Down from 3rem */
+    }
+
+  /* 3. Adjust Image Size & Shape */
+  .split-image img {
+    height: 380px;
+    /* Shorten image slightly (was 450px) */
+    padding: 5px;
+    /* Less padding inside the image box */
+  }
+
+  /* 4. Tame the giant corners */
+  /* 160px is too big for this width, scale it down to 100px */
+  .split-image-top img {
+    border-top-right-radius: 100px;
+  }
+
+  .split-image-bottom img {
+    border-top-left-radius: 100px;
+  }
+}
+
+/* --- STEP 2: Tablets Portrait & Large Phones (768px and below) --- */
+/* Here we switch to Vertical Stack (Column) because it's too narrow for side-by-side. */
+@media (max-width: 768px) {
+
+  .split-row,
+  .split-row.reverse {
+    flex-direction: column;
+    text-align: center;
+    /* Center text when stacked */
+  }
+
+  /* Reverse order on mobile? (Optional) 
+     Uncomment this if you want image always on top */
+  /* .split-row.reverse { flex-direction: column-reverse; } 
+  */
+
+  .split-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .split-text p {
+    font-size: 1rem;
+    max-width: 500px;
+    /* Stop text from getting too wide to read */
+    margin: 0 auto 1.5rem auto;
+    /* Center the text block */
+  }
+
+  .split-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .split-image img {
+    height: auto;
+    /* Unlock fixed height */
+    max-height: 350px;
+    /* Cap the height so it's not huge */
+    object-fit: contain;
+    /* Keep the full image visible */
+  }
+
+  /* Reduce curves further */
+  .split-image-top img {
+    border-top-right-radius: 60px;
+  }
+
+  .split-image-bottom img {
+    border-top-left-radius: 60px;
+  }
+}
+
+/* --- STEP 3: Small Mobile (480px and below) --- */
+@media (max-width: 480px) {
+
+  .split-section {
+    padding: 3rem 1.5rem;
+    /* Minimum padding */
+    gap: 4rem;
+  }
+
+  .split-text h2 {
+    font-size: 1.1rem;
+  }
+
+     .split-text p {
+       font-size: 0.85rem;
+       max-width: 500px;
+       /* Stop text from getting too wide to read */
+       margin: 0 auto 1.5rem auto;
+       /* Center the text block */
+     }
+
+  /* Make the image smaller on tiny screens to save space */
+  .split-image img {
+    max-height: 250px;
+  }
+}

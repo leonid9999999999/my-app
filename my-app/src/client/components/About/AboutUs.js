@@ -8,6 +8,7 @@ import logo from "../../../resources/images/imalogo.png";
 function AboutUs() {
 
   /* ===== SCROLL ANIMATION ===== */
+
   useEffect(() => {
     const elements = document.querySelectorAll(".fade-up");
 

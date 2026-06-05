@@ -26,11 +26,11 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 60px;
+    gap:20px;
 }
 
 .slider{
-    
+    margin:  0 0 0 24px;
 }
 
 .Title{
@@ -93,4 +93,66 @@ font-size: 48px;
 
 .fifthBlockFAQWrapper{
     margin-top: 80px;
+}
+
+
+@media (max-width: 768px) {
+
+    .firsBlockMain {
+            margin: 100px 0 0 0;
+            flex-direction: column;
+            gap: 10px;
+        }
+    .Title {
+        width: 90%;
+        font-size: 10px;
+    }
+    /* 1. Typography Adjustments */
+    .blockTitle {
+        font-size: 32px;
+        /* Reduce from 48px to fit mobile */
+    }
+
+    .additionalBlockWrapperTitle {
+        font-size: 18px;
+    }
+
+    .additionalParagraph {
+        font-size: 16px;
+        /* Slightly smaller text for readability */
+        line-height: 1.5;
+    }
+
+    /* 2. Stack the Additional Block Content */
+    .additionalBlock {
+        flex-direction: column;
+        /* Stack items vertically */
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .additionalBlockWrapperParagraph {
+        align-items: center;
+        /* Center align the content */
+        text-align: center;
+    }
+
+    /* 3. Stack the Recipe Wrapper */
+    .ourRecipeWrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    /* 4. Spacing Cleanups */
+    .firsBlockMain {
+        margin-top: 40px;
+        /* Less empty space at the top */
+    }
+
+    .secondBlockOurProject,
+    .fifthBlockFAQWrapper {
+        margin-top: 50px;
+        /* Reduce large vertical gaps */
+    }
 }

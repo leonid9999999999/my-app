@@ -105,7 +105,7 @@ class BookingForm extends Component {
         try {
             //send value to bakend via router link + passing token 
             const res = await axios.post(`/api/createBooking`, values);
-            
+            const res1 = await axios.post(`/api/sendMail`, values);
             console.log("Booking Submited:", res.data);
             console.log(res.data.message)
             // reseting states

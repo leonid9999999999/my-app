@@ -1,7 +1,7 @@
 .portfolio-card {
     
     max-width: 500px;
-    
+    width: 100%;
     /* CHANGE SIZE HERE */
     margin: 60px;
     text-align: left;
@@ -73,3 +73,40 @@
     color: #ffffff9c;
 }
 
+
+@media (max-width: 1200px) {
+    .portfolio-card {
+        /* Reduce the huge margin so cards can sit side-by-side */
+        margin: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-card {
+        /* On mobile, center it and allow full width */
+        margin: 20px auto;
+        max-width: 100%;
+    }
+
+    .portfolio-title {
+        margin-top: 12px;
+        margin-bottom: 5px;
+        font-size: 24px;
+        font-weight: 500;
+        color: #ffffff;
+    }
+
+    .portDesription {
+        font-size: 14px;
+        margin: 0;
+        color: #ffffff9c;
+    }
+
+        .portfolio-card {
+            text-align: left;
+            text-align: center;
+        }
+        .view-site-btn {
+            display: none;
+        }
+}

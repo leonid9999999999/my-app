@@ -7,24 +7,74 @@
 }
 
 .bookingFormInner{
-
+    width: 100%;
 }
 
 .bookingForm{
 
 }
 
-.phoneNumBlock{
+.phoneNumBlock {
+    display: flex;
+    /* Enables flexbox */
+    align-items: center;
+    /* Centers text vertically */
+    width: 100%;
+    /* Fills the parent (.leftBookingBlock) */
+
+    background-color: white;
+    /* Ensures background consistency */
     border: 1px solid rgba(128, 128, 128, 0.542);
     border-radius: 15px;
+    box-sizing: border-box;
+    /* Ensures padding doesn't break width */
+    overflow: hidden;
+    /* Keeps children inside rounded corners */
 }
 
+/* Hover effect on the wrapper */
 .phoneNumBlock:hover {
     border: 1.2px solid rgb(0, 0, 0);
 }
 
-.phone-prefix{
-    margin:10px
+/* 2. THE PREFIX: Prevent it from shrinking */
+.phone-prefix {
+    margin: 0 0 0 15px;
+    /* Adjust spacing (Top Right Bottom Left) */
+    font-weight: bold;
+    /* Optional: makes +44 stand out */
+    white-space: nowrap;
+    /* Prevents text wrapping */
+}
+
+/* 3. THE INPUT: Make it flexible and remove its individual border */
+#phoneNumber2 {
+    flex-grow: 1;
+    /* Key property: Fills remaining space */
+    width: auto;
+    /* Remove the fixed 320px width */
+    min-width: 0;
+    /* Prevents flexbox overflow issues */
+
+    border: none;
+    /* Remove border (wrapper has the border now) */
+    outline: none;
+    /* Remove blue focus outline */
+    box-shadow: none;
+    /* Remove any shadows */
+    background: transparent;
+    /* Transparent so it blends with wrapper */
+
+    height: 35px;
+    /* Match your design height */
+    padding: 5px 5px 5px 10px;
+    border-radius: 0;
+    /* Radius handled by wrapper */
+}
+
+/* Overwrite the general input hover since the wrapper handles it */
+#phoneNumber2:hover {
+    border: none;
 }
 
 .leftBookingBlock{
@@ -33,7 +83,9 @@
     justify-content: space-between;
     
     align-items: flex-start;
-
+    width: 100%;
+        /* You can add max-width to stop it getting too big */
+        max-width: 380px;
 }
 
 .bookingFields {
@@ -42,6 +94,7 @@
 
     /* БЫЛО: height: 500px; */
     /* СТАЛО: */
+  
     min-height: 500px;
     /* Можно добавить padding, чтобы снизу не прилипало */
     padding-bottom: 20px;
@@ -84,11 +137,11 @@
     border: 1.2px solid rgb(0, 0, 0);
 }
 
-#phoneNumber2{
+/* #phoneNumber2{
     width: 320px;
     border-radius: 0px 15px 15px 0;
     border: 1px solid rgba(128, 128, 128, 0.542);
-}
+} */
 
 .BookingDesc{
    

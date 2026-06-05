@@ -3,6 +3,7 @@ import "./imageSlider2.css";
 
 const ImageSlider2 = ({ images, autoPlayInterval = 4000 }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [loaded, setLoaded] = useState(false);
 
     const nextSlide = () => {
         setCurrentIndex((prev) =>
@@ -41,7 +42,11 @@ const ImageSlider2 = ({ images, autoPlayInterval = 4000 }) => {
                 >
                     {images.map((img, index) => (
                         <div className="slide" key={index}>
-                            <img src={img} alt={`Slide ${index + 1}`} />
+                            <img onLoad={() => setLoaded(true)}
+                                style={{ display: loaded ? "block" : "none" }} 
+                                src={img} 
+                                alt={`Slide ${index + 1}`} />
+                            {!loaded && <div className="image-skeleton" />}
                         </div>
                     ))}
                 </div>

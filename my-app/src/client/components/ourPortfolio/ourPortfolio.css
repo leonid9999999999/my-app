@@ -100,3 +100,44 @@
 .portfolioPair{
     /* display: flex; */
 }
+
+@media (max-width: 1055px) {
+
+    .topOurPortfolioBlock,
+    .bottomOurPortfolioBlock {
+        /* UNLOCK the height so they don't overlap dangerously */
+        height: auto !important;
+        
+        /* Center them and add spacing */
+        justify-content: center;
+        padding-bottom: 40px;
+    }
+
+    /* Stack the pair vertically */
+    .portfolioPair {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .topOurPortfolioBlock,
+    .bottomOurPortfolioBlock {
+        /* UNLOCK the height so they don't overlap dangerously */
+        height: auto !important;
+        width: 90%;
+
+        /* Center them and add spacing */
+        justify-content: center;
+        padding-bottom: 40px;
+    }
+
+    /* Stack the pair vertically */
+    .portfolioPair {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
