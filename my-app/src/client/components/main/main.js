@@ -47,6 +47,7 @@ function Main() {
   translate(-50%, -50%)
   rotateX(${ -y * 10 }deg)
   rotateY(${ x * 12 }deg)
+  
 `;
     };
 
@@ -72,6 +73,7 @@ function Main() {
           <h1 className="main__title">
             Professional Web Design
             <br />
+  
             <span>& Development</span>
           </h1>
 

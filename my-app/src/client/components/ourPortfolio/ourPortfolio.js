@@ -77,6 +77,7 @@ function OurPortfolio() {
                                                 title={bottomItem.title}
                                                 siteUrl={`/portfolio/${bottomItem.id}`}
                                                 onClick={() => Page(bottomItem)}
+                                                
                                             />
                                         
                                     </div>
