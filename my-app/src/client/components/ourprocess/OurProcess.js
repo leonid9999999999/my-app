@@ -1,37 +1,36 @@
 import { useEffect, useRef, useState } from "react";
 import "./OurProcess.css";
-import strategyImg from '../../../resources/images/strategy.png';
-import designImg from '../../../resources/images/design.png';
-import discoveryImg from '../../../resources/images/discovery.png';
-import developmentImg from '../../../resources/images/development.png';
-import launchImg from '../../../resources/images/launch.png';
 
-
+import strategyImg from "../../../resources/images/strategy.png";
+import designImg from "../../../resources/images/design.png";
+import discoveryImg from "../../../resources/images/discovery.png";
+import developmentImg from "../../../resources/images/development.png";
+import launchImg from "../../../resources/images/launch.png";
 
 const STEPS = [
   {
     title: "Discovery",
-    text: "We explore your idea, audience and goals to build a strong foundation.",
+    text: "Every successful project starts with understanding. We dive into your business, audience and goals to uncover real opportunities.",
     image: discoveryImg,
   },
   {
     title: "Strategy",
-    text: "We define structure, architecture and technical direction.",
+    text: "We define a clear roadmap that aligns design, technology and business goals into one focused direction.",
     image: strategyImg,
   },
   {
     title: "Design",
-    text: "We craft clean, modern interfaces focused on clarity and conversion.",
+    text: "We design modern, intuitive interfaces that build trust and guide users toward action.",
     image: designImg,
   },
   {
     title: "Development",
-    text: "We build scalable, high-performance solutions with clean code.",
+    text: "We build fast, scalable and reliable digital products engineered to perform across all devices.",
     image: developmentImg,
   },
   {
     title: "Launch",
-    text: "We test, deploy and refine the product for real-world success.",
+    text: "We test, refine and optimize everything to ensure a smooth launch and long-term success.",
     image: launchImg,
   },
 ];
@@ -44,7 +43,7 @@ export default function OurProcess() {
   useEffect(() => {
     const scrollContainer = document.querySelector(".App");
     if (!scrollContainer) return;
-    
+
     const onScroll = () => {
       if (!sectionRef.current) return;
 
@@ -56,37 +55,44 @@ export default function OurProcess() {
         1
       );
 
-      setVisible(progress >= 0 && progress < 1);
+      setVisible(progress > 0 && progress < 1);
 
+      // ✅ FIX: теперь доходит до 5 шага (Launch)
       const index = Math.min(
-        STEPS.length - 2,
+        STEPS.length - 1,
         Math.floor(progress * STEPS.length)
       );
 
       setStep(index);
-  };
+    };
 
-  scrollContainer.addEventListener("scroll", onScroll);
-  onScroll(); // сразу вызываем, чтобы инициализировать
+    scrollContainer.addEventListener("scroll", onScroll);
+    onScroll();
 
-  return () => scrollContainer.removeEventListener("scroll", onScroll);
-}, []);
+    return () =>
+      scrollContainer.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <section ref={sectionRef} className={`process ${visible ? "is-visible" : ""}`}>
+    <section
+      ref={sectionRef}
+      className={`process ${visible ? "is-visible" : ""}`}
+    >
       <div className="process-sticky">
 
         {/* HEADER */}
         <header className="process-header">
-          <h2>How we turn ideas into products</h2>
+          <h2>From Idea to Launch</h2>
         </header>
 
-        {/* TIMELINE FULL WIDTH */}
+        {/* TIMELINE */}
         <div className="process-timeline">
           <div className="timeline-line">
             <span
               className="timeline-progress"
-              style={{ width: `${((step + 1) / STEPS.length) * 100}%` }}
+              style={{
+                width: `${((step + 1) / STEPS.length) * 100}%`,
+              }}
             />
           </div>
 
@@ -107,11 +113,13 @@ export default function OurProcess() {
         {/* CONTENT */}
         <div className="process-content">
           <div className="process-image">
-            <img src={STEPS[step].image} alt={STEPS[step].title} />
+            <img
+              src={STEPS[step].image}
+              alt={STEPS[step].title}
+            />
           </div>
 
           <div className="process-text">
-            
             <h3>{STEPS[step].title}</h3>
             <p>{STEPS[step].text}</p>
           </div>
