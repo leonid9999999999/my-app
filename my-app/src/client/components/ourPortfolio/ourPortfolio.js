@@ -31,7 +31,7 @@ function OurPortfolio() {
     if (loading) {
         // Show spinner while loading
         return (
-            <div className="spinnerWrapper" style={{ display: "flex", justifyContent: "center", alignItems: "center", minHeight: "200px" }}>
+            <div className="spinnerWrapper" style={{ display: "flex", justifyContent: "center", alignItems: "center", minHeight: "200px" , marginTop: "100px"}}>
                 <Spinner />
             </div>
         );

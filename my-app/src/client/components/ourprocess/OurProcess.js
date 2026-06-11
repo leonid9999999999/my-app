@@ -8,11 +8,7 @@ import launchImg from '../../../resources/images/launch.png';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
-import strategyImg from "../../../resources/images/strategy.png";
-import designImg from "../../../resources/images/design.png";
-import discoveryImg from "../../../resources/images/discovery.png";
-import developmentImg from "../../../resources/images/development.png";
-import launchImg from "../../../resources/images/launch.png";
+
 
 const STEPS = [
   {
