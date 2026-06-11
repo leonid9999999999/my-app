@@ -17,27 +17,27 @@ import launchImg from "../../../resources/images/launch.png";
 const STEPS = [
   {
     title: "Discovery",
-    text: "Every successful project starts with understanding. We dive into your business, audience and goals to uncover real opportunities.",
+    text: "We start by understanding how your business actually works - your customers, your goals, and what’s currently holding you back. This stage is about clarity, not assumptions.",
     image: discoveryImg,
   },
   {
     title: "Strategy",
-    text: "We define a clear roadmap that aligns design, technology and business goals into one focused direction.",
+    text: "Once we understand the direction, we shape a clear plan. We define structure, priorities, and the user journey so everything has a purpose before design begins.",
     image: strategyImg,
   },
   {
     title: "Design",
-    text: "We design modern, intuitive interfaces that build trust and guide users toward action.",
+    text: "We design clean, modern interfaces that feel natural to use. Every layout is focused on trust, clarity, and guiding visitors toward action without friction.",
     image: designImg,
   },
   {
     title: "Development",
-    text: "We build fast, scalable and reliable digital products engineered to perform across all devices.",
+    text: "We turn the design into a fast, responsive product built with scalable code. Everything is optimised for performance, mobile experience, and real-world usage.",
     image: developmentImg,
   },
   {
     title: "Launch",
-    text: "We test, refine and optimize everything to ensure a smooth launch and long-term success.",
+    text: "Before going live, we test everything carefully to make sure it works smoothly. After launch, we monitor performance and make small adjustments where needed.",
     image: launchImg,
   },
 ];
