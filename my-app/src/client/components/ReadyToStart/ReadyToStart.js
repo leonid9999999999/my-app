@@ -1,4 +1,5 @@
 import "./ReadyToStart.css";
+import { Link } from "react-router-dom";
 
 function ReadyToStart() {
   return (
@@ -12,13 +13,17 @@ function ReadyToStart() {
         </p>
 
         <div className="ready__actions">
-          <button className="ready__btn ready__btn--primary">
-            Get a Quote →
-          </button>
+          <Link to="/ContactUs">
+            <button className="ready__btn ready__btn--primary">
+              Get a Quote →
+            </button>
+          </Link>
 
-          <button className="ready__btn ready__btn--secondary">
-            View Our Work
-          </button>
+          <Link to="/ourPortfolio">
+            <button className="ready__btn ready__btn--secondary">
+              View Our Work
+            </button>
+          </Link>
         </div>
       </div>
     </section>
