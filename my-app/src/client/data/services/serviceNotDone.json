@@ -1,0 +1,124 @@
+[
+    {
+        "id": 7,
+        
+        "title": "Personal Website Blog",
+        "text": "A beautifully designed blogging platform that prioritises readability and helps you connect authentically with your audience.",
+        "mainImage": "",
+        "ourServicesInfo": [
+            {
+                "firstPageTitle": "Launch The Professional Online Store You Have Always Wanted",
+                "additionalTitle": "E-Commerce",
+                "additionalParagpragh": "Looking to build a strong online presence or grow your business? We design and build websites that are clean, effective, and easy to manage. Whether you need a simple portfolio site or a powerful website focused on generating leads, our in-house team takes care of everything - from design and development to hosting and ongoing support. We create reliable, end-to-end web solutions that help your brand stand out and perform.",
+                "sliderImages": [
+                    "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
+                    "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
+                    "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png"
+                ],
+                "sections": [
+                    {
+                        "title": "Share your narrative",
+                        "paragraphs": [
+                            "We design personal websites and blogs that put your voice first. With carefully considered layouts, clear typography and a strong focus on readability, your content remains easy and enjoyable to read.",
+                            "Every detail is designed to support storytelling, helping you connect authentically with your audience and build a lasting presence around your ideas."
+                        ],
+                        "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb",
+                        "linkText": "Talk to our website experts →",
+                        "linkUrl": "/",
+                        "imagePosition": "right"
+                    },
+                    {
+                        "title": "Designed for meaningful storytelling",
+                        "paragraphs": [
+                            "A personal blog is more than a place to publish content - it’s a space to express ideas and perspectives. We create blogging platforms that prioritise clarity, structure and flow, allowing your stories to unfold naturally.",
+                            "The result is a website that feels personal, engaging and easy to return to."
+                        ],
+                        "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+                        "linkText": "Brief us today →",
+                        "linkUrl": "/",
+                        "imagePosition": "left"
+                    },
+                    {
+                        "title": "Your ideas, thoughtfully presented",
+                        "paragraphs": [
+                            "We build websites that are ready to be found. From clean technical foundations to performance-led design, every build is optimised for speed, accessibility, and search.",
+                            "This approach helps you communicate clearly, build trust and connect with your audience in an authentic way."
+                        ],
+                        "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb",
+                        "imagePosition": "right"
+                    },
+                    {
+                        "title": "A platform for your voice",
+                        "paragraphs": [
+                            "We create blogging platforms that are visually refined and simple to use. By focusing on clean design and user experience, we ensure your content is easy to read and your message comes through clearly.",
+                            "Your website becomes a space where ideas are shared, conversations begin and audiences grow naturally over time."
+                        ],
+                        "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+                        "imagePosition": "left"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 8,
+        
+        "title": "Proffesional Maintenanc",
+        "text": "Stressless maintenance, updates and technical support to your keep site running smoothly",
+        "mainImage": "",
+        "ourServicesInfo": [
+            {
+                "firstPageTitle": "Launch The Professional Online Store You Have Always Wanted",
+                "additionalTitle": "E-Commerce",
+                "additionalParagpragh": "Looking to build a strong online presence or grow your business? We design and build websites that are clean, effective, and easy to manage. Whether you need a simple portfolio site or a powerful website focused on generating leads, our in-house team takes care of everything - from design and development to hosting and ongoing support. We create reliable, end-to-end web solutions that help your brand stand out and perform.",
+                "sliderImages": [
+                    "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
+                    "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
+                    "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png"
+                ],
+                "sections": [
+                    {
+                        "title": "Ongoing support you can rely on",
+                        "paragraphs": [
+                            "We provide stress-free website maintenance to keep everything running smoothly. From regular updates to technical support, we take care of the details so you don’t have to.",
+                            "Our proactive approach helps ensure your site stays secure, up to date and performing as expected at all times."
+                        ],
+                        "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb",
+                        "linkText": "Talk to our website experts →",
+                        "linkUrl": "/",
+                        "imagePosition": "right"
+                    },
+                    {
+                        "title": "Professional maintenance, made simple",
+                        "paragraphs": [
+                            "A well-maintained website is essential for long-term performance. We offer ongoing support, updates and monitoring to keep your site stable, secure and reliable.",
+                            "With our team handling the technical side, you can focus on your business with confidence."
+                        ],
+                        "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+                        "linkText": "Brief us today →",
+                        "linkUrl": "/",
+                        "imagePosition": "left"
+                    },
+                    {
+                        "title": "Support that keeps you moving",
+                        "paragraphs": [
+                            "We look after your website beyond launch. Through regular maintenance, updates and technical assistance, we ensure your site continues to run smoothly and efficiently.",
+                            "Our support services are designed to reduce risk, minimise downtime and give you peace of mind."
+                        ],
+                        "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb",
+                        "imagePosition": "right"
+                    },
+                    {
+                        "title": "Stress-free website care",
+                        "paragraphs": [
+                            "We take care of your website’s ongoing needs, from updates and fixes to technical support. Our maintenance services help keep your site fast, secure and ready to perform.",
+                            "This allows you to focus on what matters most, knowing your website is in safe hands."
+                        ],
+                        "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+                        "imagePosition": "left"
+                    }
+                ]
+            }
+        ]
+    }
+   ]

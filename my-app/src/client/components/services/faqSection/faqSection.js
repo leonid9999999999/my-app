@@ -6,7 +6,7 @@ const faqs = [
     question: "What services do you offer?",
     answer:
       "We design and build responsive websites and digital products, including porfolios, business websites, web applications, e-commerce platforms / helpers, educational websites, and fully custom solutions tailored to your needs.",
-  },
+  }, 
   {
     question: "How can I pay?",
     answer:
@@ -16,6 +16,22 @@ const faqs = [
     question: "Can you design my website from scratch?",
     answer:
       "Yes. We can design your website entirely from scratch, including UI/UX design, layout, content structure, and copywriting. We can also work with existing designs and improve or adapt them to better match your goals.",
+  },
+  {
+    question: "Can you Integrate AI into our existing systems?",
+    answer: "Yes, we can seamlessly integrate AI into your current software or build a brand-new solution from scratch depending on your goals."
+  },
+  {
+    question: "What kind of AI tools do you build?",
+    answer: "We specialise in personalised chatbots, virtual assistants, and custom automation tools tailored specifically to your business workflows."
+  },
+  {
+    question: "How personalised can the AI assistant be?",
+    answer: "Completely personalised. We train and configure AI on your unique company data, and specific user requirements."
+  },
+  {
+    question: "Can you Integrate AI",
+    answer: "All pricing are custom and based on your needs and project scope. You pay after our first meeting."
   },
   {
     question: "Will my website be mobile-friendly and responsive?",

@@ -15,6 +15,7 @@
     "cloudinary": "^2.8.0",
     "dayjs": "^1.11.19",
     "formik": "^2.4.9",
+    "lucide-react": "^1.17.0",
     "nodemon": "^3.1.11",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
@@ -51,5 +52,4 @@
       "last 1 safari version"
     ]
   }
-
 }
