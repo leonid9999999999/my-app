@@ -1,10 +1,29 @@
 .pagetitle{
     display: flex;
-     justify-content: center;
-    color: white;
-    font-size: 38px;
+    justify-content: center;
     margin-top: 90px;
+    font-size: 38px;
 }
+
+.pagetitle h2{
+    color: #f8fafc;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .pagetitle h2 {
+        font-size: 28px;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pagetitle h2 {
+        font-size: 24px;
+    }
+}
+
 .imgWrapper{
     position: relative;
     overflow: hidden;
@@ -338,4 +357,7 @@
         align-items: center;
         width: 100%;
     }
+
+
+    
 }

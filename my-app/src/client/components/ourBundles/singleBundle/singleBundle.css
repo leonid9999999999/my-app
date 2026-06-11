@@ -164,3 +164,18 @@
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(139, 92, 246, 0.5);
 }
+
+.bundleTitle,
+.singleBundle h3 {
+    color: #ffffff !important;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.bundleDescription,
+.singleBundle p {
+    color: rgba(255,255,255,0.88) !important;
+    font-size: 16px;
+    line-height: 1.8;
+}

@@ -7,43 +7,50 @@ function Footer() {
     <footer className="footer">
       <div className="footer__container">
 
-        {/* BRAND */}
         <div className="footer__brand">
           <div className="footer__logo">
-            <img src={logo} alt="VB Secure Solutions logo" />
+            <img src={logo} alt="VB Secure Solutions" />
           </div>
 
           <p className="footer__description">
-            Professional web design and development services for businesses
-            across the UK and EU.
+            We design and build high-performance websites for ambitious
+            businesses across the United Kingdom.
           </p>
         </div>
 
-        {/* SERVICES */}
         <div className="footer__column">
           <h4 className="footer__title">Services</h4>
+
           <ul className="footer__list">
             <li>Web Design</li>
             <li>Web Development</li>
             <li>E-Commerce</li>
-            <li>UI/UX Design</li>
+            <li>UI / UX Design</li>
           </ul>
         </div>
 
-        {/* COMPANY */}
         <div className="footer__column">
           <h4 className="footer__title">Company</h4>
+
           <ul className="footer__list">
-            <li><Link to="/About">About Us</Link></li>
-            <li><Link to="/ourPortfolio">Our Work</Link></li>
-            
+            <li>
+              <Link to="/About">About Us</Link>
+            </li>
+
+            <li>
+              <Link to="/ourPortfolio">Portfolio</Link>
+            </li>
+
+            <li>
+              <Link to="/ContactUs">Contact</Link>
+            </li>
           </ul>
         </div>
 
-        {/* CONTACT */}
         <div className="footer__column">
           <h4 className="footer__title">Contact</h4>
-          <ul className="footer__list footer__list--contact">
+
+          <ul className="footer__list">
             <li>vbsecuresolutions@gmail.com</li>
             <li>Cardiff, United Kingdom</li>
             <li>+44 89 0989 2641</li>
@@ -52,9 +59,8 @@ function Footer() {
 
       </div>
 
-      {/* BOTTOM */}
       <div className="footer__bottom">
-        <span>© 2026 VB SECURE SOFTWARE SOLUTIONS</span>
+        <span>© 2026 VB Secure Solutions. All rights reserved.</span>
 
         <div className="footer__links">
           <Link to="/PrivacyPolicy">Privacy Policy</Link>

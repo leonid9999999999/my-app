@@ -53,6 +53,7 @@
   padding: 140px 24px;
 }
 
+/* wrapper */
 .about-company__inner {
   max-width: 1000px;
   margin: 0 auto;
@@ -60,6 +61,16 @@
   grid-template-columns: 200px 1fr;
   gap: 64px;
   align-items: center;
+
+  background: rgba(255,255,255,0.02);
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 0 60px rgba(0,0,0,0.4);
+}
+
+/* LOGO BLOCK */
+.about-company__logo {
+  position: relative;
 }
 
 .about-company__logo img {
@@ -67,13 +78,42 @@
   border-radius: 20px;
   background: #0b0f14;
   padding: 24px;
+
+  /* ❌ УБРАЛИ GRAYSCALE */
+  filter: none;
+  transition: transform 0.5s ease;
 }
 
-.about-company h2 {
-  font-size: 32px;
+.about-company__logo img:hover {
+  transform: scale(1.05);
+}
+
+/* glow оставляем */
+.about-company__logo::after {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  border-radius: 28px;
+  background: radial-gradient(
+    circle,
+    rgba(99,102,241,0.15),
+    transparent 70%
+  );
+  z-index: -1;
+}
+
+/* TEXT */
+.about-company h2,
+.about-founder__content h2,
+.about-timeline h2,
+.about-why h2 {
+  font-size: 34px;
   margin-bottom: 24px;
+  color: #f8fafc; /* 👈 ВАЖНО: усилили контраст */
+  letter-spacing: -0.02em;
 }
 
+/* paragraphs */
 .about-company p {
   font-size: 16px;
   line-height: 1.7;
@@ -81,7 +121,21 @@
   margin-bottom: 16px;
 }
 
-/* ===== FOUNDER (FULLSCREEN, CONTENT UNTOUCHED) ===== */
+.about-company hr {
+  border: none;
+  height: 1px;
+  background: rgba(255,255,255,0.06);
+  margin: 20px 0;
+}
+
+/* highlight */
+.company-highlight {
+  margin-top: 12px;
+  font-weight: 500;
+  color: #e5e7eb;
+}
+
+/* ===== FOUNDER ===== */
 .about-founder {
   min-height: 100vh;
   max-width: 1200px;
@@ -97,12 +151,14 @@
   width: 100%;
   max-width: 420px;
   border-radius: 16px;
-  filter: grayscale(100%);
-  transition: all 0.8s ease;
+
+  /* ❌ УБРАЛИ СЕРОСТЬ */
+  filter: none;
+
+  transition: transform 0.6s ease;
 }
 
 .about-founder__image img:hover {
-  filter: grayscale(0%);
   transform: scale(1.03);
 }
 
@@ -117,6 +173,7 @@
 .about-founder__content h3 {
   font-size: 32px;
   margin-bottom: 24px;
+  color: #f1f5f9;
 }
 
 .about-founder__content p {
@@ -133,11 +190,6 @@
   text-align: center;
 }
 
-.about-timeline h2 {
-  font-size: 32px;
-  margin-bottom: 64px;
-}
-
 .timeline {
   max-width: 1100px;
   margin: 0 auto;
@@ -150,7 +202,7 @@
   background: #0b0f14;
   padding: 32px 40px;
   border-radius: 12px;
-  border-left: 4px solid #0004e2;
+  border-left: 4px solid #3b82f6;
   text-align: left;
 }
 
@@ -159,17 +211,11 @@
   color: #ffffff;
 }
 
-/* ===== WHY (UNCHANGED) ===== */
+/* ===== WHY ===== */
 .about-why {
   padding: 120px 24px;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.about-why h2 {
-  font-size: 32px;
-  text-align: center;
-  margin-bottom: 64px;
 }
 
 .about-why__grid {
@@ -192,6 +238,7 @@
 .about-card h4 {
   font-size: 18px;
   margin-bottom: 12px;
+  color: #f8fafc; /* 👈 усилили заголовки */
 }
 
 .about-card p {
@@ -200,7 +247,7 @@
   color: #9ca3af;
 }
 
-/* ===== SLOGAN TYPEWRITER ===== */
+/* ===== SLOGAN ===== */
 .about-slogan {
   background: linear-gradient(135deg, #0b0f14, #111827);
   padding: 140px 24px;
@@ -241,68 +288,3 @@
     grid-template-columns: 1fr;
   }
 }
-
-
-.hero-divider {
-  width: 80px;
-  height: 3px;
-  margin: 40px auto 0;
-  border-radius: 2px;
-}
-
-.about-company__inner {
-  background: rgba(255,255,255,0.02);
-  border-radius: 24px;
-  padding: 48px;
-  box-shadow: 0 0 60px rgba(0,0,0,0.4);
-}
-
-
-.company-badge {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 32px;
-  flex-wrap: wrap;
-}
-
-.company-badge span {
-  font-size: 13px;
-  padding: 6px 14px;
-  border-radius: 999px;
-  background: rgba(99,102,241,0.12);
-  color: #c7d2fe;
-  border: 1px solid rgba(99,102,241,0.3);
-}
-
-
-.about-company__logo {
-  position: relative;
-}
-
-.about-company__logo::after {
-  content: "";
-  position: absolute;
-  inset: -20px;
-  border-radius: 28px;
-  background: radial-gradient(
-    circle,
-    rgba(99,102,241,0.15),
-    transparent 70%
-  );
-  z-index: -1;
-}
-
-
-.fancy-divider {
-  height: 1px;
-  width: 100%;
-  margin: 56px 0;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(15, 23, 42, 0.15),
-    transparent
-  );
-}
-
-

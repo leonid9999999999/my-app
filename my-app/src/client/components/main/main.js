@@ -1,34 +1,28 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./main.css";
 
-import Intro from "../Intro/Intro";
-import Header from "../header/Header";
+import logo from "../../../resources/images/ima1logo.png";
+
 import WhyWorkWithUs from "../WhyWorkWithUs/WhyWorkWithUs";
 import OurProcess from "../ourprocess/OurProcess";
 import SelectedWork from "../selectedwork/SelectedWork";
 import ClientTestimonials from "../ClientTestimonials/ClientTestimonials";
 import ReadyToStart from "../ReadyToStart/ReadyToStart";
-import logo from "../../../resources/images/ima1logo.png";
 import MainPageServices from "../services/mainPageServices/mainPageServices";
-import ErrorBoundary from "../errorBoundary/ErrorBoundary";
-import { useLocation } from "react-router-dom";
-import { useRef } from "react";
 
 function Main() {
-
-
   const location = useLocation();
   const servicesRef = useRef(null);
   const processRef = useRef(null);
-
-  
 
   useEffect(() => {
     if (location.state?.scrollTo === "services") {
       servicesRef.current?.scrollIntoView({ behavior: "smooth" });
     }
+
     if (location.state?.scrollTo === "process") {
-      processRef.current?.scrollIntoView({ behavior: "smooth", margin: 80 });
+      processRef.current?.scrollIntoView({ behavior: "smooth" });
     }
   }, [location]);
 
@@ -44,10 +38,10 @@ function Main() {
       const y = (e.clientY - rect.top) / rect.height - 0.5;
 
       logoEl.style.transform = `
-  translate(-50%, -50%)
-  rotateX(${ -y * 10 }deg)
-  rotateY(${ x * 12 }deg)
-`;
+        translate(-50%, -50%)
+        rotateX(${-y * 10}deg)
+        rotateY(${x * 12}deg)
+      `;
     };
 
     hero.addEventListener("mousemove", handleMouseMove);
@@ -56,48 +50,44 @@ function Main() {
 
   return (
     <div className="main">
-      
-      {/* <Intro /> */}
 
       <div className="main__hero">
-        <div className="main__background"></div>
+        <div className="main__background" />
 
-        {/* FAKE 3D LOGO */}
         <div className="hero-logo">
-  <img src={logo} alt="logo" />
-  <div className="hero-logo__glow"></div>
-</div>
+          <img src={logo} alt="logo" />
+        </div>
 
         <div className="main__content">
           <h1 className="main__title">
-            Professional Web Design
-            <br />
+            Professional Web Design <br />
             <span>& Development</span>
           </h1>
 
           <p className="main__subtitle">
-            We don’t just build websites.
-            <br />
+            We don’t just build websites.<br />
             We create digital products that help businesses grow.
           </p>
 
-          <div className="main__button">
+          {/* 🔥 ВОТ ГЛАВНОЕ ИЗМЕНЕНИЕ */}
+          <Link to="/ContactUs" className="main__button">
             Start Your Project
-          </div>
+          </Link>
         </div>
       </div>
 
       <WhyWorkWithUs />
-      <div style={{ margin: 0, padding: 0 }} ref={servicesRef} >
+
+      <div ref={servicesRef}>
         <MainPageServices />
       </div>
-      <div style={{margin: 0, padding: 0}}ref={processRef} >
+
+      <div ref={processRef}>
         <OurProcess />
       </div>
       {/* <SelectedWork /> */}
       <ClientTestimonials />
       <ReadyToStart />
-      
     </div>
   );
 }
