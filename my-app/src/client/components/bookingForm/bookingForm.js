@@ -248,17 +248,17 @@ class BookingForm extends Component {
                                 <div className='leftBookingBlock'>
                                     {/* Name Field */}
                                     <label htmlFor="fullName" className="field-label">Full Name*</label>
-                                    <Field type="text" name="fullName" id="fullName" placeHolder="Your Full Name" />
+                                    <Field type="text" name="fullName" id="fullName" placeholder="Your Full Name" />
                                     <ErrorMessage className="error" name="fullName" component="div" />
 
                                     {/* Company Field */}
                                     <label htmlFor="companyName" className="field-label">Company Name*</label>
-                                    <Field type="text" name="companyName" id="companyName" placeHolder="Company/Startup Name" />
+                                    <Field type="text" name="companyName" id="companyName" placeholder="Company/Startup Name" />
                                     <ErrorMessage className="error" name="companyName" component="div" />
 
                                     {/* Email Field */}
                                     <label htmlFor="email" className="field-label">Email Address*</label>
-                                    <Field type="text" name="email" id="email" placeHolder="Your Email" />
+                                    <Field type="text" name="email" id="email" placeholder="Your Email" />
                                     <ErrorMessage className="error" name="email" component="div" />
 
                                     {/* Phone Field */}
@@ -266,13 +266,13 @@ class BookingForm extends Component {
                                     <div className='phoneNumBlock'>
                                         <span className="phone-prefix">+44</span>
                                         {/* Note: htmlFor above matches this ID */}
-                                        <Field type="text" name="phoneNumber" id="phoneNumber2" placeHolder="+44 Phone Number" />
+                                        <Field type="text" name="phoneNumber" id="phoneNumber2" placeholder="+44 Phone Number" />
                                     </div>
                                     <ErrorMessage className="error" name="phoneNumber" component="div" />
 
                                     {/* Booking Note Field */}
                                     <label htmlFor="bookingMessage" className="field-label">Message</label>
-                                    <Field as="textarea" name="bookingMessage" id="bookingMessage" placeHolder="Booking Message" />
+                                    <Field as="textarea" name="bookingMessage" id="bookingMessage" placeholder="Booking Message" />
                                     <ErrorMessage className="error" name="bookingMessage" component="div" />
                                         
                                     <Button type="submit" text={this.props.buttonTitle} disabled={isSubmitting} style={{backgroundColor:"#56D55D", color: "white", width: "100%"}}/>
