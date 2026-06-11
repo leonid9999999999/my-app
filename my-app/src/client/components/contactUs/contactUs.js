@@ -22,8 +22,8 @@ const ContactUs = (props) => {
         <h2>Let's Get Your Project Started</h2>
       </div>
       <div>
-        <section class="tech-hero-block">
-          <div class="tech-hero-content">
+        <section className="tech-hero-block">
+          <div className="tech-hero-content">
               <h1>We’d love to hear from you</h1>
             <p>Whether you have questions about our service, architecture, or pricing? Book a meeting with us to discuss how we can solve your specific challenges.</p>
           </div>
