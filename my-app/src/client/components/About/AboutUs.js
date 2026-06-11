@@ -1,14 +1,12 @@
 import "./AboutUs.css";
 import { useEffect, useState, useRef } from "react";
+
 import founder from "../../../resources/images/me.png";
 import TeamMember from "../../../resources/images/Timo.png";
-
 import logo from "../../../resources/images/imalogo.png";
 
 function AboutUs() {
-
   /* ===== SCROLL ANIMATION ===== */
-
   useEffect(() => {
     const elements = document.querySelectorAll(".fade-up");
 
@@ -31,37 +29,34 @@ function AboutUs() {
   const sloganText = "We build trust first - everything else follows.";
   const [text, setText] = useState("");
   const sloganRef = useRef(null);
-const [started, setStarted] = useState(false);
+  const [started, setStarted] = useState(false);
 
-useEffect(() => {
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting && !started) {
-        setStarted(true);
-      }
-    },
-    { threshold: 0.6 }
-  );
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started) {
+          setStarted(true);
+        }
+      },
+      { threshold: 0.6 }
+    );
 
-  if (sloganRef.current) {
-    observer.observe(sloganRef.current);
-  }
+    if (sloganRef.current) observer.observe(sloganRef.current);
 
-  return () => observer.disconnect();
-}, [started]);
+    return () => observer.disconnect();
+  }, [started]);
 
-useEffect(() => {
-  if (!started) return;
+  useEffect(() => {
+    if (!started) return;
 
-  if (text.length < sloganText.length) {
-    const timeout = setTimeout(() => {
-      setText(sloganText.slice(0, text.length + 1));
-    }, 60);
+    if (text.length < sloganText.length) {
+      const timeout = setTimeout(() => {
+        setText(sloganText.slice(0, text.length + 1));
+      }, 60);
 
-    return () => clearTimeout(timeout);
-  }
-}, [text, started, sloganText]);
-
+      return () => clearTimeout(timeout);
+    }
+  }, [text, started, sloganText]);
 
   return (
     <main className="about">
@@ -69,113 +64,99 @@ useEffect(() => {
       {/* HERO */}
       <section className="about-hero fade-up">
         <h1>About Us</h1>
+
+        <div className="hero-divider" />
+
         <p>
-          <div className="hero-divider" />
-          A small, focused web studio at an early stage of its journey. We value clear communication, honest work, and long-term relationships built on trust.
+          A small, focused web studio at an early stage of its journey.
+          We value clear communication, honest work, and long-term relationships built on trust.
         </p>
       </section>
 
-      {/* ABOUT COMPANY */}
+      {/* COMPANY */}
       <section className="about-company fade-up">
         <div className="about-company__inner">
-          
+
           <div className="about-company__logo">
-            <img src={logo} alt="VB Secure Software Solutions logo" />
+            <img src={logo} alt="logo" />
           </div>
 
           <div>
-            
             <h2>About the Company</h2>
-                <p>
-                  We are a small team focused on building a clear and trustworthy presence.
-                  Our priority is not scale, but the quality of our work and our reputation.
-                </p>
 
-                <hr />
+            <p>
+              We are a small team focused on building a clear and trustworthy presence.
+              Our priority is quality and reputation, not scale.
+            </p>
 
-                <p>
-                  Our pricing is deliberately kept accessible.
-                  This allows clients to move forward with confidence and allows us to grow through real, hands-on projects.
-                </p>
+            <hr />
 
-                <hr />
+            <p>
+              Our pricing is accessible to help clients start confidently.
+            </p>
 
-                <p>
-                  Long-term trust is built through consistent results and honest feedback.
-                  Without satisfied clients, there is no sustainable future — and we take that seriously.
-                </p>
+            <hr />
 
-                <hr />
+            <p>
+              Long-term trust is built through consistent results and honest feedback.
+            </p>
 
-                <div className="company-highlight">
-                  We don’t sell promises. We focus on doing the work well and letting the results speak.
-                </div>
+            <hr />
 
+            <div className="company-highlight">
+              We don’t sell promises. We deliver results.
+            </div>
           </div>
-          </div>
+
+        </div>
       </section>
 
-      {/* FOUNDER (CONTENT UNCHANGED) */}
+      {/* FOUNDER */}
       <section className="about-founder fade-up">
         <div className="about-founder__image">
-          <img src={founder} alt="Leonid Vishnevsky" />
+          <img src={founder} alt="Founder" />
         </div>
 
         <div className="about-founder__content">
           <h2>Founder</h2>
-            <h3>Leonid Vishnevsky</h3>
+          <h3>Leonid Vishnevsky</h3>
 
-            <p>
-              VB Secure Software Solutions officially began its work in January 2026.
-            </p>
+          <p>
+            VB Secure Software Solutions began in January 2026.
+          </p>
 
-            <p>
-              Prior to that, I worked independently, completed several small client
-              projects, and gained hands-on experience through real-world work.
-              Over time, it became clear that this could grow into a dedicated company,
-              rather than remain freelance practice.
-            </p>
+          <p>
+            Before that, I worked on freelance projects and gained real experience.
+          </p>
 
-            <p>
-              We are at the beginning of our journey, focused on quality, transparency,
-              and building a strong reputation step by step.
-            </p>
+          <p>
+            Now we focus on building a long-term company with strong reputation.
+          </p>
         </div>
-        
       </section>
 
-
-      
-
-
+      {/* TEAM */}
       <section className="about-founder fade-up">
-        
         <div className="about-founder__image">
-          <img src={TeamMember} alt="Leonid Vishnevsky" />
+          <img src={TeamMember} alt="Team Member" />
         </div>
 
         <div className="about-founder__content">
           <h2>Team Member</h2>
-            <h3>Timo Berkut</h3>
+          <h3>Timo Berkut</h3>
 
-            <p>
-  Timo is a core technical lead at VB Secure Software Solutions and one of the
-  key people behind the company’s foundation.
-</p>
+          <p>
+            Timo is responsible for backend, architecture and system design.
+          </p>
 
+          <p>
+            He plays a key role in technical decisions and infrastructure.
+          </p>
 
-<p>
-  Timo is responsible for backend development, system architecture, integrations,
-  and technical infrastructure, leading this part of the company’s work and
-  defining engineering standards.
-</p>
-
-<p>
-  His contribution is fundamental to the studio’s growth, and many of the
-  technical and structural decisions were shaped by his expertise and support.
-</p>
+          <p>
+            His contribution shapes the foundation of the company.
+          </p>
         </div>
-        
       </section>
 
       {/* TIMELINE */}
@@ -185,26 +166,17 @@ useEffect(() => {
         <div className="timeline">
           <div className="timeline-item">
             <span className="timeline-year">2019 – 2023</span>
-            <p>
-              First steps into the IT industry. Learning web technologies,
-              development fundamentals, and modern design principles.
-            </p>
+            <p>Learning web development fundamentals and design.</p>
           </div>
 
           <div className="timeline-item">
             <span className="timeline-year">2025</span>
-            <p>
-              First real client projects. Around three completed orders
-              that confirmed the idea of turning this into a business.
-            </p>
+            <p>First real client projects and experience.</p>
           </div>
 
           <div className="timeline-item">
             <span className="timeline-year">2026</span>
-            <p>
-              Official launch of VB Secure Software Solutions.
-              A new path with clear goals, responsibility, and long-term vision.
-            </p>
+            <p>Official launch of VB Secure Software Solutions.</p>
           </div>
         </div>
       </section>
@@ -214,35 +186,27 @@ useEffect(() => {
         <h2>Why We Work This Way</h2>
 
         <div className="about-why__grid">
+
           <div className="about-card">
             <h4>Reasonable Pricing</h4>
-            <p>
-              Our prices are intentionally accessible.
-              Right now, our priority is experience, trust,
-              and a solid portfolio - not fast profit.
-            </p>
+            <p>We focus on growth and experience first.</p>
           </div>
 
           <div className="about-card">
             <h4>Clear Communication</h4>
-            <p>
-              We explain decisions, listen to feedback,
-              and keep the process transparent from start to finish.
-            </p>
+            <p>Transparent process from start to finish.</p>
           </div>
 
           <div className="about-card">
             <h4>Long-Term Thinking</h4>
-            <p>
-              We are building a company, not just completing tasks.
-              Every project matters for our future reputation.
-            </p>
+            <p>We build reputation, not just projects.</p>
           </div>
+
         </div>
       </section>
 
       {/* SLOGAN */}
-        <section className="about-slogan" ref={sloganRef}>
+      <section className="about-slogan" ref={sloganRef}>
         <div className="typewriter">
           {text}
           <span className="cursor" />
