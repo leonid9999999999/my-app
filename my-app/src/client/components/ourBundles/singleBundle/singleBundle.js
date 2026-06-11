@@ -1,5 +1,7 @@
 import Button from "../../Tools/button/button";
 import "./singleBundle.css";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function SingleBundle({
     image,
@@ -14,7 +16,7 @@ function SingleBundle({
     return (
         <div className="singleBundleWrapper">
             <div className="singleBundle">
-                <img src={image} alt={title} />
+                <LazyLoadImage src={image} alt={title} />
 
                 <div className="infoBlock">
                     {/* TITLE */}

@@ -1,85 +1,81 @@
-
+/* --- YOUR EXISTING STRUCTURAL CSS (Untouched) --- */
 .ourPortfolio {
     max-width: 1300px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 0 0 80px 0;
+    margin: 0 0 120px 0;
 }
-
 
 .ourPorfolioWrapper {
     width: 100%;
     position: relative;
-    /* Needed to position the background behind */
     overflow: hidden;
-    /* Ensures the blurry edges don't spill out */
     padding: 20px 0;
     z-index: 1;
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* Keeps content on top */
+
+    /* NEW: A pure, ultra-dark matte base color */
+    background-color: #030712;
 }
 
-.ourPorfolioTitle{
+.ourPorfolioTitle {
     margin-top: 70px;
+    font-size: 5em;
 }
 
-/* 2. The Gradient acts as the "Snowy" background */
+.ourPorfolioTitle h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+/* --- THE NEW "AMBIENT SPOTLIGHT" BACKGROUND --- */
+
+/* 1. The Glowing Orbs */
 .ourPorfolioWrapper::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    /* Your Gradient Colors */
-    background: linear-gradient(-45deg, #0a0f19, #1e3a8a, #00f7ffb4, #0a0f19);
-    background-size: 400% 400%;
-
-    /* The Animation */
-    animation: gradientBG 15s ease infinite;
-
-    /* THE SNOWY EFFECT: High blur + slight scaling to hide messy edges */
-    filter: blur(100px);
-    transform: scale(1.2);
-    z-index: -2;
-    /* Puts it at the very back */
-}
-
-/* 3. Optional: A thin white "Frost" layer on top of the colors */
-.ourPorfolioWrapper::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.05);
-    /* 5% White Tint */
+    inset: -50%;
+    /* Stretched large so it can rotate smoothly behind the scenes */
     z-index: -1;
-    /* sits between gradient and content */
-    pointer-events: none;
+
+    /* Creates three distinct, massive, incredibly soft "spotlights" of color */
+    background-image:
+        radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.15) 0%, transparent 45%),
+        /* Soft Sky Blue */
+        radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 45%),
+        /* Deep Violet */
+        radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 45%);
+    /* Faint Emerald */
+
+    /* Blends the lights beautifully into the dark background */
+    filter: blur(80px);
+
+    /* Slowly rotates the entire light setup seamlessly */
+    animation: slowOrbit 30s linear infinite;
 }
 
-/* Ensure your animation keyframes remain in the file */
-@keyframes gradientBG {
-    0% {
-        background-position: 0% 50%;
-    }
+/* NO ::after ELEMENT. Particles are completely removed for a cleaner look. */
 
-    50% {
-        background-position: 100% 50%;
+/* --- THE NEW ANIMATION KEYFRAME --- */
+
+@keyframes slowOrbit {
+    0% {
+        transform: rotate(0deg);
     }
 
     100% {
-        background-position: 0% 50%;
+        transform: rotate(360deg);
     }
 }
 
-/* ROW 1 → LEFT */
+
+/* --- YOUR EXISTING LAYOUT BLOCKS & MEDIA QUERIES (Untouched) --- */
+
 .topOurPortfolioBlock {
     height: 310px;
     width: 100%;
@@ -87,7 +83,6 @@
     justify-content: flex-start;
 }
 
-/* ROW 2 → RIGHT */
 .bottomOurPortfolioBlock {
     height: 280px;
     width: 100%;
@@ -96,8 +91,7 @@
     align-items: center;
 }
 
-
-.portfolioPair{
+.portfolioPair {
     /* display: flex; */
 }
 
@@ -105,15 +99,11 @@
 
     .topOurPortfolioBlock,
     .bottomOurPortfolioBlock {
-        /* UNLOCK the height so they don't overlap dangerously */
         height: auto !important;
-        
-        /* Center them and add spacing */
         justify-content: center;
         padding-bottom: 40px;
     }
 
-    /* Stack the pair vertically */
     .portfolioPair {
         display: flex;
         flex-direction: column;
@@ -125,16 +115,12 @@
 
     .topOurPortfolioBlock,
     .bottomOurPortfolioBlock {
-        /* UNLOCK the height so they don't overlap dangerously */
         height: auto !important;
         width: 90%;
-
-        /* Center them and add spacing */
         justify-content: center;
         padding-bottom: 40px;
     }
 
-    /* Stack the pair vertically */
     .portfolioPair {
         display: flex;
         flex-direction: column;

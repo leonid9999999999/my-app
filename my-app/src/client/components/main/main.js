@@ -94,7 +94,7 @@ function Main() {
       <div style={{margin: 0, padding: 0}}ref={processRef} >
         <OurProcess />
       </div>
-      <SelectedWork />
+      {/* <SelectedWork /> */}
       <ClientTestimonials />
       <ReadyToStart />
       

@@ -1,10 +1,12 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function OneSelectionCard({tag,title,text,image}){
     return(
         <div className="selected-work__card">
             <div className="selected-work__image">
                 {/* IMAGE PLACEHOLDER */}
-                <img src={image} alt="imageExample" className="imageSettings"/>
+                <LazyLoadImage loading="lazy" src={image} alt="imageExample" className="imageSettings"/>
                 
             </div>
 

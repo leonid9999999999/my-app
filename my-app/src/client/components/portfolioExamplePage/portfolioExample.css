@@ -55,6 +55,10 @@
     gap: 2rem;
 }
 
+.moreInfoWrapperParagraph{
+    width: 85%;
+}
+
 /* Switches to 3 columns on tablets and desktops */
 @media (min-width: 768px) {
     .benefits-grid {

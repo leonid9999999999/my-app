@@ -5,48 +5,47 @@
         "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
         "title": "E-Commerce Website for Clothing Reseller",
         "siteUrl": "https://example.com",
-        "description": "A custom e-commerce platform for an independent clothing retailer in Cardiff, enabling the brand to expand their local presence into a fully digital online store",
+        "description": "A custom e-commerce platform for an independent clothing retailer in Cardiff, enabling the brand to expand their local presence into a fully digital online store.",
         "sliderImages": [
-                "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
-                "https://res.cloudinary.com/dibygfenr/image/upload/v1781188289/Screenshot_2026-06-11_at_15.31.20_oycdz2.png",
-                "https://res.cloudinary.com/dibygfenr/image/upload/v1781188589/Screenshot_2026-06-11_at_15.36.20_vbuoln.png",
-                "https://res.cloudinary.com/dibygfenr/image/upload/v1781188520/Screenshot_2026-06-11_at_15.34.24_uoh3ij.png"
+            "https://res.cloudinary.com/dibygfenr/image/upload/v1768438890/Screenshot_2025-12-29_at_17.23.52_1_znskab.png",
+            "https://res.cloudinary.com/dibygfenr/image/upload/v1781188289/Screenshot_2026-06-11_at_15.31.20_oycdz2.png",
+            "https://res.cloudinary.com/dibygfenr/image/upload/v1781188589/Screenshot_2026-06-11_at_15.36.20_vbuoln.png",
+            "https://res.cloudinary.com/dibygfenr/image/upload/v1781188520/Screenshot_2026-06-11_at_15.34.24_uoh3ij.png"
         ],
         "sections": [
             {
-                "title": "Bridge Betweeen Customer & You",
+                "title": "Bridge Between Customer & You",
                 "paragraphs": [
-                    "We built this platform to be a bridge between you and your customers, using technology to make them feel understood rather than overwhelmed. We engineered smart search capabilities and intuitive filtering and sorting so that finding the perfect item feels like a delightful discovery, not a tedious hunt. Recognising that life moves fast, we ensured a fully responsive design that adapts beautifully to any device, giving your users the freedom to shop wherever they feel most comfortable. Finally, we integrated High-Qulity media such as videos,images,products, multiple payment options to ensure that the moment of purchase is not just secure, but effortless, leaving them with a sense of trust and satisfaction every time they visit."
+                    "We built this platform to be a bridge between you and your customers, using technology to make them feel understood rather than overwhelmed. We engineered smart search capabilities and intuitive filtering and sorting so that finding the perfect item feels like a delightful discovery, not a tedious hunt. Recognising that life moves fast, we ensured a fully responsive design that adapts beautifully to any device, giving your users the freedom to shop wherever they feel most comfortable. Finally, we integrated high-quality media such as videos, images, and products with multiple payment options to ensure that the moment of purchase is not just secure, but effortless, leaving them with a sense of trust and satisfaction every time they visit."
                 ],
                 "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1781188289/Screenshot_2026-06-11_at_15.31.20_oycdz2.png",
                 "imagePosition": "right"
             },
             {
-                "title": "Automate Heavy Lifting",
+                "title": "Automating the Heavy Lifting",
                 "paragraphs": [
-                    "Behind the scenes, we’ve engineered a powerful command center designed to give you complete peace of mind and the freedom to focus on growth. We integrated robust Inventory Management and a streamlined Order Management System to automate the heavy lifting, ensuring you never have to worry about overselling or losing track of a shipment. To help your brand find its voice and audience, we built in advanced Marketing and SEO tools that put you on the map, all while safeguarding your reputation with top-tier SSL security.",
+                    "Behind the scenes, we’ve engineered a powerful command centre designed to give you complete peace of mind and the freedom to focus on growth. We integrated robust Inventory Management and a streamlined Order Management System to automate the heavy lifting, ensuring you never have to worry about overselling or losing track of a shipment. To help your brand find its voice and audience, we built in advanced Marketing and SEO tools that put you on the map, all while safeguarding your reputation with top-tier SSL security.",
                     "Finally, we empowered you with a crystal-clear Analytics Dashboard, turning complex data into actionable insights so you can make every business decision with absolute confidence."
                 ],
                 "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1781188589/Screenshot_2026-06-11_at_15.36.20_vbuoln.png",
                 "imagePosition": "left"
             }
         ],
-        "moreDescriptionAboutService": "What We Developed: We have deployed a high-performance, mobile-first e-commerce platform specifically engineered for the unique demands of the fashion resale market. Unlike standard retail sites, designed to handle one-off vintage and pre-loved items without the risk of double-selling.",
+        "moreDescriptionAboutService": "What We Developed: A custom, mobile-first e-commerce platform built specifically for the unique demands of local fashion resale. Because vintage clothing relies on one-of-a-kind inventory, we engineered a secure, 'single-SKU' system from scratch. This ensures that once a unique pre-loved item is purchased, it is immediately removed from the storefront, completely eliminating the risk of double-selling and protecting the brand's reputation.",
         "whyGood": [
             {
-                "title": "Operational Efficiency",
-                "content": "The backend automates the complex logistics of resale—from stock intake to generating Royal Mail postage labels—reducing manual admin time by roughly 40%."
+                "title": "Streamlined Daily Operations",
+                "content": "We automated the time-consuming logistics of online retail. From simplified stock intake to managing shipments and orders in one dashboard, the custom backend cuts manual admin time by roughly 40%, letting the owner focus on sourcing great clothing."
             },
             {
-                "title": "High Conversion UX",
-                "content": "We tackled the biggest barrier in resale—trust—by implementing a high-fidelity product showcase with zoom capabilities and detailed measurement guides, drastically reducing return rates."
+                "title": "Building Buyer Trust",
+                "content": "To overcome the natural hesitation of buying pre-loved items online, we designed a high-end storefront featuring crisp image zooming, seamless video integration, and clear measurement guides. This premium feel builds immediate buyer confidence and helps reduce return rates."
             },
             {
-                "title": "Scalability",
-                "content": "The infrastructure is robust enough to handle high-traffic stock drops, ensuring the site remains stable during peak release times."
+                "title": "Reliable Foundation for Growth",
+                "content": "Built with modern, lightweight web technologies, the platform is fast and highly secure. Whether it is a quiet weekday or a highly anticipated weekend 'stock drop', the site's infrastructure remains perfectly stable and ready for every sale."
             }
         ]
-        
     },
     {
         "id": "2",
@@ -54,7 +53,7 @@
         "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1768501387/Screenshot_2026-01-15_at_18.22.59_imnqtk.png",
         "title": "University Smart Campus Navigator",
         "siteUrl": "https://example.com",
-        "description": "Smart Campus Navigator Web Applicaiton For Cardiff Metropolitan University",
+        "description": "Smart Campus Navigator Web Application for Cardiff Metropolitan University.",
         "sliderImages": [
             "https://res.cloudinary.com/dibygfenr/image/upload/v1768501387/Screenshot_2026-01-15_at_18.22.59_imnqtk.png",
             "https://res.cloudinary.com/dibygfenr/image/upload/v1768576846/Screenshot_2026-01-16_at_15.20.39_oyycbt.png",
@@ -75,7 +74,7 @@
             {
                 "title": "Smart Navigation, Powered by Code",
                 "paragraphs": [
-                    "To turn our designs into a living application, we utilized the robust MERN stack, building a responsive and dynamic platform. The core of the experience is powered by Leaflet, which we integrated to render interactive, detailed maps of the campus architecture. But we went beyond just showing static locations.",
+                    "To turn our designs into a living application, we utilised the robust MERN stack, building a responsive and dynamic platform. The core of the experience is powered by Leaflet, which we integrated to render interactive, detailed maps of the campus architecture. But we went beyond just showing static locations.",
                     "We engineered intelligent routing logic that connects the user's live location directly to their destination. The system calculates the fastest route, estimates travel time, and draws the exact path across the campus grounds. Whether finding a hidden classroom or the nearest coffee spot, the application provides real-time guidance, ensuring that even a complete newcomer can navigate the Llandaff campus with total confidence."
                 ],
                 "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1768501387/Screenshot_2026-01-15_at_18.22.59_imnqtk.png",
@@ -100,7 +99,7 @@
                 "imagePosition": "left"
             }
         ],
-        "moreDescriptionAboutService": "What We Developed: We have engineered a comprehensive, mobile-responsive campus navigation platform using the MERN stack, specifically designed to solve the navigational challenges of the Llandaff campus. Moving far beyond static PDF maps, this dynamic application integrates Leaflet.js to provide an interactive, real-time mapping experience. By calculating exact routes from a user's live location to specific lecture blocks, cafes, or gyms, we have created a digital companion that eliminates the anxiety of orientation and ensures students and staff can find their way with absolute precision.",
+        "moreDescriptionAboutService": "What We Developed: We have engineered a comprehensive, mobile-responsive campus navigation platform using the MERN stack, specifically designed to solve the navigational challenges of the Cardiff Metropolitan University Llandaff campus. Moving far beyond static PDF maps, this dynamic application integrates Leaflet.js to provide an interactive, real-time mapping experience. By calculating exact routes from a user's live location to specific lecture blocks, cafes, or gyms, we have created a digital companion that eliminates the anxiety of orientation and ensures students and staff can find their way with absolute precision.",
         "whyGood": [
             {
                 "title": "Time Optimisation",
@@ -108,7 +107,7 @@
             },
             {
                 "title": "Interactive Precision",
-                "content": "We moved beyond basic wayfinding by integrating Leaflet.js for granular mapping. Users can visualize their exact live location relative to campus buildings, turning a confusing physical layout into an intuitive, easily navigable digital experience."
+                "content": "We moved beyond basic wayfinding by integrating Leaflet.js for granular mapping. Users can visualise their exact live location relative to campus buildings, turning a confusing physical layout into an intuitive, easily navigable digital experience."
             },
             {
                 "title": "Secure Architecture",
@@ -121,7 +120,6 @@
         "position": "top",
         "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1768502028/Screenshot_2026-01-15_at_18.33.39_ntavot.png",
         "title": "Booking System",
-        
         "description": "A modern booking system engineered to streamline operations for a local client. By migrating from inconvenient manual bookings to a full-stack web application, we automated the entire client management process.",
         "sliderImages": [
             "https://res.cloudinary.com/dibygfenr/image/upload/v1768502028/Screenshot_2026-01-15_at_18.33.39_ntavot.png",
@@ -160,20 +158,20 @@
             }
         ],
         "moreDescriptionAboutService": "What We Developed: 'Book Flow' is a custom-engineered web application designed to digitise the operations of a local cleaning service. It serves as a comprehensive management tool that connects customers directly with the workforce, automating scheduling, invoicing, and route planning in one centralised platform.",
-            "whyGood": [
-                {
-                    "title": "Operational Clarity",
-                    "content": "The transition from paper diaries to our digital table system gave the business owner immediate visibility over their schedule, eliminating double-bookings and missed appointments entirely."
-                },
-                {
-                    "title": "Secure Infrastructure",
-                    "content": "By utilising AWS for media and hashed encryption for data, we ensured the system meets modern security standards, giving both the business and their clients peace of mind regarding their personal information."
-                },
-                {
-                    "title": "Ongoing Partnership",
-                    "content": "We don't just launch and leave. We maintain close contact with the business, providing ongoing support and implementing new features based on real-world usage. The client reported a significant reduction in admin time and is delighted with the seamless performance of the app."
-                }
-            ]
+        "whyGood": [
+            {
+                "title": "Operational Clarity",
+                "content": "The transition from paper diaries to our digital table system gave the business owner immediate visibility over their schedule, eliminating double-bookings and missed appointments entirely."
+            },
+            {
+                "title": "Secure Infrastructure",
+                "content": "By utilising AWS for media and hashed encryption for data, we ensured the system meets modern security standards, giving both the business and their clients peace of mind regarding their personal information."
+            },
+            {
+                "title": "Ongoing Partnership",
+                "content": "We don't just launch and leave. We maintain close contact with the business, providing ongoing support and implementing new features based on real-world usage. The client reported a significant reduction in admin time and is delighted with the seamless performance of the app."
+            }
+        ]
     },
     {
         "id": "4",
@@ -181,7 +179,7 @@
         "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1781189833/Screenshot_2026-06-11_at_15.57.09_pfggzy.png",
         "title": "AI Development and Integration",
         "siteUrl": "https://example.com",
-        "description": "We engineer secure, intelligent chatbots entirely from scratch. Because we build both the front-end interface and the back-end system ourselves, you get a 24/7 digital assistant that perfectly matches brand and keeps your customer data safe.",
+        "description": "We engineer secure, intelligent chatbots entirely from scratch. Because we build both the front-end interface and the back-end system ourselves, you get a 24/7 digital assistant that perfectly matches your brand and keeps your customer data safe.",
         "sliderImages": [
             "https://res.cloudinary.com/dibygfenr/image/upload/v1781189833/Screenshot_2026-06-11_at_15.57.09_pfggzy.png",
             "https://res.cloudinary.com/dibygfenr/image/upload/v1781190183/Screenshot_2026-06-11_at_16.02.57_xi8xtj.png",
@@ -192,34 +190,34 @@
             {
                 "title": "A Smart Bridge Between the Museum and Visitors",
                 "paragraphs": [
-                    "We built this intelligent platform to serve as a modern bridge between Welsh museums and their visitors, using cutting-edge technology to make culture feel accessible rather than overwhelming. At its core is a custom-engineered AI chatbot powered by Google Gemini AI, designed to handle visitor inquiries, share historical facts, and guide users seamlessly. Built entirely from scratch with a fast, modern frontend, we ensured a fully responsive design that adapts beautifully to any device. Visitors can now interact naturally with the museum's history on their phones or desktops, creating journey of discovery that leaves them with a profound sense of trust and engagement."
+                    "We built this intelligent platform to serve as a modern bridge between Welsh museums and their visitors, using cutting-edge technology to make culture feel accessible rather than overwhelming. At its core is a custom-engineered AI chatbot powered by Google Gemini AI, designed to handle visitor inquiries, share historical facts, and guide users seamlessly. Built entirely from scratch with a fast, modern frontend, we ensured a fully responsive design that adapts beautifully to any device. Visitors can now interact naturally with the museum's history on their phones or desktops, creating a journey of discovery that leaves them with a profound sense of trust and engagement."
                 ],
                 "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1781190183/Screenshot_2026-06-11_at_16.02.57_xi8xtj.png",
                 "imagePosition": "right"
             },
             {
-                "title": "Automating Complex Work with Modern MERN Stack",
+                "title": "Automating Complex Work with the Modern MERN Stack",
                 "paragraphs": [
-                    "Behind the scenes, we engineered a powerful full-stack command center using the modern MERN stack (MongoDB, Express, React, and Node.js) to handle the heavy lifting with complete data security. We custom-developed both the frontend and backend from scratch, ensuring that visitor interactions are securely processed , completely protecting sensitive data. The robust backend gives managing conversational data safely, avoiding public data leaks.",
-                    "Finally, we integrated top-tier security standards and optimization, turning complex AI integration into a smooth, secure, and lightning-fast digital solution that allows cultural institutions to step confidently into the future."
+                    "Behind the scenes, we engineered a powerful full-stack command centre using the modern MERN stack (MongoDB, Express, React, and Node.js) to handle the heavy lifting with complete data security. We custom-developed both the frontend and backend from scratch, ensuring that visitor interactions are securely processed, completely protecting sensitive data. The robust backend allows you to manage conversational data safely, avoiding public data leaks.",
+                    "Finally, we integrated top-tier security standards and optimisation, turning complex AI integration into a smooth, secure, and lightning-fast digital solution that allows cultural institutions to step confidently into the future."
                 ],
                 "image": "https://res.cloudinary.com/dibygfenr/image/upload/v1781189816/Screenshot_2026-06-11_at_15.56.41_zkhinh.png",
                 "imagePosition": "left"
             }
         ],
-        "moreDescriptionAboutService": "What We Developed: We have deployed a high-performance, mobile-first e-commerce platform specifically engineered for the unique demands of the fashion resale market. Unlike standard retail sites, designed to handle one-off vintage and pre-loved items without the risk of double-selling.",
+        "moreDescriptionAboutService": "What We Developed: A secure, custom-built AI chatbot designed to act as a 24/7 digital assistant for your business. By leveraging the MERN stack alongside advanced models like Google Gemini AI, we engineered an intelligent system that instantly answers customer questions, captures leads, and operates entirely independently of generic, less secure third-party plugins.",
         "whyGood": [
             {
-                "title": "Operational Efficiency",
-                "content": "The backend automates the complex logistics of resale—from stock intake to generating Royal Mail postage labels—reducing manual admin time by roughly 40%."
+                "title": "Automated Customer Support",
+                "content": "The AI assistant seamlessly handles repetitive inquiries—such as opening hours, service details, and initial consultations—freeing up your team to focus on high-value tasks and running the business."
             },
             {
-                "title": "High Conversion UX",
-                "content": "We tackled the biggest barrier in resale—trust—by implementing a high-fidelity product showcase with zoom capabilities and detailed measurement guides, drastically reducing return rates."
+                "title": "Always-On Engagement",
+                "content": "We ensure you never miss a lead. By designing a highly conversational and responsive interface, potential customers get immediate, accurate answers to their questions, day or night, directly from their mobile phones or desktops."
             },
             {
-                "title": "Scalability",
-                "content": "The infrastructure is robust enough to handle high-traffic stock drops, ensuring the site remains stable during peak release times."
+                "title": "Uncompromising Security",
+                "content": "Built on a custom full-stack architecture from the ground up, the backend guarantees that all customer interactions are processed securely. You retain absolute ownership over your data without the privacy risks of public AI models."
             }
         ]
     }
