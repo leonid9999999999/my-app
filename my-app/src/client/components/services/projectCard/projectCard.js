@@ -1,10 +1,12 @@
 import "./projectCard.css";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function ProjectCard({ onClick, tag, title, text, image }) {
   return (
     <div onClick={onClick} className="project-card">
       <div className="project-image">
-        <img src={image} alt={title} />
+        <LazyLoadImage loading="lazy" effect="blur" src={image} alt={title} />
         <div className="image-overlay" />
       </div>
 

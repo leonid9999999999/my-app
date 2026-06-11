@@ -63,11 +63,11 @@ function PortfolioExample(){
                 <div className="moreInfromationAboutProjectWrapper">
                     <div className="moreInfromationAboutProject">
                         <h2>The Result</h2>
-                        <p>
-                            What We Developed: We have deployed a high-performance, mobile-first e-commerce platform specifically engineered for the unique demands of
-                            the fashion resale market. Unlike standard retail sites, this platform is built on a "Single-SKU" architecture, designed to handle one-off
-                            vintage and pre-loved items without the risk of double-selling.
-                        </p>
+                        <div className="moreInfoWrapperParagraph">
+                            <p>
+                                {project.moreDescriptionAboutService}
+                            </p>
+                        </div>
                         <div className="why-it-is-good">
                             {project.whyGood && project.whyGood.length > 0 && (
                                 <div className="mt-16 w-full max-w-6xl mx-auto px-6">

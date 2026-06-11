@@ -85,8 +85,7 @@ function Main() {
       <div ref={processRef}>
         <OurProcess />
       </div>
-
-      <SelectedWork />
+      {/* <SelectedWork /> */}
       <ClientTestimonials />
       <ReadyToStart />
     </div>

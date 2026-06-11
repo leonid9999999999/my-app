@@ -33,6 +33,10 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
 }
+.ourServiceGrid>*:nth-child(3n + 1):last-child {
+    grid-column: 2;
+    /* Pushes it into the middle column */
+}
 
 
 
@@ -43,10 +47,15 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
     }
+
+    /* Reset the 3-column middle rule for tablet */
+    .ourServiceGrid>*:nth-child(3n + 1):last-child {
+        grid-column: auto;
+    }
 }
 
 @media (max-width: 600px) {
-    .ourServiceGrid{
+    .ourServiceGrid {
         grid-template-columns: 1fr;
     }
 
