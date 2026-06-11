@@ -69,3 +69,25 @@
 
 
 
+@media (max-width: 768px) {
+  .header {
+    padding: 0 16px;
+  }
+
+  .header__nav {
+    gap: 12px;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+  .header__button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .Logo img {
+    max-height: 40px;
+  }
+}

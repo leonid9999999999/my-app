@@ -32,7 +32,7 @@ function App() {
             <Route element={<AppErrorBoundaryWrapper />}>
               <Route path="home" element={<Main />} />
               <Route path="contactUs" element={<ContactUs />} />
-              <Route path="/ourservices/:id" element={<OurServices />} />
+              <Route path="/ourservices/:id" element={<OurServices />} /> 
               <Route path="/portfolio/:id" element={<PortfolioExample />} />
               <Route path="ourPortfolio" element={<OurPortfolio />} />
               <Route path="privacyPolicy" element={<PrivacyPolicy />} />

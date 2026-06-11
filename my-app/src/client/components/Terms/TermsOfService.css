@@ -1,27 +1,39 @@
 .terms {
   min-height: 100vh;
-  padding: 200px 24px;
-  background: linear-gradient(180deg, #050b1a 0%, #020617 100%);
+  padding: 140px 24px 80px;
+  background: linear-gradient(
+    180deg,
+    #050b1a 0%,
+    #020617 100%
+  );
+
   display: flex;
   justify-content: center;
 }
 
-/* Paper */
+/* PAPER */
+
 .terms-paper {
   width: 100%;
   max-width: 1280px;
-  background: #ffffff;
+
+  background: #f8fafc;
   color: #0f172a;
-  border-radius: 20px;
-  padding: 96px 140px;
+
+  border-radius: 24px;
+
+  padding: 90px 120px;
 
   box-shadow:
-    0 80px 200px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(15, 23, 42, 0.06);
+    0 80px 200px rgba(0,0,0,0.5),
+    0 0 0 1px rgba(15,23,42,0.05);
 
   opacity: 0;
-  transform: translateY(100px);
-  transition: all 1.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transform: translateY(80px);
+
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s ease;
 }
 
 .terms-paper.active {
@@ -29,53 +41,121 @@
   transform: translateY(0);
 }
 
-/* Header */
+/* HEADER */
+
 .terms-header {
-  margin-bottom: 80px;
+  margin-bottom: 70px;
 }
 
-.terms-header h2 {
+.terms-header h1 {
   font-size: 58px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.03em;
 }
 
-/* Text */
+.terms-header span {
+  display: block;
+  margin-top: 14px;
+
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* LEAD */
+
 .lead {
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.9;
   color: #334155;
 }
 
-section {
+/* SECTIONS */
+
+.terms section {
   margin-top: 48px;
 }
 
-h2 {
-  font-size: 22px;
+.terms h2 {
+  font-size: 24px;
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
+  color: #0f172a;
 }
 
-p {
+.terms p {
   font-size: 17px;
   line-height: 1.85;
   color: #334155;
 }
 
+/* CONTACT */
+
 .contact {
-  margin-top: 12px;
-  font-weight: 500;
-  color: #2563eb;
+  margin-top: 16px;
+  color: #2563eb !important;
+  font-weight: 600;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
+/* TABLET */
+
+@media (max-width: 1024px) {
   .terms-paper {
-    padding: 64px 40px;
+    padding: 70px 60px;
   }
 
-  .terms-header h2 {
-    font-size: 42px;
+  .terms-header h1 {
+    font-size: 48px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .terms {
+    padding: 110px 16px 50px;
+  }
+
+  .terms-paper {
+    padding: 45px 24px;
+    border-radius: 18px;
+  }
+
+  .terms-header {
+    margin-bottom: 40px;
+  }
+
+  .terms-header h1 {
+    font-size: 34px;
+    line-height: 1.15;
+  }
+
+  .lead {
+    font-size: 16px;
+  }
+
+  .terms h2 {
+    font-size: 21px;
+  }
+
+  .terms p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 480px) {
+  .terms-paper {
+    padding: 35px 20px;
+  }
+
+  .terms-header h1 {
+    font-size: 30px;
+  }
+
+  .lead {
+    font-size: 15px;
   }
 }
