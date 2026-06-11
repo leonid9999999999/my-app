@@ -1,17 +1,10 @@
 .privacy {
   min-height: 100vh;
   padding: 120px 20px;
-
   background: linear-gradient(180deg, #050b1a 0%, #020617 100%);
-
   display: flex;
   justify-content: center;
   align-items: flex-start;
-}
-
-
-.privacy-header h1 {
-  color: #0f172a;
 }
 
 /* =========================
@@ -23,7 +16,7 @@
   max-width: 900px;
 
   background: #f8fafc;
-  color: #0f172a;
+  color: #000; /* <-- ВЕСЬ ТЕКСТ ЧЁРНЫЙ */
 
   border-radius: 18px;
 
@@ -56,55 +49,56 @@
   font-size: 48px;
   font-weight: 700;
   letter-spacing: -0.02em;
+  color: #000; /* фикс */
 }
 
 .privacy-header span {
   display: block;
   margin-top: 8px;
-
   font-size: 13px;
-  color: #64748b;
+  color: #444;
 }
 
 /* =========================
-   TEXT
+   TEXT (ВАЖНО: ВСЁ СКОУПЛЕНО)
 ========================= */
 
-.lead {
+.privacy-paper .lead {
   font-size: 18px;
   line-height: 1.8;
-  color: #334155;
+  color: #000;
 }
 
-section {
+.privacy-paper section {
   margin-top: 36px;
 }
 
-h2 {
+.privacy-paper h2 {
   font-size: 20px;
   margin-bottom: 12px;
-  color: #0f172a;
+  color: #000;
 }
 
-p {
+.privacy-paper p {
   font-size: 16px;
   line-height: 1.75;
-  color: #334155;
+  color: #000;
 }
 
-ul {
+.privacy-paper ul {
   padding-left: 20px;
   margin-top: 12px;
 }
 
-li {
+.privacy-paper li {
   margin-bottom: 10px;
   line-height: 1.6;
+  color: #000;
 }
 
-.contact {
+.privacy-paper .contact {
   margin-top: 10px;
-  color: #2563eb;
+  color: #000;
   font-weight: 500;
 }
 
@@ -126,15 +120,15 @@ li {
     font-size: 34px;
   }
 
-  .lead {
+  .privacy-paper .lead {
     font-size: 16px;
   }
 
-  h2 {
+  .privacy-paper h2 {
     font-size: 18px;
   }
 
-  p {
+  .privacy-paper p {
     font-size: 15px;
   }
 }

@@ -1,6 +1,5 @@
 .testimonials {
   padding: 120px 0;
-  
 }
 
 .testimonials__container {
@@ -18,9 +17,10 @@
   letter-spacing: -0.02em;
 }
 
+/* ✅ 3 cards in a row */
 .testimonials__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 }
 
@@ -75,8 +75,15 @@
   color: #9ca3af;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
+/* 📱 Tablet */
+@media (max-width: 1024px) {
+  .testimonials__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 700px) {
   .testimonials__grid {
     grid-template-columns: 1fr;
   }
