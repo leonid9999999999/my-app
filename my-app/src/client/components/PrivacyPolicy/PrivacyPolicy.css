@@ -1,27 +1,42 @@
 .privacy {
   min-height: 100vh;
-  padding: 200px 24px;
+  padding: 120px 20px;
+
   background: linear-gradient(180deg, #050b1a 0%, #020617 100%);
+
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 
-/* Paper */
+
+.privacy-header h1 {
+  color: #0f172a;
+}
+
+/* =========================
+   CARD
+========================= */
+
 .privacy-paper {
   width: 100%;
-  max-width: 1280px;
-  background: #ffffff;
+  max-width: 900px;
+
+  background: #f8fafc;
   color: #0f172a;
-  border-radius: 20px;
-  padding: 96px 140px;
+
+  border-radius: 18px;
+
+  padding: 80px 70px;
 
   box-shadow:
-    0 80px 200px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(15, 23, 42, 0.06);
+    0 60px 160px rgba(0,0,0,0.5),
+    0 0 0 1px rgba(15,23,42,0.06);
 
   opacity: 0;
-  transform: translateY(100px);
-  transition: all 1.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transform: translateY(40px);
+
+  transition: all 1s ease;
 }
 
 .privacy-paper.active {
@@ -29,70 +44,97 @@
   transform: translateY(0);
 }
 
-/* Header */
+/* =========================
+   HEADER
+========================= */
+
 .privacy-header {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 .privacy-header h1 {
-  font-size: 58px;
-  font-weight: 600;
+  font-size: 48px;
+  font-weight: 700;
   letter-spacing: -0.02em;
 }
 
 .privacy-header span {
   display: block;
-  margin-top: 12px;
-  font-size: 14px;
+  margin-top: 8px;
+
+  font-size: 13px;
   color: #64748b;
 }
 
-/* Text */
+/* =========================
+   TEXT
+========================= */
+
 .lead {
   font-size: 18px;
-  line-height: 1.9;
+  line-height: 1.8;
   color: #334155;
 }
 
 section {
-  margin-top: 48px;
+  margin-top: 36px;
 }
 
 h2 {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 16px;
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #0f172a;
 }
 
 p {
-  font-size: 17px;
-  line-height: 1.85;
+  font-size: 16px;
+  line-height: 1.75;
   color: #334155;
 }
 
 ul {
-  margin-top: 16px;
-  padding-left: 24px;
+  padding-left: 20px;
+  margin-top: 12px;
 }
 
 li {
-  margin-bottom: 12px;
-  line-height: 1.75;
+  margin-bottom: 10px;
+  line-height: 1.6;
 }
 
 .contact {
-  margin-top: 12px;
-  font-weight: 500;
+  margin-top: 10px;
   color: #2563eb;
+  font-weight: 500;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .privacy {
+    padding: 100px 16px;
+  }
+
   .privacy-paper {
-    padding: 64px 40px;
+    padding: 40px 22px;
+    border-radius: 14px;
   }
 
   .privacy-header h1 {
-    font-size: 42px;
+    font-size: 34px;
+  }
+
+  .lead {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 15px;
   }
 }

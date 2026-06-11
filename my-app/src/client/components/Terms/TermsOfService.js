@@ -1,129 +1,125 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import "./TermsOfService.css";
 
 export default function TermsOfService() {
-  const ref = useRef(null);
   const [active, setActive] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setActive(entry.isIntersecting),
-      { threshold: 0.2 }
-    );
+    const timer = setTimeout(() => {
+      setActive(true);
+    }, 700);
 
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <section className="terms">
-      <article
-        ref={ref}
-        className={`terms-paper ${active ? "active" : ""}`}
-      >
-        
+      <article className={`terms-paper ${active ? "active" : ""}`}>
+        <header className="terms-header">
+          <h1>Terms of Service</h1>
+          <span>Last updated: June 2026</span>
+        </header>
 
         <section>
           <p className="lead">
             These Terms of Service govern your access to and use of our website,
-            services, and any related interactions. By using this website, you
-            agree to these terms. If you do not agree, you should discontinue
-            use of the site.
+            services, and related communications. By using this website, you
+            agree to comply with these terms. If you do not agree, please
+            discontinue use of the website.
           </p>
         </section>
 
         <section>
           <h2>1. About Us</h2>
           <p>
-            This website is operated by VB Secure Solutions. We provide digital
-            services including website development, design, consulting, and
-            presentation of previous work for informational purposes.
+            VB Secure Solutions provides professional website design,
+            development, and digital consulting services for businesses across
+            the United Kingdom and Europe.
           </p>
         </section>
 
         <section>
-          <h2>2. Use of the Website</h2>
+          <h2>2. Website Use</h2>
           <p>
-            You agree to use this website only for lawful purposes and in a way
-            that does not infringe the rights of others or restrict their use
-            of the site. Misuse, interference, or unauthorized access is
-            strictly prohibited.
+            You agree to use this website lawfully and responsibly. Any attempt
+            to disrupt, damage, gain unauthorized access to, or misuse the
+            website is strictly prohibited.
           </p>
         </section>
 
         <section>
-          <h2>3. Services</h2>
+          <h2>3. Services & Quotations</h2>
           <p>
-            Any services described on this website are provided subject to
-            individual agreements. Information on this site does not constitute
-            a binding offer and is provided for general informational purposes
-            only.
+            Information presented on this website is provided for general
+            informational purposes only and does not constitute a legally
+            binding offer. Specific services are governed by separate agreements
+            between us and our clients.
           </p>
         </section>
 
         <section>
           <h2>4. Intellectual Property</h2>
           <p>
-            All content on this website, including text, design, code, graphics,
-            and showcased projects, is the intellectual property of VB Secure
-            Solutions unless otherwise stated. Unauthorized reproduction or
-            distribution is prohibited.
+            All website content, including code, graphics, designs, text,
+            branding, and project showcases, remains the intellectual property
+            of VB Secure Solutions unless otherwise stated.
           </p>
         </section>
 
         <section>
-          <h2>5. User Submissions</h2>
+          <h2>5. Client Communications</h2>
           <p>
-            By submitting information through contact forms or other means, you
-            confirm that the information provided is accurate and that you have
-            the right to share it. We reserve the right to refuse or ignore
-            submissions that are inappropriate or unlawful.
+            Any information submitted through contact forms, email, or other
+            communication channels must be accurate and lawful. We reserve the
+            right to decline inappropriate or abusive enquiries.
           </p>
         </section>
 
         <section>
           <h2>6. Limitation of Liability</h2>
           <p>
-            This website and its content are provided on an “as is” basis. We do
-            not guarantee accuracy, availability, or specific outcomes. To the
-            maximum extent permitted by law, we shall not be liable for any
-            damages resulting from the use or inability to use this website or
-            services.
+            While we strive to keep all information accurate and up to date, we
+            cannot guarantee that the website will always be error-free or
+            uninterrupted. Use of the website is at your own risk.
           </p>
         </section>
 
         <section>
-          <h2>7. External Links</h2>
+          <h2>7. Third-Party Links</h2>
           <p>
-            This website may contain links to third-party websites. We are not
-            responsible for the content, policies, or practices of external
-            sites.
+            Our website may contain links to external websites. We are not
+            responsible for the content, security, or privacy practices of
+            third-party sites.
           </p>
         </section>
 
         <section>
-          <h2>8. Termination</h2>
+          <h2>8. Suspension or Termination</h2>
           <p>
             We reserve the right to restrict or terminate access to this website
-            at our discretion, without notice, if these Terms are violated.
+            if these Terms are violated or if misuse is detected.
           </p>
         </section>
 
         <section>
           <h2>9. Changes to These Terms</h2>
           <p>
-            These Terms of Service may be updated from time to time. Continued
-            use of the website constitutes acceptance of the revised terms.
+            These Terms may be updated periodically. Continued use of the
+            website following updates constitutes acceptance of the revised
+            Terms.
           </p>
         </section>
 
         <section>
-          <h2>10. Contact</h2>
+          <h2>10. Contact Information</h2>
           <p>
-            If you have any questions regarding these Terms of Service, you may
-            contact us at:
+            If you have questions regarding these Terms of Service, please
+            contact us:
           </p>
-          <p className="contact">vbsecuresolutions@gmail.com</p>
+
+          <p className="contact">
+            vbsecuresolutions@gmail.com
+          </p>
         </section>
       </article>
     </section>
