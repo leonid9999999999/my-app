@@ -53,7 +53,7 @@ function Footer() {
           <ul className="footer__list">
             <li>vbsecuresolutions@gmail.com</li>
             <li>Cardiff, United Kingdom</li>
-            <li>+44 89 0989 2641</li>
+            <li>+44 73 0840 5339</li>
           </ul>
         </div>
 
