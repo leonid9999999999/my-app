@@ -63,8 +63,12 @@
 .project-title {
   font-size: 20px;
   font-weight: 600;
-  color: #ffffff;
+  /* color: #ffffff; */
   margin-bottom: 10px;
+}
+
+#projetTileCardTitle{
+ color:#3b82f6;;
 }
 
 .project-text {

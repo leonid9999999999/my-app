@@ -12,7 +12,7 @@ function ProjectCard({ onClick, tag, title, text, image }) {
 
       <div className="project-content">
         <span className="work-tag">{tag}</span>
-        <h3 className="project-title">{title}</h3>
+        <h3 id="projetTileCardTitle">{title}</h3>
         <p className="project-text">{text}</p>
 
         <div className="project-link">
