@@ -5,6 +5,7 @@ import { borderRadius, height, width } from "@mui/system"
 import ImageSlider2 from "../imageSlider2/imageSlider2"
 import portfolioData from "../../data/portfolio/porfolioData.json";
 import Spinner from "../spinner/Spinner"; // Make sure path is correct
+import { CheckCircle2 } from 'lucide-react';
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -68,20 +69,35 @@ function PortfolioExample(){
                             vintage and pre-loved items without the risk of double-selling.
                         </p>
                         <div className="why-it-is-good">
-                            {project.whyGood.length > 0 && (
-                                <div className="why-it-is-good">
-                                    <h2>Why It Is Good</h2>
-                                    <ul>
-                                        {project.whyGood.map((benefit, index) => (
-                                            <li key={index}>
-                                                {/* Render Title in Bold */}
-                                                <strong>{benefit.title}: </strong>
+                            {project.whyGood && project.whyGood.length > 0 && (
+                                <div className="mt-16 w-full max-w-6xl mx-auto px-6">
 
-                                                {/* Render Content */}
-                                                {benefit.content}
-                                            </li>
-                                        ))}
-                                    </ul>
+                                    {/* CSS Grid for the Cards */}
+                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                        {project.whyGood && project.whyGood.length > 0 && (
+                                            <div className="benefits-section">
+                                                <h3 className="benefits-title">Why It Works</h3>
+
+                                                <div className="benefits-grid">
+                                                    {project.whyGood.map((benefit, index) => (
+                                                        <div key={index} className="benefit-card">
+                                                            <div className="benefit-icon-wrapper">
+                                                                <CheckCircle2 size={32} />
+                                                            </div>
+
+                                                            <h4 className="benefit-card-title">
+                                                                {benefit.title}
+                                                            </h4>
+
+                                                            <p className="benefit-card-content">
+                                                                {benefit.content}
+                                                            </p>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
                                 </div>
                             )}
                         </div>

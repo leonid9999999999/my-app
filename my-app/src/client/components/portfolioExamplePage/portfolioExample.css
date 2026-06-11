@@ -28,3 +28,124 @@
 .why-it-is-good ul {
     color:white;
 }
+/* Container for the whole section */
+.benefits-section {
+    margin-top: 4rem;
+    width: 100%;
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+}
+
+.benefits-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+/* CSS Grid layout for the cards */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* 1 column on mobile */
+    gap: 2rem;
+}
+
+/* Switches to 3 columns on tablets and desktops */
+@media (min-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.why-it-is-good{
+    margin-bottom: 60px;
+}
+
+/* The actual Card styling */
+.benefit-card {
+    /* 1. The Glass Background: A very faint, semi-transparent white/grey gradient */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+
+    /* 2. The Frosted Blur: This is what creates the actual glass effect */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    /* Ensures it works on Safari */
+
+    /* 3. The Glass Edge: A very subtle translucent white border */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    /* 4. The Depth: A dark shadow below the glass to separate it from the background */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+
+    /* Layout properties (kept from before) */
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* The Hover Effect: Making the glass catch the light */
+.benefit-card:hover {
+    transform: translateY(-8px);
+
+    /* Slightly brighten the glass on hover */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+
+    /* Tint the glass edge slightly with a brand color (using a soft blue here) */
+    border: 1px solid rgba(96, 165, 250, 0.3);
+
+    /* Add a subtle colored glow beneath the glass */
+    box-shadow: 0 15px 35px 0 rgba(96, 165, 250, 0.15);
+}
+
+/* The "Inaccurate" Organic Icon Wrapper */
+.benefit-icon-wrapper {
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+
+    /* Here is your asymmetrical magic */
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.8), rgba(15, 23, 42, 0.8));
+    /* Subtle gradient */
+    color: #60a5fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Adds a slow animation to make the shape feel alive on hover */
+    transition: border-radius 0.4s ease, transform 0.4s ease;
+}
+
+/* Optional: Make the blob shape shift when the user hovers over the card */
+.benefit-card:hover .benefit-icon-wrapper {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    /* Shifts the asymmetry */
+    transform: scale(1.1) rotate(5deg);
+    /* Slight pulse and tilt */
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.8), rgba(30, 58, 138, 0.8));
+    color: #ffffff;
+}
+.benefit-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.benefit-card-content {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+    /* Light grey text for readability */
+    margin: 0;
+}
