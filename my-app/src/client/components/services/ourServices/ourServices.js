@@ -186,7 +186,7 @@ const OurServices = () => {
             ) : (
               cards.map((card, index) => (
                 
-                  <ProcessCard {...card} />
+                <ProcessCard key={index} {...card} />
                 
               ))
             )}
