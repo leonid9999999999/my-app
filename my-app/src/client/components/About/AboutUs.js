@@ -143,10 +143,10 @@ function AboutUs() {
 
         <div className="about-founder__content">
           <h2>Team Member</h2>
-          <h3>Timo Berkut</h3>
+          <h3>Timothy Ber</h3>
 
           <p>
-            Timo is responsible for backend, architecture and system design.
+            Timothy is responsible for backend, architecture and system design.
           </p>
 
           <p>
@@ -166,17 +166,17 @@ function AboutUs() {
         <div className="timeline">
           <div className="timeline-item">
             <span className="timeline-year">2019 – 2023</span>
-            <p>Learning web development fundamentals and design.</p>
+            <p><strong>Learning the ropes.</strong> Getting hands-on with code, figuring out how the modern web works, and building a solid foundation in both design and development.</p>
           </div>
 
           <div className="timeline-item">
             <span className="timeline-year">2025</span>
-            <p>First real client projects and experience.</p>
+            <p><strong>Moving beyond tutorials.</strong> Started tackling real-world problems—like building custom booking systems and full-stack applications—to get actual client experience.</p>
           </div>
 
           <div className="timeline-item">
             <span className="timeline-year">2026</span>
-            <p>Official launch of VB Secure Software Solutions.</p>
+            <p><strong>Making it official.</strong> After years of refining the tech stack and building out complex projects, VB Secure Software Solutions officially launches.</p>
           </div>
         </div>
       </section>
