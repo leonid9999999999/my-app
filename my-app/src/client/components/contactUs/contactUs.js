@@ -43,8 +43,8 @@ const ContactUs = (props) => {
               <InfoBlock
                 icon={PhoneIcon}
                 name="Phone"
-                content="+44 20 1234 5678"
-                link="tel:+442012345678"
+                content="+44 73 0840 5339"
+                link="tel:+44 73 0840 5339"
               />
 
               <InfoBlock
