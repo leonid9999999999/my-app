@@ -6,7 +6,6 @@ import logo from "../../../resources/images/ima1logo.png";
 
 import WhyWorkWithUs from "../WhyWorkWithUs/WhyWorkWithUs";
 import OurProcess from "../ourprocess/OurProcess";
-import SelectedWork from "../selectedwork/SelectedWork";
 import ClientTestimonials from "../ClientTestimonials/ClientTestimonials";
 import ReadyToStart from "../ReadyToStart/ReadyToStart";
 import MainPageServices from "../services/mainPageServices/mainPageServices";

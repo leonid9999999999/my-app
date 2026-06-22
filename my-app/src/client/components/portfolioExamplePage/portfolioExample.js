@@ -1,12 +1,9 @@
 import SplitVisualSection from "../splitSection/splitVisualSection"
-import eCom2 from "../../../resources/displayImages/ecomMore.png"
 import "./portfolioExample.css"
-import { borderRadius, height, width } from "@mui/system"
 import ImageSlider2 from "../imageSlider2/imageSlider2"
 import portfolioData from "../../data/portfolio/porfolioData.json";
 import Spinner from "../spinner/Spinner"; // Make sure path is correct
 import { CheckCircle2 } from 'lucide-react';
-import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
