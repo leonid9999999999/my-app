@@ -3,8 +3,6 @@ import { Component } from 'react';
 import './bookingForm.css';
 
 
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import dayjs from "dayjs";
 // import { WrapperPicker } from '../dateTimePicker/dateTimePicker.js';
 import withRouter from '../navigate/navigate.js';
 
@@ -46,7 +44,6 @@ class BookingForm extends Component {
 
     let hours = now.getHours();
     let minutes = now.getMinutes();
-    let seconds = now.getSeconds();
     let timeNow = `${hours}:${minutes}`
 
         if (this.props.initialData?.date) {
@@ -105,7 +102,7 @@ class BookingForm extends Component {
         try {
             //send value to bakend via router link + passing token 
             const res = await axios.post(`/api/createBooking`, values);
-            const res1 = await axios.post(`/api/sendMail`, values);
+            await axios.post(`/api/sendMail`, values);
             console.log("Booking Submited:", res.data);
             console.log(res.data.message)
             // reseting states

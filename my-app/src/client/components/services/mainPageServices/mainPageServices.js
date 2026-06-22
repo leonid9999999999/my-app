@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import servicesData from "../../../data/services/services.json";
 import ProjectCard from "../../services/projectCard/projectCard.js";
-import ErrorBoundary from "../../errorBoundary/ErrorBoundary.js";
 import Spinner from "../../spinner/Spinner.js"; 
 
 function MainPageServices(){

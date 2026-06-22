@@ -1,8 +1,4 @@
 import "./SelectedWork.css";
-import OneSelectionCard from "./oneSelectionCard";
-
-import servicesData from "../../data/services/services.json";
-import ProjectCard from "../services/projectCard/projectCard";
 
 function SelectedWork() {
   return (

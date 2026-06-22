@@ -1,11 +1,10 @@
 import logo from '../../../resources/images/ima1logo.png';
 import { Link } from "react-router-dom";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import './header.css';
 
 function Header() {
   const navigate = useNavigate();
-  const location = useLocation();
 
   const goToServices = () => {
     navigate("/home", { state: { scrollTo: "services" } });

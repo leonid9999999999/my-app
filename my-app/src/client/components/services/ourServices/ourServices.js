@@ -8,7 +8,6 @@ import OurBundles from "../../ourBundles/ourBundles";
 import { useRef, useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Spinner from "../../spinner/Spinner.js";
-import ErrorBoundary from "../../errorBoundary/ErrorBoundary";
 import "./ourServices.css";
 import "./portfolioGrid.css";
 
@@ -29,8 +28,6 @@ const OurServices = () => {
   const [portfolioData, setPortfolioData] = useState([]);
   const [cards, setCards] = useState([]);
   const [firstPageTitle, setFirstPageTitle] = useState("");
-  const [additionalTitle, setAdditionalTitle] = useState("");
-  const [additionalParagraph, setAdditionalParagraph] = useState("");
 
   // --- Load all JSON / hardcoded data
   useEffect(() => {
@@ -44,8 +41,6 @@ const OurServices = () => {
       setSlides(info.sliderImages || []);
       setSections(info.sections || []);
       setFirstPageTitle(info.firstPageTitle || "");
-      setAdditionalTitle(info.additionalTitle || "");
-      setAdditionalParagraph(info.additionalParagpragh || "");
       setLoadingSlider(false);
 
       // --- Portfolio

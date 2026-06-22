@@ -1,8 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './imageSlider.css';
 
 const ImageSlider = ({ images, interval = 3000 }) => {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const nextSlide = useCallback(() => {
+    setActiveIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  }, [images.length]);
 
   // Automatic sliding logic
   useEffect(() => {
@@ -12,13 +18,7 @@ const ImageSlider = ({ images, interval = 3000 }) => {
 
     // Cleanup the interval when component unmounts
     return () => clearInterval(autoPlay);
-  }, [activeIndex]); 
-
-  const nextSlide = () => {
-    setActiveIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
+  }, [nextSlide, interval]);
 
   return (
     <div className="slider-container">

@@ -1,4 +1,3 @@
-import ErrorBoundary from '../../errorBoundary/ErrorBoundary';
 import './singlePortfolio.css'
 import { Link } from 'react-router-dom'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
