@@ -32,7 +32,8 @@ const OurServices = () => {
   const [portfolioData, setPortfolioData] = useState([]);
   const [cards, setCards] = useState([]);
   const [firstPageTitle, setFirstPageTitle] = useState("");
-
+  const [additionalTitle, setAdditionalTitle] = useState("");
+  const [additionalParagraph, setAdditionalParagraph] = useState("");
   // --- Scroll logic
   useEffect(() => {
     if (location.state && location.state.scrollTo === "OurBundles") {
