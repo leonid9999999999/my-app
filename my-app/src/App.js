@@ -4,7 +4,7 @@ import { Navigate, Route, BrowserRouter as Router, Routes } from "react-router-d
 import WebApp from './web-app.js'
 import './App.css';
 
-import Header from './client/components/header/Header';
+
 import Main from "./client/components/main/main";
 import ContactUs from './client/components/contactUs/contactUs';
 import OurServices from './client/components/services/ourServices/ourServices.js';

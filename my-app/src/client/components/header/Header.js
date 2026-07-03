@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../../../resources/images/ima1logo.png';
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import './header.css';
 
 function Header() {

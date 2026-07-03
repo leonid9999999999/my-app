@@ -32,8 +32,7 @@ const OurServices = () => {
   const [portfolioData, setPortfolioData] = useState([]);
   const [cards, setCards] = useState([]);
   const [firstPageTitle, setFirstPageTitle] = useState("");
-  const [additionalTitle, setAdditionalTitle] = useState("");
-  const [additionalParagraph, setAdditionalParagraph] = useState("");
+  
   // --- Scroll logic
   useEffect(() => {
     if (location.state && location.state.scrollTo === "OurBundles") {
@@ -94,8 +93,7 @@ const OurServices = () => {
         setSlides(info.sliderImages || []);
         setSections(info.sections || []);
         setFirstPageTitle(info.firstPageTitle || "");
-        setAdditionalTitle(info.additionalTitle || "");
-        setAdditionalParagraph(info.additionalParagpragh || "");
+       
       }
 
       setLoadingSlider(false);
