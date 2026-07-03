@@ -1,14 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import "./OurProcess.css";
+
 import strategyImg from '../../../resources/images/strategy.png';
 import designImg from '../../../resources/images/design.png';
 import discoveryImg from '../../../resources/images/discovery.png';
 import developmentImg from '../../../resources/images/development.png';
 import launchImg from '../../../resources/images/launch.png';
+
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-
-
 
 const STEPS = [
   {
@@ -53,6 +53,14 @@ export default function OurProcess() {
       const rect = sectionRef.current.getBoundingClientRect();
       const containerHeight = scrollContainer.clientHeight;
 
+      // 1. VISIBILITY FIX: 
+      // Fade in the section when it enters the bottom 80% of the screen,
+      // instead of waiting for it to reach the absolute top.
+      setVisible(rect.top < containerHeight * 0.8 && rect.bottom > 0);
+
+      // 2. PROGRESS LOGIC:
+      // Keep this exactly the same. It only starts calculating step progress
+      // when rect.top hits 0 (when the sticky effect begins).
       const progress = Math.min(
         Math.max(-rect.top / (rect.height - containerHeight), 0),
         1
@@ -60,7 +68,6 @@ export default function OurProcess() {
 
       setVisible(progress > 0 && progress < 1);
 
-      // ✅ FIX: теперь доходит до 5 шага (Launch)
       const index = Math.min(
         STEPS.length - 1,
         Math.floor(progress * STEPS.length)
@@ -70,10 +77,9 @@ export default function OurProcess() {
     };
 
     scrollContainer.addEventListener("scroll", onScroll);
-    onScroll();
+    onScroll(); // Trigger once on mount
 
-    return () =>
-      scrollContainer.removeEventListener("scroll", onScroll);
+    return () => scrollContainer.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
@@ -83,12 +89,12 @@ export default function OurProcess() {
     >
       <div className="process-sticky">
 
-        {/* HEADER */}
+        {/* HEADER (как было) */}
         <header className="process-header">
           <h2>From Idea to Launch</h2>
         </header>
 
-        {/* TIMELINE */}
+        {/* TIMELINE (как было) */}
         <div className="process-timeline">
           <div className="timeline-line">
             <span
@@ -116,7 +122,11 @@ export default function OurProcess() {
         {/* CONTENT */}
         <div className="process-content">
           <div className="process-image">
-            <LazyLoadImage loading="lazy" src={STEPS[step].image} alt={STEPS[step].title} />
+            <LazyLoadImage
+              loading="lazy"
+              src={STEPS[step].image}
+              alt={STEPS[step].title}
+            />
           </div>
 
           <div className="process-text">
@@ -124,6 +134,7 @@ export default function OurProcess() {
             <p>{STEPS[step].text}</p>
           </div>
         </div>
+
       </div>
     </section>
   );

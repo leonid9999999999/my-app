@@ -1,45 +1,94 @@
+import React, { useState } from 'react';
 import logo from '../../../resources/images/ima1logo.png';
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import './header.css';
 
 function Header() {
   const navigate = useNavigate();
 
+  // 1. Create a state to track if the menu is open
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // 2. Function to toggle the menu open/closed
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  // 3. Function to close the menu when a link is clicked
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   const goToServices = () => {
+    closeMenu(); // Close menu on click
     navigate("/home", { state: { scrollTo: "services" } });
+  };
+  const goAboutUs = () => {
+    closeMenu(); // Close menu on click
+    navigate("/about", { state: { scrollTo: "about" } });
   };
 
   const goToProcess = () => {
+    closeMenu(); // Close menu on click
     navigate("/home", { state: { scrollTo: "process" } });
   };
+  const goToPrices = () => {
+    closeMenu(); // Always close the burger menu
+    navigate("/ourServices/0", { state: { scrollTo: "OurBundles" } });
+  };
+  
+
 
   return (
-    <div className="header">
-      <Link to="/home" className="Logo">
+    <header className="header">
+      <Link to="/home" className="Logo" onClick={closeMenu}>
         <img alt="logo" src={logo} />
       </Link>
 
-      <div className="header__nav">
-        <div onClick={goToServices} className="hide-mobile">
-          <Link className="header__link">
-            Services
-          </Link>
+      {/* 4. Add the Burger Button with dynamic class */}
+      <button
+        className={`header__burger ${isMenuOpen ? 'is-open' : ''}`}
+        onClick={toggleMenu}
+        aria-label="Toggle menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      {/* 5. Add dynamic class to the navigation container */}
+      <nav className={`header__nav ${isMenuOpen ? 'is-open' : ''}`}>
+
+        {/* Changed from <div> wrapper to just using the Link/Div directly for cleaner markup */}
+        <Link to="/home" className="header__link" onClick={closeMenu}>
+          Home
+        </Link>
+        <div onClick={goAboutUs} className="header__link">
+          About Us
+        </div>
+        <div onClick={goToServices} className="header__link">
+          Services
         </div>
 
-        <div onClick={goToProcess} className="header__link hide-mobile">
+        <div onClick={goToProcess} className="header__link">
           Process
         </div>
 
-        <Link to="/ourPortfolio" className="header__link">
+        <Link to="/ourPortfolio" className="header__link" onClick={closeMenu}>
           Work
         </Link>
 
-        <Link to="/ContactUs" className="header__link">
+        <div onClick={goToPrices} className="header__link">
+          Prices
+        </div>
+
+        {/* Removed nested div in Link, apply button styling directly or wrap properly */}
+        <Link to="/ContactUs" onClick={closeMenu} style={{ textDecoration: 'none' }}>
           <div className="header__button">Contact Us</div>
         </Link>
-      </div>
-    </div>
+
+      </nav>
+    </header>
   );
 }
 
