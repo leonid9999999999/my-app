@@ -1,7 +1,9 @@
-import React, { Suspense, useState } from 'react';
+import React from 'react';
 import { Navigate, Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
 import WebApp from './web-app.js'
 import './App.css';
+
 import Header from './client/components/header/Header';
 import Main from "./client/components/main/main";
 import ContactUs from './client/components/contactUs/contactUs';
@@ -16,37 +18,40 @@ import TermsOfService from "./client/components/Terms/TermsOfService";
 import Page404 from "./client/components/errorBoundary/Page404.js";
 import AppErrorBoundaryWrapper from './client/components/errorBoundary/ErrorBoundary.js';
 
+// ⭐ ДОБАВИЛИ PERFORMANCE ENGINE
+import PerformanceProvider from './performance/PerformanceProvider';
+
 function App() {
   return (
-  <Router>
-  <div className="App">
-    {/* ScrollToTop должен быть здесь, чтобы отслеживать все маршруты */}
-      <ScrollToTop />
-  <Routes>
+    <PerformanceProvider>
+      <Router>
+        <div className="App">
 
+          <ScrollToTop />
 
-          <Route path="/" element={<WebApp />}>
-            <Route index element={<Navigate to="home" replace />} />
+          <Routes>
 
-            {/* Wrap all pages inside one ErrorBoundary */}
-            <Route element={<AppErrorBoundaryWrapper />}>
-              <Route path="home" element={<Main />} />
-              <Route path="contactUs" element={<ContactUs />} />
-              <Route path="/ourservices/:id" element={<OurServices />} /> 
-              <Route path="/portfolio/:id" element={<PortfolioExample />} />
-              <Route path="ourPortfolio" element={<OurPortfolio />} />
-              <Route path="privacyPolicy" element={<PrivacyPolicy />} />
-              <Route path="about" element={<AboutUs />} />
-              <Route path="terms-of-service" element={<TermsOfService />} />
+            <Route path="/" element={<WebApp />}>
+              <Route index element={<Navigate to="home" replace />} />
+
+              <Route element={<AppErrorBoundaryWrapper />}>
+                <Route path="home" element={<Main />} />
+                <Route path="contactUs" element={<ContactUs />} />
+                <Route path="/ourservices/:id" element={<OurServices />} />
+                <Route path="/portfolio/:id" element={<PortfolioExample />} />
+                <Route path="ourPortfolio" element={<OurPortfolio />} />
+                <Route path="privacyPolicy" element={<PrivacyPolicy />} />
+                <Route path="about" element={<AboutUs />} />
+                <Route path="terms-of-service" element={<TermsOfService />} />
+              </Route>
+
+              <Route path="*" element={<Page404 />} />
             </Route>
 
-            <Route path="*" element={<Page404 />} />
-          </Route>
-  </Routes>
-</div>
-</Router>
-                    
-    
+          </Routes>
+        </div>
+      </Router>
+    </PerformanceProvider>
   );
 }
 
