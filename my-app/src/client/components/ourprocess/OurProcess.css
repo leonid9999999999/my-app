@@ -1,10 +1,10 @@
 .process {
-  height: 500vh;
+  height: 250vh;
   background: radial-gradient(ellipse at top, #0f172a, #020617);
   color: white;
 
   opacity: 0;
-  transition: opacity 1s ease;
+transition: opacity 0.9s ease;
 }
 
 .process.is-visible {

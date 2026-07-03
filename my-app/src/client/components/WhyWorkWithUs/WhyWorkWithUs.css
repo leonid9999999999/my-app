@@ -105,8 +105,57 @@
   }
 }
 
+/* --- Адаптив для телефонов (Mobile) --- */
 @media (max-width: 480px) {
+  .why {
+    padding: 60px 16px;
+    /* Reduce overall section padding */
+  }
+
+  .why__title {
+    font-size: 28px;
+    /* Smaller main title */
+  }
+
+  .why__subtitle {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
   .why__cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    /* Force 2 columns */
+    gap: 12px;
+    /* Tighter gap so cards have more room */
+  }
+
+  .why__card {
+    padding: 20px 12px;
+    /* Shrink inner padding */
+    min-height: auto;
+    /* Remove the 280px fixed height so it hugs the content */
+  }
+
+  .why__icon {
+    width: 32px;
+    /* Smaller icon box */
+    height: 32px;
+    margin-bottom: 16px;
+    /* Less space below icon */
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  .why__card h3 {
+    font-size: 14px;
+    /* Smaller card title */
+    margin-bottom: 8px;
+  }
+
+  .why__card p {
+    font-size: 12px;
+    /* Smaller paragraph text */
+    line-height: 1.4;
+    /* Tighter line height to save vertical space */
   }
 }

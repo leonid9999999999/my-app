@@ -8,8 +8,6 @@ import launchImg from '../../../resources/images/launch.png';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
-
-
 const STEPS = [
   {
     title: "Discovery",
@@ -53,14 +51,20 @@ export default function OurProcess() {
       const rect = sectionRef.current.getBoundingClientRect();
       const containerHeight = scrollContainer.clientHeight;
 
+      // 1. VISIBILITY FIX: 
+      // Fade in the section when it enters the bottom 80% of the screen,
+      // instead of waiting for it to reach the absolute top.
+      setVisible(rect.top < containerHeight * 0.8 && rect.bottom > 0);
+
+      // 2. PROGRESS LOGIC:
+      // Keep this exactly the same. It only starts calculating step progress
+      // when rect.top hits 0 (when the sticky effect begins).
       const progress = Math.min(
         Math.max(-rect.top / (rect.height - containerHeight), 0),
         1
       );
 
-      setVisible(progress > 0 && progress < 1);
-
-      // ✅ FIX: теперь доходит до 5 шага (Launch)
+      // 3. SET STEP:
       const index = Math.min(
         STEPS.length - 1,
         Math.floor(progress * STEPS.length)
@@ -70,10 +74,9 @@ export default function OurProcess() {
     };
 
     scrollContainer.addEventListener("scroll", onScroll);
-    onScroll();
+    onScroll(); // Trigger once on mount
 
-    return () =>
-      scrollContainer.removeEventListener("scroll", onScroll);
+    return () => scrollContainer.removeEventListener("scroll", onScroll);
   }, []);
 
   return (

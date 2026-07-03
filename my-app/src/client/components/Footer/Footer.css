@@ -65,7 +65,7 @@
 
 .footer__title {
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 800;
 
   color: #ffffff;
 
@@ -158,19 +158,28 @@
 
 @media (max-width: 600px) {
   .footer {
-    padding-top: 55px;
+    padding-top: 50px;
   }
 
   .footer__container {
-    grid-template-columns: 1fr;
-    gap: 35px;
+    /* Create a 2-column grid for the link lists to save vertical space */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
 
-    padding: 0 24px 50px;
+    padding: 0 24px 40px;
     text-align: center;
+    /* Shift from center to left for a cleaner, sharper look */
   }
 
   .footer__brand {
+    /* Make the brand section span across both columns at the top */
+    grid-column: span 2;
     align-items: center;
+  }
+
+  .footer__logo {
+    justify-content: center;
+    margin-bottom: 16px;
   }
 
   .footer__column {
@@ -180,27 +189,93 @@
   }
 
   .footer__title {
-    margin-bottom: 12px;
+    font-size: 19px;
+    margin-bottom: 16px;
   }
 
   .footer__description {
     max-width: 100%;
-    font-size: 14px;
+    font-size: 18px;
+    text-align: center;
   }
 
   .footer__list li {
-    margin-bottom: 10px;
-    font-size: 14px;
+    margin-bottom: 12px;
+    font-size: 17px;
     text-align: center;
   }
 
   .footer__bottom {
     flex-direction: column;
-    gap: 14px;
+    align-items: center;
+    /* Keep the copyright/legal section left-aligned too */
+    gap: 16px;
 
+    text-align: left;
+    padding: 24px;
+  }
+
+  .footer__links {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    /* 16px vertical gap, 24px horizontal gap if they wrap */
+  }
+}
+
+@media (max-width: 425px) {
+  .footer {
+    padding-top: 50px;
+  }
+
+  .footer__container {
+    /* Single column grid */
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 24px 40px;
     text-align: center;
+  }
 
-    padding: 20px 24px;
+  .footer__brand {
+    /* Reset to a single column */
+    grid-column: 1;
+    align-items: center;
+  }
+
+  .footer__logo {
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .footer__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__title {
+    font-size: 19px;
+    margin-bottom: 16px;
+  }
+
+  .footer__description {
+    max-width: 100%;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .footer__list li {
+    margin-bottom: 12px;
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+    padding: 24px;
   }
 
   .footer__links {
@@ -209,22 +284,32 @@
     gap: 16px;
   }
 }
-
 /* =========================
    SMALL PHONES
 ========================= */
 
 @media (max-width: 380px) {
+  .footer__container {
+    /* Revert back to a single column ONLY for very tiny screens */
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer__brand {
+    grid-column: 1;
+  }
+
   .footer__description {
-    font-size: 13px;
+   
   }
 
   .footer__bottom {
     font-size: 12px;
+    padding: 20px 24px;
   }
 
   .footer__links {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
   }
 }

@@ -2,7 +2,7 @@ import "./AboutUs.css";
 import { useEffect, useState, useRef } from "react";
 
 import founder from "../../../resources/images/me.png";
-import TeamMember from "../../../resources/images/Timo.png";
+import TeamMember from "../../../resources/images/tim.png";
 import logo from "../../../resources/images/imalogo.png";
 
 function AboutUs() {
