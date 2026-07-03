@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import "./OurProcess.css";
+
 import strategyImg from '../../../resources/images/strategy.png';
 import designImg from '../../../resources/images/design.png';
 import discoveryImg from '../../../resources/images/discovery.png';
 import developmentImg from '../../../resources/images/development.png';
 import launchImg from '../../../resources/images/launch.png';
+
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
@@ -64,7 +66,8 @@ export default function OurProcess() {
         1
       );
 
-      // 3. SET STEP:
+      setVisible(progress > 0 && progress < 1);
+
       const index = Math.min(
         STEPS.length - 1,
         Math.floor(progress * STEPS.length)
@@ -86,12 +89,12 @@ export default function OurProcess() {
     >
       <div className="process-sticky">
 
-        {/* HEADER */}
+        {/* HEADER (как было) */}
         <header className="process-header">
           <h2>From Idea to Launch</h2>
         </header>
 
-        {/* TIMELINE */}
+        {/* TIMELINE (как было) */}
         <div className="process-timeline">
           <div className="timeline-line">
             <span
@@ -119,7 +122,11 @@ export default function OurProcess() {
         {/* CONTENT */}
         <div className="process-content">
           <div className="process-image">
-            <LazyLoadImage loading="lazy" src={STEPS[step].image} alt={STEPS[step].title} />
+            <LazyLoadImage
+              loading="lazy"
+              src={STEPS[step].image}
+              alt={STEPS[step].title}
+            />
           </div>
 
           <div className="process-text">
@@ -127,6 +134,7 @@ export default function OurProcess() {
             <p>{STEPS[step].text}</p>
           </div>
         </div>
+
       </div>
     </section>
   );
