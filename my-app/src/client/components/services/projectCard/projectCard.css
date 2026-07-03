@@ -1,9 +1,7 @@
 .project-card {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.04),
-    rgba(255, 255, 255, 0.02)
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.02));
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 28px;
   padding: 18px;
@@ -17,19 +15,40 @@
   box-shadow: 0 40px 120px rgba(0, 0, 0, 0.5);
 }
 
-/* IMAGE */
+/* --- IMAGE SECTION (UPDATED) --- */
 .project-image {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
   aspect-ratio: 4 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 1. USE PADDING FOR THE GAP: 
+     This guarantees a perfectly even 24px border around every image, 
+     regardless of the screen size or container dimensions. */
+  padding: 24px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.15);
 }
 
 .project-image img {
+  /* 2. FORCE UNIFORM SIZING:
+     Now that the parent has padding, we tell the image to fill 100% 
+     of the remaining space. */
   width: 100%;
   height: 100%;
+
+  /* 3. CROP TO FIT:
+     This is the magic line. It forces every image to fill that 100% space 
+     identically, cropping any weird native aspect ratios so they all match. */
   object-fit: cover;
+  object-position: top center;
+  /* Aligns the mockups to the top so headers aren't cut off */
+  border-radius: 12px;
   transition: transform 0.8s ease;
+  z-index: 1;
 }
 
 .project-card:hover .project-image img {
@@ -38,15 +57,22 @@
 
 .image-overlay {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.05),
-    rgba(0, 0, 0, 0.35)
-  );
+  /* 4. MATCH THE OVERLAY TO THE GAP:
+     By setting inset to 24px, the overlay perfectly covers ONLY the image, 
+     leaving your 24px gap untouched by the shadow. */
+  inset: 24px;
+  border-radius: 12px;
+  /* Matches the inner image border radius */
+  
+  z-index: 2;
+  pointer-events: none;
 }
 
-/* CONTENT */
+/*
+
+/* ------------------------------- */
+
+/* CONTENT (UNTOUCHED) */
 .project-content {
   padding: 18px 6px 6px;
 }
@@ -63,12 +89,11 @@
 .project-title {
   font-size: 20px;
   font-weight: 600;
-  /* color: #ffffff; */
   margin-bottom: 10px;
 }
 
-#projetTileCardTitle{
- color:#3b82f6;;
+#projetTileCardTitle {
+  color: #3b82f6;
 }
 
 .project-text {
@@ -78,7 +103,7 @@
   margin-bottom: 18px;
 }
 
-/* LINK */
+/* LINK (UNTOUCHED) */
 .project-link {
   display: inline-flex;
   align-items: center;
