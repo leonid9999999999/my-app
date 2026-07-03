@@ -1,17 +1,13 @@
 import "./contactUs.css";
 
-  import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import PhoneIcon from "../../components/icons/PhoneIcon";
 import LocationIcon from "../../components/icons/LocationIcon";
 import Email from "../../components/icons/Email";
 import Clock from "../../components/icons/Clock"
-import withRouter from '../navigate/navigate';
 import InfoBlock from "./infoBlock/infoBlock";
 import BookingForm from "../bookingForm/bookingForm";
 
 const ContactUs = (props) => {
-  const { location } = props;
-  const { title, price, serviceDescription, urlImage } = location?.state || {};
 
   return (
     // service details with booking form component

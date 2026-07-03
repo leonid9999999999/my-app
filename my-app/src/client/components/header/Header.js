@@ -5,7 +5,6 @@ import './header.css';
 
 function Header() {
   const navigate = useNavigate();
-  const location = useLocation();
 
   // 1. Create a state to track if the menu is open
   const [isMenuOpen, setIsMenuOpen] = useState(false);

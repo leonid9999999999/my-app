@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import "./imageSlider2.css";
 
 const ImageSlider2 = ({ images, autoPlayInterval = 4000 }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [loaded, setLoaded] = useState(false);
 
-    const nextSlide = () => {
+    const nextSlide = useCallback(() => {
         setCurrentIndex((prev) =>
             prev === images.length - 1 ? 0 : prev + 1
         );
-    };
+    }, [images.length]);
 
     const prevSlide = () => {
         setCurrentIndex((prev) =>
@@ -21,7 +21,7 @@ const ImageSlider2 = ({ images, autoPlayInterval = 4000 }) => {
     useEffect(() => {
         const interval = setInterval(nextSlide, autoPlayInterval);
         return () => clearInterval(interval);
-    }, [autoPlayInterval, images.length]);
+    }, [autoPlayInterval, images.length, nextSlide]);
 
     return (
         <div className="slider-wrapper">

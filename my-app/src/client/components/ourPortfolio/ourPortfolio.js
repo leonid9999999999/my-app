@@ -1,7 +1,6 @@
 import SinglePortfolio from "./singlePorfolio/singlePortfolio";
 import portfolioData from "../../data/portfolio/porfolioData.json";
 import { useNavigate } from "react-router-dom";
-import ErrorBoundary from "../errorBoundary/ErrorBoundary";
 import Spinner from "../spinner/Spinner"; // Make sure path is correct
 import { useState, useEffect } from "react";
 import "./ourPortfolio.css";
@@ -20,11 +19,8 @@ function OurPortfolio() {
     }, []);
 
     function Page(item) {
-        const safeSections = item.sections || [];
-        const safeBenefits = item.whyGood || [];
-        const safeSliderImages = item.sliderImages || [];
         navigate(`/portfolio/${item.id}`, {
-           
+
         });
     }
 
