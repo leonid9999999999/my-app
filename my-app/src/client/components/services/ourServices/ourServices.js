@@ -5,7 +5,7 @@ import ProcessCard from "../../processCard/processCard";
 import FAQSection from "../faqSection/faqSection";
 import ProjectCard from "../projectCard/projectCard";
 import OurBundles from "../../ourBundles/ourBundles";
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import Spinner from "../../spinner/Spinner.js";
 import "./ourServices.css";
