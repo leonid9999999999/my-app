@@ -21,7 +21,7 @@ function Footer() {
         <div className="footer__column">
           <h4 className="footer__title">Contact</h4>
           <ul className="footer__list">
-            <li>vbsecuresolutions@gmail.com</li>
+            <li><a href="mailto:vbsecuresolutions@gmail.com">vbsecuresolutions@gmail.com</a></li>
             <li>Cardiff, United Kingdom</li>
             <li>+44 73 0840 5339</li>
           </ul>
@@ -45,10 +45,13 @@ function Footer() {
         <div className="footer__column">
           <h4 className="footer__title">Services</h4>
           <ul className="footer__list">
-            <li>Web Design</li>
-            <li>Web Development</li>
-            <li>E-Commerce</li>
-            <li>UI / UX Design</li>
+            <div id="nonClickable">
+              <li>Web Design</li>
+              <li>Web Development</li>
+              <li>E-Commerce</li>
+              <li>UI / UX Design</li>
+            </div>
+            
           </ul>
         </div>
 

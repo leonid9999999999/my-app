@@ -6,7 +6,7 @@ const ProcessCard = ({ title, text, image, alt, imageStyle  }) => {
   return (
     <div className="process-card">
       <div className="image-wrapper" style={imageStyle }>
-        <LazyLoadImage loading="lazy" src={image} alt={alt} />
+        <LazyLoadImage effect="blur" loading="lazy" src={image} alt={alt} />
       </div>
 
       <h3>{title}</h3>

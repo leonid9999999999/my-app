@@ -5,7 +5,7 @@ import ProcessCard from "../../processCard/processCard";
 import FAQSection from "../faqSection/faqSection";
 import ProjectCard from "../projectCard/projectCard";
 import OurBundles from "../../ourBundles/ourBundles";
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import Spinner from "../../spinner/Spinner.js";
 import "./ourServices.css";
@@ -14,7 +14,7 @@ import "./portfolioGrid.css";
 const OurServices = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const targetSection = useRef(null);
+  
   const { id } = useParams();
 
   // --- 1. Bulletproof check: Is this the "Prices" link? ---
@@ -35,12 +35,10 @@ const OurServices = () => {
   
   // --- Scroll logic
   useEffect(() => {
-    if (location.state && location.state.scrollTo === "OurBundles") {
+    if (location.state) {
       setTimeout(() => {
-        const targetSection = document.getElementById("OurBundles");
-        if (targetSection) {
-          targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
+        
+        
       }, 100);
     }
   }, [location]);
@@ -107,10 +105,6 @@ const OurServices = () => {
     }
   }, [location?.state, isOnlyBundles]);
 
-  // --- Handlers
-  const handleScrollDown = () => {
-    targetSection.current?.scrollIntoView({ behavior: "smooth" });
-  };
 
   const handlePortfolioClick = (item) => {
     navigate(`/portfolio/${item.id}`, {
@@ -140,7 +134,7 @@ const OurServices = () => {
                 <h1>{firstPageTitle}</h1>
                 <Button
                   style={{ fontWeight: "bold", border: 0, backgroundColor: "#3b82f6", color: "white" }}
-                  onClick={handleScrollDown}
+                  
                   text="Find out more!"
                 />
               </div>
@@ -148,7 +142,7 @@ const OurServices = () => {
           </div>
 
           <div className="secondBlockOurProject">
-            <div className="ourProject" ref={targetSection}>
+            <div className="ourProject" >
               {loadingPortfolio ? (
                 <Spinner />
               ) : (

@@ -15,7 +15,7 @@ function SingleBundle({
     return (
         <div className="singleBundleWrapper">
             <div className="singleBundle">
-                <LazyLoadImage src={image} alt={title} />
+                <LazyLoadImage effect="blur" src={image} alt={title} />
 
                 <div className="infoBlock">
                     {/* TITLE */}

@@ -8,7 +8,7 @@ function SinglePortfolio({ image, title, siteUrl, description,onClick }){
        
             <div className="portfolio-card" onClick={onClick}>
                 <div className="portfolio-image-wrapper">
-                        <LazyLoadImage loading="lazy" src={image} alt={title} className="portfolio-image" />
+                <LazyLoadImage effect="blur" placeholderSrc="./resources/images/backgroundImg.png"  loading="lazy" src={image} alt={title} className="portfolio-image" />
                         <Link to={siteUrl} className="view-site-btn">
                             View Site
                         </Link>

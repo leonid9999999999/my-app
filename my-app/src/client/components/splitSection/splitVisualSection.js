@@ -34,7 +34,7 @@ const SplitVisualSection = ({ sections = [],styles,  }) => {
               }`}
             >
               
-              <LazyLoadImage loading="lazy" className="imageSection" style={styles} src={section.image} alt={section.title} />
+              <LazyLoadImage effect="blur" loading="lazy" className="imageSection" style={styles} src={section.image} alt={section.title} />
             </div>
           </div>
         );
