@@ -75,7 +75,7 @@ function Header() {
         </div>
 
         <Link to="/ourPortfolio" className="header__link" onClick={closeMenu}>
-          Work
+          Our Work
         </Link>
 
         <div onClick={goToPrices} className="header__link">

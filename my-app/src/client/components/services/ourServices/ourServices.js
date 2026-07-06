@@ -35,12 +35,10 @@ const OurServices = () => {
   
   // --- Scroll logic
   useEffect(() => {
-    if (location.state && location.state.scrollTo === "OurBundles") {
+    if (location.state) {
       setTimeout(() => {
         const targetSection = document.getElementById("OurBundles");
-        if (targetSection) {
-          targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
+        
       }, 100);
     }
   }, [location]);
