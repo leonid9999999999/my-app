@@ -14,7 +14,7 @@ import "./portfolioGrid.css";
 const OurServices = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const targetSection = useRef(null);
+  
   const { id } = useParams();
 
   // --- 1. Bulletproof check: Is this the "Prices" link? ---
@@ -37,7 +37,7 @@ const OurServices = () => {
   useEffect(() => {
     if (location.state) {
       setTimeout(() => {
-        const targetSection = document.getElementById("OurBundles");
+        
         
       }, 100);
     }
@@ -105,10 +105,6 @@ const OurServices = () => {
     }
   }, [location?.state, isOnlyBundles]);
 
-  // --- Handlers
-  const handleScrollDown = () => {
-    targetSection.current?.scrollIntoView({ behavior: "smooth" });
-  };
 
   const handlePortfolioClick = (item) => {
     navigate(`/portfolio/${item.id}`, {
@@ -138,7 +134,7 @@ const OurServices = () => {
                 <h1>{firstPageTitle}</h1>
                 <Button
                   style={{ fontWeight: "bold", border: 0, backgroundColor: "#3b82f6", color: "white" }}
-                  onClick={handleScrollDown}
+                  
                   text="Find out more!"
                 />
               </div>
@@ -146,7 +142,7 @@ const OurServices = () => {
           </div>
 
           <div className="secondBlockOurProject">
-            <div className="ourProject" ref={targetSection}>
+            <div className="ourProject" >
               {loadingPortfolio ? (
                 <Spinner />
               ) : (
