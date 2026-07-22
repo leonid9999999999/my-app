@@ -2,287 +2,849 @@
    BASE HEADER STYLES
 ========================= */
 
+
 * {
+
   box-sizing: border-box;
+
 }
+
+
 
 .header {
+
   position: fixed;
+
   top: 0;
+
   left: 0;
+
   width: 100%;
+
+
   min-height: 70px;
+
   padding: 0 40px;
 
+
   z-index: 100;
-  /* Ensure header is on top of page content */
+
+
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
+
+
   background: rgba(10, 15, 25, 0.8);
+
+
   backdrop-filter: blur(12px);
+
   -webkit-backdrop-filter: blur(12px);
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+
 }
+
+
+
 
 .Logo {
-  z-index: 101;
-  /* Keeps logo clickable when mobile menu is open */
-  display: flex;
-  align-items: center;
+
+  z-index:101;
+
+
+  display:flex;
+
+  align-items:center;
+
 }
 
+
+
+
+
 .Logo img {
-  max-height: 50px;
-  width: auto;
-  object-fit: contain;
-  cursor: pointer;
+
+
+  max-height:50px;
+
+
+  width:auto;
+
+
+  object-fit:contain;
+
+
+  cursor:pointer;
+
+
 }
+
+
+
+
 
 /* =========================
    DESKTOP NAVIGATION
 ========================= */
 
+
 .header__nav {
-  display: flex;
-  align-items: center;
-  gap: 32px;
+
+
+  display:flex;
+
+
+  align-items:center;
+
+
+  gap:32px;
+
+
 }
+
+
+
+
 
 .header__link {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 15px;
-  cursor: pointer;
-  transition: color 0.3s ease;
-  white-space: nowrap;
-  text-decoration: none;
-  background: transparent;
-  border: none;
-  padding: 0;
+
+
+  color:rgba(255,255,255,0.7);
+
+
+  font-size:15px;
+
+
+  cursor:pointer;
+
+
+  transition:color .3s ease;
+
+
+  white-space:nowrap;
+
+
+  text-decoration:none;
+
+
+  background:transparent;
+
+
+  border:none;
+
+
+  padding:0;
+
+
 }
+
+
+
+
 
 .header__link:hover {
-  color: #ffffff;
+
+
+  color:white;
+
+
 }
+
+
+
+
+
 
 .header__button {
-  padding: 10px 22px;
-  background-color: #3b82f6;
-  color: #ffffff;
-  border-radius: 10px;
-  font-size: 15px;
-  font-weight: 500;
-  text-align: center;
 
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  padding:10px 22px;
+
+
+  background:#3b82f6;
+
+
+  color:white;
+
+
+  border-radius:10px;
+
+
+  font-size:15px;
+
+
+  font-weight:500;
+
+
+  text-align:center;
+
+
+
+  cursor:pointer;
+
+
+  transition:
+    background-color .3s ease,
+    transform .2s ease;
+
+
 }
+
+
+
+
 
 .header__button:hover {
-  background-color: #2563eb;
-  transform: translateY(-1px);
+
+
+  background:#2563eb;
+
+
+  transform:translateY(-1px);
+
+
 }
 
+
+
+
+
+
+
+
 /* =========================
-   BURGER ICON (Hidden on Desktop)
+   BURGER ICON
 ========================= */
+
 
 .header__burger {
-  display: none;
-  /* Hidden by default */
-  flex-direction: column;
-  justify-content: space-between;
-  width: 26px;
-  height: 18px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 101;
-  /* Keeps burger on top of the open menu */
-  padding: 0;
+
+
+  display:none;
+
+
+  flex-direction:column;
+
+
+  justify-content:space-between;
+
+
+  width:26px;
+
+
+  height:18px;
+
+
+  background:transparent;
+
+
+  border:none;
+
+
+  cursor:pointer;
+
+
+  z-index:101;
+
+
+  padding:0;
+
+
 }
+
+
+
+
 
 .header__burger span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #ffffff;
-  border-radius: 2px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+
+
+  display:block;
+
+
+  width:100%;
+
+
+  height:2px;
+
+
+  background:white;
+
+
+  border-radius:2px;
+
+
+  transition:
+    transform .3s ease,
+    opacity .3s ease;
+
+
 }
+
+
+
+
+
+
 
 /* =========================
-   TABLET & MOBILE (Max 768px)
+   TABLET & MOBILE
 ========================= */
 
-@media (max-width: 820px) {
-  .header {
-    padding: 0 20px;
-  }
 
-  .Logo img {
-    max-height: 40px;
-  }
+@media(max-width:820px){
 
-  /* Show the burger icon */
-  .header__burger {
-    display: flex;
-  }
 
-  /* Transform the nav into a FULL HEIGHT mobile dropdown menu */
-  .header__nav {
-    position: absolute;
-    top: 10%;
-    left: 0;
-    width: 100%;
 
-    /* Full height minus the 70px header */
-    height: calc(100vh - 70px);
-    height: calc(100dvh - 70px);
-    /* 100dvh fixes the URL bar issue on modern mobile browsers */
-    overflow-y: auto;
-    /* Allows scrolling inside the menu if the user is holding their phone sideways */
+.header {
 
-    background: rgba(10, 15, 25, 0.97);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Center the links horizontally for a better full-screen look */
-    justify-content: center;
-    /* Center the links vertically (optional, remove if you want them at the top) */
-    padding: 20px 20px 60px;
-    /* Extra bottom padding for comfortable thumb reach */
-    gap: 32px;
-    /* Spread out the links a bit more */
+  padding:0 20px;
 
-    /* Hidden state */
-    transform: translateY(-10px);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease-in-out;
-  }
 
-  /* Active state class */
-  .header__nav.is-open {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-  }
-
-  /* Make links bigger and centered for full-screen tapping */
-  .header__link {
-    font-size: 24px;
-    /* Larger font for full-screen menus */
-    width: 100%;
-    text-align: center;
-    padding: 8px 0;
-    color: white;
-    font-weight: 700;
-  }
-
-  /* Make button prominent, but prevent it from being completely edge-to-edge */
-  .header__button {
-    width: 100%;
-    max-width: 280px;
-    padding: 16px;
-    font-size: 18px;
-    margin-top: 16px;
-  }
-
-  /* Burger Icon Animation */
-  .header__burger.is-open span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .header__burger.is-open span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .header__burger.is-open span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
 }
-@media (max-width: 375px) {
+
+
+
+.Logo img {
+
+
+  max-height:40px;
+
+
+}
+
+
+
+
+.header__burger {
+
+
+  display:flex;
+
+
+}
+
+
+
+
+
 .header__nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
 
-    /* Full height minus the 70px header */
-    height: calc(100vh - 70px);
-    height: calc(100dvh - 70px);
-    /* 100dvh fixes the URL bar issue on modern mobile browsers */
-    overflow-y: auto;
-    /* Allows scrolling inside the menu if the user is holding their phone sideways */
 
-    background: rgba(10, 15, 25, 0.97);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position:absolute;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Center the links horizontally for a better full-screen look */
-    justify-content: center;
-    /* Center the links vertically (optional, remove if you want them at the top) */
-    padding: 20px 20px 60px;
-    /* Extra bottom padding for comfortable thumb reach */
-    gap: 32px;
-    /* Spread out the links a bit more */
 
-    /* Hidden state */
-    transform: translateY(-10px);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease-in-out;
-  }
+  top:100%;
 
-  /* Active state class */
-  .header__nav.is-open {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-  }
 
-  /* Make links bigger and centered for full-screen tapping */
-  .header__link {
-    font-size: 24px;
-    /* Larger font for full-screen menus */
-    width: 100%;
-    text-align: center;
-    padding: 8px 0;
-    color: white;
-    font-weight: 700;
-  }
+  left:0;
 
-  /* Make button prominent, but prevent it from being completely edge-to-edge */
-  .header__button {
-    width: 100%;
-    max-width: 280px;
-    padding: 16px;
-    font-size: 18px;
-    margin-top: 16px;
-  }
 
-  /* Burger Icon Animation */
-  .header__burger.is-open span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
+  width:100%;
 
-  .header__burger.is-open span:nth-child(2) {
-    opacity: 0;
-  }
 
-  .header__burger.is-open span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
+
+  height:calc(100vh - 70px);
+
+  height:calc(100dvh - 70px);
+
+
+
+  overflow-y:auto;
+
+
+
+  background:rgba(10,15,25,0.97);
+
+
+
+  backdrop-filter:blur(16px);
+
+  -webkit-backdrop-filter:blur(16px);
+
+
+
+  border-bottom:
+    1px solid rgba(255,255,255,.08);
+
+
+
+  display:flex;
+
+
+  flex-direction:column;
+
+
+  align-items:center;
+
+
+  justify-content:center;
+
+
+
+  padding:20px 20px 60px;
+
+
+
+  gap:32px;
+
+
+
+
+
+  transform:translateY(-10px);
+
+
+  opacity:0;
+
+
+  visibility:hidden;
+
+
+
+  transition:
+    all .3s ease-in-out;
+
+
+
+}
+
+
+
+
+
+
+
+.header__nav.is-open {
+
+
+  transform:translateY(0);
+
+
+  opacity:1;
+
+
+  visibility:visible;
+
+
+}
+
+
+
+
+
+
+.header__link {
+
+
+  font-size:24px;
+
+
+  width:100%;
+
+
+  text-align:center;
+
+
+  padding:8px 0;
+
+
+  color:white;
+
+
+  font-weight:700;
+
+
+}
+
+
+
+
+
+.header__button {
+
+
+  width:100%;
+
+
+  max-width:280px;
+
+
+  padding:16px;
+
+
+  font-size:18px;
+
+
+  margin-top:16px;
+
+
+}
+
+
+
+
+
+
+.header__burger.is-open span:nth-child(1){
+
+
+  transform:
+    translateY(8px)
+    rotate(45deg);
+
+
+}
+
+
+
+
+
+.header__burger.is-open span:nth-child(2){
+
+
+  opacity:0;
+
+
+}
+
+
+
+
+
+
+.header__burger.is-open span:nth-child(3){
+
+
+  transform:
+    translateY(-8px)
+    rotate(-45deg);
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+
+@media(max-width:375px){
+
+
+
+.header__nav {
+
+
+  position:absolute;
+
+
+  top:100%;
+
+
+  left:0;
+
+
+  width:100%;
+
+
+
+  height:calc(100vh - 70px);
+
+  height:calc(100dvh - 70px);
+
+
+
+  overflow-y:auto;
+
+
+
+  background:
+    rgba(10,15,25,0.97);
+
+
+
+  backdrop-filter:blur(16px);
+
+
+  -webkit-backdrop-filter:blur(16px);
+
+
+
+  border-bottom:
+    1px solid rgba(255,255,255,.08);
+
+
+
+  display:flex;
+
+
+  flex-direction:column;
+
+
+  align-items:center;
+
+
+  justify-content:center;
+
+
+
+  padding:20px 20px 60px;
+
+
+  gap:32px;
+
+
+
+
+  transform:translateY(-10px);
+
+
+  opacity:0;
+
+
+  visibility:hidden;
+
+
+
+  transition:
+    all .3s ease-in-out;
+
+
+}
+
+
+
+
+
+.header__nav.is-open {
+
+
+  transform:translateY(0);
+
+
+  opacity:1;
+
+
+  visibility:visible;
+
+
+}
+
+
+
+
+
+
+.header__link {
+
+
+  font-size:24px;
+
+
+  width:100%;
+
+
+  text-align:center;
+
+
+  padding:8px 0;
+
+
+  color:white;
+
+
+  font-weight:700;
+
+
+}
+
+
+
+
+.header__button {
+
+
+  width:100%;
+
+
+  max-width:280px;
+
+
+  padding:16px;
+
+
+  font-size:18px;
+
+
+  margin-top:16px;
+
+
+}
+
+
+
+
+
+
+.header__burger.is-open span:nth-child(1){
+
+
+  transform:
+    translateY(8px)
+    rotate(45deg);
+
+
+}
+
+
+
+
+.header__burger.is-open span:nth-child(2){
+
+
+  opacity:0;
+
+
+}
+
+
+
+
+
+.header__burger.is-open span:nth-child(3){
+
+
+  transform:
+    translateY(-8px)
+    rotate(-45deg);
+
+
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+   PREMIUM TECH SCROLL PROGRESS
+========================= */
+
+
+
+.scroll-progress {
+
+
+  position:absolute;
+
+
+  left:0;
+
+
+  bottom:-1px;
+
+
+  width:100%;
+
+
+  height:2px;
+
+
+
+  background:
+    rgba(255,255,255,0.08);
+
+
+
+  overflow:hidden;
+
+
+
+  z-index:9999;
+
+
+
+  pointer-events:none;
+
+
+}
+
+
+
+
+
+.scroll-progress span {
+
+
+  display:block;
+
+
+
+  width:100%;
+
+
+  height:100%;
+
+
+
+  transform-origin:left center;
+
+
+
+  background:linear-gradient(
+
+    90deg,
+
+    #1d4ed8 0%,
+
+    #2563eb 40%,
+
+    #38bdf8 75%,
+
+    #7dd3fc 100%
+
+  );
+
+
+
+  box-shadow:
+
+    0 0 8px rgba(37,99,235,.9),
+
+    0 0 20px rgba(56,189,248,.45);
+
+
+
+  transition:
+    transform .12s linear;
+
+
+
 }

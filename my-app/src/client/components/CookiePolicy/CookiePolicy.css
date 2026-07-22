@@ -1,0 +1,515 @@
+.privacy {
+
+  min-height:100vh;
+
+  padding:120px 20px;
+
+  background:
+  linear-gradient(
+    180deg,
+    #050b1a 0%,
+    #020617 100%
+  );
+
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:flex-start;
+
+}
+
+
+
+
+
+
+/* =========================
+   DOCUMENT PAPER
+========================= */
+
+
+.privacy-paper {
+
+
+  width:100%;
+
+
+  max-width:900px;
+
+
+
+  background:#f8fafc;
+
+
+  color:#000;
+
+
+
+  border-radius:18px;
+
+
+
+  padding:
+
+  80px 75px;
+
+
+
+  box-shadow:
+
+
+  0 40px 120px rgba(0,0,0,.45),
+
+
+  0 0 0 1px rgba(15,23,42,.05);
+
+
+
+  opacity:0;
+
+
+  transform:translateY(35px);
+
+
+
+  transition:
+
+  opacity .8s ease,
+
+  transform .8s ease;
+
+
+
+}
+
+
+
+
+.privacy-paper.active {
+
+
+  opacity:1;
+
+
+  transform:translateY(0);
+
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+   HEADER
+========================= */
+
+
+.privacy-header {
+
+
+  margin-bottom:55px;
+
+
+  border-bottom:
+
+  1px solid rgba(0,0,0,.08);
+
+
+  padding-bottom:30px;
+
+
+}
+
+
+
+.privacy-header h1 {
+
+
+  margin:0;
+
+
+
+  font-size:48px;
+
+
+
+  font-weight:700;
+
+
+
+  letter-spacing:-0.04em;
+
+
+
+  color:#000;
+
+
+
+}
+
+
+
+
+.privacy-header span {
+
+
+  display:block;
+
+
+
+  margin-top:12px;
+
+
+
+  font-size:13px;
+
+
+
+  color:#64748b;
+
+
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+   TEXT
+========================= */
+
+
+.privacy-paper section {
+
+
+  margin-top:40px;
+
+
+}
+
+
+
+.privacy-paper .lead {
+
+
+  font-size:18px;
+
+
+
+  line-height:1.85;
+
+
+
+  color:#111827;
+
+
+
+  margin-bottom:20px;
+
+
+
+}
+
+
+
+
+
+.privacy-paper h2 {
+
+
+  margin-bottom:14px;
+
+
+
+  font-size:21px;
+
+
+
+  font-weight:700;
+
+
+
+  letter-spacing:-0.02em;
+
+
+
+  color:#000;
+
+
+
+}
+
+
+
+
+
+.privacy-paper p {
+
+
+  margin:0;
+
+
+
+  font-size:16px;
+
+
+
+  line-height:1.8;
+
+
+
+  color:#111;
+
+
+
+}
+
+
+
+
+
+/* =========================
+   LISTS
+========================= */
+
+
+.privacy-paper ul {
+
+
+  margin-top:18px;
+
+
+
+  padding-left:24px;
+
+
+
+}
+
+
+
+.privacy-paper li {
+
+
+  margin-bottom:12px;
+
+
+
+  font-size:16px;
+
+
+
+  line-height:1.7;
+
+
+
+  color:#111;
+
+
+
+}
+
+
+
+.privacy-paper strong {
+
+
+  font-weight:600;
+
+
+  color:#000;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   CONTACT
+========================= */
+
+
+.privacy-paper .contact {
+
+
+  margin-top:15px;
+
+
+
+  font-weight:600;
+
+
+
+  color:#000;
+
+
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+
+@media(max-width:768px){
+
+
+
+.privacy {
+
+
+  padding:
+
+  90px 16px;
+
+
+}
+
+
+
+
+.privacy-paper {
+
+
+  padding:
+
+  45px 25px;
+
+
+  border-radius:14px;
+
+
+}
+
+
+
+.privacy-header {
+
+
+  margin-bottom:35px;
+
+
+}
+
+
+
+
+.privacy-header h1 {
+
+
+  font-size:34px;
+
+
+}
+
+
+
+
+.privacy-paper .lead {
+
+
+  font-size:16px;
+
+
+}
+
+
+
+
+.privacy-paper h2 {
+
+
+  font-size:18px;
+
+
+}
+
+
+
+
+.privacy-paper p,
+
+.privacy-paper li {
+
+
+  font-size:15px;
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+
+@media(max-width:420px){
+
+
+
+.privacy {
+
+
+padding:
+
+80px 12px;
+
+
+}
+
+
+
+.privacy-paper {
+
+
+padding:
+
+35px 20px;
+
+
+}
+
+
+
+.privacy-header h1 {
+
+
+font-size:30px;
+
+
+}
+
+
+
+}

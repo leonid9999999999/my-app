@@ -14,6 +14,9 @@ import PrivacyPolicy from './client/components/PrivacyPolicy/PrivacyPolicy.js';
 import AboutUs from './client/components/About/AboutUs.js';
 import ScrollToTop from "./client/components/utils/ScrollToTop";
 import TermsOfService from "./client/components/Terms/TermsOfService";
+import CookiePolicy from './client/components/CookiePolicy/CookiePolicy.js';
+import Accessibility from './client/components/Accessibility/Accessibility.js';
+
 
 import Page404 from "./client/components/errorBoundary/Page404.js";
 import AppErrorBoundaryWrapper from './client/components/errorBoundary/ErrorBoundary.js';
@@ -43,6 +46,8 @@ function App() {
                 <Route path="privacyPolicy" element={<PrivacyPolicy />} />
                 <Route path="about" element={<AboutUs />} />
                 <Route path="terms-of-service" element={<TermsOfService />} />
+                <Route path="cookiePolicy" element={<CookiePolicy />} />
+                <Route path="accessibility" element={<Accessibility />} />
               </Route>
 
               <Route path="*" element={<Page404 />} />
