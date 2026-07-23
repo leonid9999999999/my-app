@@ -11,18 +11,6 @@
     text-align: center;
 }
 
-@media (max-width: 768px) {
-    .pagetitle h2 {
-        font-size: 28px;
-        padding: 0 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .pagetitle h2 {
-        font-size: 24px;
-    }
-}
 
 .imgWrapper{
     position: relative;
@@ -122,12 +110,7 @@
         color: rgba(255, 255, 255, 0.85); 
     }
 
-    /* Mobile Responsiveness */
-    @media (max-width: 768px) {
-        .tech-hero-block { padding: 80px 20px; }
-        .tech-hero-content h1 { font-size: 36px; }
-        .tech-hero-content p { font-size: 18px; }
-    }
+  
 
 .additionalInformationWrapper {
     width: 400px;
@@ -183,6 +166,27 @@
   }
 }
 
+
+
+@media (max-width: 480px) {
+    .pagetitle h2 {
+        font-size: 24px;
+    }
+}
+  /* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .tech-hero-block {
+        padding: 80px 20px;
+    }
+
+    .tech-hero-content h1 {
+        font-size: 36px;
+    }
+
+    .tech-hero-content p {
+        font-size: 18px;
+    }
+}
 /* --------- Phones (<= 768px) --------- */
 @media (max-width: 768px) {
 
@@ -199,7 +203,7 @@
 
   .pagetitle h2 {
     width: 100%;
-    margin: 0;
+    margin: 50px;
     font-size: 28px;
     text-align: center;
     line-height: 1.2;

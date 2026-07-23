@@ -48,13 +48,50 @@ console.log("values:", values);
         const text = await res.text();
         let data = {};
 
-        try {
-            data = text ? JSON.parse(text) : {};
-        } catch {
-            throw new Error(
-                'Server returned an invalid response. Run "npm run dev" (Netlify Dev) instead of "npm start" for local testing.'
-            );
+
+    handleUpdateSubmit = (values) => {
+
+        this.props.onDataFromChild(values);
+    }
+
+    handleFinalSubmit = async (values, tools) => {
+        const isUpdate = this.props.initialData?.update === true;
+        if(isUpdate){
+            return this.handleUpdateSubmit(values)
+           
+        }else{
+            return this.handleSubmit(values, tools)
         }
+    }
+    handleSubmit = async (values, { setSubmitting, setStatus, resetForm }) => {
+        console.log("Booking Submited Try:");
+
+        // Grab the base URL from your environment variables
+        const baseUrl = process.env.REACT_APP_API_URL || "";
+
+        try {
+            // Prepend the baseUrl to your routes
+            const res = await axios.post(`${baseUrl}/api/createBooking`, values);
+            await axios.post(`${baseUrl}/api/sendMail`, values);
+
+            console.log("Booking Submited:", res.data);
+            console.log(res.data.message)
+
+            // reseting states
+            this.setState({
+                success: true,
+            })
+            //clear form
+            resetForm({
+                values: {
+                    fullName: "",
+                    email: '',
+                    companyName: '',
+                    phoneNumber: "",
+                    bookingMessage: ""
+                }
+            });
+        } catch (error) {
 
         console.log('📨 JSON RESPONSE:', data);
 
