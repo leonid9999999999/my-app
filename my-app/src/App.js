@@ -16,7 +16,7 @@ import ScrollToTop from "./client/components/utils/ScrollToTop";
 import TermsOfService from "./client/components/Terms/TermsOfService";
 import CookiePolicy from './client/components/CookiePolicy/CookiePolicy.js';
 import Accessibility from './client/components/Accessibility/Accessibility.js';
-
+import Pricetags from './client/components/Pricetags/Pricetags.jsx';
 
 import Page404 from "./client/components/errorBoundary/Page404.js";
 import AppErrorBoundaryWrapper from './client/components/errorBoundary/ErrorBoundary.js';
@@ -48,6 +48,8 @@ function App() {
                 <Route path="terms-of-service" element={<TermsOfService />} />
                 <Route path="cookiePolicy" element={<CookiePolicy />} />
                 <Route path="accessibility" element={<Accessibility />} />
+                <Route path="pricetags" element={<Pricetags />} />
+                
               </Route>
 
               <Route path="*" element={<Page404 />} />

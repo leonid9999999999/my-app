@@ -182,7 +182,7 @@ function Header() {
     closeMenu();
 
 
-    navigate("/ourServices/0", {
+    navigate("Pricetags", {
 
       state:{
         scrollTo:"OurBundles"
