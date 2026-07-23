@@ -11,12 +11,9 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.1",
     "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.13.2",
-    "cloudinary": "^2.8.0",
     "dayjs": "^1.11.19",
     "formik": "^2.4.9",
     "lucide-react": "^1.17.0",
-    "nodemon": "^3.1.11",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-error-boundary": "^6.1.0",
@@ -24,16 +21,21 @@
     "react-lazy-load-image-component": "^1.6.3",
     "react-router-dom": "^7.11.0",
     "react-scripts": "^5.0.1",
+    "resend": "^4.8.0",
     "web-vitals": "^2.1.4",
     "webpack-dev-server": "^5.2.3",
     "yup": "^1.7.1"
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:dev": "set PORT=3001&& react-scripts start",
+    "dev": "netlify dev --functions netlify/functions",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "dev": "nodemon server.js"
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "netlify-cli": "^23.0.0"
   },
   "eslintConfig": {
     "extends": [
