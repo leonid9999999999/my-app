@@ -47,7 +47,6 @@ const ContactUs = (props) => {
                 icon={Email}
                 name="Email"
                 content="vbsecuresolutions@gmail.com"
-                link="vbsecuresolutions@gmail.com"
               />
 
               <InfoBlock
