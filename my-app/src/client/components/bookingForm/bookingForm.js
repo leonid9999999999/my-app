@@ -2,51 +2,85 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { Component } from 'react';
 import './bookingForm.css';
 
+
+// import { WrapperPicker } from '../dateTimePicker/dateTimePicker.js';
 import withRouter from '../navigate/navigate.js';
+
+import axios from 'axios';
 import * as Yup from 'yup';
 import Button from '../Tools/button/button.js';
 import Modal from '../modal/modal.js';
 
 class BookingForm extends Component {
+    
     constructor(props) {
-        super(props);
+    super(props);
         this.state = {
+            
+            title: "",
+            desc: "",
+            buttonTitle:"",
+            availableTimes:[],
             success: null,
+            date: "",
+            content: "",
+            update: false,
+            dateSelectedByUser: false,
             errorMessage: '',
-            loading: false
-        };
+        }
     }
 
-   handleSubmit = async (values, { resetForm }) => {
-    this.setState({ loading: true, success: null, errorMessage: '' });
 
-    console.log("🚀 SUBMIT STARTED");
-console.log("values:", values);
+    
+    componentDidMount() {
 
-    try {
-        const payload = {
-            fullName: values.fullName,
-            email: values.email,
-            companyName: values.companyName,
-            phoneNumber: values.phoneNumber,
-            bookingMessage: values.bookingMessage,
-            serviceTitle: values.serviceTitle,
-        };
+            
+    
+    let now = new Date();
+    let day = String(now.getDate()).padStart(2, "0");
+    let month = now.getMonth() + 1;
+    let year = now.getFullYear();
+    let currentDate = `${year}-${month}-${day}`;
 
-        const apiUrl = process.env.REACT_APP_API_URL || '/api/send-booking';
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let timeNow = `${hours}:${minutes}`
 
-        const res = await fetch(apiUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(payload),
-        });
+        if (this.props.initialData?.date) {
+            const date = this.props.initialData.date;
+            const time1 = this.props.initialData.time
+            date === currentDate && time1 < timeNow ? this.setState({ 
+                // date: date,
+                selectedTime: ""
+            }) : this.setState({ 
+                date: date,
+                selectedTime: this.props.initialData.time 
+            });
+            this.getTime(date)
+        }
+    }
 
-        console.log('📡 RESPONSE STATUS:', res.status);
+    getTime = async (date) => {
+        console.log(this.state.selectedTime)
+            const bookedTime = this.props.initialData?.time
+            const isUpdate = this.props.initialData?.update === true;
+        try{
+           
+            const res = await fetch(`/api/available?date=${encodeURIComponent(date)}&update=${isUpdate}&bookedTime=${bookedTime}`, {
+                method: "GET",
+                headers: {"Content-Type": "applicaiton/json"},
+                
+            })
 
-        const text = await res.text();
-        let data = {};
+            const data = await res.json();
+            this.setState({availableTimes:data})
+            return data;
+
+        }catch(error){
+            console.log(error)
+        }
+        
+    }
 
 
     handleUpdateSubmit = (values) => {
@@ -93,137 +127,168 @@ console.log("values:", values);
             });
         } catch (error) {
 
-        console.log('📨 JSON RESPONSE:', data);
+            let message = "Something went wrong. Please try again.";
+            if (error.response && error.response.status === 409) {
+                this.setState({
+                    success: false,
+                    errorMessage: error.message,
+                });
+            }
+            if (error.response) {
+                // The request was made and the server responded with a status code
+                // that falls out of the range of 2xx (e.g. 400, 404, 500)
+                // We try to grab the message sent from your backend controller
+                message = error.response.data.message || error.response.data.error || error.response.status || "Server Error";
+                console.log("Server responded with error:", error.response.status);
+            } else if (error.request) {
+                message = "Server is not responding. Please check your connection.";
+                console.log("No response received from server");
+            } else {
+                // Something happened in setting up the request that triggered an Error
+                message = error.message;
+            }
+            this.setState({
+                success: false,
+                errorMessage: message,
+            });
+            console.error(error);
 
-        if (!res.ok) {
-            throw new Error(data.message || 'Something went wrong');
+            } finally {
+                setSubmitting(false);
         }
+    };
+    render (){
 
-        this.setState({
-            success: true,
-            loading: false
-        });
+    // transforming data into date and time 
 
-        resetForm();
-    } catch (error) {
-        this.setState({
-            success: false,
-            loading: false,
-            errorMessage: error.message
-        });
-    }
-};
-    render() {
-        const nationalNumberRegex = /^[1-9](?:\s?\d){8,9}$/;
+    const nationalNumberRegex = /^[1-9](?:\s?\d){8,9}$/;
+  
 
-        return (
+        return(
             <div className="bookingFormWrapper" style={this.props.style}>
-
-                {/* SUCCESS MODAL */}
                 {this.state.success === true && (
                     <Modal
-                        onClose={() =>
-                            this.setState({ success: null, errorMessage: '' })
-                        }
+                        onClose={() => this.setState({ success: null, errorMessage: null })}
                     />
                 )}
 
-                {/* ERROR MODAL */}
+                {/* If unseccess it will throw 409 error and set state to false and print this */}
                 {this.state.success === false && this.state.errorMessage && (
                     <div className="modal-overlay">
                         <div className="modal">
+                            {/* Generic Header */}
                             <h3 style={{ color: 'red' }}>Submission Failed</h3>
-                            <p>{this.state.errorMessage}</p>
 
-                            <button
-                                onClick={() =>
-                                    this.setState({ success: null, errorMessage: '' })
-                                }
-                            >
-                                Close
+                            {/* The dynamic message from the catch block above */}
+                            <p>Server Resonse // error - {this.state.errorMessage}</p>
+
+                            <button onClick={() => this.setState({ success: null, errorMessage: null })}>
+                                Close & Try Again
                             </button>
                         </div>
                     </div>
                 )}
-
-                <div className="bookingFormInner">
-
+                <div className='bookingFormInner'>
                     <Formik
-                        initialValues={{
-                            fullName: '',
-                            email: '',
-                            companyName: '',
-                            phoneNumber: '',
-                            bookingMessage: '',
-                            serviceTitle: this.props.serviceTitle || ''
+                    
+                        initialValues={{ 
+                            _id: this.props.initialData?._id,
+                            serviceTitle: this.props.serviceTitle || this.props.initialData?.serviceTitle,
+                            // dateTime: null,
+                            fullName: this.props.initialData?.Name || '',
+                            email: this.props.initialData?.email || '',
+                            companyName: this.props.initialData?.companyName || '',
+                            // address: this.props.initialData?.address || '',
+                            phoneNumber: this.props.initialData?.phoneNumber || '',
+                            bookingMessage: this.props.initialData?.bookingMessage || ''
                         }}
-                        validationSchema={Yup.object({
-                            fullName: Yup.string().required('Required Field'),
-                            companyName: Yup.string().required('Required Field'),
-                            email: Yup.string()
-                                .email('Wrong Email address')
-                                .required('Required Field'),
-                            phoneNumber: Yup.string()
-                                .matches(
-                                    nationalNumberRegex,
-                                    'Enter 9–10 digits (no +44 or 0)'
-                                )
-                                .required('Required Field'),
-                            bookingMessage: Yup.string()
-                        })}
-                        onSubmit={this.handleSubmit}
+                        enableReinitialize={this.props.initialData?.update === true}
+                        
+                            validationSchema = {Yup.object({
+                                fullName: Yup.string()
+                                            .required('Required Field'),
+
+                                companyName: Yup.string()
+                                                .min(1, "Min 1 characters")
+                                                .required('Required Field'), 
+                                                
+                                email: Yup.string()
+                                        .email('Wrong Email address')
+                                        .required('Required Field'),
+                                phoneNumber: Yup.string()
+                                            .min(2, "Min 2 characters")
+                                            .matches(nationalNumberRegex, "input 9 or 10 numbers(DO NOT include 0 or +44)")
+                                            .required('Phone Number is Required '),
+                                bookingMessage: Yup.string()
+                            })}
+                            onSubmit={this.handleFinalSubmit }
+                            
                     >
-                        {({ isSubmitting }) => (
-                            <Form className="bookingForm">
 
-                                <div className="BookingDesc">
+                         {({ values, isSubmitting, status, setFieldValue}) => (
+                            
+
+                        <Form className='bookingForm'>
+                        
+                            <div className='wrapperDesc'>
+
+                                <div className='BookingDesc'>
                                     <h3>Get In Touch With Us</h3>
-                                    <p>
-                                        Describe your project and leave your contact
-                                        information, we’ll get back to you soon.
-                                    </p>
+                                        <p>Describe your project and leave us your contact information, we’ll get back to you soon.</p>
+                                    
+                                </div>
+                                <div className='closeImg'>
+                                    {this.props.content}
                                 </div>
 
-                                <label className="field-label">Full Name*</label>
-                                <Field name="fullName" />
-                                <ErrorMessage name="fullName" component="div" className="error" />
-
-                                <label className="field-label">Company Name*</label>
-                                <Field name="companyName" />
-                                <ErrorMessage name="companyName" component="div" className="error" />
-
-                                <label className="field-label">Email*</label>
-                                <Field name="email" />
-                                <ErrorMessage name="email" component="div" className="error" />
-
-                                <label className="field-label">Phone*</label>
-                                <div className="phoneNumBlock">
-                                    <span className="phone-prefix">+44</span>
-                                    <Field name="phoneNumber" id="phoneNumber2" />
+                            </div>
+                           
+                            {status && status.error && (
+                                <div style={{ color: 'red', marginBottom: '10px' }}>
+                                    {status.error}
                                 </div>
-                                <ErrorMessage name="phoneNumber" component="div" className="error" />
+                            )}
+                            <div className='bookingFields'>
+                                <div className='leftBookingBlock'>
+                                    {/* Name Field */}
+                                    <label htmlFor="fullName" className="field-label">Full Name*</label>
+                                    <Field type="text" name="fullName" id="fullName" placeholder="Your Full Name" />
+                                    <ErrorMessage className="error" name="fullName" component="div" />
 
-                                <label className="field-label">Message</label>
-                                <Field as="textarea" name="bookingMessage" id="bookingMessage" />
-                                <ErrorMessage name="bookingMessage" component="div" className="error" />
+                                    {/* Company Field */}
+                                    <label htmlFor="companyName" className="field-label">Company Name*</label>
+                                    <Field type="text" name="companyName" id="companyName" placeholder="Company/Startup Name" />
+                                    <ErrorMessage className="error" name="companyName" component="div" />
 
-                                <Button
-                                    type="submit"
-                                    text={this.props.buttonTitle || 'Submit'}
-                                    disabled={isSubmitting || this.state.loading}
-                                    style={{
-                                        backgroundColor: '#56D55D',
-                                        color: 'white',
-                                        width: '100%'
-                                    }}
-                                />
-                            </Form>
-                        )}
+                                    {/* Email Field */}
+                                    <label htmlFor="email" className="field-label">Email Address*</label>
+                                    <Field type="text" name="email" id="email" placeholder="Your Email" />
+                                    <ErrorMessage className="error" name="email" component="div" />
+
+                                    {/* Phone Field */}
+                                    <label htmlFor="phoneNumber2" className="field-label">Phone Number*</label>
+                                    <div className='phoneNumBlock'>
+                                        <span className="phone-prefix">+44</span>
+                                        {/* Note: htmlFor above matches this ID */}
+                                        <Field type="text" name="phoneNumber" id="phoneNumber2" placeholder="+44 Phone Number" />
+                                    </div>
+                                    <ErrorMessage className="error" name="phoneNumber" component="div" />
+
+                                    {/* Booking Note Field */}
+                                    <label htmlFor="bookingMessage" className="field-label">Message</label>
+                                    <Field as="textarea" name="bookingMessage" id="bookingMessage" placeholder="Booking Message" />
+                                    <ErrorMessage className="error" name="bookingMessage" component="div" />
+                                        
+                                    <Button type="submit" text={this.props.buttonTitle} disabled={isSubmitting} style={{backgroundColor:"#56D55D", color: "white", width: "100%"}}/>
+                                </div>
+                                
+                            </div>
+                        </Form>
+                         )}
                     </Formik>
                 </div>
             </div>
-        );
+        )
     }
 }
-
 export default withRouter(BookingForm);
