@@ -2,6 +2,7 @@
   background: #0b0f14;
   color: #e5e7eb;
   overflow-x: hidden;
+ 
 }
 
 /* =========================
@@ -43,14 +44,15 @@
 }
 
 .about-hero h1 {
-  font-size: 52px;
+  /* Fluid typography: scales smoothly between 40px and 64px based on screen width */
+  font-size: clamp(40px, 6vw, 64px); 
   font-weight: 700;
   margin-bottom: 20px;
   letter-spacing: -0.02em;
 }
 
 .about-hero p {
-  font-size: 18px;
+  font-size: clamp(16px, 2vw, 20px);
   line-height: 1.7;
   color: #9ca3af;
   max-width: 700px;
@@ -70,21 +72,21 @@
 ========================= */
 .about-company {
   background: #111827;
-  padding: 140px 24px;
+  padding: clamp(80px, 10vw, 140px) 24px;
 }
 
 .about-company__inner {
-  max-width: 1000px;
+  max-width: 1200px; /* Unified max-width across the site */
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 64px;
+  grid-template-columns: auto 1fr; /* Allows the logo to dictate its column size */
+  gap: clamp(32px, 5vw, 64px);
   align-items: center;
 
   background: rgba(255,255,255,0.02);
   border-radius: 24px;
-  padding: 48px;
+  padding: clamp(32px, 5vw, 48px);
 
   box-shadow: 0 0 60px rgba(0,0,0,0.4);
 }
@@ -115,7 +117,7 @@
 }
 
 .about-company h2 {
-  font-size: 34px;
+  font-size: clamp(28px, 4vw, 36px);
   margin-bottom: 24px;
   color: #f8fafc;
   letter-spacing: -0.02em;
@@ -145,22 +147,24 @@
    FOUNDER + TEAM
 ========================= */
 .about-founder {
-  min-height: 100vh;
+  min-height: 20vh; /* Reduced from 100vh so it doesn't feel too empty on tall screens */
   max-width: 1200px;
   margin: 0 auto;
-  padding: 120px 24px;
+  padding: clamp(80px, 10vw, 140px) 24px;
 
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 64px;
+  /* FIX: Caps the image column strictly at 460px so it never pulls away from the text */
+  grid-template-columns: minmax(300px, 460px) 1fr; 
+  gap: clamp(40px, 6vw, 80px); /* Fluid gap that shrinks on smaller screens */
   align-items: center;
+  justify-content: center;
 }
 
 .about-founder__image img {
   width: 100%;
-  max-width: 420px;
   border-radius: 16px;
   transition: transform 0.5s ease;
+  object-fit: cover;
 }
 
 .about-founder__image img:hover {
@@ -176,7 +180,7 @@
 }
 
 .about-founder__content h3 {
-  font-size: 32px;
+  font-size: clamp(28px, 4vw, 36px);
   margin-bottom: 24px;
   color: #f1f5f9;
 }
@@ -193,20 +197,19 @@
 ========================= */
 .about-timeline {
   background: #0f1520;
-  padding: 120px 24px;
+  padding: clamp(80px, 10vw, 140px) 24px;
   text-align: center;
 }
 
 .about-timeline h2 {
-  font-size: 34px;
+  font-size: clamp(28px, 4vw, 36px);
   margin-bottom: 40px;
   color: #f8fafc;
 }
 
 .timeline {
-  max-width: 1100px;
+  max-width: 1200px; /* Unified max-width */
   margin: 0 auto;
-
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -231,14 +234,14 @@
    WHY SECTION
 ========================= */
 .about-why {
-  padding: 120px 24px;
+  padding: clamp(80px, 10vw, 140px) 24px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .about-why h2 {
-  font-size: 34px;
-  margin-bottom: 40px;
+  font-size: clamp(28px, 4vw, 36px);
+  margin-bottom: clamp(32px, 5vw, 60px);
   color: #f8fafc;
   text-align: center;
 }
@@ -246,7 +249,7 @@
 .about-why__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: clamp(24px, 3vw, 40px);
 }
 
 .about-card {
@@ -277,13 +280,13 @@
 ========================= */
 .about-slogan {
   background: linear-gradient(135deg, #0b0f14, #111827);
-  padding: 140px 24px;
+  padding: clamp(100px, 10vw, 160px) 24px;
   text-align: center;
 }
 
 .typewriter {
   font-family: monospace;
-  font-size: 28px;
+  font-size: clamp(20px, 4vw, 32px);
   color: #ffffff;
 }
 
@@ -302,15 +305,35 @@
 /* =========================
    RESPONSIVE
 ========================= */
-@media (max-width: 900px) {
+
+/* TABLET (Intermediate Breakpoint) */
+@media (max-width: 1024px) {
+  .about-why__grid {
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid instead of squeezing 3 */
+  }
+}
+
+/* MOBILE (Phones) */
+@media (max-width: 768px) {
   .about-company__inner {
     grid-template-columns: 1fr;
     text-align: center;
   }
 
+  .about-company__logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
   .about-founder {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .about-founder__image img {
+    max-width: 400px;
+    margin: 0 auto;
   }
 
   .about-why__grid {

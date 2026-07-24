@@ -6,6 +6,7 @@ import Spinner from "../spinner/Spinner"; // Make sure path is correct
 import { CheckCircle2 } from 'lucide-react';
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import ReadyToStart from "../ReadyToStart/ReadyToStart";
 
 function PortfolioExample(){
     const [loading, setLoading] = useState(true);
@@ -100,6 +101,7 @@ function PortfolioExample(){
                         </div>
                     </div>
                 </div>
+                <ReadyToStart buttonText="Build Your Project Today"/>
             </div>
         </div>
     )

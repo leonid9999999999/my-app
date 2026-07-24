@@ -1,7 +1,7 @@
 import "./ReadyToStart.css";
 import { Link } from "react-router-dom";
 
-function ReadyToStart() {
+function ReadyToStart({ buttonText = "Get a Quote →" }) {
   return (
     <section className="ready">
       <div className="ready__container">
@@ -15,7 +15,7 @@ function ReadyToStart() {
         <div className="ready__actions">
           <Link to="/ContactUs">
             <button className="ready__btn ready__btn--primary">
-              Get a Quote →
+              {buttonText}
             </button>
           </Link>
 

@@ -5,6 +5,10 @@ h2{
     color:White;
 }
 
+.portHeading{
+ color: black;
+}
+
 
 .contact-link {
   font-size: 24px;
@@ -88,7 +92,7 @@ font-size: 48px;
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin: 50px 100px 0 100px;
+    margin: 50px 100px 50px 100px;
 }
 
 .fifthBlockFAQWrapper{

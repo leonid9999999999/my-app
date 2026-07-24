@@ -10,6 +10,7 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import Spinner from "../../spinner/Spinner.js";
 import "./ourServices.css";
 import "./portfolioGrid.css";
+import ReadyToStart from "../../ReadyToStart/ReadyToStart.js";
 
 const OurServices = () => {
   const location = useLocation();
@@ -134,8 +135,13 @@ const OurServices = () => {
                 <h1>{firstPageTitle}</h1>
                 <Button
                   style={{ fontWeight: "bold", border: 0, backgroundColor: "#3b82f6", color: "white" }}
-                  
                   text="Find out more!"
+                  onClick={() => {
+                    const section = document.getElementById("thirdBlockProcess");
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
                 />
               </div>
             </div>
@@ -148,7 +154,7 @@ const OurServices = () => {
               ) : (
                 <section className="portfolio-section">
                   <div className="portfolio-container">
-                    <h2 className="portfolio-heading">Latest Branding Projects</h2>
+                    <h2 className="portfolio-heading" id="portHeading">Latest Branding Projects</h2>
                     <div className="portfolio-grid">
                       {portfolioData.map((project, index) => (
                         <ProjectCard
@@ -165,7 +171,7 @@ const OurServices = () => {
             </div>
           </div>
 
-          <div className="thirdBlockProcess">
+          <div id="thirdBlockProcess" className="thirdBlockProcess">
             <div className="blockProcess">
               <h2 className="blockTitle">Our Recipe</h2>
               <div className="ourRecipeWrapper">
@@ -194,6 +200,9 @@ const OurServices = () => {
         <div id="OurBundles" className="ourBundles">
           {loadingBundles ? <Spinner /> : <OurBundles />}
         </div>
+      </div>
+      <div className="lastBlockContact">
+          <ReadyToStart buttonText='Start Project'/>
       </div>
 
     </div>

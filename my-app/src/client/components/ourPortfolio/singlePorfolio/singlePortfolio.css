@@ -11,7 +11,7 @@
     
     cursor: pointer;
     position: relative;
-    background: #3f3f3f;
+    
     border-radius: 24px;
     padding: 24px;
     overflow: hidden;
@@ -27,7 +27,7 @@
     border-radius: 18px;
     object-fit: contain;
 
-    transform: scale(1.06);
+    transform: scale(1.001);
     transition: transform 0.6s ease;
 }
 
@@ -41,8 +41,8 @@
 /* VIEW SITE BUTTON */
 .view-site-btn {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 30px;
+    left: 30px;
     background: white;
     color: black;
     padding: 10px 18px;

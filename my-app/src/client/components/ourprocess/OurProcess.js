@@ -194,7 +194,7 @@ index !== STEPS.length-1 &&
 
 
 <div 
-className={`process-card ${
+className={`process-card1 ${
 openStep===index ? "expanded": ""
 }`}
 >

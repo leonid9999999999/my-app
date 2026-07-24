@@ -3,852 +3,289 @@
    Premium Dark Agency Style
 ===================================================== */
 
-
 .process-section {
-
-    background:
-    linear-gradient(
-        135deg,
-        #15171d 0%,
-        #111318 100%
-    );
-
-    padding:
-    clamp(70px,8vw,120px)
-    clamp(20px,5vw,70px);
-
-    color:white;
-
-    font-family:
-    Inter,
-    Arial,
-    Helvetica,
-    sans-serif;
-
+    background: linear-gradient(135deg, #15171d 0%, #111318 100%);
+    padding: clamp(70px, 8vw, 120px) clamp(20px, 5vw, 70px);
+    color: white;
+    font-family: Inter, Arial, Helvetica, sans-serif;
 }
-
-
 
 .process-container {
-
-    max-width:1200px;
-
-    margin:auto;
-
+    max-width: 1200px;
+    margin: auto;
 }
-
-
-
-
-
 
 /* ================= HEADER ================= */
 
-
 .process-header {
-
-    text-align:center;
-
-    max-width:850px;
-
-    margin:
-    0 auto 65px;
-
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 65px;
 }
-
-
 
 .process-header h2 {
-
-
-    margin:0 0 20px;
-
-
-    font-size:
-
-    clamp(44px,5vw,68px);
-
-
-    font-weight:700;
-
-
-    letter-spacing:-2px;
-
-
-    color:#ffffff;
-
-
+    margin: 0 0 20px;
+    font-size: clamp(44px, 5vw, 68px);
+    font-weight: 700;
+    letter-spacing: -2px;
+    color: #ffffff;
 }
-
-
 
 .process-header p {
-
-
-    margin:auto;
-
-
-    max-width:720px;
-
-
-    color:
-
-    rgba(255,255,255,.65);
-
-
-    font-size:
-
-    clamp(16px,1.3vw,20px);
-
-
-    line-height:1.7;
-
-
+    margin: auto;
+    max-width: 720px;
+    color: rgba(255, 255, 255, .65);
+    font-size: clamp(16px, 1.3vw, 20px);
+    line-height: 1.7;
 }
-
-
-
-
-
-
-
 
 /* ================= TIMELINE ================= */
 
-
 .process-timeline {
-
-
-    display:flex;
-
-
-    flex-direction:column;
-
-
-    gap:60px;
-
-
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
 }
-
-
 
 .process-step {
-
-
-    display:grid;
-
-
-    grid-template-columns:80px 1fr;
-
-
-    gap:35px;
-
-
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 35px;
 }
-
-
-
-
-
-
-
 
 /* ================= NUMBER ================= */
 
-
 .timeline-side {
-
-
-    display:flex;
-
-
-    flex-direction:column;
-
-
-    align-items:center;
-
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-
 
 .timeline-number {
-
-
-    width:60px;
-
-
-    height:60px;
-
-
-    border-radius:50%;
-
-
-    display:flex;
-
-
-    justify-content:center;
-
-
-    align-items:center;
-
-
-    background:
-
-    rgba(59,130,246,.08);
-
-
-    border:
-
-    2px solid rgba(59,130,246,.55);
-
-
-    color:#4f8cff;
-
-
-    font-size:17px;
-
-
-    font-weight:700;
-
-
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(59, 130, 246, .08);
+    border: 2px solid rgba(59, 130, 246, .55);
+    color: #4f8cff;
+    font-size: 17px;
+    font-weight: 700;
 }
-
-
 
 .timeline-line {
-
-
-    margin-top:18px;
-
-
-    width:3px;
-
-
-    flex:1;
-
-
-    min-height:100px;
-
-
-    background:
-
-
-    linear-gradient(
-
-        to bottom,
-
-        rgba(59,130,246,.45),
-
-        rgba(59,130,246,.05)
-
-    );
-
+    margin-top: 18px;
+    width: 3px;
+    flex: 1;
+    min-height: 100px;
+    background: linear-gradient(to bottom, rgba(59, 130, 246, .45), rgba(59, 130, 246, .05));
 }
-
-
-
-
-
-
-
 
 /* ================= CARD ================= */
-
-
-.process-card {
-
-
-    display:grid;
-
-
-    grid-template-columns:
-
-    340px 1fr;
-
-
-    gap:45px;
-
-
-    padding:35px;
-
-
-    border-radius:24px;
-
-
-    background:
-
-
-    rgba(255,255,255,.055);
-
-
-    border:
-
-
-    1px solid rgba(255,255,255,.09);
-
-
-    transition:.4s ease;
-
-
+/* Restored your exact original class name */
+.process-card1 {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 45px;
+    padding: 35px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, .055);
+    border: 1px solid rgba(255, 255, 255, .09);
+    transition: .4s ease;
 }
 
-
-
-.process-card:hover {
-
-
-    transform:
-
-    translateY(-5px);
-
-
-    background:
-
-
-    rgba(255,255,255,.07);
-
-
-    border-color:
-
-
-    rgba(255,255,255,.18);
-
-
+.process-card1:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, .07);
+    border-color: rgba(255, 255, 255, .18);
 }
-
-
-
-
-
 
 /* first card highlight */
-
-
+.process-step:first-child .process-card1,
 .process-step:first-child .process-card {
-
-
-    background:
-
-
-    rgba(255,255,255,.065);
-
-
+    background: rgba(255, 255, 255, .065);
 }
-
-
-
-
-
-
 
 /* ================= IMAGE ================= */
 
-
 .process-image {
-
-
-    width:100%;
-
-
-    height:220px;
-
-
-    border-radius:16px;
-
-
-    overflow:hidden;
-
-
+    width: 100%;
+    height: 220px;
+    border-radius: 16px;
+    overflow: hidden;
 }
-
-
 
 .process-image img {
-
-
-    width:100%;
-
-
-    height:100%;
-
-
-    object-fit:cover;
-
-
-    transition:.5s ease;
-
-
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s ease;
 }
 
-
-
+.process-card1:hover img,
 .process-card:hover img {
-
-
-    transform:
-
-    scale(1.06);
-
-
+    transform: scale(1.06);
 }
-
-
-
-
-
-
-
-
 
 /* ================= CONTENT ================= */
 
-
 .process-content {
-
-
-    display:flex;
-
-
-    flex-direction:column;
-
-
-    justify-content:center;
-
-
-    align-items:center;
-
-
-    text-align:center;
-
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-
-
 
 .card-top {
-
-
-    width:100%;
-
-
-    display:flex;
-
-
-    justify-content:center;
-
-
-    align-items:center;
-
-
-    position:relative;
-
-
-    margin-bottom:18px;
-
-
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 18px;
 }
-
-
 
 .card-top h3 {
-
-
-    margin:0;
-
-
-    font-family:inherit;
-
-
-    font-size:
-
-    clamp(28px,3vw,36px);
-
-
-    font-weight:700;
-
-
-    color:white;
-
-
+    margin: 0;
+    font-family: inherit;
+    font-size: clamp(28px, 3vw, 36px);
+    font-weight: 700;
+    color: white;
 }
-
-
-
 
 .duration {
-
-
-    position:absolute;
-
-
-    right:0;
-
-
-    top:0;
-
-
-    padding:
-
-    7px 16px;
-
-
-    border-radius:30px;
-
-
-    background:
-
-
-    rgba(255,255,255,.08);
-
-
-    border:
-
-
-    1px solid rgba(255,255,255,.12);
-
-
-    color:
-
-
-    rgba(255,255,255,.65);
-
-
-    font-size:13px;
-
-
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 7px 16px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .12);
+    color: rgba(255, 255, 255, .65);
+    font-size: 13px;
 }
-
-
-
-
-
 
 .process-content h4 {
-
-
-    margin:
-
-    0 0 15px;
-
-
-    color:white;
-
-
-    font-size:18px;
-
-
-    font-weight:600;
-
-
+    margin: 0 0 15px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
 }
-
-
 
 .process-content p {
-
-
-    max-width:520px;
-
-
-    margin:0;
-
-
-    color:
-
-
-    rgba(255,255,255,.62);
-
-
-    font-size:16px;
-
-
-    line-height:1.7;
-
-
+    max-width: 520px;
+    margin: 0;
+    color: rgba(255, 255, 255, .62);
+    font-size: 16px;
+    line-height: 1.7;
 }
-
-
-
-
-
-
 
 /* ================= LEARN MORE ================= */
 
-
 .learn-button {
-
-
-    margin-top:25px;
-
-
-    padding:
-
-    9px 22px;
-
-
-    border-radius:30px;
-
-
-    border:
-
-    1px solid rgba(255,255,255,.12);
-
-
-    background:
-
-
-    rgba(255,255,255,.04);
-
-
-    color:
-
-
-    rgba(255,255,255,.75);
-
-
-    font-size:14px;
-
-
-    cursor:pointer;
-
-
-    transition:.3s ease;
-
-
+    margin-top: 25px;
+    padding: 9px 22px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    background: rgba(255, 255, 255, .04);
+    color: rgba(255, 255, 255, .75);
+    font-size: 14px;
+    cursor: pointer;
+    transition: .3s ease;
 }
-
-
 
 .learn-button:hover {
-
-
-    background:
-
-
-    rgba(255,255,255,.1);
-
-
-    color:white;
-
-
+    background: rgba(255, 255, 255, .1);
+    color: white;
 }
-
-
-
-
-
-
 
 /* ================= DETAILS ================= */
 
-
 .details {
-
-
-    max-height:0;
-
-
-    opacity:0;
-
-
-    overflow:hidden;
-
-
-    transition:
-
-    .5s ease;
-
-
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: .5s ease;
 }
 
-
-
+.process-card1.expanded .details,
 .process-card.expanded .details {
-
-
-    max-height:300px;
-
-
-    opacity:1;
-
-
-    margin-top:25px;
-
-
+    max-height: 300px;
+    opacity: 1;
+    margin-top: 25px;
 }
-
-
 
 .details ul {
-
-
-    padding:0;
-
-
-    margin:0;
-
-
-    list-style:none;
-
-
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
-
-
 
 .details li {
-
-
-    margin:10px 0;
-
-
-    color:
-
-    rgba(255,255,255,.7);
-
-
+    margin: 10px 0;
+    color: rgba(255, 255, 255, .7);
 }
 
 
+/* =====================================================
+   RESPONSIVE (TABLET & MOBILE)
+===================================================== */
 
+/* TABLET */
+@media(max-width: 850px) {
 
+    /* Stack the image and text on top of each other */
+    .process-card1 {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 
-
-
-/* ================= TABLET ================= */
-
-
-@media(max-width:950px){
-
-
-.process-card {
-
-
-    grid-template-columns:1fr;
-
-
+    .process-image {
+        height: 300px;
+    }
 }
 
-
-
-.process-image {
-
-
-    height:280px;
-
-
-}
-
-
-}
-
-
-
-
-
-
-
-/* ================= MOBILE ================= */
-
-
-@media(max-width:650px){
-
-
-
-.process-header h2{
-
-
-font-size:38px;
-
-
-}
-
-
-
-.process-step {
-
-
-    display:block;
-
-
-}
-
-
-
-.timeline-side {
-
-
-    align-items:flex-start;
-
-
-    margin-bottom:20px;
-
-
-}
-
-
-
-.timeline-line {
-
-
-    display:none;
-
-
-}
-
-
-
-.process-card {
-
-
-    padding:22px;
-
-
-}
-
-
-
-.process-image {
-
-
-    height:180px;
-
-
-}
-
-
-
-.card-top {
-
-
-    flex-direction:column;
-
-
-    gap:12px;
-
-
-}
-
-
-
-.duration {
-
-
-    position:static;
-
-
-}
-
-
-
-.card-top h3 {
-
-
-    font-size:28px;
-
-
-}
-
-
+/* MOBILE */
+@media(max-width: 650px) {
+    .process-header h2 {
+        font-size: 38px;
+    }
+
+    /* Shrink the timeline area so cards have enough room */
+    .process-step {
+        grid-template-columns: 45px 1fr;
+        gap: 15px;
+    }
+
+    .timeline-number {
+        width: 45px;
+        height: 45px;
+        font-size: 15px;
+    }
+
+    .process-card1 {
+        padding: 22px;
+    }
+
+    .process-image {
+        height: 200px;
+    }
+
+    .card-top {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    /* Make sure the duration badge doesn't overlap text on small screens */
+    .duration {
+        position: relative;
+        display: inline-block;
+    }
+
+    .card-top h3 {
+        font-size: 26px;
+    }
 }

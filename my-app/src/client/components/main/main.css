@@ -7,736 +7,442 @@
    HERO
 ======================================================= */
 
-.main__hero{
-
-    position:relative;
-
-    min-height:100vh;
-    min-height:100svh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    overflow:hidden;
-
-    padding:90px 40px 80px;
-
+.main__hero {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 90px 40px 80px;
 }
 
 /* =======================================================
    BACKGROUND
 ======================================================= */
 
-.main__background{
-
-    position:absolute;
-
-    inset:0;
-
-    z-index:0;
-
+.main__background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
     background:
-        radial-gradient(
-            900px circle at center,
-            rgba(22,82,190,.16),
-            transparent 72%
-        ),
-        linear-gradient(
-            180deg,
+        radial-gradient(900px circle at center,
+            rgba(22, 82, 190, .16),
+            transparent 72%),
+        linear-gradient(180deg,
             #0c111d 0%,
-            #080b14 100%
-        );
-
+            #080b14 100%);
 }
 
-.main__background::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:-15%;
-
+.main__background::after {
+    content: "";
+    position: absolute;
+    inset: -15%;
     background:
-
-        radial-gradient(
-            600px circle,
-            rgba(59,130,246,.16),
-            transparent 70%
-        );
-
+        radial-gradient(600px circle,
+            rgba(59, 130, 246, .16),
+            transparent 70%);
     animation:
-        glowMove
-        18s
-        ease-in-out
-        infinite;
-
+        glowMove 18s ease-in-out infinite;
 }
 
-@keyframes glowMove{
-
-    0%{
-
-        transform:translate(-10%,-8%);
-
+@keyframes glowMove {
+    0% {
+        transform: translate(-10%, -8%);
     }
 
-    50%{
-
-        transform:translate(10%,8%);
-
+    50% {
+        transform: translate(10%, 8%);
     }
 
-    100%{
-
-        transform:translate(-10%,-8%);
-
+    100% {
+        transform: translate(-10%, -8%);
     }
-
 }
 
 /* =======================================================
    FOG
 ======================================================= */
 
-.main__overlay{
-
-    position:absolute;
-
-    inset:-20%;
-
-    z-index:1;
-
-    pointer-events:none;
-
-    opacity:.8;
-
-    filter:blur(45px);
-
+.main__overlay {
+    position: absolute;
+    inset: -20%;
+    z-index: 1;
+    pointer-events: none;
+    opacity: .8;
+    filter: blur(45px);
     background:
-
-        radial-gradient(
-            circle at 25% 25%,
-            rgba(255,255,255,.06),
-            transparent 38%
-        ),
-
-        radial-gradient(
-            circle at 75% 55%,
-            rgba(255,255,255,.05),
-            transparent 42%
-        ),
-
-        radial-gradient(
-            circle at 45% 85%,
-            rgba(255,255,255,.04),
-            transparent 45%
-        );
-
+        radial-gradient(circle at 25% 25%,
+            rgba(255, 255, 255, .06),
+            transparent 38%),
+        radial-gradient(circle at 75% 55%,
+            rgba(255, 255, 255, .05),
+            transparent 42%),
+        radial-gradient(circle at 45% 85%,
+            rgba(255, 255, 255, .04),
+            transparent 45%);
     animation:
-        fogMove
-        20s
-        linear
-        infinite;
-
+        fogMove 20s linear infinite;
 }
 
-@keyframes fogMove{
-
-    0%{
-
-        transform:translate(0,0);
-
+@keyframes fogMove {
+    0% {
+        transform: translate(0, 0);
     }
 
-    50%{
-
-        transform:translate(-5%,-3%);
-
+    50% {
+        transform: translate(-5%, -3%);
     }
 
-    100%{
-
-        transform:translate(0,0);
-
+    100% {
+        transform: translate(0, 0);
     }
-
 }
 
 /* =======================================================
    CONTENT
 ======================================================= */
 
-.main__content{
-
-    position:relative;
-
-    z-index:5;
-
-    width:100%;
-
-    max-width:1100px;
-
-    margin:0 auto;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
+.main__content {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 /* =======================================================
    LOGO
 ======================================================= */
 
-.hero-logo{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    margin-bottom:56px;
-
+.hero-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 56px;
 }
 
-.hero-logo img{
-
-    width:360px;
-
-    max-width:100%;
-
-    height:auto;
-
-    display:block;
-
-    user-select:none;
-
-    pointer-events:none;
-
+/* Scaled up ~15% from previous version */
+.hero-logo img {
+    width: 320px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    user-select: none;
+    pointer-events: none;
 }
 
 /* =======================================================
-   TITLE
-======================================================= */
-/* =======================================================
-   TITLE
+   TITLE & SUBTITLE
 ======================================================= */
 
-.main__title{
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    margin:0;
-
-    margin-bottom:24px;
-
-    font-weight:700;
-
-    font-size:4rem;
-
-    line-height:1.08;
-
-    letter-spacing:-.03em;
-
-    color:#edf2ff;
-
-    text-wrap:balance;
-
+.main__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 1.08;
+    letter-spacing: -.03em;
+    color: #edf2ff;
+    text-wrap: balance;
 }
 
-.main__title span{
+.main__title span {
+    margin-top: 8px;
+    color: #3b82f6;
+}
 
-    margin-top:8px;
-
-    color:#3b82f6;
-
+.main__subtitle {
+    margin: 0;
+    max-width: 760px;
+    font-size: 1.15rem;
+    line-height: 1.75;
+    font-weight: 400;
+    color: rgba(235, 239, 248, .72);
+    text-wrap: pretty;
 }
 
 /* =======================================================
-   SUBTITLE
+   BUTTON (Base styling)
 ======================================================= */
 
-.main__subtitle{
+.main__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 44px;
 
-    margin:0;
+    /* Slightly larger base padding and height */
+    padding: 14px 32px;
+    min-height: 52px;
+    border-radius: 14px;
 
-    max-width:760px;
+    background: #3b82f6;
+    color: #fff !important;
+    text-decoration: none !important;
 
-    font-size:1.15rem;
+    /* Slightly larger font size */
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: .02em;
 
-    line-height:1.75;
-
-    font-weight:400;
-
-    color:rgba(235,239,248,.72);
-
-    text-wrap:pretty;
-
+    transition: transform .25s, background .25s, box-shadow .25s;
+    box-shadow: 0 12px 35px rgba(59, 130, 246, .28);
 }
 
-/* =======================================================
-   BUTTON
-======================================================= */
-
-.main__button{
-
-    display:inline-flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:12px;
-
-    margin-top:44px;
-
-    padding:16px 34px;
-
-    min-height:58px;
-
-    border-radius:14px;
-
-    background:#3b82f6;
-
-    color:#fff !important;
-
-    text-decoration:none !important;
-
-    font-size:1rem;
-
-    font-weight:600;
-
-    letter-spacing:.02em;
-
-    transition:
-        transform .25s,
-        background .25s,
-        box-shadow .25s;
-
-    box-shadow:
-        0 12px 35px rgba(59,130,246,.28);
-
+.main__button::after {
+    content: "→";
+    transition: .3s;
 }
 
-.main__button::after{
-
-    content:"→";
-
-    transition:.3s;
-
+.main__button:hover {
+    background: #2563eb;
+    transform: translateY(-4px);
+    box-shadow: 0 18px 45px rgba(59, 130, 246, .38);
 }
 
-.main__button:hover{
-
-    background:#2563eb;
-
-    transform:translateY(-4px);
-
-    box-shadow:
-        0 18px 45px rgba(59,130,246,.38);
-
+.main__button:hover::after {
+    transform: translateX(6px);
 }
 
-.main__button:hover::after{
-
-    transform:translateX(6px);
-
-}
-
-.main__button:active{
-
-    transform:translateY(-1px);
-
+.main__button:active {
+    transform: translateY(-1px);
 }
 
 .main__button:link,
 .main__button:visited,
 .main__button:hover,
-.main__button:active{
-
-    color:#fff;
-
-    text-decoration:none;
-
+.main__button:active {
+    color: #fff;
+    text-decoration: none;
 }
 
 /* =======================================================
    LARGE DESKTOPS (2K / 4K)
 ======================================================= */
 
-@media (min-width:1800px){
-
-    .main__content{
-
-        max-width:1350px;
-
+@media (min-width:1800px) {
+    .main__content {
+        max-width: 1350px;
     }
 
-    .hero-logo{
-
-        margin-bottom:140px;
-
+    .hero-logo {
+        margin-bottom: 90px;
     }
 
-    .hero-logo img{
-
-        width:450px;
-
+    /* Increased by ~15% (was 350px) */
+    .hero-logo img {
+        width: 400px;
     }
 
-    .main__title{
-
-        font-size:5rem;
-
-        margin-bottom:30px;
-
+    .main__title {
+        font-size: 5rem;
+        margin-bottom: 30px;
     }
 
-    .main__subtitle{
-
-        max-width:900px;
-
-        font-size:1.7rem;
-
+    .main__subtitle {
+        max-width: 900px;
+        font-size: 1.7rem;
     }
 
-    .main__button{
-
-        margin-top:90px;
-
-        padding:18px 40px;
-
+    /* Slightly larger button */
+    .main__button {
+        margin-top: 60px;
+        padding: 22px 40px;
+        font-size: 1.7rem;
     }
-
 }
 
 /* =======================================================
    DESKTOP
 ======================================================= */
 
-@media (max-width:1600px){
-
-    .main__hero{
-
-        padding:90px 40px 80px;
-
+@media (max-width:1600px) {
+    .main__hero {
+        padding: 90px 40px 80px;
     }
 
-    .hero-logo{
-
-        margin-bottom:90px;
-
+    .hero-logo {
+        margin-bottom: 70px;
     }
 
-    .hero-logo img{
-
-        width:600px;
-        height: 150px;
-
+    /* Increased by ~20% (was 320px) */
+    .hero-logo img {
+        width: 380px;
+        height: auto;
     }
 
-    .main__title{
-
-        font-size:5rem;
-
+    .main__title {
+        font-size: 5rem;
     }
 
-     .main__subtitle{
-
-        max-width:900px;
-
-        font-size:1.7rem;
-
+    .main__subtitle {
+        max-width: 900px;
+        font-size: 1.7rem;
     }
 
-    .main__button{
-
-        margin-top:80px;
-
-        padding:25px 20px;
-
-        font-size: 30px;
-
+    /* Slightly larger button */
+    .main__button {
+        margin-top: 50px;
+        padding: 22px 40px;
+        font-size: 1.2rem;
     }
-
 }
 
 /* =======================================================
-   LAPTOP
+   LAPTOP (1200px - Center content & hide logo)
 ======================================================= */
 
-@media (max-width:1200px){
-
-    .main__hero{
-
-        padding:90px 32px 80px;
-
+@media (max-width:1200px) {
+    .main__hero {
+        padding: 90px 32px 80px;
     }
 
-    .main__content{
-
-        max-width:900px;
-
+    .main__content {
+        max-width: 900px;
     }
 
-    .hero-logo{
-
-        margin-bottom:130px;
-
+    /* Logo hides here, cascading down */
+    .hero-logo {
+        display: none;
     }
 
-    .hero-logo img{
-
-        width:500px;
-        height: 140px;
+    .main__title {
+        font-size: 5rem;
+        margin-bottom: 22px;
     }
 
-    .main__title{
-
-        font-size:5rem;
-
-        margin-bottom:22px;
-
+    .main__subtitle {
+        max-width: 700px;
+        font-size: 1.7rem;
+        line-height: 1.7;
     }
 
-    .main__subtitle{
-
-        max-width:700px;
-
-        font-size:1.7rem;
-
-        line-height:1.7;
-
+    /* Slightly larger button */
+    .main__button {
+        margin-top: 40px;
+        padding: 22px 40px;
+        font-size: 1.05rem;
     }
-
-    .main__button{
-
-        margin-top:100px;
-
-         padding:30px 40px;
-    }
-
 }
 
 /* =======================================================
    TABLETS
 ======================================================= */
 
-@media (max-width:992px){
-
-    .main__hero{
-
-        padding:85px 28px 75px;
-
+@media (max-width:992px) {
+    .main__hero {
+        padding: 85px 28px 75px;
     }
 
-    .hero-logo{
-
-        margin-bottom:120px;
-
+    .main__title {
+        font-size: 5rem;
+        margin-bottom: 20px;
     }
 
-    .hero-logo img{
-
-        width:420px;
-        height: 110px;
+    .main__subtitle {
+        max-width: 700px;
+        font-size: 1.7rem;
+        line-height: 1.7;
     }
 
-    .main__title{
-
-        font-size:5rem;
-
-        margin-bottom:20px;
-
+    /* Slightly larger button */
+    .main__button {
+        margin-top: 40px;
+        padding: 14px 30px;
+        font-size: 1.05rem;
     }
-
-    .main__subtitle{
-
-        max-width:700px;
-
-        font-size:1.7rem;
-
-        line-height:1.7;
-
-    }
-
-    .main__button{
-
-        margin-top:60px;
-        padding:30px 40px;
-    }
-
 }
 
 /* =======================================================
    MOBILE
 ======================================================= */
 
-@media (max-width:768px){
-
-    .main__hero{
-
-        padding:80px 22px 70px;
-
+@media (max-width:768px) {
+    .main__hero {
+        padding: 80px 22px 70px;
     }
 
-    .hero-logo{
-
-        margin-bottom:150px;
-
+    .main__title {
+        font-size: 3.5rem;
+        margin-bottom: 18px;
     }
 
-    .hero-logo img{
-
-        width:360px;
-        height: 100px;
-    
+    .main__subtitle {
+        max-width: 520px;
+        font-size: 1.4rem;
+        line-height: 1.65;
     }
 
-    .main__title{
-
-        font-size:3.5rem;
-
-        margin-bottom:18px;
-
+    /* Slightly larger button */
+    .main__button {
+        width: 70%;
+        max-width: 280px;
+        margin-top: 30px;
+        font-size: 1rem;
+        padding: 14px 28px;
     }
-
-    .main__subtitle{
-
-        max-width:5020px;
-
-        font-size:1.4rem;
-
-        line-height:1.65;
-
-    }
-
-    .main__button{
-
-        width:70%;
-
-        max-width:300px;
-
-        margin-top:170px;
-        font-size: 20px;
-
-    }
-
 }
 
 /* =======================================================
    SMALL PHONES
 ======================================================= */
 
-@media (max-width:480px){
-
-    .main__hero{
-
-        padding:70px 18px 60px;
-
+@media (max-width:480px) {
+    .main__hero {
+        padding: 70px 18px 60px;
     }
 
-    .hero-logo{
-
-        margin-bottom:90px;
-
+    .main__title {
+        font-size: 2.3rem;
+        margin-bottom: 16px;
     }
 
-    .hero-logo img{
-
-        width:270px;
-
-        height: 70px;
+    .main__subtitle {
+        font-size: .95rem;
+        line-height: 1.55;
     }
 
-    .main__title{
-
-        font-size:2.3rem;
-
-        margin-bottom:16px;
-
+    /* Slightly larger button */
+    .main__button {
+        margin-top: 30px;
+        min-height: 48px;
+        max-width: 100%;
+        font-size: 0.95rem;
+        padding: 12px 24px;
     }
-
-    .main__subtitle{
-
-        font-size:.95rem;
-
-        line-height:1.55;
-
-    }
-
-    .main__button{
-
-        margin-top:140px;
-
-        min-height:54px;
-
-        max-width:100%;
-
-        font-size: 20px;
-    }
-
 }
 
-@media (max-width:390px){
-
-    .main__hero{
-
-        padding:70px 18px 60px;
-
+@media (max-width:390px) {
+    .main__hero {
+        padding: 70px 18px 60px;
     }
 
-    .hero-logo{
-
-        margin-bottom:40px;
-
+    .main__title {
+        font-size: 2rem;
+        margin-bottom: 16px;
     }
 
-    .hero-logo img{
-
-        width:230px;
-
-        height: 58px;
+    .main__subtitle {
+        font-size: 1rem;
+        line-height: 1.5;
     }
 
-    .main__title{
-
-        font-size:2rem;
-
-        margin-bottom:16px;
-
+    /* Slightly larger button */
+    .main__button {
+        margin-top: 24px;
+        min-height: 44px;
+        font-size: 0.9rem;
+        padding: 10px 20px;
     }
-
-    .main__subtitle{
-
-        font-size:1rem;
-
-        line-height:1.5;
-
-    }
-
-    .main__button{
-
-        max-height:100px;
-
-        max-width:150px;
-
-        margin-top:60px;
-        font-size: 13px;
-
-    }
-
 }
