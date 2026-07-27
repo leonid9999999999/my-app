@@ -25,3 +25,4 @@ yarn-error.log*
 config.env
 # Local Netlify folder
 .netlify
+.env
