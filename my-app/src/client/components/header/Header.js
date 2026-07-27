@@ -156,26 +156,6 @@ function Header() {
 
 
 
-  const goToProcess = () => {
-
-
-    closeMenu();
-
-
-    navigate("/home", {
-
-      state:{
-        scrollTo:"process"
-      }
-
-    });
-
-
-  };
-
-
-
-
   const goToPrices = () => {
 
 
@@ -348,23 +328,6 @@ function Header() {
         >
 
           Services
-
-        </div>
-
-
-
-
-
-
-        <div
-
-          onClick={goToProcess}
-
-          className="header__link"
-
-        >
-
-          Process
 
         </div>
 
