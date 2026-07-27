@@ -12,27 +12,33 @@
   color: #e0e0e0;
   max-width: 420px;
 }
+
 .image-wrapper {
   overflow: hidden;
   border-top-right-radius: 180px;
   border-bottom-right-radius: 180px;
+  /* Removed the unnecessary transition from here */
 }
 
-/* IMAGE */
+/* IMAGE (Base State) */
 .image-wrapper img {
   width: 100%;
   height: 260px;
   object-fit: cover;
   display: block;
 
-  transition: transform 0.5s ease;
+  transition: transform 1s ease-in-out, filter 0.5s, opacity 0.5s !important;
+    backface-visibility: hidden;
+    will-change: transform;
+  
 }
 
 /* HOVER ZOOM */
 .image-wrapper:hover img {
-  transform: scale(1.08);
+  transform: scale(1.03);
+  /* Removed the redundant transition from here */
 }
 
-#processCardTitle{
-  color:rgb(0, 0, 0);
+#processCardTitle {
+  color: rgb(0, 0, 0);
 }

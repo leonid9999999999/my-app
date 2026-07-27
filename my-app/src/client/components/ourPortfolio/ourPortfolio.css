@@ -95,6 +95,74 @@
     /* display: flex; */
 }
 
+/* Container styling */
+/* --- FULL WIDTH CTA SECTION --- */
+
+/* The outer container stretches 100% of the screen */
+.portfolioCtaSection {
+    width: 100%;
+    background-color: #0d1322;
+    /* Matches your dark theme */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    /* Subtle separator from the section above */
+    padding: 80px 20px;
+    /* Generous top/bottom padding so it doesn't touch the portfolio items */
+    
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    /* Keeps it above the rotating background lights */
+}
+
+/* The inner container keeps the text centered and readable on large screens */
+.portfolioCtaContent {
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.portfolioCtaContent h4 {
+    margin: 0 0 16px 0;
+    font-size: 32px;
+    /* Slightly larger to fit a full-width section */
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.portfolioCtaContent p {
+    margin: 0 0 32px 0;
+    font-size: 18px;
+    color: #94a3b8;
+    /* Softer slate gray for secondary text */
+    line-height: 1.6;
+}
+
+/* Renamed Button styling to avoid global conflicts */
+.portfolioCtaBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2563eb;
+    color: #ffffff !important;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+
+.portfolioCtaBtn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
+}
+
+.portfolioCtaBtn:active {
+    transform: translateY(0);
+}
+
 @media (max-width: 1055px) {
 
     .topOurPortfolioBlock,

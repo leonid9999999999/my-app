@@ -1,0 +1,111 @@
+/* Общие настройки контейнеров превью */
+.mockupBrowser, .mockupDevices, .mockupSpeed, .mockupShield, .mockupServer,
+.mockupChart, .mockupPalette, .mockupBrand, .mockupWireframe, .mockupImage,
+.mockupText, .mockupShapes, .mockupProfile, .mockupList, .mockupGrid,
+.mockupForm, .mockupCal, .mockupCreditCard, .mockupUser, .mockupGlobe,
+.mockupLock, .mockupProduct, .mockupNodes, .mockupMail, .mockupSocial,
+.mockupCode, .mockupDefault {
+  width: 100%;
+  height: 100%;
+  background: #090e18;
+  border-radius: 6px;
+  border: 1px solid #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 1. FOUNDATION MOCKUPS */
+.mockupBrowser { flex-direction: column; }
+.browserHeader { width: 100%; display: flex; gap: 4px; margin-bottom: 6px; }
+.browserHeader span { width: 4px; height: 4px; border-radius: 50%; background: #334155; }
+.browserBody { width: 100%; display: flex; flex-direction: column; gap: 4px; }
+.skeletonNav { width: 100%; height: 6px; background: #1e293b; border-radius: 2px; }
+.skeletonHero { width: 60%; height: 18px; background: #3b82f6; border-radius: 2px; opacity: 0.6; }
+
+.mockupDevices { gap: 8px; }
+.desktopFrame { width: 50px; height: 32px; border: 1px solid #334155; border-radius: 4px; padding: 2px; }
+.screenInner { width: 100%; height: 100%; background: #3b82f6; opacity: 0.4; }
+.mobileFrame { width: 14px; height: 26px; border: 1px solid #3b82f6; border-radius: 3px; background: #1e293b; }
+
+.speedArc { width: 40px; height: 20px; border: 3px solid #3b82f6; border-bottom: 0; border-radius: 40px 40px 0 0; }
+.speedValue { font-size: 10px; font-weight: 700; color: #3b82f6; position: absolute; }
+
+.shieldBadge { font-size: 10px; font-weight: 700; color: #3b82f6; background: rgba(59, 130, 246, 0.15); padding: 4px 8px; border-radius: 12px; border: 1px solid #3b82f6; }
+
+.mockupServer { flex-direction: column; gap: 4px; width: 80%; }
+.serverLine { width: 100%; height: 12px; background: #1e293b; border-radius: 3px; display: flex; align-items: center; padding: 0 6px; }
+.dotOn { width: 4px; height: 4px; background: #3b82f6; border-radius: 50%; box-shadow: 0 0 6px #3b82f6; }
+
+.mockupChart { gap: 6px; align-items: flex-end; height: 40px; }
+.bar { width: 8px; background: #1e293b; border-radius: 2px; }
+.barActive { width: 8px; background: #3b82f6; border-radius: 2px; box-shadow: 0 0 8px rgba(59, 130, 246, 0.5); }
+
+/* 2. DESIGN & CONTENT MOCKUPS */
+.mockupPalette { gap: 6px; }
+.colorPill { width: 18px; height: 18px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.1); }
+
+.mockupBrand { gap: 8px; }
+.logoBadge { font-size: 9px; font-weight: 800; color: #3b82f6; border: 1px dashed #3b82f6; padding: 2px 4px; }
+.brandText { font-size: 16px; font-weight: 700; color: #fff; }
+
+.mockupWireframe { flex-direction: column; gap: 4px; width: 70%; }
+.wfHeader { width: 100%; height: 6px; background: #3b82f6; opacity: 0.5; }
+.wfGrid { display: flex; gap: 4px; width: 100%; }
+.wfGrid div { flex: 1; height: 18px; background: #1e293b; }
+
+.imgIcon { font-size: 20px; }
+
+.mockupText { flex-direction: column; gap: 4px; width: 70%; }
+.lineLong { width: 100%; height: 4px; background: #3b82f6; opacity: 0.7; }
+.lineMedium { width: 70%; height: 4px; background: #334155; }
+.lineShort { width: 40%; height: 4px; background: #334155; }
+
+.mockupShapes { gap: 8px; }
+.shapeSquare { width: 16px; height: 16px; background: #3b82f6; border-radius: 3px; }
+.shapeCircle { width: 16px; height: 16px; border: 2px solid #3b82f6; border-radius: 50%; }
+
+/* 3. PAGES & OTHER MOCKUPS */
+.mockupProfile { gap: 8px; }
+.avatar { width: 20px; height: 20px; border-radius: 50%; background: #3b82f6; }
+.profileLines div { width: 40px; height: 4px; background: #1e293b; margin-bottom: 3px; }
+
+.mockupList { flex-direction: column; gap: 4px; width: 80%; }
+.listItem { width: 100%; height: 10px; background: #1e293b; border-left: 2px solid #3b82f6; }
+
+.mockupGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; width: 50px; }
+.mockupGrid div { height: 16px; background: #1e293b; border-radius: 2px; }
+
+.mockupForm { flex-direction: column; gap: 6px; width: 70%; }
+.inputBox { width: 100%; height: 12px; border: 1px solid #334155; border-radius: 3px; }
+.btnBox { width: 50%; height: 12px; background: #3b82f6; border-radius: 3px; }
+
+.calGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
+.calGrid span { width: 8px; height: 8px; background: #1e293b; border-radius: 2px; }
+.calGrid .activeDay { background: #3b82f6; }
+
+.mockupCreditCard { width: 75px; height: 42px; background: linear-gradient(135deg, #1d4ed8 0%, #0f172a 100%); border-radius: 6px; padding: 6px; display: flex; flex-direction: column; justify-content: space-between; }
+.cardChip { width: 8px; height: 6px; background: #f59e0b; border-radius: 1px; }
+.cardNumber { font-size: 8px; font-family: monospace; color: #94a3b8; }
+
+.userBadge { font-size: 10px; color: #3b82f6; font-weight: 600; }
+.activeLang { color: #3b82f6; font-weight: 700; }
+.lockIcon { font-size: 10px; color: #3b82f6; font-weight: 700; }
+
+.mockupProduct { gap: 8px; }
+.prodImg { width: 24px; height: 24px; background: #1e293b; border-radius: 4px; }
+.prodTag { font-size: 10px; font-weight: 700; color: #3b82f6; }
+
+.mockupNodes { gap: 4px; align-items: center; }
+.node { width: 8px; height: 8px; border-radius: 50%; background: #334155; }
+.nodeActive { width: 10px; height: 10px; border-radius: 50%; background: #3b82f6; box-shadow: 0 0 6px #3b82f6; }
+.nodeLine { width: 20px; height: 2px; background: #3b82f6; }
+
+.mailEnvelope { font-size: 10px; color: #3b82f6; font-weight: 600; }
+.socIcon { font-size: 10px; font-weight: 800; color: #3b82f6; border: 1px solid #3b82f6; padding: 2px 4px; border-radius: 3px; }
+.mockupCode code { font-size: 9px; color: #3b82f6; font-family: monospace; }
+.defaultBox { width: 20px; height: 20px; background: #3b82f6; opacity: 0.3; }

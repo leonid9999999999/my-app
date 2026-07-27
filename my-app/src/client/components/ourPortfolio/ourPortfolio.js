@@ -1,6 +1,6 @@
 import SinglePortfolio from "./singlePorfolio/singlePortfolio";
 import portfolioData from "../../data/portfolio/porfolioData.json";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Spinner from "../spinner/Spinner"; // Make sure path is correct
 import { useState, useEffect } from "react";
 import "./ourPortfolio.css";
@@ -34,57 +34,76 @@ function OurPortfolio() {
     }
    
     return (
-        <div className="ourPorfolioWrapper">
-            <div className="ourPorfolioTitle">
-                <h2>Our Work</h2>
-            </div>
-            <div className="ourPortfolio">
-                
-                    {portfolioItems.map((item, index) => {
-                        // only start a pair on EVEN index
-                        if (index % 2 !== 0) return null;
+        <div >
+            <div className="ourPorfolioWrapper">
 
-                        const topItem = item;
-                        const bottomItem = portfolioItems[index + 1];
+            
+                <div className="ourPorfolioTitle">
+                    <h2>Our Work</h2>
+                </div>
+                <div className="ourPortfolio">
+                    
+                        {portfolioItems.map((item, index) => {
+                            // only start a pair on EVEN index
+                            if (index % 2 !== 0) return null;
 
-                        return (
-                            <div className="portfolioPair" key={topItem.id}>
+                            const topItem = item;
+                            const bottomItem = portfolioItems[index + 1];
 
-                                {/* TOP */}
-                                <div className="topOurPortfolioBlock">
-                                  
-                                        <SinglePortfolio
-                                            image={topItem.image}
-                                            description={topItem.description}
-                                            title={topItem.title}
-                                            siteUrl={`/portfolio/${topItem.id}`}
-                                            onClick={() => Page(topItem)}
-                                        />
+                            return (
+                                <div className="portfolioPair" key={topItem.id}>
+
+                                    {/* TOP */}
+                                    <div className="topOurPortfolioBlock">
                                     
-                                </div>
-
-                                {/* BOTTOM */}
-                                {bottomItem && (
-                                    <div className="bottomOurPortfolioBlock">
-                                        
                                             <SinglePortfolio
-                                                image={bottomItem.image}
-                                                description={bottomItem.description}
-                                                title={bottomItem.title}
-                                                siteUrl={`/portfolio/${bottomItem.id}`}
-                                                onClick={() => Page(bottomItem)}
-                                                
+                                                image={topItem.image}
+                                                description={topItem.description}
+                                                title={topItem.title}
+                                                siteUrl={`/portfolio/${topItem.id}`}
+                                                onClick={() => Page(topItem)}
                                             />
                                         
                                     </div>
-                                )}
 
-                            </div>
-                        );
-                    })}
-               
+                                    {/* BOTTOM */}
+                                    {bottomItem && (
+                                        <div className="bottomOurPortfolioBlock">
+                                            
+                                                <SinglePortfolio
+                                                    image={bottomItem.image}
+                                                    description={bottomItem.description}
+                                                    title={bottomItem.title}
+                                                    siteUrl={`/portfolio/${bottomItem.id}`}
+                                                    onClick={() => Page(bottomItem)}
+                                                    
+                                                />
+                                            
+                                        </div>
+                                    )}
+
+                                </div>
+                            );
+                        })}
+                
+                </div>
+            
+            </div>
+            <div className="portfolioCtaSection">
+                <div className="portfolioCtaContent">
+                    <h4>Don't see what you need?</h4>
+                    <p>We can build custom features tailored to your business.</p>
+
+                    <Link
+                        to="/ContactUs"
+                        className="portfolioCtaBtn"
+                    >
+                        Get a Custom Solution &rarr;
+                    </Link>
+                </div>
             </div>
         </div>
+        
     );
 }
 

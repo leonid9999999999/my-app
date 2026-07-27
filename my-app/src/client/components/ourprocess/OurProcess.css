@@ -1,279 +1,291 @@
-.process {
-  height: 250vh;
-  background: radial-gradient(ellipse at top, #0f172a, #020617);
-  color: white;
-  opacity: 0;
-transition: opacity 0.9s ease;
+/* =====================================================
+   OUR PROCESS
+   Premium Dark Agency Style
+===================================================== */
+
+.process-section {
+    background: linear-gradient(135deg, #15171d 0%, #111318 100%);
+    padding: clamp(70px, 8vw, 120px) clamp(20px, 5vw, 70px);
+    color: white;
+    font-family: Inter, Arial, Helvetica, sans-serif;
 }
 
-.process.is-visible {
-  opacity: 1;
+.process-container {
+    max-width: 1200px;
+    margin: auto;
 }
 
-/* ================= DESKTOP DEFAULT ================= */
-
-.process-sticky {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  padding: 100px 60px;
-  display: flex;
-  flex-direction: column;
-  gap: 70px;
-}
+/* ================= HEADER ================= */
 
 .process-header {
-  text-align: center;
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 65px;
 }
 
 .process-header h2 {
-  font-size: 64px;
-  font-weight: 700;
-  color: #f8fafc;
+    margin: 0 0 20px;
+    font-size: clamp(44px, 5vw, 68px);
+    font-weight: 700;
+    letter-spacing: -2px;
+    color: #ffffff;
+}
+
+.process-header p {
+    margin: auto;
+    max-width: 720px;
+    color: rgba(255, 255, 255, .65);
+    font-size: clamp(16px, 1.3vw, 20px);
+    line-height: 1.7;
 }
 
 /* ================= TIMELINE ================= */
 
 .process-timeline {
-  position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.process-step {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 35px;
+}
+
+/* ================= NUMBER ================= */
+
+.timeline-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(59, 130, 246, .08);
+    border: 2px solid rgba(59, 130, 246, .55);
+    color: #4f8cff;
+    font-size: 17px;
+    font-weight: 700;
 }
 
 .timeline-line {
-  height: 2px;
-  background: rgba(255,255,255,0.15);
-  position: relative;
+    margin-top: 18px;
+    width: 3px;
+    flex: 1;
+    min-height: 100px;
+    background: linear-gradient(to bottom, rgba(59, 130, 246, .45), rgba(59, 130, 246, .05));
 }
 
-.timeline-progress {
-  position: absolute;
-  inset: 0;
-  width: 0;
-  background: linear-gradient(90deg, #3b82f6, #818cf8);
-  transition: width 0.8s ease;
+/* ================= CARD ================= */
+/* Restored your exact original class name */
+.process-card1 {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 45px;
+    padding: 35px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, .055);
+    border: 1px solid rgba(255, 255, 255, .09);
+    transition: .4s ease;
 }
 
-.timeline-steps {
-  display: flex;
-  justify-content: space-between;
-  margin-top: -20px;
+.process-card1:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, .07);
+    border-color: rgba(255, 255, 255, .18);
 }
 
-.timeline-circle {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: #020617;
-  border: 2px solid rgba(255,255,255,0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  opacity: 0;
-  transform: scale(0.6);
-  transition: 0.5s ease;
+/* first card highlight */
+.process-step:first-child .process-card1,
+.process-step:first-child .process-card {
+    background: rgba(255, 255, 255, .065);
 }
 
-.timeline-circle.visible {
-  opacity: 1;
-  transform: scale(1);
+/* ================= IMAGE ================= */
+
+.process-image {
+    width: 100%;
+    height: 220px;
+    border-radius: 16px;
+    overflow: hidden;
 }
 
-.timeline-circle.active {
-  background: #3b82f6;
-  color: #020617;
-  box-shadow: 0 0 25px rgba(59,130,246,0.6);
+.process-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s ease;
+}
+
+.process-card1:hover img,
+.process-card:hover img {
+    transform: scale(1.06);
 }
 
 /* ================= CONTENT ================= */
 
 .process-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: center;
-}
-
-.process-image img {
-  width: 100%;
-  max-height: 520px;
-  object-fit: cover;
-  border-radius: 28px;
-  box-shadow: 0 60px 140px rgba(0,0,0,0.6);
-}
-
-.process-text h3 {
-  font-size: 42px;
-  background: linear-gradient(90deg, #60a5fa, #818cf8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 16px;
-}
-
-.process-text p {
-  font-size: 18px;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.85);
-}
-
-/* ================= TABLET FIX (iPad Air / Pro) ================= */
-
-@media (max-width: 1024px) {
-
-  .process-sticky {
-    padding: 70px 20px;
-    gap: 0px;
-    display: grid;
-    grid-template-columns: 70px 1fr;
-    column-gap: 20px;
-    align-content: space-evenly;
-    align-items: start;
-  }
-
-  .process {
-    height: 500vh;
-  }
-
-  .process-header {
-    grid-column: 1 / -1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-  }
-
-  .process-header h2 {
-    font-size: 32px;
-  }
-
-  .process-timeline {
-    position: relative;
-    height: 100%;
-  }
-
-  .timeline-line {
-    width: 2px;
-    height: 100%;
-    margin: 0 auto;
-  }
-
-  .timeline-progress {
-    width: 100% !important;
-    height: 0;
-  }
-
-  .timeline-steps {
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .process-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .process-image img {
-    max-height: 260px;
-    border-radius: 20px;
-  }
-
-  .process-text h3 {
-    font-size: 28px;
-  }
-
-  .process-text p {
-    font-size: 15px;
-  }
-
-  .timeline-circle {
-    width: 32px;
-    height: 32px;
-    font-size: 10px;
-  }
 }
 
-/* ================= MOBILE FIX ================= */
-
-@media (max-width: 768px) {
-
-  .process-sticky {
-    padding: 70px 20px;
-    gap: 40px;
-    display: grid;
-    grid-template-columns: 70px 1fr;
-    column-gap: 20px;
-    align-items: start;
-  }
-
-  .process {
-    height: 500vh;
-  }
-
-  .process-header {
-    grid-column: 1 / -1;
+.card-top {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-  }
-
-  .process-header h2 {
-    font-size: 32px;
-  }
-
-  .process-timeline {
     position: relative;
-    height: 100%;
-  }
+    margin-bottom: 18px;
+}
 
-  .timeline-line {
-    width: 2px;
-    height: 100%;
-    margin: 0 auto;
-  }
+.card-top h3 {
+    margin: 0;
+    font-family: inherit;
+    font-size: clamp(28px, 3vw, 36px);
+    font-weight: 700;
+    color: white;
+}
 
-  .timeline-progress {
-    width: 100% !important;
-    height: 0;
-  }
-
-  .timeline-steps {
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+.duration {
     position: absolute;
+    right: 0;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+    padding: 7px 16px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .12);
+    color: rgba(255, 255, 255, .65);
+    font-size: 13px;
+}
 
-  .process-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
+.process-content h4 {
+    margin: 0 0 15px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
 
-  .process-image img {
-    max-height: 260px;
-    border-radius: 20px;
-  }
+.process-content p {
+    max-width: 520px;
+    margin: 0;
+    color: rgba(255, 255, 255, .62);
+    font-size: 16px;
+    line-height: 1.7;
+}
 
-  .process-text h3 {
-    font-size: 28px;
-  }
+/* ================= LEARN MORE ================= */
 
-  .process-text p {
-    font-size: 15px;
-  }
+.learn-button {
+    margin-top: 25px;
+    padding: 9px 22px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    background: rgba(255, 255, 255, .04);
+    color: rgba(255, 255, 255, .75);
+    font-size: 14px;
+    cursor: pointer;
+    transition: .3s ease;
+}
 
-  .timeline-circle {
-    width: 32px;
-    height: 32px;
-    font-size: 10px;
-  }
+.learn-button:hover {
+    background: rgba(255, 255, 255, .1);
+    color: white;
+}
+
+/* ================= DETAILS ================= */
+
+.details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+.process-card1.expanded .details,
+.process-card.expanded .details {
+    max-height: 300px;
+    opacity: 1;
+    margin-top: 25px;
+}
+
+.details ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.details li {
+    margin: 10px 0;
+    color: rgba(255, 255, 255, .7);
+}
+
+
+/* =====================================================
+   RESPONSIVE (TABLET & MOBILE)
+===================================================== */
+
+/* TABLET */
+@media(max-width: 850px) {
+
+    /* Stack the image and text on top of each other */
+    .process-card1 {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .process-image {
+        height: 300px;
+    }
+}
+
+/* MOBILE */
+@media(max-width: 650px) {
+    .process-header h2 {
+        font-size: 38px;
+    }
+
+    /* Shrink the timeline area so cards have enough room */
+    .process-step {
+        grid-template-columns: 45px 1fr;
+        gap: 15px;
+    }
+
+    .timeline-number {
+        width: 45px;
+        height: 45px;
+        font-size: 15px;
+    }
+
+    .process-card1 {
+        padding: 22px;
+    }
+
+    .process-image {
+        height: 200px;
+    }
+
+    .card-top {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    /* Make sure the duration badge doesn't overlap text on small screens */
+    .duration {
+        position: relative;
+        display: inline-block;
+    }
+
+    .card-top h3 {
+        font-size: 26px;
+    }
 }

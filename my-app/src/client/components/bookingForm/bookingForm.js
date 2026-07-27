@@ -97,27 +97,34 @@ class BookingForm extends Component {
             return this.handleSubmit(values, tools)
         }
     }
-    handleSubmit = async (values, { setSubmitting, setStatus, resetForm}) => {
+    handleSubmit = async (values, { setSubmitting, setStatus, resetForm }) => {
         console.log("Booking Submited Try:");
+
+        // Grab the base URL from your environment variables
+        const baseUrl = process.env.REACT_APP_API_URL || "";
+
         try {
-            //send value to bakend via router link + passing token 
-            const res = await axios.post(`/api/createBooking`, values);
-            await axios.post(`/api/sendMail`, values);
+            // Prepend the baseUrl to your routes
+            const res = await axios.post(`${baseUrl}/api/createBooking`, values);
+            await axios.post(`${baseUrl}/api/sendMail`, values);
+
             console.log("Booking Submited:", res.data);
             console.log(res.data.message)
+
             // reseting states
-                this.setState({
-                    success: true,
-                })
-                        //clear form
-                resetForm({values: {
-                        fullName: "",
-                        email:'',
-                        companyName: '',
-                        phoneNumber: "",
-                        bookingMessage: ""
-                    }
-                });
+            this.setState({
+                success: true,
+            })
+            //clear form
+            resetForm({
+                values: {
+                    fullName: "",
+                    email: '',
+                    companyName: '',
+                    phoneNumber: "",
+                    bookingMessage: ""
+                }
+            });
         } catch (error) {
 
             let message = "Something went wrong. Please try again.";
