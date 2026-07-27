@@ -1,7 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useCallback, useRef } from 'react'; // 1. Добавили useRef
+import { Link } from 'react-router-dom'; // Для Next.js замените на: import Link from 'next/link';
 import * as Icons from 'lucide-react';
 import { PRESETS_DATA, CATEGORIES_DATA } from './pricetagsData';
 import styles from './Pricetags.module.css';
+
+// Компонент для безопасного рендера динамических иконок
+const DynamicIcon = ({ name, size = 18, className = '' }) => {
+  const IconComponent = Icons[name] || Icons.HelpCircle;
+  return <IconComponent size={size} className={className} />;
+};
 
 export default function Pricetags() {
   const [selectedIds, setSelectedIds] = useState([
@@ -9,31 +16,38 @@ export default function Pricetags() {
   ]);
   const [activeCategory, setActiveCategory] = useState('all');
 
-  // Переключение выбора карточки
-  const toggleItem = (id) => {
+  // 2. Создаем реф для секции каталога
+  const catalogRef = useRef(null);
+
+  // 3. Функция плавной прокрутки к каталогу
+  const scrollToCatalog = () => {
+    catalogRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  // Переключение выбора карточки с использованием useCallback
+  const toggleItem = useCallback((id) => {
     setSelectedIds(prev =>
       prev.includes(id) ? prev.filter(item => item !== id) : [...prev, id]
     );
-  };
+  }, []);
 
-  // Получаем выбранные объекты для дешборда в Hero
-  const getSelectedObjects = () => {
+  // Мемоизация списка выбранных объектов
+  const selectedList = useMemo(() => {
     const list = [];
-    CATEGORIES_DATA.forEach(cat => {
-      cat.items.forEach(item => {
-        if (selectedIds.includes(item.id)) list.push(item);
+    CATEGORIES_DATA?.forEach(cat => {
+      cat.items?.forEach(item => {
+        if (selectedIds.includes(item.id)) {
+          list.push(item);
+        }
       });
     });
     return list;
-  };
+  }, [selectedIds]);
 
-  const selectedList = getSelectedObjects();
-  const totalAmount = selectedList.reduce((sum, item) => sum + item.price, 0);
-
-  const renderIcon = (iconName) => {
-    const IconComponent = Icons[iconName] || Icons.HelpCircle;
-    return <IconComponent size={18} />;
-  };
+  // Мемоизация подсчета общей суммы
+  const totalAmount = useMemo(() => {
+    return selectedList.reduce((sum, item) => sum + (item.price || 0), 0);
+  }, [selectedList]);
 
   return (
     <div className={styles.wrapper}>
@@ -83,7 +97,11 @@ export default function Pricetags() {
                   <h3>Your Website</h3>
                   <p>Built around your business</p>
                   <div className={styles.dashChartPlaceholder} />
-                  <button className={styles.dashBtn}>Explore features</button>
+                  
+                  {/* 4. Добавили onClick для прокрутки */}
+                  <button className={styles.dashBtn} onClick={scrollToCatalog}>
+                    Explore features
+                  </button>
                 </div>
 
                 {/* DYNAMIC YOUR SELECTIONS BLOCK */}
@@ -96,7 +114,7 @@ export default function Pricetags() {
                       selectedList.slice(0, 5).map(item => (
                         <div key={item.id} className={styles.selectionRow}>
                           <span>{item.title}</span>
-                          <strong>£{item.price.toLocaleString()}</strong>
+                          <strong>£{item.price?.toLocaleString()}</strong>
                         </div>
                       ))
                     )}
@@ -142,17 +160,17 @@ export default function Pricetags() {
           <h3>Popular Combinations</h3>
           <p className={styles.presetsSub}>Not sure where to start? Here are some popular setups our clients often choose.</p>
           <div className={styles.presetsGrid}>
-            {PRESETS_DATA.map(preset => (
+            {PRESETS_DATA?.map(preset => (
               <div key={preset.id} className={`${styles.presetCard} ${preset.isPopular ? styles.popularPreset : ''}`}>
                 {preset.isPopular && <div className={styles.popularTag}>Most Popular</div>}
                 <h4>{preset.title}</h4>
                 <span className={styles.presetSetup}>{preset.subtitle}</span>
                 <ul className={styles.presetList}>
-                  {preset.features.map((feat, i) => (
+                  {preset.features?.map((feat, i) => (
                     <li key={i}><Icons.Check size={14} color="#3b82f6" /> {feat}</li>
                   ))}
                 </ul>
-                <div className={styles.presetPrice}>From <strong>£{preset.price.toLocaleString()}</strong></div>
+                <div className={styles.presetPrice}>From <strong>£{preset.price?.toLocaleString()}</strong></div>
               </div>
             ))}
           </div>
@@ -163,14 +181,15 @@ export default function Pricetags() {
             <h4>Need Something Unique?</h4>
             <p>We’re happy to create a custom solution for your business.</p>
           </div>
-          <button className={styles.blueBtn}>Get a Custom Quote →</button>
+          <Link to="/ContactUs" className={styles.blueBtn} style={{ textDecoration: 'none' }}>
+            Get a Custom Quote →
+          </Link>
         </div>
       </section>
 
-      {/* 2. CATALOG SECTION */}
-      <section className={styles.catalogSection}>
+      {/* 2. CATALOG SECTION (5. Привязали catalogRef) */}
+      <section ref={catalogRef} className={styles.catalogSection}>
         <div className={styles.catalogHeader}>
-          <div className={styles.badgePill}><Icons.Compass size={12} style={{ marginRight: 6 }} /> ALL FEATURES</div>
           <h2>All the Features <span className={styles.blueGlow}>You Might Need</span></h2>
           <p>Explore all the powerful features we offer. Pick what’s right for your business.</p>
         </div>
@@ -189,13 +208,15 @@ export default function Pricetags() {
               </div>
             </button>
             <div className={styles.sideDivider} />
-            {CATEGORIES_DATA.map(cat => (
+            {CATEGORIES_DATA?.map(cat => (
               <button
                 key={cat.id}
                 className={`${styles.sideItem} ${activeCategory === cat.id ? styles.sideActive : ''}`}
                 onClick={() => setActiveCategory(cat.id)}
               >
-                <div className={styles.sideIconBox}>{renderIcon(cat.iconName)}</div>
+                <div className={styles.sideIconBox}>
+                  <DynamicIcon name={cat.iconName} />
+                </div>
                 <div className={styles.sideMeta}>
                   <strong>{cat.title}</strong>
                   <span>{cat.subtitle}</span>
@@ -207,13 +228,15 @@ export default function Pricetags() {
           {/* CARDS CONTAINER IN RECTANGULAR WRAPPER BOXES */}
           <main className={styles.cardsContainer}>
             {CATEGORIES_DATA
-              .filter(cat => activeCategory === 'all' || activeCategory === cat.id)
+              ?.filter(cat => activeCategory === 'all' || activeCategory === cat.id)
               .map(cat => (
                 <div key={cat.id} className={styles.categoryOuterBox}>
                   
                   <div className={styles.categoryHeader}>
                     <div className={styles.categoryTitleRow}>
-                      <div className={styles.catIconPill}>{renderIcon(cat.iconName)}</div>
+                      <div className={styles.catIconPill}>
+                        <DynamicIcon name={cat.iconName} />
+                      </div>
                       <div>
                         <h3>{cat.title}</h3>
                         <p>{cat.subtitle}</p>
@@ -222,7 +245,7 @@ export default function Pricetags() {
                   </div>
 
                   <div className={styles.cardsGrid}>
-                    {cat.items.map(item => {
+                    {cat.items?.map(item => {
                       const isSelected = selectedIds.includes(item.id);
                       return (
                         <div
@@ -257,7 +280,14 @@ export default function Pricetags() {
             <div className={styles.bottomBanner}>
               <h4>Don't see what you need?</h4>
               <p>We can build custom features tailored to your business.</p>
-              <button className={styles.blueBtn}>Get a Custom Solution →</button>
+
+              <Link 
+                to="/ContactUs" 
+                className={styles.blueBtn} 
+                style={{ textDecoration: 'none' }}
+              >
+                Get a Custom Solution →
+              </Link>
             </div>
           </main>
         </div>
